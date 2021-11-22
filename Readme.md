@@ -1,7 +1,7 @@
 # Личный проект «Погнали» 
 
 * Студент: [Виктория Ширунова](https://up.htmlacademy.ru/adaptive/24/user/1841097).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Малиновская](https://htmlacademy.ru/profile/irina-malinovskaya).
 
 ---
 
