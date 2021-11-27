@@ -7,7 +7,7 @@
 <body class="page__body">
 <header class="page-header">
   <div class="wrapper">
-    <a href="#" class="logo link">
+    <a href="#" class="page-header__logo logo button">
       <svg
         width="96"
         height="15"
@@ -44,10 +44,10 @@
           fill="white"/>
       </svg>
     </a>
-    <button class="page-header__menu-open">
+    <button class="page-header__menu-open button">
       <span class="visually-hidden">Открыть меню.</span>
     </button>
-    <button class="page-header__menu-close hidden">
+    <button class="page-header__menu-close button hidden">
       <span class="visually-hidden">Закрыть меню.</span>
     </button>
     <p class="page-header__slogan">
@@ -55,62 +55,69 @@
       с крутыми <br>
       попутчиками!
     </p>
-    <a class="page-header__tel link button-icon" href="tel:88005558628">
+    <a
+      class="page-header__phone button button--size-s button--phone"
+      href="tel:88005558628">
       <span class="visually-hidden">8 800 555-86-28</span>
     </a>
-    <a class="page-header__mail button-icon" href="mailto:mail@htmlacademy.ru">
+    <a
+      class="page-header__mail button button--size-s button--email"
+      href="mailto:mail@htmlacademy.ru">
       <span class="visually-hidden">mail@htmlacademy.ru</span>
     </a>
     <button
-      class="page-header__authorize authorize-button button-action"
+      class="page-header__authorize button button--size-m button--primary"
       type="button">
       авторизация
     </button>
   </div>
-  <div class="menu-content popup hidden">
+  <div class="menu-content-popup popup hidden">
     <nav class="menu-content wrapper">
       <ul class="menu-content__list">
         <li class="menu-content__item">
-          <a class="link" href="#">О сервисе</a>
+          <a class="button button--menu" href="#">О сервисе</a>
         </li>
         <li class="menu-content__item">
-          <a class="link" href="#">Направления</a>
+          <a class="button button--menu" href="#">Направления</a>
         </li>
         <li class="menu-content__item">
-          <a class="link" href="#">Попутчики</a>
+          <a class="button button--menu" href="#">Попутчики</a>
         </li>
       </ul>
-      <button class="menu-content__authorize authorize-button button-action">
+      <button
+        class="menu-content__authorize button button--size-m button--primary">
         авторизация
       </button>
-      <ul class="contact contact__list">
+      <ul class="menu-content__contact contact">
         <li class="contact__item">
-          <a class="contact__tel link" href="tel:88005558628">
+          <a class="contact__phone button" href="tel:88005558628">
             8 800 555-86-28
           </a>
         </li>
         <li class="contact__item">
-          <a class="contact__mail link" href="mailto:mail@htmlacademy.ru">
+          <a class="contact__mail button" href="mailto:mail@htmlacademy.ru">
             mail@htmlacademy.ru
           </a>
         </li>
       </ul>
-      <ul class="social social__list">
+      <ul class="menu-content__social social">
         <li class="social__item">
           <a
-            class="social__fb link"
+            class="social__fb button button--social"
             href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook.</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__vk link" href="https://vk.com/htmlacademy">
+          <a
+            class="social__vk button button--social"
+            href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте.</span>
           </a>
         </li>
         <li class="social__item">
           <a
-            class="social__in link"
+            class="social__in button button--social"
             href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Instagram.</span>
           </a>
@@ -137,19 +144,19 @@
     <div class="wrapper">
       <h2 class="visually-hidden">Порядок действий</h2>
       <ol class="promo__list">
-        <li class="promo__item promo--destination">
+        <li class="promo__item promo__item--destination">
           Выберите <br>
           направление
         </li>
-        <li class="promo__item promo--idea">
+        <li class="promo__item promo__item--idea">
           Изучите идеи <br>
           путешественников
         </li>
-        <li class="promo__item promo--traveller">
+        <li class="promo__item promo__item--traveller">
           Находите тех, <br>
           кто похож на вас
         </li>
-        <li class="promo__item promo--trip">
+        <li class="promo__item promo__item--trip">
           Путешествуйте <br>
           вместе!
         </li>
@@ -183,7 +190,7 @@
       </p>
       <ul class="destination__list">
         <li class="destination__item">
-          <a class="link country" href="#">
+          <a class="button country" href="#">
             <img
               class="country__image"
               src="img/countries/thailand-mobile.png"
@@ -234,7 +241,9 @@
           </a>
         </li>
       </ul>
-      <a class="destination__button button-details button" href="#">
+      <a
+        class="destination__button button button--size-l button--icon-right"
+        href="#">
         Показать все
       </a>
 
@@ -253,7 +262,7 @@
       </p>
       <ul class="traveller__list">
         <li class="traveller__item">
-          <a class="traveller-card link" href="#">
+          <a class="traveller-card button" href="#">
             <img
               class="traveller-card__image"
               src="img/people/firsova.png"
@@ -263,20 +272,20 @@
               <span class="traveller-level__number">99</span>
               <span class="traveller-level__text">level</span>
             </p>
-            <ul class="traveller-card__flag-list flag-list">
-              <li class="flag-list__item">
+            <ul class="traveller-card__flags flags">
+              <li class="flags__item">
                 <img
                   src="img/flags/Sri-Lanka.png"
                   width="35" height="25"
                   alt="Флаг Шри-Ланки.">
               </li>
-              <li class="flag-list__item">
+              <li class="flags__item">
                 <img
                   src="img/flags/Thailand.png"
                   width="35" height="25"
                   alt="Флаг Таиланда.">
               </li>
-              <li class="flag-list__item">
+              <li class="flags__item">
                 <img
                   src="img/flags/Seychelles.png"
                   width="35" height="25"
@@ -284,7 +293,7 @@
               </li>
             </ul>
             <p class="traveller-card__name">Таня Фирсова</p>
-            <ul class="traveller-card__tags tags__list">
+            <ul class="traveller-card__tags tags">
               <li class="tags__item">#ЗОЖ</li>
               <li class="tags__item">#ПП</li>
               <li class="tags__item">#Фитнес</li>
@@ -292,7 +301,7 @@
               <li class="tags__item">#авокадо</li>
               <li class="tags__item">#смузи</li>
             </ul>
-            <ul class="traveller-card__transport transport__list">
+            <ul class="traveller-card__transport transport">
               <li class="transport__item transport__aircraft transport__item--preferable">
                 <span class="visually-hidden">Самолет.</span>
               </li>
@@ -309,7 +318,7 @@
           </a>
         </li>
         <li class="traveller__item">
-          <a class="traveller-card link" href="#">
+          <a class="traveller-card button" href="#">
             <img
               class="traveller-card__image"
               src="img/people/demin.png"
@@ -319,14 +328,14 @@
               <span class="traveller-level__number">80</span>
               <span class="traveller-level__text">level</span>
             </p>
-            <ul class="traveller-card__flag-list flag-list">
-              <li class="flag-list__item">
+            <ul class="traveller-card__flags flags">
+              <li class="flags__item">
                 <img
                   src="img/flags/Belgium.png"
                   width="35" height="24"
                   alt="Флаг Бельгии.">
               </li>
-              <li class="flag-list__item">
+              <li class="flags__item">
                 <img
                   src="img/flags/Czech.png"
                   width="35" height="24"
@@ -334,14 +343,14 @@
               </li>
             </ul>
             <p class="traveller-card__name">Петя Демин</p>
-            <ul class="traveller-card__tags tags__list">
+            <ul class="traveller-card__tags tags">
               <li class="tags__item">#бургер</li>
               <li class="tags__item">#бар</li>
               <li class="tags__item">#футбол</li>
               <li class="tags__item">#концерт</li>
               <li class="tags__item">#крафт</li>
             </ul>
-            <ul class="traveller-card__transport transport__list">
+            <ul class="traveller-card__transport transport">
               <li class="transport__item transport__aircraft transport__item--preferable">
                 <span class="visually-hidden">Самолет.</span>
               </li>
@@ -358,8 +367,10 @@
           </a>
         </li>
       </ul>
-      <a class="traveller__button button-details button" href="#">
-        Показать все
+      <a
+        class="traveller__button button button--size-l button--icon-right"
+        href="#">
+        Показать всех
       </a>
     </div>
   </section>
@@ -368,7 +379,7 @@
       <h2 class="services__title title">
         Добавьте свой профиль
       </h2>
-      <p class="user-currency">
+      <p class="services__user-currency">
         <img
           src="img/icons/rates.svg"
           width="100"
@@ -389,36 +400,38 @@
           <p class="services-card__price">59 руб./мес</p>
         </li>
       </ol>
-      <button class="services__show-tariffs button" type="button">
-      <span class="description description--selected">
-        Показать тарифы для бизнеса
-      </span>
+      <button
+        class="services__show-rates button button--rates"
+        type="button">
+        <span class="description description--selected">
+          Показать тарифы для бизнеса
+        </span>
       </button>
     </div>
-    <div class="business-tariffs modal hidden">
+    <div class="business-rates modal hidden">
       <div class="wrapper">
         <h3 class="services__title title">
           Бизнес-тарифы
         </h3>
-        <ul class="business-tariffs__list">
-          <li class="business-tariffs__item">
-            <p class="business-tariffs__title">Реклама у блоггера</p>
-            <p class="business-tariffs__price">300 000 руб./пост</p>
+        <ul class="business-rates__list">
+          <li class="business-rates__item">
+            <p class="business-rates__title">Реклама у блоггера</p>
+            <p class="business-rates__price">300 000 руб./пост</p>
           </li>
-          <li class="business-tariffs__item">
-            <p class="business-tariffs__title">Накрутка подписчиков</p>
-            <p class="business-tariffs__price">от 1 руб./шт.</p>
+          <li class="business-rates__item">
+            <p class="business-rates__title">Накрутка подписчиков</p>
+            <p class="business-rates__price">от 1 руб./шт.</p>
           </li>
-          <li class="business-tariffs__item">
-            <p class="business-tariffs__title">Лайки от ботов</p>
-            <p class="business-tariffs__price">от 20 коп./лайк</p>
+          <li class="business-rates__item">
+            <p class="business-rates__title">Лайки от ботов</p>
+            <p class="business-rates__price">от 20 коп./лайк</p>
           </li>
-          <li class="business-tariffs__item">
-            <p class="business-tariffs__title">Ваш продакт-плейсмент</p>
-            <p class="business-tariffs__price">Индивидуально</p>
+          <li class="business-rates__item">
+            <p class="business-rates__title">Ваш продакт-плейсмент</p>
+            <p class="business-rates__price">Индивидуально</p>
           </li>
         </ul>
-        <button class="business-tariffs__close button button-ghost">
+        <button class="business-rates__close button">
           Закрыть окно
         </button>
       </div>
@@ -449,7 +462,9 @@
           name="email"
           placeholder="E-mail"
           required>
-        <button class="sign-in__button button-details button" type="submit">
+        <button
+          class="sign-in__button button button--size-l button--icon-right"
+          type="submit">
           <span class="visually-hidden">Зарегистрироваться.</span>
         </button>
         <p class="sign-in__slogan description">
@@ -457,28 +472,31 @@
           <span>Мы с радостью на них ответим!</span>
         </p>
       </form>
-      <ul class="contact contact__list">
+      <ul class="contacts__contact contact">
         <li class="contact__item">
-          <a class="contact__tel link" href="tel:88005558628">
+          <a class="contact__phone button" href="tel:88005558628">
             8 800 555-86-28
           </a>
         </li>
         <li class="contact__item">
-          <a class="contact__mail link" href="mailto:mail@htmlacademy.ru">
+          <a class="contact__mail button" href="mailto:mail@htmlacademy.ru">
             mail@htmlacademy.ru
           </a>
         </li>
       </ul>
     </div>
-    <address class="contacts__address address`">
+    <address class="contacts__address address">
       <div class="wrapper">
         <p class="address__text">ул. Большая
           Конюшенная, 19/8</p>
-        <button class="address__button button button-stroke">
+        <button
+          class="address__button button button--size-l button--icon-right button--stroke"
+          type="button">
           Проложить маршрут
         </button>
       </div>
       <img
+        class="address__map"
         src="img/backgrounds/background_map.png"
         width="320"
         height="424"
@@ -489,7 +507,7 @@
 </main>
 <footer class="page-footer">
   <div class="wrapper">
-    <a href="#" class="logo link">
+    <a class="page-footer__logo logo button" href="#">
       <svg
         width="96"
         height="15"
@@ -526,32 +544,32 @@
           fill="white"/>
       </svg>
     </a>
-    <ul class="social social__list">
+    <ul class="page-footer__social social">
       <li class="social__item">
         <a
-          class="social__fb link"
+          class="social__fb button"
           href="https://www.facebook.com/htmlacademy">
           <span class="visually-hidden">Facebook.</span>
         </a>
       </li>
       <li class="social__item">
         <a
-          class="social__vk link"
+          class="social__vk button"
           href="https://vk.com/htmlacademy">
           <span class="visually-hidden">ВКонтакте.</span>
         </a>
       </li>
       <li class="social__item">
         <a
-          class="social__in link"
+          class="social__in button"
           href="https://www.instagram.com/htmlacademy">
           <span class="visually-hidden">Instagram.</span>
         </a>
       </li>
     </ul>
-    <p class="footer__developer">
+    <p class="page-footer__developer">
       Разработано
-      <a class="developer-logo link" href="https://htmlacademy.ru/">
+      <a class="developer-logo button" href="https://htmlacademy.ru/">
         <img
           class="developer-logo__image"
           src="img/htmlacademy-big.svg"
