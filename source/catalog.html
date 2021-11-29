@@ -441,14 +441,16 @@
           <span class="visually-hidden">Свернуть.</span>
         </button>
         <ul class="filter-form-group__list filter-form-transport">
-          <li class="filter-form-transport__item transport-control">
+          <li class="filter-form-transport__item transport-control transport">
             <label class="transport-control__control control">
               <input
                 class="visually-hidden control-input"
                 type="checkbox"
                 name="aircraft"
                 checked>
-              <span class="control-mark"></span>
+              <span
+                class="transport__item transport__item--bg-filter-form transport__aircraft">
+              </span>
               <span class="visually-hidden">Самолет.</span>
             </label>
           </li>
@@ -459,7 +461,7 @@
                 type="checkbox"
                 name="car"
                 checked>
-              <span class="control-mark"></span>
+              <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
               <span class="visually-hidden">Автомобиль.</span>
             </label>
           </li>
@@ -469,7 +471,7 @@
                 class="visually-hidden control-input"
                 type="checkbox"
                 name="bicycle">
-              <span class="control-mark"></span>
+              <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
               <span class="visually-hidden">Велосипед.</span>
             </label>
           </li>
@@ -480,7 +482,7 @@
                 type="checkbox"
                 name="walk"
                 checked>
-              <span class="control-mark"></span>
+              <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
               <span class="visually-hidden">Пешком.</span>
             </label>
           </li>
@@ -533,6 +535,392 @@
         показать
       </button>
     </form>
+  </section>
+  <section class="traveller-details">
+    <ul class="traveller-details__list">
+      <li class="traveller-details__item traveller-details-card">
+        <a
+          class="traveller-details-card__title button"
+          href="/people/firsova.html">
+          Таня Фирсова
+        </a>
+        <p class="traveller-details-card__status">
+          <span class="visually-hidden">Не в сети.</span>
+        </p>
+        <a
+          class="traveller-details-card__image button"
+          href="/people/firsova.html">
+          <img
+            src="img/people/firsova.png"
+            width="270" height="270"
+            alt="Таня Фирсова.">
+        </a>
+        <p
+          class="traveller-details-card__favorite traveller-details-card__favorite--selected">
+        </p>
+        <p class="traveller-details-card__subscribers">1,5 М</p>
+        <ul class="traveller-details-card__tags tags">
+          <li class="tags__item">#ЗОЖ</li>
+          <li class="tags__item">#ПП</li>
+          <li class="tags__item">#Фитнес</li>
+          <li class="tags__item">#пляж</li>
+          <li class="tags__item">#авокадо</li>
+          <li class="tags__item">#смузи</li>
+        </ul>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            хочет посетить:
+          </p>
+          <ul class="traveller-details-card__country country-with-flag">
+            <li class="country-with-flag__item">
+              <img
+                class="country-with-flag__flag"
+                src="img/flags/Sri-Lanka.png"
+                width="26" height="18"
+                alt="Флаг Шри-Ланки.">
+              <p class="country-with-flag__name">шри-ланка</p>
+            </li>
+            <li class="country-with-flag__item">
+              <img
+                class="country-with-flag__flag"
+                src="img/flags/Thailand.png"
+                width="26" height="18"
+                alt="Флаг Таиланда.">
+              <p class="country-with-flag__name">Таиланд</p>
+            </li>
+            <li class="country-with-flag__item">
+              <img
+                class="country-with-flag__flag"
+                src="img/flags/Seychelles.png"
+                width="26" height="18"
+                alt="Флаг Сейшельских островов.">
+              <p class="country-with-flag__name">сейшелы</p>
+            </li>
+          </ul>
+        </div>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            транспорт:
+          </p>
+          <ul class="traveller-details-card__transport transport">
+            <li
+              class="transport__item transport__item--bg-traveller-details-card transport__aircraft transport__item--preferable">
+              <span class="visually-hidden">Самолет.</span>
+            </li>
+            <li class="transport__item transport__item--bg-traveller-details-card transport__car">
+              <span class="visually-hidden">Автомобиль.</span>
+            </li>
+            <li class="transport__item transport__item--bg-traveller-details-card transport__bicycle">
+              <span class="visually-hidden">Велосипед.</span>
+            </li>
+            <li class="transport__item transport__item--bg-traveller-details-card transport__walk">
+              <span class="visually-hidden">Пешком.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            левел:
+          </p>
+          <p class="traveller-details-card__level traveller-level">
+              <span
+                class="traveller-level__number traveller-level__number--single">
+                99
+              </span>
+          </p>
+        </div>
+        <a
+          class="traveller-details-card__button button button--form-oval button--primary"
+          href="#">
+          Позвать!
+        </a>
+      </li>
+      <li class="traveller-details__item traveller-details-card">
+        <a
+          class="traveller-details-card__title button"
+          href="/people/demin.html">
+          Петя Демин
+        </a>
+        <p class="traveller-details-card__status">
+          <span class="visually-hidden">Не в сети.</span>
+        </p>
+        <a
+          class="traveller-details-card__image button"
+          href="/people/demin.html">
+          <img
+            src="img/people/demin.png"
+            width="270" height="270"
+            alt="Петя Демин.">
+        </a>
+        <p class="traveller-details-card__favorite">
+        </p>
+        <p class="traveller-details-card__subscribers">1500</p>
+        <ul class="traveller-details-card__tags tags">
+          <li class="tags__item">#бургер</li>
+          <li class="tags__item">#бар</li>
+          <li class="tags__item">#футбол</li>
+          <li class="tags__item">#концерт</li>
+          <li class="tags__item">#крафт</li>
+        </ul>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            хочет посетить:
+          </p>
+          <ul class="traveller-details-card__country country-with-flag">
+            <li class="country-with-flag__item">
+              <img
+                class="country-with-flag__flag"
+                src="img/flags/Belgium.png"
+                width="26" height="18"
+                alt="Флаг Бельгии.">
+              <p class="country-with-flag__name">бельгия</p>
+            </li>
+            <li class="country-with-flag__item">
+              <img
+                class="country-with-flag__flag"
+                src="img/flags/Czech.png"
+                width="26" height="18"
+                alt="Флаг Чехии.">
+              <p class="country-with-flag__name">чехия</p>
+            </li>
+          </ul>
+        </div>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            транспорт:
+          </p>
+          <ul class="traveller-details-card__transport transport">
+            <li
+              class="transport__item transport__item--bg-traveller-details-card transport__aircraft transport__item--preferable">
+              <span class="visually-hidden">Самолет.</span>
+            </li>
+            <li class="transport__item transport__item--bg-traveller-details-card transport__car transport__item--preferable">
+              <span class="visually-hidden">Автомобиль.</span>
+            </li>
+            <li class="transport__item transport__item--bg-traveller-details-card transport__bicycle">
+              <span class="visually-hidden">Велосипед.</span>
+            </li>
+            <li class="transport__item transport__item--bg-traveller-details-card transport__walk transport__item--preferable">
+              <span class="visually-hidden">Пешком.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            левел:
+          </p>
+          <p class="traveller-details-card__level traveller-level">
+              <span
+                class="traveller-level__number traveller-level__number--single">
+                80
+              </span>
+          </p>
+        </div>
+        <a
+          class="traveller-details-card__button button button--form-oval button--primary"
+          href="#">
+          Позвать!
+        </a>
+      </li>
+      <li class="traveller-details__item traveller-details-card">
+        <a
+          class="traveller-details-card__title button"
+          href="/people/smolov.html">
+          Марк Смолов
+        </a>
+        <p class="traveller-details-card__status">
+          <span class="visually-hidden">Не в сети.</span>
+        </p>
+        <a
+          class="traveller-details-card__image button"
+          href="/people/smolov.html">
+          <img
+            src="img/people/smolov.png"
+            width="270" height="270"
+            alt="Марк Смолов.">
+        </a>
+        <p class="traveller-details-card__favorite">
+        </p>
+        <p class="traveller-details-card__subscribers">170</p>
+        <ul class="traveller-details-card__tags tags">
+          <li class="tags__item">#рэп</li>
+          <li class="tags__item">#тату</li>
+          <li class="tags__item">#хайпбист</li>
+          <li class="tags__item">#кроссовки</li>
+          <li class="tags__item">#суприм</li>
+        </ul>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            хочет посетить:
+          </p>
+          <ul class="traveller-details-card__country country-with-flag">
+            <li class="country-with-flag__item">
+              <img
+                class="country-with-flag__flag"
+                src="img/flags/USA.png"
+                width="26" height="18"
+                alt="Флаг США.">
+              <p class="country-with-flag__name">сша</p>
+            </li>
+            <li class="country-with-flag__item">
+              <img
+                class="country-with-flag__flag"
+                src="img/flags/Australia.png"
+                width="26" height="18"
+                alt="Флаг Австралии.">
+              <p class="country-with-flag__name">австралия</p>
+            </li>
+            <li class="country-with-flag__item">
+              <img
+                class="country-with-flag__flag"
+                src="img/flags/Dominica.png"
+                width="26" height="18"
+                alt="Флаг Доминики.">
+              <p class="country-with-flag__name">Доминика</p>
+            </li>
+          </ul>
+        </div>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            транспорт:
+          </p>
+          <ul class="traveller-details-card__transport transport">
+            <li
+              class="transport__item transport__item--bg-traveller-details-card transport__aircraft transport__item--preferable">
+              <span class="visually-hidden">Самолет.</span>
+            </li>
+            <li class="transport__item transport__item--bg-traveller-details-card transport__car">
+              <span class="visually-hidden">Автомобиль.</span>
+            </li>
+            <li
+              class="transport__item transport__item--bg-traveller-details-card transport__bicycle transport__item--preferable">
+              <span class="visually-hidden">Велосипед.</span>
+            </li>
+            <li class="transport__item transport__item--bg-traveller-details-card transport__walk">
+              <span class="visually-hidden">Пешком.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            левел:
+          </p>
+          <p class="traveller-details-card__level traveller-level">
+              <span
+                class="traveller-level__number traveller-level__number--single">
+                25
+              </span>
+          </p>
+        </div>
+        <a
+          class="traveller-details-card__button button button--form-oval button--primary"
+          href="#">
+          Позвать!
+        </a>
+      </li>
+      <li class="traveller-details__item traveller-details-card">
+        <a
+          class="traveller-details-card__title button"
+          href="/people/rogovaya.html">
+          Лариса Роговая
+        </a>
+        <p class="traveller-details-card__status">
+          <span class="visually-hidden">В сети.</span>
+        </p>
+        <a
+          class="traveller-details-card__image button"
+          href="/people/rogovaya.html">
+          <img
+            src="img/people/rogovaya.png"
+            width="270" height="270"
+            alt="Лариса Роговая.">
+        </a>
+        <p class="traveller-details-card__favorite">
+        </p>
+        <p class="traveller-details-card__subscribers">23</p>
+        <ul class="traveller-details-card__tags tags">
+          <li class="tags__item">#образование</li>
+          <li class="tags__item">#карьера</li>
+          <li class="tags__item">#учеба</li>
+          <li class="tags__item">#линкедин</li>
+        </ul>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            хочет посетить:
+          </p>
+          <ul class="traveller-details-card__country country-with-flag">
+            <li class="country-with-flag__item">
+              <img
+                class="country-with-flag__flag"
+                src="img/flags/UK.png"
+                width="26" height="18"
+                alt="Флаг Великобритании.">
+              <p class="country-with-flag__name">Великобритания</p>
+            </li>
+            <li class="country-with-flag__item">
+              <img
+                class="country-with-flag__flag"
+                src="img/flags/Germany.png"
+                width="26" height="18"
+                alt="Флаг Германии.">
+              <p class="country-with-flag__name">Германия</p>
+            </li>
+          </ul>
+        </div>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            транспорт:
+          </p>
+          <ul class="traveller-details-card__transport transport">
+            <li
+              class="transport__item transport__item--bg-traveller-details-card transport__aircraft transport__item--preferable">
+              <span class="visually-hidden">Самолет.</span>
+            </li>
+            <li class="transport__item transport__item--bg-traveller-details-card transport__car transport__item--preferable">
+              <span class="visually-hidden">Автомобиль.</span>
+            </li>
+            <li
+              class="transport__item transport__item--bg-traveller-details-card transport__bicycle">
+              <span class="visually-hidden">Велосипед.</span>
+            </li>
+            <li class="transport__item transport__item--bg-traveller-details-card transport__walk">
+              <span class="visually-hidden">Пешком.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="traveller-details-card__group">
+          <p class="traveller-details-card__subtitle">
+            левел:
+          </p>
+          <p class="traveller-details-card__level traveller-level">
+              <span
+                class="traveller-level__number traveller-level__number--single">
+                50
+              </span>
+          </p>
+        </div>
+        <a
+          class="traveller-details-card__button button button--form-oval button--primary"
+          href="#">
+          Позвать!
+        </a>
+      </li>
+    </ul>
+    <a class="traveller-details__show-more button" href="#">
+      показать еще
+    </a>
+    <div class="traveller-details__pagination pagination">
+      <a
+        class="pagination__button button pagination__button--back"
+        href="#">
+        <span class="visually-hidden">Предыдущая страница.</span>
+      </a>
+      <a
+        class="pagination__button button pagination__button--forward"
+        href="#">
+        <span class="visually-hidden">Следующая страница.</span>
+      </a>
+    </div>
   </section>
 </main>
 </body>
