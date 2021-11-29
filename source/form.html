@@ -113,6 +113,110 @@
     </nav>
   </div>
 </header>
+<main>
+  <h1 class="visually-hidden">Персональные данные и планы.</h1>
+  <section class="personal">
+    <div class="wrapper">
+      <h2 class="visually-hidden">Персональные данные.</h2>
+      <form
+        class="personal__form personal-form"
+        action="https://echo.htmlacademy.ru/"
+        method="post">
+        <p class="personal-form__level traveller-level">
+          <span
+            class="traveller-level__number traveller-level__number--personal-form">
+            99
+          </span>
+          <span
+            class="traveller-level__text traveller-level__text--personal-form">
+            level
+          </span>
+        </p>
+        <img
+          class="personal-form__photo"
+          src="img/people/demin.png"
+          width="270" height="270"
+          alt="Петя Демин.">
+        <button
+          class="personal-form__button button button--form-oval"
+          type="button">
+          сменить фото
+        </button>
+        <fieldset
+          class="personal-form__transport filter-form-group filter-form-group--personal-form">
+          <legend
+            class="filter-form-group__title filter-form-group__title--personal-form">
+            ТЭГИ
+          </legend>
+          <label>
+            <textarea
+              class="personal-form__tags"
+              name="tags"
+            >#бургер #бар #футбол #концерт
+              #крафт
+            </textarea>
+          </label>
+        </fieldset>
+        <fieldset class="personal-form__transport filter-form-group filter-form-group--personal-form">
+          <legend
+            class="filter-form-group__title filter-form-group__title--personal-form">
+            транспорт
+          </legend>
+          <ul class="filter-form-group__list filter-form-transport">
+            <li class="filter-form-transport__item transport-control transport">
+              <label class="transport-control__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="aircraft"
+                  checked>
+                <span
+                  class="transport__item transport__item--bg-filter-form transport__aircraft">
+              </span>
+                <span class="visually-hidden">Самолет.</span>
+              </label>
+            </li>
+            <li class="filter-form-transport__item transport-control transport">
+              <label class="transport-control__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="car"
+                  checked>
+                <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
+                <span class="visually-hidden">Автомобиль.</span>
+              </label>
+            </li>
+            <li class="filter-form-transport__item transport-control transport">
+              <label class="transport-control__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="bicycle">
+                <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
+                <span class="visually-hidden">Велосипед.</span>
+              </label>
+            </li>
+            <li class="filter-form-transport__item transport-control transport">
+              <label class="transport-control__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="walk"
+                  checked>
+                <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
+                <span class="visually-hidden">Пешком.</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="visually-hidden" type="submit">
+          Сохранить изменения.
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
 <footer class="page-footer">
   <div class="wrapper">
     <a class="page-footer__logo logo button" href="#">
