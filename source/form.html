@@ -280,10 +280,13 @@
               Укажите предпочтительное количество попутчиков, которых
               вы хотели бы позвать в поездку, и ее предполагаемую длительность.
             </p>
-            <label
-              class="steps__range-control steps__range-control--travellers range-control">
-              <span class="range-control__title">ищу попутчиков:</span>
-              <span class="range-control__unit">чел.</span>
+            <div class="step1__item step1__item--travellers range-control">
+              <label
+                class="range-control__title range-control-title"
+                for="field-total-travellers">
+                <span class="range-control-title__name">ищу попутчиков:</span>
+                <span class="range-control-title__unit">чел.</span>
+              </label>
               <input
                 class="range-control__field"
                 type="number"
@@ -302,11 +305,14 @@
                 type="button">
                 <span class="visually-hidden">Увеличить на 1.</span>
               </button>
-            </label>
-            <label
-              class="steps__range-control steps__range-control--dates range-control">
-              <span class="range-control__title">длительность:</span>
-              <span class="range-control__unit">дн.</span>
+            </div>
+            <div class="step1__item step1__item--dates range-control">
+              <label
+                class="range-control__title range-control-title"
+                for="field-duration">
+                <span class="range-control__title">длительность:</span>
+                <span class="range-control__unit">дн.</span>
+              </label>
               <input
                 class="range-control__field"
                 type="number"
@@ -325,17 +331,22 @@
                 type="button">
                 <span class="visually-hidden">Увеличить на 1.</span>
               </button>
-            </label>
-            <label class="steps__with-children with-children">
-              <input
-                class="with-children__checkbox"
-                type="checkbox"
-                id="field-with-children"
-                name="field-with-children"
-                checked>
-              <span class="with-children__mark"></span>
-              <span class="with-children__label">Можно с детьми</span>
-            </label>
+            </div>
+            <div
+              class="step1__item step1__item--with-children with-children-control">
+              <label class="with-children-control__label">
+                <input
+                  class="with-children-control__checkbox"
+                  type="checkbox"
+                  id="field-with-children"
+                  name="field-with-children"
+                  checked>
+                <span class="with-children-control__mark"></span>
+                <span class="with-children-control__text">
+                    Можно с детьми
+                  </span>
+              </label>
+            </div>
             <div class="steps__calendar calendar">
               <div class="calendar__month calendar-month">
                 <button
@@ -429,13 +440,17 @@
             <p class="steps__description description">
               Укажите страны, которые вы хотели бы посетить.
               Это может быть одна или сразу несколько. </p>
-            <label class="steps__select steps-select">
-              <span class="visually-hidden">Выберите страну</span>
+            <div class="steps__select steps-select">
+              <label class="visually-hidden" for="country-chosen-country-1">
+                Выберите страну
+              </label>
               <span class="steps-select__chosen-country steps-chosen-country">
                 <select
                   class="steps-chosen-country__select"
+                  id="country-chosen-country-1"
                   name="country-chosen-country-1">
-                  <option value="popular">Босния и герцеговина</option>
+                  <option value="bosnia-and-herzegovina">Босния и
+                    герцеговина</option>
                 </select>
                 <span class="steps-chosen-country__flag">
                   <img
@@ -450,14 +465,17 @@
                   Убрать выбранную страну.
                 </button>
               </span>
-            </label>
-            <label class="steps__select steps-select">
-              <span class="visually-hidden">Выберите страну</span>
+            </div>
+            <div class="steps__select steps-select">
+              <label class="visually-hidden" for="country-chosen-country-2">
+                Выберите страну
+              </label>
               <span class="steps-select__chosen-country steps-chosen-country">
                 <select
                   class="steps-chosen-country__select"
+                  id="country-chosen-country-2"
                   name="country-chosen-country-2">
-                  <option value="popular">чехия</option>
+                  <option value="czech">чехия</option>
                 </select>
                 <span class="steps-chosen-country__flag">
                   <img
@@ -472,17 +490,17 @@
                   Убрать выбранную страну.
                 </button>
               </span>
-            </label>
-            <label class="steps__select steps-select">
+            </div>
+            <label class="steps__select steps-chooser">
               <span class="visually-hidden">Выберите страну</span>
               <select
                 class="steps-chooser__select hidden"
                 name="country-chooser-3">
-                <option value="popular">Выберите страну</option>
+                <option value="choose-country">Выберите страну</option>
               </select>
             </label>
-            <div class="steps-chooser__popup steps-chooser-popup popup">
-              <ul class="steps-chooser-popup__letters letters">
+            <div class="step2__popup step2-popup popup">
+              <ul class="step2-popup__letters letters">
                 <li class="letters__item letter">
                   <button
                     class="letter__name button letter__name--selected"
@@ -563,7 +581,7 @@
                   <button class="letter__name button" type="button">Я</button>
                 </li>
               </ul>
-              <ul class="steps-chooser-popup__countries-list countries-list">
+              <ul class="step2-popup__countries-list countries-list">
                 <li class="countries-list__item">
                   <button class="countries-list__button button" type="button">
                     Австралия
