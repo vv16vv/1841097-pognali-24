@@ -1,0 +1,70 @@
+.page-header {
+  background-image: url("../../img/backgrounds/traveller-illustration-mobile.svg"),
+    url("../../img/backgrounds/globe-back-mobile.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center bottom, center;
+  background-size: 192px 255px, cover;
+  background-color: @bg-main;
+  color: @fg-main;
+  padding-top: 19px;
+}
+
+.page-header__wrapper {
+  display: flex;
+  min-height: 458px;
+  flex-direction: column;
+}
+
+.page-header__title-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__slogan {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.page-header__img {
+  display: block;
+  margin-right: 24px;
+  margin-left: auto;
+}
+
+.page-header__authorize {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.page-header__contact-buttons {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: -20px;
+  justify-self: center;
+  align-items: center;
+}
+
+.page-header__contact-button {
+  width: 40px;
+  height: 40px;
+
+  &--phone {
+    background-color: @special-orange;
+    background-image: url("../../img/icons/phone-call.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--email {
+    background-color: @special-yellow-dark;
+    background-image: url("../../img/icons/email1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
