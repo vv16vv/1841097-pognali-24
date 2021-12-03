@@ -44,13 +44,20 @@
 
 .filter__button {
   width: 17px;
-  height: 3px;
+  height: 17px;
 
   margin: 0;
   padding: 0;
 
-  background-image: url("../../../img/icons/filter-expand.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
+}
+
+.filter__button--state-open {
+  background-image: url("../../../img/icons/filter-expand.svg");
+}
+
+.filter__button--state-close {
+  background-image: url("../../../img/icons/filter-close.svg");
 }
