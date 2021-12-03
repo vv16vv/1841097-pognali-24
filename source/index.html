@@ -457,53 +457,62 @@
       </div>
     </div>
   </section>
-  <section class="contacts">
-    <div class="contacts__common-part wrapper">
-      <h2 class="contacts__title title">
-        Заинтересовались?
-      </h2>
-      <p class="contacts__description description">
-        Зарегистрируйтесь,
-        это быстро и бесплатно!
-        Уже зарегистрированы? Тогда
-        скорее <a class="contacts__authorize" href="#">авторизуйтесь</a> .
-      </p>
-      <form
-        class="sign-in"
-        action="https://echo.htmlacademy.ru/"
-        method="post">
-        <label class="visually-hidden" for="sign-in__email">
-          Укажите свой e-mail
-        </label>
-        <input
-          class="sign-in__email"
-          type="email"
-          id="sign-in__email"
-          name="email"
-          placeholder="E-mail"
-          required>
-        <button
-          class="sign-in__button button button--form-rectangle button--icon-right"
-          type="submit">
-          <span class="visually-hidden">Зарегистрироваться.</span>
-        </button>
-        <p class="sign-in__slogan description">
+  <section>
+    <div class="contacts">
+      <div class="contacts__common-part wrapper">
+        <header class="contacts__header">
+          <h2 class="contacts__title title">
+            Заинтересовались?
+          </h2>
+          <p class="contacts__description description">
+            Зарегистрируйтесь,
+            это быстро и бесплатно!
+            Уже зарегистрированы? Тогда
+            скорее
+            <a class="contacts__authorize" href="#">авторизуйтесь</a>.
+          </p>
+        </header>
+        <form
+          class="contacts__sign-in sign-in"
+          action="https://echo.htmlacademy.ru/"
+          method="post">
+          <label class="visually-hidden" for="sign-in__email">
+            Укажите свой e-mail
+          </label>
+          <input
+            class="sign-in__email"
+            type="email"
+            id="sign-in__email"
+            name="email"
+            placeholder="E-mail"
+            required>
+          <button
+            class="sign-in__button button button--form-rectangle button--icon-right"
+            type="submit">
+            <span class="visually-hidden">Зарегистрироваться.</span>
+          </button>
+        </form>
+        <p class="contacts__slogan description">
           <span>Остались вопросы?</span>
           <span>Мы с радостью на них ответим!</span>
         </p>
-      </form>
-      <ul class="contacts__contact contact">
-        <li class="contact__item">
-          <a class="contact__phone button" href="tel:88005558628">
-            8 800 555-86-28
-          </a>
-        </li>
-        <li class="contact__item">
-          <a class="contact__mail button" href="mailto:mail@htmlacademy.ru">
-            mail@htmlacademy.ru
-          </a>
-        </li>
-      </ul>
+        <ul class="contacts__contact contact">
+          <li class="contact__item">
+            <a
+              class="contact__button contact__button--phone button"
+              href="tel:88005558628">
+              8 800 555-86-28
+            </a>
+          </li>
+          <li class="contact__item">
+            <a
+              class="contact__button contact__button--email button"
+              href="mailto:mail@htmlacademy.ru">
+              mail@htmlacademy.ru
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <address class="contacts__address address">
       <div class="wrapper">
