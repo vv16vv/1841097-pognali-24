@@ -19,4 +19,6 @@ function toggleFilter() {
   const filter = document
     .getElementsByClassName("filter")[0]
   filter.classList.toggle("filter--opened")
+  toggleHidden("filter__button--state-open")
+  toggleHidden("filter__button--state-close")
 }

@@ -140,10 +140,16 @@
         Фильтрация по странам:
       </h2>
       <button
-        class="filter__button button"
+        class="filter__button filter__button--state-open button"
         type="button"
         onclick="toggleFilter()">
         <span class="visually-hidden">Открыть фильтр.</span>
+      </button>
+      <button
+        class="filter__button filter__button--state-close button hidden"
+        type="button"
+        onclick="toggleFilter()">
+        <span class="visually-hidden">Закрыть фильтр.</span>
       </button>
     </div>
     <div class="filter__popup filter-popup popup hidden">
@@ -298,7 +304,8 @@
         </ul>
         <button
           class="filter-popup__button button button--form-oval"
-          type="button">
+          type="button"
+          onclick="toggleFilter()">
           Свернуть
         </button>
       </div>
