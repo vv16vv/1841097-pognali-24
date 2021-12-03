@@ -1,0 +1,37 @@
+.services {
+  background-color: @bg-light;
+  color: @fg-special-grey;
+
+  padding-top: 53px + @block-overlap;
+  padding-bottom: 38px;
+
+  margin-top: (@block-overlap * -1);
+
+  border-bottom-left-radius: @block-overlap;
+  border-bottom-right-radius: @block-overlap;
+
+  position: relative;
+  z-index: @z-index-services;
+}
+
+.services__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.services__title {
+  width: 107px;
+}
+
+.services__list {
+  margin: 0;
+  padding: 0 0 31px 25px;
+  list-style-type: none;
+}
+
+.services__show-rates {
+  background-color: transparent;
+  color: @fg-blue-darker;
+}
