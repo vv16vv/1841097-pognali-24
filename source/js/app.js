@@ -13,3 +13,10 @@ function toggleMenu() {
   pageHeader.classList.toggle("page-header--dark")
   pageHeader.classList.toggle("page-header--light")
 }
+
+function toggleFilter() {
+  toggleHidden("filter-popup")
+  const filter = document
+    .getElementsByClassName("filter")[0]
+  filter.classList.toggle("filter--opened")
+}
