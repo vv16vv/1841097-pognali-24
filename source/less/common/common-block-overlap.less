@@ -1,0 +1,15 @@
+.common-block-overlap__start() {
+  border-bottom-left-radius: @block-overlap;
+  border-bottom-right-radius: @block-overlap;
+}
+
+.common-block-overlap__end() {
+  margin-top: (@block-overlap * -1);
+}
+
+.common-block-overlap(@padding-top) {
+  padding-top: @padding-top + @block-overlap;
+  .common-block-overlap__start();
+  .common-block-overlap__end();
+}
+
