@@ -439,31 +439,34 @@
       </button>
     </div>
     <div class="business-rates modal hidden">
-      <div class="wrapper">
-        <h3 class="services__title title">
-          Бизнес-тарифы
-        </h3>
-        <ul class="business-rates__list">
-          <li class="business-rates__item">
-            <p class="business-rates__title">Реклама у блоггера</p>
-            <p class="business-rates__price">300 000 руб./пост</p>
-          </li>
-          <li class="business-rates__item">
-            <p class="business-rates__title">Накрутка подписчиков</p>
-            <p class="business-rates__price">от 1 руб./шт.</p>
-          </li>
-          <li class="business-rates__item">
-            <p class="business-rates__title">Лайки от ботов</p>
-            <p class="business-rates__price">от 20 коп./лайк</p>
-          </li>
-          <li class="business-rates__item">
-            <p class="business-rates__title">Ваш продакт-плейсмент</p>
-            <p class="business-rates__price">Индивидуально</p>
-          </li>
-        </ul>
+      <div class="modal__container business-rates__modal-container">
+        <div class="wrapper business-rates__wrapper">
+          <h3 class="business-rates__title title">
+            Бизнес-тарифы
+          </h3>
+          <ul class="business-rates__list">
+            <li class="business-rates__item">
+              <p class="business-rates__text">Реклама у блоггера</p>
+              <p class="business-rates__text">300 000 руб./пост</p>
+            </li>
+            <li class="business-rates__item">
+              <p class="business-rates__text">Накрутка подписчиков</p>
+              <p class="business-rates__text">от 1 руб./шт.</p>
+            </li>
+            <li class="business-rates__item">
+              <p class="business-rates__text">Лайки от ботов</p>
+              <p class="business-rates__text">от 20 коп./лайк</p>
+            </li>
+            <li class="business-rates__item">
+              <p class="business-rates__text">Ваш продакт-плейсмент</p>
+              <p class="business-rates__text">Индивидуально</p>
+            </li>
+          </ul>
+        </div>
         <button
           class="business-rates__close button"
-          type="button">
+          type="button"
+          onclick="toggleHidden('business-rates')">
           Закрыть окно
         </button>
       </div>
