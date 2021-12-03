@@ -1,19 +1,25 @@
 .page-header {
-  background-image: url("../../img/backgrounds/traveller-illustration-mobile.svg"),
-    url("../../img/backgrounds/globe-back-mobile.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center bottom, center;
-  background-size: 192px 255px, cover;
-  background-color: @bg-main;
-  color: @fg-main;
-  padding-top: 19px;
-  z-index: 2;
-}
-
-.page-header__wrapper {
+  height: @menu-content-popup__top;
   display: flex;
-  min-height: 458px;
-  flex-direction: column;
+  align-items: center;
+
+  &--dark {
+    background-color: @bg-main;
+    color: @fg-main;
+  }
+
+  &--dark path {
+    fill: @fg-main;
+  }
+
+  &--light {
+    background-color: @fg-main;
+    color: @bg-secondary;
+  }
+
+  &--light path {
+    fill: @bg-secondary;
+  }
 }
 
 .page-header__title-bar {
@@ -21,51 +27,20 @@
   justify-content: space-between;
 }
 
-.page-header__slogan {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 40px;
-  text-align: center;
-  position: relative;
-}
+.page-header__menu-button {
+  width: 25px;
+  height: 25px;
 
-.page-header__img {
-  display: block;
-  margin-right: 24px;
-  margin-left: auto;
-}
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
 
-.page-header__authorize {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.page-header__contact-buttons {
-  display: flex;
-  margin-top: auto;
-  margin-bottom: -20px;
-  justify-self: center;
-  align-items: center;
-}
-
-.page-header__contact-button {
-  width: 40px;
-  height: 40px;
-
-  &--phone {
-    background-color: @special-orange;
-    background-image: url("../../img/icons/phone-call.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &--open {
+    background-image: url("../../img/icons/menu.svg");
   }
 
-  &--email {
-    background-color: @special-yellow-dark;
-    background-image: url("../../img/icons/email1.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &--close {
+    background-image: url("../../img/icons/close.svg");
   }
 }
+
