@@ -1,13 +1,8 @@
 .destination {
-  padding-top: 101px + @block-overlap;
+  .common-block-overlap(101px);
   padding-bottom: 34px;
 
-  margin-top: (@block-overlap * -1);
-
   background-color: @bg-lighter;
-
-  border-bottom-left-radius: @block-overlap;
-  border-bottom-right-radius: @block-overlap;
 
   position: relative;
   z-index: @z-index-destinations;
