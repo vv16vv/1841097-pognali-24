@@ -1,0 +1,35 @@
+.contact-buttons {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+@contact-buttons__height: 40px;
+
+.contact-buttons__button {
+  width: @contact-buttons__height;
+  height: @contact-buttons__height;
+
+  &--phone {
+    background-color: @special-orange;
+    background-image: url("../../img/icons/phone-call.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--email {
+    background-color: @special-yellow-dark;
+    background-image: url("../../img/icons/email1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.contact-buttons__authorize {
+  flex-grow: 1;
+  height: @contact-buttons__height;
+
+  .common-font(17px, 20px, 700);
+  color: @fg-blue-light;
+  text-transform: uppercase;
+}
