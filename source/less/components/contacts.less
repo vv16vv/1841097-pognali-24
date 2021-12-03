@@ -1,0 +1,40 @@
+.contacts {
+  background-color: @bg-secondary;
+  color: @fg-main;
+
+  padding-top: 72px + @block-overlap;
+  padding-bottom: 44px;
+
+  margin-top: (@block-overlap * -1);
+
+  border-bottom-left-radius: @block-overlap;
+  border-bottom-right-radius: @block-overlap;
+
+  position: relative;
+  z-index: @z-index-contacts;
+}
+
+.contacts__additional-padding() {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.contacts__header {
+  .contacts__additional-padding();
+}
+
+.contacts__contact {
+  padding: 0;
+  .contacts__additional-padding();
+  margin: 0;
+  list-style-type: none;
+}
+
+.contacts__slogan {
+  .contacts__additional-padding();
+}
+
+.contacts__authorize {
+  display: inline;
+  color: @basic-yellow;
+}
