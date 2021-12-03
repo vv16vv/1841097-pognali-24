@@ -8,8 +8,8 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
-<header class="page-header">
-  <div class="wrapper">
+<header class="page-header page-header--dark">
+  <div class="wrapper page-header__title-bar">
     <a href="#" class="page-header__logo logo button">
       <svg
         width="96"
@@ -51,12 +51,13 @@
     <button
       class="page-header__menu-button page-header__menu-button--open button"
       type="button"
-      onclick="toggleHidden('menu-content-popup')">
+      onclick="toggleMenu()">
       <span class="visually-hidden">Открыть меню.</span>
     </button>
     <button
       class="page-header__menu-button page-header__menu-button--close button hidden"
-      type="button">
+      type="button"
+      onclick="toggleMenu()">
       <span class="visually-hidden">Закрыть меню.</span>
     </button>
     <p class="page-header__inner-title">Попутчики</p>
