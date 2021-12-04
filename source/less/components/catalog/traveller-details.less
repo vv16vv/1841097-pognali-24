@@ -1,7 +1,7 @@
 .traveller-details {
   background-color: @bg-lighter;
 
-  padding-bottom: 28px;
+  padding-bottom: 28px + @block-overlap;
 }
 
 .traveller-details__list {
@@ -11,4 +11,58 @@
 
 .traveller-details__item + .traveller-details__item {
   margin-top: 10px;
+}
+
+.traveller-details__show-more {
+  color: @fg-blue-light;
+  .common-font(17px, 30px, 700);
+  text-transform: uppercase;
+
+  display: flex;
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    margin-right: 15px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../../img/icons/plus-more.svg");
+  }
+}
+
+.traveller-details__pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.traveller-details__buttons {
+  width: 100%;
+  display: flex;
+}
+
+.pagination__button {
+  width: 50%;
+  height: 51px;
+  padding: 0;
+  background-color: @fg-main;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--back {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background-image: url("../../../img/icons/arrow-back.svg");
+  }
+
+  &--forward {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: url("../../../img/icons/arrow-next.svg");
+  }
 }
