@@ -1,0 +1,46 @@
+.filter-form-group {
+  border-top: 1px solid @yellow-dark;
+  padding-top: 12px;
+  padding-bottom: 21px;
+  position: relative;
+}
+
+.filter-form-group__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-form-group__title {
+  .common-font(16px, 18px, 700);
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+
+.filter-form-group__button {
+  position: absolute;
+  width: 10px;
+  height: 6px;
+
+  border: none;
+  right: 0;
+  top: 17px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+.filter-form-group__button--closed {
+  background-image: url("../../../img/icons/group-close.svg");
+}
+
+.filter-form-group__button--opened {
+  background-image: url("../../../img/icons/group-open.svg");
+}
+
+.filter-form-group__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
