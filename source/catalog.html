@@ -321,248 +321,279 @@
         идеального
         попутчика
       </h2>
-      <fieldset class="filter-form__hobby filter-form-group">
-        <legend class="filter-form-group__title">хобби</legend>
-        <button
-          class="filter-form-group__button filter-form-group__button--closed"
-          type="button">
-          <span class="visually-hidden">Развернуть.</span>
-        </button>
-        <button
-          class="filter-form-group__button filter-form-group__button--opened hidden"
-          type="button">
-          <span class="visually-hidden">Свернуть.</span>
-        </button>
-        <ul class="filter-form-group__list">
-          <li class="filter-form-group__item checkbox-set">
-            <label class="checkbox-set__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="gym"
-                checked>
-              <span class="control-mark"></span>
-              <span class="control-label">Спортзал</span>
-            </label>
-          </li>
-          <li class="filter-form-group__item checkbox-set">
-            <label class="checkbox-set__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="hookah">
-              <span class="control-mark"></span>
-              <span class="control-label">Кальян</span>
-            </label>
-          </li>
-          <li class="filter-form-group__item checkbox-set">
-            <label class="checkbox-set__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="sofa">
-              <span class="control-mark"></span>
-              <span class="control-label">Диван</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="filter-form__music filter-form-group">
-        <legend class="filter-form-group__title">музыка</legend>
-        <button
-          class="filter-form-group__button filter-form-group__button--closed"
-          type="button">
-          <span class="visually-hidden">Развернуть.</span>
-        </button>
-        <button
-          class="filter-form-group__button filter-form-group__button--opened hidden"
-          type="button">
-          <span class="visually-hidden">Свернуть.</span>
-        </button>
-        <ul class="filter-form-group__list">
-          <li class="filter-form-group__item checkbox-set">
-            <label class="checkbox-set__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="hard-rock"
-                checked>
-              <span class="control-mark"></span>
-              <span class="control-label">Тяжелый рок</span>
-            </label>
-          </li>
-          <li class="filter-form-group__item checkbox-set">
-            <label class="checkbox-set__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="russian-rap"
-                checked>
-              <span class="control-mark"></span>
-              <span class="control-label">Русский рэп</span>
-            </label>
-          </li>
-          <li class="filter-form-group__item checkbox-set">
-            <label class="checkbox-set__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="euro-dance">
-              <span class="control-mark"></span>
-              <span class="control-label">Евроденс</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="filter-form__food filter-form-group">
-        <legend class="filter-form-group__title">еда</legend>
-        <button
-          class="filter-form-group__button filter-form-group__button--closed"
-          type="button">
-          <span class="visually-hidden">Развернуть.</span>
-        </button>
-        <button
-          class="filter-form-group__button filter-form-group__button--opened hidden"
-          type="button">
-          <span class="visually-hidden">Свернуть.</span>
-        </button>
-        <ul class="filter-form-group__list">
-          <li class="filter-form-group__item checkbox-set">
-            <label class="checkbox-set__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="meat-eater"
-                checked>
-              <span class="control-mark"></span>
-              <span class="control-label">Мясоед</span>
-            </label>
-          </li>
-          <li class="filter-form-group__item checkbox-set">
-            <label class="checkbox-set__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="proper-nutrition">
-              <span class="control-mark"></span>
-              <span class="control-label">Сидит на ПП</span>
-            </label>
-          </li>
-          <li class="filter-form-group__item checkbox-set">
-            <label class="checkbox-set__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="vegan">
-              <span class="control-mark"></span>
-              <span class="control-label">Веган-сыроед</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="filter-form__transport filter-form-group">
-        <legend class="filter-form-group__title">транспорт</legend>
-        <button
-          class="filter-form-group__button filter-form-group__button--closed"
-          type="button">
-          <span class="visually-hidden">Развернуть.</span>
-        </button>
-        <button
-          class="filter-form-group__button filter-form-group__button--opened hidden"
-          type="button">
-          <span class="visually-hidden">Свернуть.</span>
-        </button>
-        <ul class="filter-form-group__list filter-form-transport">
-          <li class="filter-form-transport__item transport-control transport">
-            <label class="transport-control__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="aircraft"
-                checked>
-              <span
-                class="transport__item transport__item--bg-filter-form transport__aircraft">
+      <div class="filter-form__hobby filter-form-group">
+        <fieldset class="filter-form-group__fieldset">
+          <legend class="filter-form-group__title">хобби</legend>
+          <button
+            class="filter-form-group__button filter-form-group__button--closed"
+            type="button"
+            onclick="toggleGroup('filter-form__hobby')">
+            <span class="visually-hidden">Развернуть.</span>
+          </button>
+          <button
+            class="filter-form-group__button filter-form-group__button--opened hidden"
+            type="button"
+            onclick="toggleGroup('filter-form__hobby')">
+            <span class="visually-hidden">Свернуть.</span>
+          </button>
+          <ul class="filter-form-group__list">
+            <li class="filter-form-group__item checkbox-set">
+              <label class="checkbox-set__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="gym"
+                  checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Спортзал</span>
+              </label>
+            </li>
+            <li class="filter-form-group__item checkbox-set">
+              <label class="checkbox-set__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="hookah">
+                <span class="control-mark"></span>
+                <span class="control-label">Кальян</span>
+              </label>
+            </li>
+            <li class="filter-form-group__item checkbox-set">
+              <label class="checkbox-set__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="sofa">
+                <span class="control-mark"></span>
+                <span class="control-label">Диван</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="filter-form__music filter-form-group">
+        <fieldset class="filter-form-group__fieldset">
+          <legend class="filter-form-group__title">музыка</legend>
+          <button
+            class="filter-form-group__button filter-form-group__button--closed"
+            type="button"
+            onclick="toggleGroup('filter-form__music')">
+            <span class="visually-hidden">Развернуть.</span>
+          </button>
+          <button
+            class="filter-form-group__button filter-form-group__button--opened hidden"
+            type="button"
+            onclick="toggleGroup('filter-form__music')">
+            <span class="visually-hidden">Свернуть.</span>
+          </button>
+          <ul class="filter-form-group__list">
+            <li class="filter-form-group__item checkbox-set">
+              <label class="checkbox-set__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="hard-rock"
+                  checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Тяжелый рок</span>
+              </label>
+            </li>
+            <li class="filter-form-group__item checkbox-set">
+              <label class="checkbox-set__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="russian-rap"
+                  checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Русский рэп</span>
+              </label>
+            </li>
+            <li class="filter-form-group__item checkbox-set">
+              <label class="checkbox-set__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="euro-dance">
+                <span class="control-mark"></span>
+                <span class="control-label">Евроденс</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="filter-form__food filter-form-group">
+        <fieldset class="filter-form-group__fieldset">
+          <legend class="filter-form-group__title">еда</legend>
+          <button
+            class="filter-form-group__button filter-form-group__button--closed"
+            type="button"
+            onclick="toggleGroup('filter-form__food')">
+            <span class="visually-hidden">Развернуть.</span>
+          </button>
+          <button
+            class="filter-form-group__button filter-form-group__button--opened hidden"
+            type="button"
+            onclick="toggleGroup('filter-form__food')">
+            <span class="visually-hidden">Свернуть.</span>
+          </button>
+          <ul class="filter-form-group__list">
+            <li class="filter-form-group__item checkbox-set">
+              <label class="checkbox-set__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="meat-eater"
+                  checked>
+                <span class="control-mark"></span>
+                <span class="control-label">Мясоед</span>
+              </label>
+            </li>
+            <li class="filter-form-group__item checkbox-set">
+              <label class="checkbox-set__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="proper-nutrition">
+                <span class="control-mark"></span>
+                <span class="control-label">Сидит на ПП</span>
+              </label>
+            </li>
+            <li class="filter-form-group__item checkbox-set">
+              <label class="checkbox-set__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="vegan">
+                <span class="control-mark"></span>
+                <span class="control-label">Веган-сыроед</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="filter-form__transport filter-form-group">
+        <fieldset class="filter-form-group__fieldset">
+          <legend class="filter-form-group__title">транспорт</legend>
+          <button
+            class="filter-form-group__button filter-form-group__button--closed"
+            type="button"
+            onclick="toggleGroup('filter-form__transport')">
+            <span class="visually-hidden">Развернуть.</span>
+          </button>
+          <button
+            class="filter-form-group__button filter-form-group__button--opened hidden"
+            type="button"
+            onclick="toggleGroup('filter-form__transport')">
+            <span class="visually-hidden">Свернуть.</span>
+          </button>
+          <ul class="filter-form-group__list filter-form-transport">
+            <li class="filter-form-transport__item transport-control transport">
+              <label class="transport-control__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="aircraft"
+                  checked>
+                <span
+                  class="transport__item transport__item--bg-filter-form transport__aircraft">
               </span>
-              <span class="visually-hidden">Самолет.</span>
-            </label>
-          </li>
-          <li class="filter-form-transport__item transport-control transport">
-            <label class="transport-control__control control">
+                <span class="visually-hidden">Самолет.</span>
+              </label>
+            </li>
+            <li class="filter-form-transport__item transport-control transport">
+              <label class="transport-control__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="car"
+                  checked>
+                <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
+                <span class="visually-hidden">Автомобиль.</span>
+              </label>
+            </li>
+            <li class="filter-form-transport__item transport-control transport">
+              <label class="transport-control__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="bicycle">
+                <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
+                <span class="visually-hidden">Велосипед.</span>
+              </label>
+            </li>
+            <li class="filter-form-transport__item transport-control transport">
+              <label class="transport-control__control control">
+                <input
+                  class="visually-hidden control-input"
+                  type="checkbox"
+                  name="walk"
+                  checked>
+                <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
+                <span class="visually-hidden">Пешком.</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="filter-form__level filter-form-group">
+        <fieldset class="filter-form-group__fieldset">
+          <legend class="filter-form-group__title">Левел</legend>
+          <button
+            class="filter-form-group__button filter-form-group__button--closed"
+            type="button"
+            onclick="toggleGroup('filter-form__level', 'filter-form-group__level')">
+            <span class="visually-hidden">Развернуть.</span>
+          </button>
+          <button
+            class="filter-form-group__button filter-form-group__button--opened hidden"
+            type="button"
+            onclick="toggleGroup('filter-form__level', 'filter-form-group__level')">
+            <span class="visually-hidden">Свернуть.</span>
+          </button>
+          <div class="filter-form-group__level">
+            <div class="level-range-data">
+              <label class="visually-hidden" for="level-min">
+                Задать минимальный левел.
+              </label>
               <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="car"
-                checked>
-              <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
-              <span class="visually-hidden">Автомобиль.</span>
-            </label>
-          </li>
-          <li class="filter-form-transport__item transport-control transport">
-            <label class="transport-control__control control">
+                class="level-range-data__input level-range-data__input--min"
+                type="number"
+                name="level-min"
+                id="level-min"
+                value="30">
+              <label class="visually-hidden" for="level-max">
+                Задать максимальный левел.
+              </label>
               <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="bicycle">
-              <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
-              <span class="visually-hidden">Велосипед.</span>
-            </label>
-          </li>
-          <li class="filter-form-transport__item transport-control transport">
-            <label class="transport-control__control control">
-              <input
-                class="visually-hidden control-input"
-                type="checkbox"
-                name="walk"
-                checked>
-              <span class="transport__item transport__item--bg-filter-form transport__aircraft"></span>
-              <span class="visually-hidden">Пешком.</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="filter-form__level filter-form-group">
-        <legend class="filter-form-group__title">Левел</legend>
-        <div class="level-range-data">
-          <label class="visually-hidden" for="level-min">
-            Задать минимальный левел.
-          </label>
-          <input
-            class="level-range-data__input level-range-data__input--min"
-            type="number"
-            name="level-min"
-            id="level-min"
-            value="30">
-          <label class="visually-hidden" for="level-max">
-            Задать максимальный левел.
-          </label>
-          <input
-            class="level-range-data__input level-range-data__input--max"
-            type="number"
-            name="level-max"
-            id="level-max"
-            value="100">
-          <span class="level-range-data__separator"></span>
-        </div>
-        <div class="level-range-bar">
-          <div class="level-range-bar__bar">
-            <button
-              class="level-range-bar__toggle level-range-bar__toggle--min"
-              type="button">
-              <span class="visually-hidden">
-                Изменить минимальный левел.
-              </span>
-            </button>
-            <button
-              class="level-range-bar__toggle level-range-bar__toggle--max"
-              type="button">
+                class="level-range-data__input level-range-data__input--max"
+                type="number"
+                name="level-max"
+                id="level-max"
+                value="100">
+              <span class="level-range-data__separator"></span>
+            </div>
+            <div class="level-range-bar">
+              <div class="level-range-bar__bar">
+                <button
+                  class="level-range-bar__toggle level-range-bar__toggle--min"
+                  type="button">
                 <span class="visually-hidden">
-                  Изменить максимальный левел.
+                  Изменить минимальный левел.
                 </span>
-            </button>
+                </button>
+                <button
+                  class="level-range-bar__toggle level-range-bar__toggle--max"
+                  type="button">
+                  <span class="visually-hidden">
+                    Изменить максимальный левел.
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-
-      </fieldset>
+        </fieldset>
+      </div>
       <button
         class="filter-form__button button button--form-oval"
         type="submit">

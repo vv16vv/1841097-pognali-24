@@ -1,5 +1,5 @@
-function toggleHidden(className) {
-  const menu = document
+function toggleHidden(className, parent = document) {
+  const menu = parent
     .getElementsByClassName(className)[0]
   menu.classList.toggle("hidden")
 }
@@ -21,4 +21,11 @@ function toggleFilter() {
   filter.classList.toggle("filter--opened")
   toggleHidden("filter__button--state-open")
   toggleHidden("filter__button--state-close")
+}
+
+function toggleGroup(searchedName, toggledName = "filter-form-group__list") {
+  const group = document.getElementsByClassName(searchedName)[0]
+  toggleHidden("filter-form-group__button--closed", group)
+  toggleHidden("filter-form-group__button--opened", group)
+  toggleHidden(toggledName, group)
 }

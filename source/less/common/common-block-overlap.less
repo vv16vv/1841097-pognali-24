@@ -7,8 +7,12 @@
   margin-top: (@block-overlap * -1);
 }
 
-.common-block-overlap(@padding-top) {
+.common-block-overlap__padding-top(@padding-top) {
   padding-top: @padding-top + @block-overlap;
+}
+
+.common-block-overlap(@padding-top) {
+  .common-block-overlap__padding-top(@padding-top);
   .common-block-overlap__start();
   .common-block-overlap__end();
 }
