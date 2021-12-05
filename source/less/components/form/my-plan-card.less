@@ -1,0 +1,51 @@
+.my-plan-card {
+  padding-left: 0;
+  list-style-type: none;
+  counter-reset: my-plan-counter;
+}
+
+.my-plan-card__item {
+  counter-increment: my-plan-counter;
+  background-color: @fg-main;
+  border-radius: 10px;
+  padding: 24px 25px;
+}
+
+.my-plan-card__item + .my-plan-card__item {
+  margin-top: 10px;
+}
+
+.my-plan-card__title {
+  margin: 0 0 20px;
+  .common-font(16px, 16px, 700);
+
+  &::before {
+    content: counter(my-plan-counter) + ". ";
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    color: @fg-blue-light;
+    .common-font(16px, 16px, 500);
+  }
+}
+
+.my-plan-card__description {
+  .common-font(14px, 14px, 500);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 0;
+
+  &--ntravellers {
+    margin-bottom: 5px;
+  }
+
+  &--dates {
+    margin-bottom: 24px;
+  }
+}
+
+.my-plan-card__button {
+  .common-font(14px, 14px, 500);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: @fg-black;
+  opacity: 0.3;
+}
