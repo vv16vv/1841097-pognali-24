@@ -1,0 +1,10 @@
+.personal {
+  .common-block-overlap__padding-top(24px);
+  .common-block-overlap__end();
+  padding-bottom: 34px + @block-overlap;
+  @break-point: @block-overlap + 3px;
+  background: linear-gradient(@basic-yellow @break-point, @bg-lighter @break-point);
+
+  position: relative;
+  z-index: @z-index-personal;
+}
