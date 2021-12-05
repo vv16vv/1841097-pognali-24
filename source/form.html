@@ -148,8 +148,8 @@
               class="traveller-level__number traveller-level__number--personal-form">
               99
             </span>
-              <span
-                class="traveller-level__text traveller-level__text--personal-form">
+            <span
+              class="traveller-level__text traveller-level__text--personal-form">
               level
             </span>
           </p>
@@ -295,7 +295,7 @@
             class="step1__form"
             action="https://echo.htmlacademy.ru/"
             method="post">
-            <h3 class="steps__title title">
+            <h3 class="steps__title steps-title">
               <span>Шаг 1.</span>
               <span>Даты пребывания</span>
             </h3>
@@ -310,50 +310,54 @@
                 <span class="range-control-title__name">ищу попутчиков:</span>
                 <span class="range-control-title__unit">чел.</span>
               </label>
-              <input
-                class="range-control__field"
-                type="number"
-                id="field-total-travellers"
-                name="field-total-travellers"
-                min="0"
-                placeholder="2"
-                required>
-              <button
-                class="range-control__button range-control__button--minus button"
-                type="button">
-                <span class="visually-hidden">Уменьшить на 1.</span>
-              </button>
-              <button
-                class="range-control__button range-control__button--plus button"
-                type="button">
-                <span class="visually-hidden">Увеличить на 1.</span>
-              </button>
+              <div class="range-control__field-with-buttons">
+                <button
+                  class="range-control__button range-control__button--minus button"
+                  type="button">
+                  <span class="visually-hidden">Уменьшить на 1.</span>
+                </button>
+                <input
+                  class="range-control__field"
+                  type="number"
+                  id="field-total-travellers"
+                  name="field-total-travellers"
+                  min="0"
+                  placeholder="2"
+                  required>
+                <button
+                  class="range-control__button range-control__button--plus button"
+                  type="button">
+                  <span class="visually-hidden">Увеличить на 1.</span>
+                </button>
+              </div>
             </div>
             <div class="step1__item step1__item--dates range-control">
               <label
                 class="range-control__title range-control-title"
                 for="field-duration">
-                <span class="range-control__title">длительность:</span>
-                <span class="range-control__unit">дн.</span>
+                <span class="range-control-title__name">длительность:</span>
+                <span class="range-control-title__unit">дн.</span>
               </label>
-              <input
-                class="range-control__field"
-                type="number"
-                id="field-duration"
-                name="field-duration"
-                min="0"
-                placeholder="3"
-                required>
-              <button
-                class="range-control__button range-control__button--minus button"
-                type="button">
-                <span class="visually-hidden">Уменьшить на 1.</span>
-              </button>
-              <button
-                class="range-control__button range-control__button--plus button"
-                type="button">
-                <span class="visually-hidden">Увеличить на 1.</span>
-              </button>
+              <div class="range-control__field-with-buttons">
+                <button
+                  class="range-control__button range-control__button--minus button"
+                  type="button">
+                  <span class="visually-hidden">Уменьшить на 1.</span>
+                </button>
+                <input
+                  class="range-control__field"
+                  type="number"
+                  id="field-duration"
+                  name="field-duration"
+                  min="0"
+                  placeholder="3"
+                  required>
+                <button
+                  class="range-control__button range-control__button--plus button"
+                  type="button">
+                  <span class="visually-hidden">Увеличить на 1.</span>
+                </button>
+              </div>
             </div>
             <div
               class="step1__item step1__item--with-children with-children-control">
@@ -385,18 +389,16 @@
                   <span class="visually-hidden">Следующий месяц.</span>
                 </button>
               </div>
-              <ul class="calendar__week">
-                <li class="calendar__day-name">П</li>
-                <li class="calendar__day-name">В</li>
-                <li class="calendar__day-name">С</li>
-                <li class="calendar__day-name">Ч</li>
-                <li class="calendar__day-name">П</li>
-                <li class="calendar__day-name calendar__day-name--weekend">С
-                </li>
-                <li class="calendar__day-name calendar__day-name--weekend">В
-                </li>
-              </ul>
               <ul class="calendar__days">
+                <li class="calendar__day calendar__day--name">П</li>
+                <li class="calendar__day calendar__day--name">В</li>
+                <li class="calendar__day calendar__day--name">С</li>
+                <li class="calendar__day calendar__day--name">Ч</li>
+                <li class="calendar__day calendar__day--name">П</li>
+                <li class="calendar__day calendar__day calendar__day--weekend">С
+                </li>
+                <li class="calendar__day calendar__day--weekend">В
+                </li>
                 <li class="calendar__day">23</li>
                 <li class="calendar__day">24</li>
                 <li class="calendar__day">25</li>
@@ -445,7 +447,7 @@
               </ul>
             </div>
             <button
-              class="steps__button button button--form-oval button--secondary"
+              class="steps__button button button--form-oval button--primary"
               type="submit">
               Следующий шаг
             </button>
@@ -456,7 +458,7 @@
             class="step2__form"
             action="https://echo.htmlacademy.ru/"
             method="post">
-            <h3 class="steps__title title">
+            <h3 class="steps__title steps-title">
               <span>Шаг 2.</span>
               <span>Маршрут</span>
             </h3>
@@ -679,7 +681,7 @@
             class="step3__form"
             action="https://echo.htmlacademy.ru/"
             method="post">
-            <h3 class="steps__title title">
+            <h3 class="steps__title steps-title">
               <span>Шаг 3.</span>
               <span>Развлечения</span>
             </h3>
