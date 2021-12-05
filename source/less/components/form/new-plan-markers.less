@@ -1,0 +1,31 @@
+.new-plan-markers {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-plan__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-plan-markers__item {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0.3;
+
+  background-color: @fg-blue-light;
+
+  &--current {
+    opacity: 1;
+  }
+}
+
+.new-plan-markers__item + .new-plan-markers__item {
+  margin-left: 16px;
+}
