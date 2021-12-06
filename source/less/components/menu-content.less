@@ -5,19 +5,27 @@
 }
 
 .menu-content__list {
-  .common-list();
-  text-align: center;
+  flex-direction: column;
+
   margin-bottom: 51px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    padding-left: 57px;
+    padding-top: 53px;
+    margin-bottom: 144px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .menu-content__contact {
   .common-list();
   .common-font(16px, 18px, 700);
   margin-bottom: 29px;
-}
-
-.menu-content__button {
-  color: @bg-secondary;
 }
 
 .menu-content__authorize {

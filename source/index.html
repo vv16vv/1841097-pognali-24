@@ -44,11 +44,33 @@
           fill="white"/>
       </svg>
     </a>
+    <ul class="page-header__menu-content-list menu">
+      <li class="menu__item">
+        <a class="menu__button button button--menu" href="#">
+          О сервисе
+        </a>
+      </li>
+      <li class="menu__item">
+        <a
+          class="menu__button button button--menu"
+          href="form.html">
+          Направления
+        </a>
+      </li>
+      <li class="menu__item">
+        <a
+          class="menu__button button button--menu"
+          href="catalog.html">
+          Попутчики
+        </a>
+      </li>
+    </ul>
     <button
       class="page-header__menu-button page-header__menu-button--open button"
       type="button"
       onclick="toggleMenu()">
-      <svg width="25" height="11"  viewBox="0 0 25 11"
+      <svg
+        width="25" height="11" viewBox="0 0 25 11"
         xmlns="http://www.w3.org/2000/svg">
         <rect width="25" height="3" rx="1.5"/>
         <rect y="8" width="25" height="3" rx="1.5"/>
@@ -61,42 +83,44 @@
       onclick="toggleMenu()">
       <span class="visually-hidden">Закрыть меню.</span>
     </button>
-    <div class="page-header__contact-buttons contact-buttons">
-      <a
-        class="contact-buttons__button contact-buttons__button--phone button button--form-round"
-        href="tel:88005558628">
-        <span class="visually-hidden">8 800 555-86-28</span>
-      </a>
-      <a
-        class="contact-buttons__button contact-buttons__button--email button button--form-round"
-        href="mailto:mail@htmlacademy.ru">
-        <span class="visually-hidden">mail@htmlacademy.ru</span>
-      </a>
-      <button
-        class="contact-buttons__authorize button button--form-oval button--primary"
-        type="button">
-        авторизация
-      </button>
+    <div class="page-header__contact-buttons">
+      <div class="contact-buttons">
+        <a
+          class="contact-buttons__button contact-buttons__button--phone button button--form-round"
+          href="tel:88005558628">
+          <span class="visually-hidden">8 800 555-86-28</span>
+        </a>
+        <a
+          class="contact-buttons__button contact-buttons__button--email button button--form-round"
+          href="mailto:mail@htmlacademy.ru">
+          <span class="visually-hidden">mail@htmlacademy.ru</span>
+        </a>
+        <button
+          class="contact-buttons__authorize button button--form-oval button--primary"
+          type="button">
+          авторизация
+        </button>
+      </div>
     </div>
   </div>
   <div class="menu-content-popup popup hidden">
     <nav class="menu-content wrapper">
-      <ul class="menu-content__list">
-        <li class="menu-content__item">
-          <a class="menu-content__button button button--menu" href="#">
+      <ul class="menu-content__list menu">
+        <li class="menu__item">
+          <a class="menu__button button button--menu" href="#">
             О сервисе
           </a>
         </li>
-        <li class="menu-content__item">
+        <li class="menu__item">
           <a
-            class="menu-content__button button button--menu"
+            class="menu__button button button--menu"
             href="form.html">
             Направления
           </a>
         </li>
-        <li class="menu-content__item">
+        <li class="menu__item">
           <a
-            class="menu-content__button button button--menu"
+            class="menu__button button button--menu"
             href="catalog.html">
             Попутчики
           </a>

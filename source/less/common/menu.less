@@ -1,0 +1,20 @@
+.menu {
+  .common-list();
+  display: flex;
+}
+
+.menu__button {
+  color: @bg-secondary;
+  .common-font(30px, 35px, 500);
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .common-font(60px, 71px, 500);
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @fg-main;
+    .common-font(20px, 20px, 500);
+  }
+}
+
