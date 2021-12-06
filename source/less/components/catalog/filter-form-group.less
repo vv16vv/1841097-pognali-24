@@ -41,14 +41,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
-}
 
-.filter-form-group__button--closed {
-  background-image: url("../../../img/icons/group-close.svg");
-}
+  &--state {
+    &-closed {
+      background-image: url("../../../img/icons/group-close.svg");
+    }
 
-.filter-form-group__button--opened {
-  background-image: url("../../../img/icons/group-open.svg");
+    &-opened {
+      background-image: url("../../../img/icons/group-open.svg");
+    }
+  }
 }
 
 .filter-form-group__list {
