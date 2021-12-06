@@ -1,0 +1,39 @@
+.calendar-month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+
+  height: 43px;
+
+  border-top: 1px solid @fg-border;
+  border-bottom: 1px solid @fg-border;
+
+  .common-font(20px, 20px, 700);
+  color: @fg-blue-light;
+}
+
+.calendar-month__button {
+  width: 15px;
+  height: 42px;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--prev {
+    background-image: url("../../../img/icons/month-back.svg");
+  }
+
+  &--next {
+    background-image: url("../../../img/icons/month-next.svg");
+  }
+}
+
+.calendar-month__name {
+  margin-left: auto;
+}
+
+.calendar-month__year {
+  margin-right: auto;
+}

@@ -1,0 +1,30 @@
+.slogan {
+  background-image: url("../../../img/backgrounds/traveller-illustration-mobile.svg"),
+    url("../../../img/backgrounds/globe-back-mobile.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center bottom, center;
+  background-size: 192px 255px, cover;
+
+  background-color: @bg-main;
+  color: @fg-main;
+
+  box-sizing: border-box;
+  padding-top: 21px;
+  z-index: 2;
+}
+
+.slogan__text {
+  .common-font(36px, 40px, 700);
+  text-align: center;
+  position: relative;
+}
+
+.slogan__wrapper {
+  display: flex;
+  min-height: 404px;
+  flex-direction: column;
+}
+
+.slogan__contact-buttons {
+  margin-bottom: -20px;
+}

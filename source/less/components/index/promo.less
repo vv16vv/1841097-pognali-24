@@ -1,0 +1,73 @@
+.promo {
+  padding-top: 29px;
+  padding-bottom: 39px;
+  background: linear-gradient(to bottom, @bg-main 109px, @bg-secondary 109px);
+}
+
+.promo__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  counter-reset: items;
+}
+
+.promo__font() {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.promo__item {
+  @overlap: 20px;
+  @vertical-padding: 22px;
+
+  position: relative;
+  border-radius: (@overlap / 2);
+  padding-top: @vertical-padding;
+  padding-right: 21px;
+  padding-left: 24px;
+
+  .promo__font();
+
+  &--destination {
+    background-color: @special-orange;
+  }
+
+  &--idea {
+    background-color: @special-orange-dark;
+  }
+
+  &--traveller {
+    background-color: @special-yellow-dark;
+  }
+
+  &--trip {
+    background-color: @basic-yellow;
+  }
+
+  &::after {
+    position: absolute;
+    counter-increment: items;
+    content: counter(items);
+    .promo__font();
+    color: @fg-main;
+
+    right: 24px;
+    top: 22px;
+    width: 10px;
+    height: 18px;
+  }
+
+  &:not(:first-child) {
+    margin-top: @overlap * -1;
+  }
+
+  &:last-child {
+    padding-bottom: @vertical-padding;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: @vertical-padding + @overlap;
+  }
+}

@@ -1,0 +1,35 @@
+.contacts {
+  background-color: @bg-secondary;
+  color: @fg-main;
+
+  .ladder-top2down(72px);
+  padding-bottom: 44px;
+
+  position: relative;
+  z-index: @z-index-contacts;
+}
+
+.contacts__additional-padding() {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.contacts__header {
+  .contacts__additional-padding();
+}
+
+.contacts__contact {
+  padding: 0;
+  .contacts__additional-padding();
+  margin: 0;
+  list-style-type: none;
+}
+
+.contacts__slogan {
+  .contacts__additional-padding();
+}
+
+.contacts__authorize {
+  display: inline;
+  color: @basic-yellow;
+}

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
+<!--suppress CheckImageSize -->
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
-<header class="page-header">
-  <div class="wrapper">
+<header class="page-header page-header--dark">
+  <div class="wrapper page-header__title-bar">
     <a href="#" class="page-header__logo logo button">
       <svg
         width="96"
         height="15"
         viewBox="0 0 96 15"
-        stroke="black"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
@@ -21,9 +23,10 @@
         <path
           d="M76.3053 10.2354L80.1618 5.46351C80.5573 4.88748 81.0941 4.56674 81.7722 4.50128C82.4502 4.42273 83.0435 4.58638 83.5521 4.99221C84.0606 5.39805 84.3008 5.94135 84.2725 6.62211V13.4559C84.2725 13.8879 84.103 14.2545 83.764 14.5556C83.4391 14.8436 83.0435 14.9876 82.5774 14.9876C82.1112 14.9876 81.7086 14.8436 81.3696 14.5556C81.0447 14.2545 80.8822 13.8879 80.8822 13.4559V9.21424L77.0257 13.9861C76.6302 14.5622 76.0934 14.8829 75.4153 14.9484C74.7373 15.0269 74.144 14.8633 73.6354 14.4574C73.1269 14.0516 72.8867 13.5083 72.915 12.8275V6.01336C72.915 5.58133 73.0774 5.21477 73.4023 4.91367C73.7413 4.61256 74.144 4.46201 74.6101 4.46201C75.0763 4.46201 75.4718 4.61256 75.7967 4.91367C76.1358 5.21477 76.3053 5.58133 76.3053 6.01336V10.2354Z"
           fill="white"/>
-        <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M58.967 13.3889V5.97502C58.967 5.54871 58.7887 5.18234 58.4323 4.87593C58.0901 4.5562 57.6837 4.39633 57.2132 4.39633C56.7569 4.39633 56.3576 4.5562 56.0154 4.87593C55.6732 5.18234 55.5021 5.54871 55.5021 5.97502V5.79517C55.331 5.3955 54.9888 5.05578 54.4755 4.77601C53.9622 4.48292 53.3776 4.33638 52.7217 4.33638C51.4384 4.33638 50.2549 4.80932 49.1712 5.7552C48.1161 6.70109 47.5885 8.00001 47.5885 9.65198C47.5885 11.3439 48.109 12.6562 49.1498 13.5887C50.1907 14.5213 51.3813 14.9876 52.7217 14.9876C53.3776 14.9876 53.955 14.8677 54.4541 14.6279C54.9531 14.3747 55.3167 14.075 55.5449 13.7286C55.6304 14.0883 55.8301 14.3881 56.1438 14.6279C56.4574 14.8543 56.8139 14.9676 57.2132 14.9676C57.6837 14.9676 58.0901 14.8144 58.4323 14.508C58.7887 14.2015 58.967 13.8285 58.967 13.3889ZM53.4968 12.0265C54.6657 12.0265 55.6133 11.0009 55.6133 9.73559C55.6133 8.47034 54.6657 7.44464 53.4968 7.44464C52.328 7.44464 51.3804 8.47034 51.3804 9.73559C51.3804 11.0009 52.328 12.0265 53.4968 12.0265Z"
-              fill="white"/>
+        <path
+          fill-rule="evenodd" clip-rule="evenodd"
+          d="M58.967 13.3889V5.97502C58.967 5.54871 58.7887 5.18234 58.4323 4.87593C58.0901 4.5562 57.6837 4.39633 57.2132 4.39633C56.7569 4.39633 56.3576 4.5562 56.0154 4.87593C55.6732 5.18234 55.5021 5.54871 55.5021 5.97502V5.79517C55.331 5.3955 54.9888 5.05578 54.4755 4.77601C53.9622 4.48292 53.3776 4.33638 52.7217 4.33638C51.4384 4.33638 50.2549 4.80932 49.1712 5.7552C48.1161 6.70109 47.5885 8.00001 47.5885 9.65198C47.5885 11.3439 48.109 12.6562 49.1498 13.5887C50.1907 14.5213 51.3813 14.9876 52.7217 14.9876C53.3776 14.9876 53.955 14.8677 54.4541 14.6279C54.9531 14.3747 55.3167 14.075 55.5449 13.7286C55.6304 14.0883 55.8301 14.3881 56.1438 14.6279C56.4574 14.8543 56.8139 14.9676 57.2132 14.9676C57.6837 14.9676 58.0901 14.8144 58.4323 14.508C58.7887 14.2015 58.967 13.8285 58.967 13.3889ZM53.4968 12.0265C54.6657 12.0265 55.6133 11.0009 55.6133 9.73559C55.6133 8.47034 54.6657 7.44464 53.4968 7.44464C52.328 7.44464 51.3804 8.47034 51.3804 9.73559C51.3804 11.0009 52.328 12.0265 53.4968 12.0265Z"
+          fill="white"/>
         <path
           d="M43.0813 8.23733V6.09447C43.0813 5.65909 43.2578 5.28968 43.6109 4.98624C43.9639 4.6696 44.3758 4.51128 44.8466 4.51128C45.3173 4.51128 45.7292 4.6696 46.0822 4.98624C46.4353 5.28968 46.6118 5.65909 46.6118 6.09447V13.4365C46.6118 13.8719 46.4353 14.2413 46.0822 14.5448C45.7439 14.8482 45.332 14.9999 44.8466 14.9999C44.3611 14.9999 43.9419 14.8482 43.5888 14.5448C43.2505 14.2413 43.0813 13.8719 43.0813 13.4365V11.262H39.264V13.4365C39.264 13.8719 39.0875 14.2413 38.7344 14.5448C38.3961 14.8482 37.9842 14.9999 37.4988 14.9999C37.0133 14.9999 36.5941 14.8482 36.241 14.5448C35.9027 14.2413 35.7335 13.8719 35.7335 13.4365V6.09447C35.7335 5.65909 35.9101 5.28968 36.2631 4.98624C36.6161 4.6696 37.028 4.51128 37.4988 4.51128C37.9695 4.51128 38.3814 4.6696 38.7344 4.98624C39.0875 5.28968 39.264 5.65909 39.264 6.09447V8.23733H43.0813Z"
           fill="white"/>
@@ -46,46 +49,43 @@
     </a>
     <button
       class="page-header__menu-button page-header__menu-button--open button"
-      type="button">
+      type="button"
+      onclick="toggleMenu()">
+      <svg width="25" height="11"  viewBox="0 0 25 11"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect width="25" height="3" rx="1.5"/>
+        <rect y="8" width="25" height="3" rx="1.5"/>
+      </svg>
       <span class="visually-hidden">Открыть меню.</span>
     </button>
     <button
       class="page-header__menu-button page-header__menu-button--close button hidden"
-      type="button">
+      type="button"
+      onclick="toggleMenu()">
       <span class="visually-hidden">Закрыть меню.</span>
-    </button>
-    <p class="page-header__slogan">
-      В путешествие <br>
-      с крутыми <br>
-      попутчиками!
-    </p>
-    <a
-      class="page-header__phone button button--form-round button--phone"
-      href="tel:88005558628">
-      <span class="visually-hidden">8 800 555-86-28</span>
-    </a>
-    <a
-      class="page-header__mail button button--form-round button--email"
-      href="mailto:mail@htmlacademy.ru">
-      <span class="visually-hidden">mail@htmlacademy.ru</span>
-    </a>
-    <button
-      class="page-header__authorize button button--form-oval button--primary"
-      type="button">
-      авторизация
     </button>
   </div>
   <div class="menu-content-popup popup hidden">
     <nav class="menu-content wrapper">
       <ul class="menu-content__list">
         <li class="menu-content__item">
-          <a class="button button--menu" href="#">О сервисе</a>
+          <a class="menu-content__button button button--menu" href="#">
+            О сервисе
+          </a>
         </li>
         <li class="menu-content__item">
-          <a class="button button--menu" href="#">Направления</a>
+          <a
+            class="menu-content__button button button--menu"
+            href="form.html">
+            Направления
+          </a>
         </li>
         <li class="menu-content__item">
-          <a class="button button--menu" href="#">Попутчики</a>
+          <a
+            class="menu-content__button button button--menu"
+            href="catalog.html">
+            Попутчики
+          </a>
         </li>
       </ul>
       <button
@@ -108,21 +108,21 @@
       <ul class="menu-content__social social">
         <li class="social__item">
           <a
-            class="social__fb button button--social"
+            class="social__button--network-fb button social__button button--form-round"
             href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook.</span>
           </a>
         </li>
         <li class="social__item">
           <a
-            class="social__vk button button--social"
+            class="social__button--network-vk button social__button button--form-round"
             href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте.</span>
           </a>
         </li>
         <li class="social__item">
           <a
-            class="social__in button button--social"
+            class="social__button--network-in button social__button button--form-round"
             href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Instagram.</span>
           </a>
@@ -133,11 +133,37 @@
 </header>
 <main>
   <h1 class="visually-hidden">Сервис подбора попутчиков "Погнали"</h1>
+  <section class="slogan">
+    <div class="wrapper slogan__wrapper">
+      <p class="slogan__text">
+        В путешествие <br>
+        с крутыми <br>
+        попутчиками!
+      </p>
+    </div>
+    <div class="slogan__contact-buttons wrapper contact-buttons">
+      <a
+        class="contact-buttons__button contact-buttons__button--phone button button--form-round"
+        href="tel:88005558628">
+        <span class="visually-hidden">8 800 555-86-28</span>
+      </a>
+      <a
+        class="contact-buttons__button contact-buttons__button--email button button--form-round"
+        href="mailto:mail@htmlacademy.ru">
+        <span class="visually-hidden">mail@htmlacademy.ru</span>
+      </a>
+      <button
+        class="contact-buttons__authorize button button--form-oval button--primary"
+        type="button">
+        авторизация
+      </button>
+    </div>
+  </section>
   <section class="review">
     <div class="wrapper">
       <h2 class="visually-hidden">Отзывы</h2>
-      <blockquote class="review__text">
-        «Лучшее приложение, что я видел в жизни!»
+      <blockquote class="review__block">
+        <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
         <cite class="review__author">
           Мурат Эльтазин <br>
           главный редактор газеты «гаджетлайф»
@@ -169,7 +195,7 @@
     </div>
   </section>
   <section class="about">
-    <div class="wrapper">
+    <div class="wrapper about__wrapper">
       <h2 class="about__title title">О сервисе</h2>
       <p class="about__description description">
         Любое путешествие веселее с попутчиками,
@@ -185,14 +211,16 @@
   </section>
   <section class="destination">
     <div class="wrapper">
-      <h2 class="destination__title title">Направления</h2>
-      <p class="destination__description description">
-        Мы не продаем туры
-        и ничего не рекламируем.
-        Люди сами пишут о странах,
-        куда хотели бы отправиться
-        и чем можно там заняться.
-      </p>
+      <header class="destination__header">
+        <h2 class="destination__title title">Направления</h2>
+        <p class="destination__description description">
+          Мы не продаем туры
+          и ничего не рекламируем.
+          Люди сами пишут о странах,
+          куда хотели бы отправиться
+          и чем можно там заняться.
+        </p>
+      </header>
       <ul class="destination__list">
         <li class="destination__item">
           <a class="button country" href="#">
@@ -256,15 +284,17 @@
   </section>
   <section class="traveller">
     <div class="wrapper">
-      <h2 class="traveller__title title">Попутчики</h2>
-      <p class="traveller__description description">
-        Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
-        Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-      </p>
-      <p class="traveller__slogan description description--selected">
-        Теперь можно легко найти
-        единомышленников!
-      </p>
+      <header class="traveller__header">
+        <h2 class="traveller__title title">Попутчики</h2>
+        <p class="traveller__description description">
+          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+          Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+        </p>
+        <p class="traveller__slogan description description--selected">
+          Теперь можно легко найти
+          единомышленников!
+        </p>
+      </header>
       <ul class="traveller__list">
         <li class="traveller__item">
           <a class="traveller-card button" href="#">
@@ -381,16 +411,18 @@
   </section>
   <section class="services">
     <div class="wrapper">
-      <h2 class="services__title title">
-        Добавьте свой профиль
-      </h2>
-      <p class="services__user-currency">
-        <img
-          src="img/icons/rates.svg"
-          width="100"
-          height="100"
-          alt="Валюта рубль.">
-      </p>
+      <header class="services__header">
+        <h2 class="services__title title">
+          Добавьте свой профиль
+        </h2>
+        <p class="services__user-currency">
+          <img
+            src="img/icons/rates.svg"
+            width="100"
+            height="100"
+            alt="Валюта рубль.">
+        </p>
+      </header>
       <ol class="services__list">
         <li class="services__item services-card">
           <p class="services-card__description">Базовое размещение</p>
@@ -407,100 +439,115 @@
       </ol>
       <button
         class="services__show-rates button button--rates"
-        type="button">
+        type="button"
+        onclick="toggleHidden('business-rates')">
         <span class="description description--selected">
           Показать тарифы для бизнеса
         </span>
       </button>
     </div>
     <div class="business-rates modal hidden">
-      <div class="wrapper">
-        <h3 class="services__title title">
-          Бизнес-тарифы
-        </h3>
-        <ul class="business-rates__list">
-          <li class="business-rates__item">
-            <p class="business-rates__title">Реклама у блоггера</p>
-            <p class="business-rates__price">300 000 руб./пост</p>
-          </li>
-          <li class="business-rates__item">
-            <p class="business-rates__title">Накрутка подписчиков</p>
-            <p class="business-rates__price">от 1 руб./шт.</p>
-          </li>
-          <li class="business-rates__item">
-            <p class="business-rates__title">Лайки от ботов</p>
-            <p class="business-rates__price">от 20 коп./лайк</p>
-          </li>
-          <li class="business-rates__item">
-            <p class="business-rates__title">Ваш продакт-плейсмент</p>
-            <p class="business-rates__price">Индивидуально</p>
-          </li>
-        </ul>
+      <div class="modal__container business-rates__modal-container">
+        <div class="wrapper business-rates__wrapper">
+          <h3 class="business-rates__title title">
+            Бизнес-тарифы
+          </h3>
+          <ul class="business-rates__list">
+            <li class="business-rates__item">
+              <p class="business-rates__text">Реклама у блоггера</p>
+              <p class="business-rates__text">300 000 руб./пост</p>
+            </li>
+            <li class="business-rates__item">
+              <p class="business-rates__text">Накрутка подписчиков</p>
+              <p class="business-rates__text">от 1 руб./шт.</p>
+            </li>
+            <li class="business-rates__item">
+              <p class="business-rates__text">Лайки от ботов</p>
+              <p class="business-rates__text">от 20 коп./лайк</p>
+            </li>
+            <li class="business-rates__item">
+              <p class="business-rates__text">Ваш продакт-плейсмент</p>
+              <p class="business-rates__text">Индивидуально</p>
+            </li>
+          </ul>
+        </div>
         <button
           class="business-rates__close button"
-          type="button">
+          type="button"
+          onclick="toggleHidden('business-rates')">
           Закрыть окно
         </button>
       </div>
     </div>
   </section>
-  <section class="contacts">
-    <div class="contacts__common-part wrapper">
-      <h2 class="contacts__title title">
-        Заинтересовались?
-      </h2>
-      <p class="contacts__description description">
-        Зарегистрируйтесь,
-        это быстро и бесплатно!
-        Уже зарегистрированы? Тогда
-        скорее <a class="contacts__authorize" href="#">авторизуйтесь</a> .
-      </p>
-      <form
-        class="sign-in"
-        action="https://echo.htmlacademy.ru/"
-        method="post">
-        <label class="visually-hidden" for="sign-in__email">
-          Укажите свой e-mail
-        </label>
-        <input
-          class="sign-in__email"
-          type="email"
-          id="sign-in__email"
-          name="email"
-          placeholder="E-mail"
-          required>
-        <button
-          class="sign-in__button button button--form-rectangle button--icon-right"
-          type="submit">
-          <span class="visually-hidden">Зарегистрироваться.</span>
-        </button>
-        <p class="sign-in__slogan description">
+  <section>
+    <div class="contacts">
+      <div class="contacts__common-part wrapper">
+        <header class="contacts__header">
+          <h2 class="contacts__title title">
+            Заинтересовались?
+          </h2>
+          <p class="contacts__description description">
+            Зарегистрируйтесь,
+            это быстро и бесплатно!
+            Уже зарегистрированы? Тогда
+            скорее
+            <a class="contacts__authorize" href="#">авторизуйтесь</a>.
+          </p>
+        </header>
+        <form
+          class="contacts__sign-in sign-in"
+          action="https://echo.htmlacademy.ru/"
+          method="post">
+          <label class="visually-hidden" for="sign-in__email">
+            Укажите свой e-mail
+          </label>
+          <input
+            class="sign-in__email"
+            type="email"
+            id="sign-in__email"
+            name="email"
+            placeholder="E-mail"
+            required>
+          <button
+            class="sign-in__button button button--form-rectangle button--icon-right"
+            type="submit">
+            <span class="visually-hidden">Зарегистрироваться.</span>
+          </button>
+        </form>
+        <p class="contacts__slogan description">
           <span>Остались вопросы?</span>
           <span>Мы с радостью на них ответим!</span>
         </p>
-      </form>
-      <ul class="contacts__contact contact">
-        <li class="contact__item">
-          <a class="contact__phone button" href="tel:88005558628">
-            8 800 555-86-28
-          </a>
-        </li>
-        <li class="contact__item">
-          <a class="contact__mail button" href="mailto:mail@htmlacademy.ru">
-            mail@htmlacademy.ru
-          </a>
-        </li>
-      </ul>
+        <ul class="contacts__contact contact">
+          <li class="contact__item">
+            <a
+              class="contact__button contact__button--phone button"
+              href="tel:88005558628">
+              8 800 555-86-28
+            </a>
+          </li>
+          <li class="contact__item">
+            <a
+              class="contact__button contact__button--email button"
+              href="mailto:mail@htmlacademy.ru">
+              mail@htmlacademy.ru
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <address class="contacts__address address">
-      <div class="wrapper">
-        <p class="address__text">ул. Большая
-          Конюшенная, 19/8</p>
-        <button
-          class="address__button button button--form-rectangle button--icon-right button--route"
-          type="button">
-          Проложить маршрут
-        </button>
+    <address class="address">
+      <div class="address__wrapper">
+        <div class="wrapper">
+          <p class="address__text">ул. Большая
+            Конюшенная, 19/8</p>
+          <button
+            class="address__button button button--form-rectangle button--icon-right button--route"
+            type="button">
+            Проложить маршрут
+          </button>
+        </div>
       </div>
       <img
         class="address__map"
@@ -519,7 +566,6 @@
         width="96"
         height="15"
         viewBox="0 0 96 15"
-        stroke="black"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
@@ -528,9 +574,10 @@
         <path
           d="M76.3053 10.2354L80.1618 5.46351C80.5573 4.88748 81.0941 4.56674 81.7722 4.50128C82.4502 4.42273 83.0435 4.58638 83.5521 4.99221C84.0606 5.39805 84.3008 5.94135 84.2725 6.62211V13.4559C84.2725 13.8879 84.103 14.2545 83.764 14.5556C83.4391 14.8436 83.0435 14.9876 82.5774 14.9876C82.1112 14.9876 81.7086 14.8436 81.3696 14.5556C81.0447 14.2545 80.8822 13.8879 80.8822 13.4559V9.21424L77.0257 13.9861C76.6302 14.5622 76.0934 14.8829 75.4153 14.9484C74.7373 15.0269 74.144 14.8633 73.6354 14.4574C73.1269 14.0516 72.8867 13.5083 72.915 12.8275V6.01336C72.915 5.58133 73.0774 5.21477 73.4023 4.91367C73.7413 4.61256 74.144 4.46201 74.6101 4.46201C75.0763 4.46201 75.4718 4.61256 75.7967 4.91367C76.1358 5.21477 76.3053 5.58133 76.3053 6.01336V10.2354Z"
           fill="white"/>
-        <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M58.967 13.3889V5.97502C58.967 5.54871 58.7887 5.18234 58.4323 4.87593C58.0901 4.5562 57.6837 4.39633 57.2132 4.39633C56.7569 4.39633 56.3576 4.5562 56.0154 4.87593C55.6732 5.18234 55.5021 5.54871 55.5021 5.97502V5.79517C55.331 5.3955 54.9888 5.05578 54.4755 4.77601C53.9622 4.48292 53.3776 4.33638 52.7217 4.33638C51.4384 4.33638 50.2549 4.80932 49.1712 5.7552C48.1161 6.70109 47.5885 8.00001 47.5885 9.65198C47.5885 11.3439 48.109 12.6562 49.1498 13.5887C50.1907 14.5213 51.3813 14.9876 52.7217 14.9876C53.3776 14.9876 53.955 14.8677 54.4541 14.6279C54.9531 14.3747 55.3167 14.075 55.5449 13.7286C55.6304 14.0883 55.8301 14.3881 56.1438 14.6279C56.4574 14.8543 56.8139 14.9676 57.2132 14.9676C57.6837 14.9676 58.0901 14.8144 58.4323 14.508C58.7887 14.2015 58.967 13.8285 58.967 13.3889ZM53.4968 12.0265C54.6657 12.0265 55.6133 11.0009 55.6133 9.73559C55.6133 8.47034 54.6657 7.44464 53.4968 7.44464C52.328 7.44464 51.3804 8.47034 51.3804 9.73559C51.3804 11.0009 52.328 12.0265 53.4968 12.0265Z"
-              fill="white"/>
+        <path
+          fill-rule="evenodd" clip-rule="evenodd"
+          d="M58.967 13.3889V5.97502C58.967 5.54871 58.7887 5.18234 58.4323 4.87593C58.0901 4.5562 57.6837 4.39633 57.2132 4.39633C56.7569 4.39633 56.3576 4.5562 56.0154 4.87593C55.6732 5.18234 55.5021 5.54871 55.5021 5.97502V5.79517C55.331 5.3955 54.9888 5.05578 54.4755 4.77601C53.9622 4.48292 53.3776 4.33638 52.7217 4.33638C51.4384 4.33638 50.2549 4.80932 49.1712 5.7552C48.1161 6.70109 47.5885 8.00001 47.5885 9.65198C47.5885 11.3439 48.109 12.6562 49.1498 13.5887C50.1907 14.5213 51.3813 14.9876 52.7217 14.9876C53.3776 14.9876 53.955 14.8677 54.4541 14.6279C54.9531 14.3747 55.3167 14.075 55.5449 13.7286C55.6304 14.0883 55.8301 14.3881 56.1438 14.6279C56.4574 14.8543 56.8139 14.9676 57.2132 14.9676C57.6837 14.9676 58.0901 14.8144 58.4323 14.508C58.7887 14.2015 58.967 13.8285 58.967 13.3889ZM53.4968 12.0265C54.6657 12.0265 55.6133 11.0009 55.6133 9.73559C55.6133 8.47034 54.6657 7.44464 53.4968 7.44464C52.328 7.44464 51.3804 8.47034 51.3804 9.73559C51.3804 11.0009 52.328 12.0265 53.4968 12.0265Z"
+          fill="white"/>
         <path
           d="M43.0813 8.23733V6.09447C43.0813 5.65909 43.2578 5.28968 43.6109 4.98624C43.9639 4.6696 44.3758 4.51128 44.8466 4.51128C45.3173 4.51128 45.7292 4.6696 46.0822 4.98624C46.4353 5.28968 46.6118 5.65909 46.6118 6.09447V13.4365C46.6118 13.8719 46.4353 14.2413 46.0822 14.5448C45.7439 14.8482 45.332 14.9999 44.8466 14.9999C44.3611 14.9999 43.9419 14.8482 43.5888 14.5448C43.2505 14.2413 43.0813 13.8719 43.0813 13.4365V11.262H39.264V13.4365C39.264 13.8719 39.0875 14.2413 38.7344 14.5448C38.3961 14.8482 37.9842 14.9999 37.4988 14.9999C37.0133 14.9999 36.5941 14.8482 36.241 14.5448C35.9027 14.2413 35.7335 13.8719 35.7335 13.4365V6.09447C35.7335 5.65909 35.9101 5.28968 36.2631 4.98624C36.6161 4.6696 37.028 4.51128 37.4988 4.51128C37.9695 4.51128 38.3814 4.6696 38.7344 4.98624C39.0875 5.28968 39.264 5.65909 39.264 6.09447V8.23733H43.0813Z"
           fill="white"/>
@@ -554,21 +601,21 @@
     <ul class="page-footer__social social">
       <li class="social__item">
         <a
-          class="social__fb button"
+          class="social__button--network-fb button social__button button--form-round"
           href="https://www.facebook.com/htmlacademy">
           <span class="visually-hidden">Facebook.</span>
         </a>
       </li>
       <li class="social__item">
         <a
-          class="social__vk button"
+          class="social__button--network-vk button social__button button--form-round"
           href="https://vk.com/htmlacademy">
           <span class="visually-hidden">ВКонтакте.</span>
         </a>
       </li>
       <li class="social__item">
         <a
-          class="social__in button"
+          class="social__button--network-in button social__button button--form-round"
           href="https://www.instagram.com/htmlacademy">
           <span class="visually-hidden">Instagram.</span>
         </a>
@@ -588,5 +635,6 @@
     </p>
   </div>
 </footer>
+<script src="./js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,105 @@
+.traveller-details-card {
+  background-color: @fg-main;
+  border-radius: @block-overlap;
+
+  padding: 15px 0 23px;
+}
+
+.traveller-details-card__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.traveller-details-card__title {
+  margin: 0;
+}
+
+.traveller-details-card__name {
+  color: @fg-blue-light;
+  .common-font(20px, 20px, 700);
+}
+
+.traveller-details-card__button {
+  color: @bg-main;
+  .common-font(17px, 17px, 700);
+  height: 40px;
+  padding: 13px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.traveller-details-card__status {
+  margin: 0;
+
+  &--offline circle {
+    fill: @status-offline;
+  }
+
+  &--online circle {
+    fill: @status-online;
+  }
+}
+
+.traveller-details-card__image {
+  width: 70px;
+  height: 70px;
+}
+
+.traveller-details-card__favorite {
+  width: 31px;
+  height: 31px;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../../img/icons/like.svg");
+
+  &--selected {
+    background-image: url("../../../img/icons/like-active.svg");
+  }
+}
+
+.traveller-details-card__subscribers {
+  margin: 0;
+  color: @bg-main;
+  .common-font(14px, 16px, 700);
+}
+
+.traveller-details-card__tags {
+  margin-bottom: 16px;
+}
+
+.traveller-details-card__group {
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 6px;
+
+    width: 100%;
+    height: 0;
+    border: 1px solid @bg-lighter;
+    z-index: 1;
+  }
+}
+
+.traveller-details-card__subtitle {
+  .common-font(15px, 16px, 400);
+  position: relative;
+  z-index: 2;
+  margin-left: 25px;
+  margin-top: 0;
+  width: 96px;
+  background-color: @fg-main;
+  color: @fg-special-grey;
+}
+
+.traveller-details-card__country {
+  list-style-type: none;
+}
+
+.traveller-details-card__transport {
+  margin-bottom: 20px;
+}

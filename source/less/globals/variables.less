@@ -1,0 +1,28 @@
+@block-overlap: 25px;
+
+// z-indices on index.html
+// т.к. компоненты отображаются один как бы из под другого
+@z-index-map: 1;
+@z-index-address: @z-index-map + 1;
+@z-index-contacts: @z-index-address + 1;
+@z-index-services: @z-index-contacts + 1;
+@z-index-travelers: @z-index-services + 1;
+@z-index-destinations: @z-index-travelers + 1;
+@z-index-about: @z-index-destinations + 1;
+
+@z-index-footer: @z-index-map + 1;
+
+@z-index-popup: 10;
+
+@menu-content-popup__top: 73px;
+
+// z-indices on catalog.html
+@z-index-list: 1;
+@z-index-filter: @z-index-list + 1;
+@z-index-header: @z-index-filter + 1;
+
+// z-indices on form.html
+@z-index-personal: 1;
+@z-index-my-plans: @z-index-personal + 1;
+@z-index-add-plan: @z-index-my-plans +  1;
+@z-index-form-footer: @z-index-add-plan + 1;

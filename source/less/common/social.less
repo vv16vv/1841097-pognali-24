@@ -1,0 +1,28 @@
+.social {
+  .common-list();
+  display: flex;
+  justify-content: center;
+}
+
+.social__button {
+  background-color: @basic-yellow;
+  width: 45px;
+  height: 45px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--network {
+    &-fb {
+      background-image: url("../../img/icons/facebook.svg");
+    }
+
+    &-vk {
+      background-image: url("../../img/icons/vkontakte.svg");
+    }
+
+    &-in {
+      background-image: url("../../img/icons/instagram.svg");
+    }
+  }
+}

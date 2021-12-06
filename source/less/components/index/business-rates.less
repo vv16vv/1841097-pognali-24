@@ -1,0 +1,37 @@
+@business-rates-border-radius: 20px;
+
+.business-rates__modal-container {
+  border-radius: @business-rates-border-radius;
+}
+
+.business-rates__wrapper {
+  box-sizing: border-box;
+  padding: 34px 25px 0;
+}
+
+.business-rates__title {
+  margin-bottom: 28px;
+}
+
+.business-rates__close {
+  height: 59px;
+  width: 100%;
+  background-color: @bg-very-light;
+  color: @fg-blue-light;
+
+  border-bottom-right-radius: @business-rates-border-radius;
+  border-bottom-left-radius: @business-rates-border-radius;
+
+  .common-font(16px, 24px, 700);
+}
+
+.business-rates__list {
+  .common-list();
+  margin-bottom: 35px;
+}
+
+.business-rates__text {
+  .common-font(16px, 22px, 300);
+  margin: 0;
+  padding: 0;
+}

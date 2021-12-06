@@ -1,0 +1,65 @@
+.filter {
+  background-color: @bg-grey;
+  color: @bg-secondary;
+
+  .ladder-top2down(20px);
+  padding-bottom: 15px;
+  padding-right: 4px;
+
+  position: relative;
+  z-index: @z-index-filter;
+
+  &--opened {
+    border-radius: 0;
+  }
+}
+
+.filter__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter__title {
+  padding: 0 0 0 25px;
+  margin: 0;
+
+  .common-font(16px, 18px, 700);
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 16px;
+    height: 10px;
+    background-image: url("../../../img/icons/filter.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+  }
+}
+
+.filter__button {
+  width: 17px;
+  height: 17px;
+
+  margin: 0;
+  padding: 0;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+
+  &--state {
+    &-open {
+      background-image: url("../../../img/icons/filter-expand.svg");
+    }
+
+    &-close {
+      background-image: url("../../../img/icons/filter-close.svg");
+    }
+  }
+}

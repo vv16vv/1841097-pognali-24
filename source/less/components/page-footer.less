@@ -1,0 +1,33 @@
+.page-footer {
+  background-color: @fg-main;
+  color: @fg-special-grey;
+
+  padding-top: 37px;
+  padding-bottom: 19px;
+
+  margin-top: (@block-overlap * -1);
+
+  border-top-left-radius: @block-overlap;
+  border-top-right-radius: @block-overlap;
+
+  position: relative;
+  z-index: @z-index-footer;
+
+  &--page-destination {
+    z-index: @z-index-form-footer;
+  }
+}
+
+.page-footer__logo {
+  text-align: center;
+
+  & path {
+    fill: @bg-secondary;
+  }
+}
+
+.page-footer__developer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

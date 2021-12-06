@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+
+  &--primary {
+    background-color: @basic-yellow;
+  }
+
+  &--secondary {
+    background-color: @special-orange;
+  }
+
+  &--form {
+    &-round {
+      border-radius: 50%;
+    }
+
+    &-oval {
+      border-radius: 25px;
+    }
+
+    &-rectangle {
+      border-radius: 10px;
+    }
+  }
+}

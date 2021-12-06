@@ -1,0 +1,38 @@
+.traveller {
+  background-color: @bg-secondary;
+  color: @fg-main;
+
+  .ladder-top2down(68px);
+  padding-bottom: 34px;
+
+  position: relative;
+  z-index: @z-index-travelers;
+}
+
+.traveller__header {
+  padding-left: 24px;
+  padding-right: 27px;
+  padding-bottom: 54px;
+  box-sizing: border-box;
+}
+
+.traveller__item {
+  background-color: @bg-extra-light;
+}
+
+.traveller__button {
+  padding: 22px;
+  height: 61px;
+  box-sizing: border-box;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  background-color: @basic-yellow;
+  color: @fg-blue-light;
+}
+
+.traveller__list {
+  .common-list();
+}
