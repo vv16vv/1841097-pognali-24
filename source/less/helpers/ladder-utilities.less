@@ -1,0 +1,37 @@
+.ladder__bottom() {
+  border-bottom-left-radius: @block-overlap;
+  border-bottom-right-radius: @block-overlap;
+}
+
+.ladder__top() {
+  border-top-left-radius: @block-overlap;
+  border-top-right-radius: @block-overlap;
+}
+
+.ladder__margin-top() {
+  margin-top: (@block-overlap * -1);
+}
+
+.ladder__margin-bottom() {
+  margin-bottom: (@block-overlap * -1);
+}
+
+.ladder__padding-top(@padding-top) {
+  padding-top: @padding-top + @block-overlap;
+}
+
+.ladder__padding-bottom(@padding-bottom) {
+  padding-bottom: @padding-bottom + @block-overlap;
+}
+
+.ladder-top2down(@padding-top) {
+  .ladder__padding-top(@padding-top);
+  .ladder__bottom();
+  .ladder__margin-top();
+}
+
+.ladder-down2top(@padding-bottom) {
+  .ladder__padding-bottom(@padding-bottom);
+  .ladder__top();
+  .ladder__margin-bottom();
+}
