@@ -25,7 +25,7 @@ function toggleFilter() {
 
 function toggleGroup(searchedName, toggledName = "filter-form-group__list") {
   const group = document.getElementsByClassName(searchedName)[0]
-  toggleHidden("filter-form-group__button--closed", group)
-  toggleHidden("filter-form-group__button--opened", group)
+  toggleHidden("filter-form-group__button--state-closed", group)
+  toggleHidden("filter-form-group__button--state-opened", group)
   toggleHidden(toggledName, group)
 }
