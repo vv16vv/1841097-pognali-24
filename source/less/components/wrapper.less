@@ -1,4 +1,12 @@
 .wrapper {
   width: 270px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width - 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width - 120px;
+  }
 }

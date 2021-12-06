@@ -69,3 +69,20 @@
   .common-font(36px, 36px, 700);
   border-bottom: 5px solid @special-orange;
 }
+
+.page-header__contact-buttons .contact-buttons__button {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.page-header__contact-buttons .contact-buttons__authorize {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    min-width: 188px;
+  }
+}
