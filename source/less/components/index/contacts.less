@@ -19,14 +19,24 @@
 }
 
 .contacts__contact {
-  padding: 0;
   .contacts__additional-padding();
-  margin: 0;
-  list-style-type: none;
+}
+
+.contacts__contact .contact__button {
+  color: @basic-yellow;
 }
 
 .contacts__slogan {
   .contacts__additional-padding();
+  margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 42px;
+  }
 }
 
 .contacts__authorize {
