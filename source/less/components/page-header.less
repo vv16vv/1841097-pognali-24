@@ -9,6 +9,10 @@
   &--dark {
     background-color: @bg-main;
     color: @fg-main;
+
+    @media (min-width: @tablet-width) {
+      background-color: @bg-dark;
+    }
   }
 
   &--dark path,
