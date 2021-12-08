@@ -116,9 +116,36 @@
 
 .address__map {
   width: 100%;
+  display: none;
 
   .ladder__margin-top();
 
   position: relative;
   z-index: @z-index-map;
+
+  &--mobile {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
 }
