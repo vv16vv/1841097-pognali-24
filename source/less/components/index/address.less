@@ -1,4 +1,4 @@
-.address__wrapper {
+.address {
   background-color: @basic-yellow;
   color: @fg-blue-light;
 
@@ -7,18 +7,111 @@
 
   position: relative;
   z-index: @z-index-address;
+
+  @media (min-width: @tablet-width) {
+    .ladder-top2down(70px);
+    padding-bottom: 84px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .ladder-top2down(60px);
+    padding-bottom: 61px;
+  }
+}
+
+.address__wrapper {
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 225px;
+    padding-right: 75px;
+  }
 }
 
 .address__text {
   .common-font(16px, 22px, 700);
   font-style: normal;
   text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 45px 16px 1fr;
+
+  margin-top: 0;
+  margin-bottom: 32px;
+
+  &::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    width: 45px;
+    height: 45px;
+    margin-right: 16px;
+    border-radius: 50%;
+
+    background-color: @bg-contact;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../../img/icons/location.svg");
+    background-size: 21px 21px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .common-font(28px, 28px, 700);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 44px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      background-size: 32px 32px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      background-size: 42px 42px;
+    }
+  }
+}
+
+.address__part {
+  grid-column: 3;
 }
 
 .address__button {
   background-color: transparent;
   color: @fg-blue-light;
   .common-font(18px, 18px, 700);
+  text-align: left;
+
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 22px;
+  width: 100%;
+  border: 3px solid @fg-blue-light;
+
+  @media (min-width: @tablet-width) {
+    .common-font(24px, 24px, 700);
+  }
+
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    width: 324px;
+  }
 }
 
 .address__map {
