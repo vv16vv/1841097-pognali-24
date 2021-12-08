@@ -12,9 +12,6 @@
   <div class="wrapper page-header__title-bar">
     <a href="#" class="page-header__logo logo button">
       <svg
-        width="96"
-        height="15"
-        viewBox="0 0 96 15"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
@@ -47,11 +44,33 @@
           fill="white"/>
       </svg>
     </a>
+    <ul class="page-header__menu-content-list menu">
+      <li class="menu__item">
+        <a class="menu__button button button--menu" href="#">
+          О сервисе
+        </a>
+      </li>
+      <li class="menu__item">
+        <a
+          class="menu__button button button--menu"
+          href="form.html">
+          Направления
+        </a>
+      </li>
+      <li class="menu__item">
+        <a
+          class="menu__button button button--menu"
+          href="catalog.html">
+          Попутчики
+        </a>
+      </li>
+    </ul>
     <button
       class="page-header__menu-button page-header__menu-button--open button"
       type="button"
       onclick="toggleMenu()">
-      <svg width="25" height="11"  viewBox="0 0 25 11"
+      <svg
+        width="25" height="11" viewBox="0 0 25 11"
         xmlns="http://www.w3.org/2000/svg">
         <rect width="25" height="3" rx="1.5"/>
         <rect y="8" width="25" height="3" rx="1.5"/>
@@ -64,25 +83,44 @@
       onclick="toggleMenu()">
       <span class="visually-hidden">Закрыть меню.</span>
     </button>
+    <div class="page-header__contact-buttons">
+      <div class="contact-buttons">
+        <a
+          class="contact-buttons__button contact-buttons__button--phone button button--form-round"
+          href="tel:88005558628">
+          <span class="visually-hidden">8 800 555-86-28</span>
+        </a>
+        <a
+          class="contact-buttons__button contact-buttons__button--email button button--form-round"
+          href="mailto:mail@htmlacademy.ru">
+          <span class="visually-hidden">mail@htmlacademy.ru</span>
+        </a>
+        <button
+          class="contact-buttons__authorize button button--form-oval button--primary"
+          type="button">
+          авторизация
+        </button>
+      </div>
+    </div>
   </div>
   <div class="menu-content-popup popup hidden">
     <nav class="menu-content wrapper">
-      <ul class="menu-content__list">
-        <li class="menu-content__item">
-          <a class="menu-content__button button button--menu" href="#">
+      <ul class="menu-content__list menu">
+        <li class="menu__item">
+          <a class="menu__button button button--menu" href="#">
             О сервисе
           </a>
         </li>
-        <li class="menu-content__item">
+        <li class="menu__item">
           <a
-            class="menu-content__button button button--menu"
+            class="menu__button button button--menu"
             href="form.html">
             Направления
           </a>
         </li>
-        <li class="menu-content__item">
+        <li class="menu__item">
           <a
-            class="menu-content__button button button--menu"
+            class="menu__button button button--menu"
             href="catalog.html">
             Попутчики
           </a>
@@ -95,12 +133,16 @@
       </button>
       <ul class="menu-content__contact contact">
         <li class="contact__item">
-          <a class="contact__phone button" href="tel:88005558628">
+          <a
+            class="contact__button contact__button--phone button"
+            href="tel:88005558628">
             8 800 555-86-28
           </a>
         </li>
         <li class="contact__item">
-          <a class="contact__mail button" href="mailto:mail@htmlacademy.ru">
+          <a
+            class="contact__button contact__button--email button"
+            href="mailto:mail@htmlacademy.ru">
             mail@htmlacademy.ru
           </a>
         </li>
@@ -133,67 +175,66 @@
 </header>
 <main>
   <h1 class="visually-hidden">Сервис подбора попутчиков "Погнали"</h1>
-  <section class="slogan">
-    <div class="wrapper slogan__wrapper">
-      <p class="slogan__text">
-        В путешествие <br>
-        с крутыми <br>
-        попутчиками!
-      </p>
+  <div class="intro">
+    <div class="wrapper intro__wrapper">
+      <section class="slogan slogan__wrapper">
+        <p class="slogan__text">
+          В путешествие <br>
+          с крутыми <br>
+          попутчиками!
+        </p>
+        <div class="slogan__contact-buttons wrapper contact-buttons">
+          <a
+            class="contact-buttons__button contact-buttons__button--phone button button--form-round"
+            href="tel:88005558628">
+            <span class="visually-hidden">8 800 555-86-28</span>
+          </a>
+          <a
+            class="contact-buttons__button contact-buttons__button--email button button--form-round"
+            href="mailto:mail@htmlacademy.ru">
+            <span class="visually-hidden">mail@htmlacademy.ru</span>
+          </a>
+          <button
+            class="contact-buttons__authorize button button--form-oval button--primary"
+            type="button">
+            авторизация
+          </button>
+        </div>
+      </section>
+      <section class="review">
+        <h2 class="visually-hidden">Отзывы</h2>
+        <blockquote class="review__block">
+          <p class="review__text">«Лучшее приложение, <br>
+            что я видел в жизни!»</p>
+          <cite class="review__author">
+            Мурат Эльтазин <br>
+            главный редактор газеты «гаджетлайф»
+          </cite>
+        </blockquote>
+      </section>
+      <section class="promo">
+        <h2 class="visually-hidden">Порядок действий</h2>
+        <ol class="promo__list">
+          <li class="promo__item promo__item--destination">
+            Выберите <br>
+            направление
+          </li>
+          <li class="promo__item promo__item--idea">
+            Изучите идеи <br>
+            путешественников
+          </li>
+          <li class="promo__item promo__item--traveller">
+            Находите тех, <br>
+            кто похож на вас
+          </li>
+          <li class="promo__item promo__item--trip">
+            Путешествуйте <br>
+            вместе!
+          </li>
+        </ol>
+      </section>
     </div>
-    <div class="slogan__contact-buttons wrapper contact-buttons">
-      <a
-        class="contact-buttons__button contact-buttons__button--phone button button--form-round"
-        href="tel:88005558628">
-        <span class="visually-hidden">8 800 555-86-28</span>
-      </a>
-      <a
-        class="contact-buttons__button contact-buttons__button--email button button--form-round"
-        href="mailto:mail@htmlacademy.ru">
-        <span class="visually-hidden">mail@htmlacademy.ru</span>
-      </a>
-      <button
-        class="contact-buttons__authorize button button--form-oval button--primary"
-        type="button">
-        авторизация
-      </button>
-    </div>
-  </section>
-  <section class="review">
-    <div class="wrapper">
-      <h2 class="visually-hidden">Отзывы</h2>
-      <blockquote class="review__block">
-        <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
-        <cite class="review__author">
-          Мурат Эльтазин <br>
-          главный редактор газеты «гаджетлайф»
-        </cite>
-      </blockquote>
-    </div>
-  </section>
-  <section class="promo">
-    <div class="wrapper">
-      <h2 class="visually-hidden">Порядок действий</h2>
-      <ol class="promo__list">
-        <li class="promo__item promo__item--destination">
-          Выберите <br>
-          направление
-        </li>
-        <li class="promo__item promo__item--idea">
-          Изучите идеи <br>
-          путешественников
-        </li>
-        <li class="promo__item promo__item--traveller">
-          Находите тех, <br>
-          кто похож на вас
-        </li>
-        <li class="promo__item promo__item--trip">
-          Путешествуйте <br>
-          вместе!
-        </li>
-      </ol>
-    </div>
-  </section>
+  </div>
   <section class="about">
     <div class="wrapper about__wrapper">
       <h2 class="about__title title">О сервисе</h2>
@@ -203,14 +244,18 @@
         своими идеями путешествий и черпайте вдохновение в чужих.
       </p>
       <p class="about__slogan description description--selected">
-        А если найдете кого-то
-        близкого по духу — скорее
-        зовите в совместный трип!
+        <span>А если найдете кого-то близкого по духу &#8213;</span>
+        <span>скорее зовите в совместный трип!</span>
       </p>
+      <a
+        class="about__button button button--primary button--form-rectangle button--icon-right"
+        href="#">
+        Подробнее
+      </a>
     </div>
   </section>
   <section class="destination">
-    <div class="wrapper">
+    <div class="wrapper destination__wrapper">
       <header class="destination__header">
         <h2 class="destination__title title">Направления</h2>
         <p class="destination__description description">
@@ -275,15 +320,14 @@
         </li>
       </ul>
       <a
-        class="destination__button button button--form-rectangle button--icon-right"
-        href="#">
+        class="destination__button button button--form-rectangle button--icon-right button--primary"
+        href="form.html">
         Показать все
       </a>
-
     </div>
   </section>
   <section class="traveller">
-    <div class="wrapper">
+    <div class="wrapper traveller__wrapper">
       <header class="traveller__header">
         <h2 class="traveller__title title">Попутчики</h2>
         <p class="traveller__description description">
@@ -403,36 +447,27 @@
         </li>
       </ul>
       <a
-        class="traveller__button button button--form-rectangle button--icon-right"
-        href="#">
+        class="traveller__button button button--form-rectangle button--icon-right "
+        href="catalog.html">
         Показать всех
       </a>
     </div>
   </section>
   <section class="services">
-    <div class="wrapper">
-      <header class="services__header">
-        <h2 class="services__title title">
-          Добавьте свой профиль
-        </h2>
-        <p class="services__user-currency">
-          <img
-            src="img/icons/rates.svg"
-            width="100"
-            height="100"
-            alt="Валюта рубль.">
-        </p>
-      </header>
+    <div class="wrapper services__wrapper">
+      <h2 class="services__title title">
+        Добавьте свой профиль
+      </h2>
       <ol class="services__list">
-        <li class="services__item services-card">
+        <li class="services__item services-card services-card--first">
           <p class="services-card__description">Базовое размещение</p>
           <p class="services-card__price">Бесплатно</p>
         </li>
-        <li class="services__item services-card">
+        <li class="services__item services-card services-card--second">
           <p class="services-card__description">Вывод на первых позициях</p>
           <p class="services-card__price">99 руб./мес</p>
         </li>
-        <li class="services__item services-card">
+        <li class="services__item services-card services-card--third">
           <p class="services-card__description">Кастомный цвет карточки</p>
           <p class="services-card__price">59 руб./мес</p>
         </li>
@@ -488,11 +523,13 @@
             Заинтересовались?
           </h2>
           <p class="contacts__description description">
-            Зарегистрируйтесь,
-            это быстро и бесплатно!
-            Уже зарегистрированы? Тогда
-            скорее
-            <a class="contacts__authorize" href="#">авторизуйтесь</a>.
+            <span>Зарегистрируйтесь,</span>
+            <span>это быстро и бесплатно! <br></span>
+            <span>Уже зарегистрированы? Тогда</span>
+            <span>скорее
+              <a class="contacts__authorize" href="#">
+                авторизуйтесь
+              </a>.</span>
           </p>
         </header>
         <form
@@ -537,11 +574,13 @@
         </ul>
       </div>
     </div>
-    <address class="address">
-      <div class="address__wrapper">
-        <div class="wrapper">
-          <p class="address__text">ул. Большая
-            Конюшенная, 19/8</p>
+    <address>
+      <div class="address">
+        <div class="wrapper address__wrapper">
+          <p class="address__text">
+            <span class="address__part">ул. Большая</span>
+            <span class="address__part">Конюшенная, 19/8</span>
+          </p>
           <button
             class="address__button button button--form-rectangle button--icon-right button--route"
             type="button">
@@ -550,22 +589,31 @@
         </div>
       </div>
       <img
-        class="address__map"
-        src="img/backgrounds/background_map.png"
+        class="address__map address__map--mobile"
+        src="img/backgrounds/background-map-mobile.png"
         width="320"
         height="424"
+        alt="Расположение офиса.">
+      <img
+        class="address__map address__map--tablet"
+        src="img/backgrounds/background-map-tablet.png"
+        width="768"
+        height="581"
+        alt="Расположение офиса.">
+      <img
+        class="address__map address__map--desktop"
+        src="img/backgrounds/background-map-desktop.png"
+        width="1440"
+        height="584"
         alt="Расположение офиса.">
       <span class="address__locator"></span>
     </address>
   </section>
 </main>
 <footer class="page-footer">
-  <div class="wrapper">
+  <div class="wrapper page-footer__wrapper">
     <a class="page-footer__logo logo button" href="#">
       <svg
-        width="96"
-        height="15"
-        viewBox="0 0 96 15"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path
@@ -622,8 +670,9 @@
       </li>
     </ul>
     <p class="page-footer__developer">
-      Разработано
-      <a class="developer-logo button" href="https://htmlacademy.ru/">
+      <span class="page-footer__developer-text">Разработано</span>
+      <a class="page-footer__developer-button button"
+        href="https://htmlacademy.ru/">
         <img
           class="developer-logo__image"
           src="img/htmlacademy-big.svg"

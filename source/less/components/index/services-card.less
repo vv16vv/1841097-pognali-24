@@ -1,5 +1,102 @@
 .services-card {
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 300;
+  .common-font(16px, 17px, 300);
+  color: @fg-special-grey;
+  border-top: 1px solid @fg-border;
+
+  width: 200px;
+  padding-left: 0;
+  padding-top: 13px;
+  padding-bottom: 18px;
+
+  counter-increment: services-counter;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  &:last-child {
+    border-bottom: 1px solid @fg-border;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 34px;
+
+    right: -34px;
+    top: 3px;
+
+    border-radius: 50%;
+  }
+
+  &--first::before {
+    background-color: @special-orange;
+  }
+
+  &--second::before {
+    background-color: @special-yellow-dark;
+  }
+
+  &--third::before {
+    background-color: @basic-yellow;
+  }
+
+  &::after {
+    content: counter(services-counter);
+    position: absolute;
+
+    right: -21px;
+    top: 12px;
+
+    .common-font(16px, 16px, 400);
+    color: @fg-main;
+  }
+
+  @media (min-width: @tablet-width) {
+    .common-font(28px, 28px, 300);
+    flex-direction: row;
+    justify-content: space-between;
+    width: 561px;
+    margin-left: 90px;
+    padding-top: 20px;
+    padding-bottom: 18px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+
+      left: -90px;
+      top: 0;
+    }
+
+    &::after {
+      .common-font(28px, 28px, 400);
+      left: -64px;
+      top: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 812px;
+    margin-left: 163px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+}
+
+.services-card__description {
+  padding: 0;
+  margin: 0 0 6px;
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+}
+
+.services-card__price {
+  margin: 0;
+  padding: 0;
 }

@@ -7,26 +7,136 @@
 
   position: relative;
   z-index: @z-index-services;
+
+  @media (min-width: @tablet-width) {
+    .ladder-top2down(135px);
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .ladder-top2down(175px);
+    padding-bottom: 165px;
+  }
 }
 
-.services__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.services__wrapper {
   padding-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 72px;
+  }
 }
 
 .services__title {
   width: 107px;
+
+  margin-bottom: 56px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 73px;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 134px;
+  }
 }
 
 .services__list {
-  margin: 0;
-  padding: 0 0 31px 25px;
-  list-style-type: none;
+  .common-list();
+  margin-bottom: 46px;
+  counter-reset: services-counter;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+    right: 25px;
+    top: -144px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../../img/icons/rates.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+
+    &::before {
+      right: 56px;
+      top: 211px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+
+      top: -41px;
+      right: 0;
+
+      width: 198px;
+      height: calc(100% + 86px);
+
+      background-color: @bg-grey;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      width: 198px;
+      height: 198px;
+
+      right: 79px;
+      top: 8px;
+    }
+
+    &::after {
+      top: -51px;
+      right: 180px;
+
+      width: 446px;
+      height: calc(100% + 102px);
+    }
+  }
 }
 
 .services__show-rates {
   background-color: transparent;
   color: @fg-blue-darker;
+  padding-left: 0;
+  padding-right: 0;
+  .common-font(16px, 16px, 700);
+
+  @media (min-width: @tablet-width) {
+    .common-font(20px, 20px, 700);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before {
+      content: "";
+      width: 68px;
+      height: 68px;
+
+      margin-right: 21px;
+
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: @bg-grey;
+      background-image: url("../../../img/icons/businessman.svg");
+      background-size: 27px 27px;
+    }
+  }
 }

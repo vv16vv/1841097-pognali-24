@@ -1,30 +1,53 @@
 .slogan {
-  background-image: url("../../../img/backgrounds/traveller-illustration-mobile.svg"),
-    url("../../../img/backgrounds/globe-back-mobile.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center bottom, center;
-  background-size: 192px 255px, cover;
-
-  background-color: @bg-main;
-  color: @fg-main;
-
   box-sizing: border-box;
   padding-top: 21px;
   z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 110px;
+    grid-row: 1;
+    grid-column: 1;
+  }
 }
 
 .slogan__text {
   .common-font(36px, 40px, 700);
   text-align: center;
   position: relative;
+  margin-bottom: 245px;
+
+  @media (min-width: @tablet-width) {
+    .common-font(60px, 70px, 700);
+    margin-bottom: 86px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 101px;
+    padding-left: 67px;
+  }
 }
 
 .slogan__wrapper {
   display: flex;
   min-height: 404px;
   flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    min-height: 0;
+  }
 }
 
 .slogan__contact-buttons {
+  margin-top: auto;
   margin-bottom: -20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

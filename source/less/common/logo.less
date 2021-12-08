@@ -1,0 +1,30 @@
+.logo {
+  @media (min-width: @tablet-width) {
+    min-height: 40px;
+    background-image: url("../../img/logo-bag.svg"),
+      url("../../img/logo-figures.svg");
+    background-repeat: no-repeat, no-repeat;
+    width: 166px;
+    background-position: 0 top, 32px top;
+    background-size: 42px 39px, 123px 40px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo svg {
+  width: 96px;
+  height: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 107px;
+    height: 16px;
+    padding-left: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 129px;
+    height: 20px;
+    padding-left: 69px;
+  }
+}

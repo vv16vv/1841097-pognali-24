@@ -1,21 +1,38 @@
 .promo {
   padding-top: 29px;
-  padding-bottom: 39px;
-  background: linear-gradient(to bottom, @bg-main 109px, @bg-secondary 109px);
+  grid-row: 2;
+  grid-column: 1 / -1;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .promo__list {
-  margin: 0;
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   list-style-type: none;
 
   counter-reset: items;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .promo__font() {
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 700;
+  .common-font(18px, 18px, 700);
+
+  @media (min-width: @tablet-width) {
+    .common-font(24px, 24px, 700);
+  }
 }
 
 .promo__item {
@@ -29,6 +46,7 @@
   padding-left: 24px;
 
   .promo__font();
+  color: @bg-main;
 
   &--destination {
     background-color: @special-orange;
@@ -69,5 +87,87 @@
 
   &:not(:last-child) {
     padding-bottom: @vertical-padding + @overlap;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    @overlap: 42px;
+
+    padding-top: 31px;
+    padding-right: 33px;
+    padding-left: 33px;
+    margin: 0;
+    border-radius: 0;
+
+    &:first-child {
+      margin-right: @overlap * -1;
+      border-top-left-radius: (@overlap / 2);
+    }
+
+    &:nth-child(2) {
+      border-top-left-radius: (@overlap / 2);
+      border-top-right-radius: (@overlap / 2);
+    }
+
+    &:nth-child(3) {
+      margin-right: @overlap * -1;
+      border-bottom-left-radius: (@overlap / 2);
+    }
+
+    &:last-child {
+      border-bottom-left-radius: (@overlap / 2);
+      border-bottom-right-radius: (@overlap / 2);
+      padding-bottom: 61px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 61px;
+    }
+
+    &::after {
+      left: 33px;
+      top: 89px;
+      .common-font(30px, 30px, 700);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    @overlap: 30px;
+    @base-width: 315px;
+
+    border-radius: (@overlap / 2) 0 0 (@overlap / 2);
+
+    padding: 30px 34px;
+
+    &::after {
+      right: 33px + @overlap;
+      top: 22px;
+    }
+
+    &:first-child {
+      padding-bottom: 30px;
+      width: @base-width + @overlap;
+    }
+
+    &:not(:first-child) {
+      width: @base-width + @overlap * 2;
+      margin-right: 0;
+      margin-top: 0;
+      padding-bottom: 34px;
+      margin-left: @overlap * -1;
+    }
+
+    &:last-child {
+      width: @base-width;
+      border-top-right-radius: (@overlap / 2);
+      border-bottom-right-radius: (@overlap / 2);
+
+      &::after {
+        right: 33px;
+      }
+    }
   }
 }
