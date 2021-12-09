@@ -1,5 +1,7 @@
 .my-plan-card {
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   list-style-type: none;
   counter-reset: my-plan-counter;
 }
@@ -9,21 +11,85 @@
   background-color: @fg-main;
   border-radius: 10px;
   padding: 24px 25px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 40px 14px;
+    display: grid;
+    grid-template-columns: 177px 1fr 117px;
+    grid-row-gap: 54px;
+    grid-template-areas:
+      "plan-header plan-header plan-header"
+      "plan-ntravellers plan-dates plan-change";
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 97px;
+      left: 0;
+      background-color: @fg-border;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 37px 40px 37px;
+    display: grid;
+    grid-template-columns: 1fr 175px 306px 106px;
+    grid-row-gap: 0;
+    grid-template-areas: "plan-header plan-ntravellers plan-dates plan-change";
+
+    &::before {
+      content: none;
+    }
+  }
 }
 
 .my-plan-card__item + .my-plan-card__item {
   margin-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 15px;
+  }
 }
 
 .my-plan-card__title {
   margin: 0 0 20px;
   .common-font(16px, 16px, 700);
+  grid-area: plan-header;
+  position: relative;
 
   &::before {
     content: counter(my-plan-counter) + ". ";
     font-family: "Blogger Sans", "Arial", sans-serif;
     color: @fg-blue-light;
     .common-font(16px, 16px, 500);
+  }
+
+  @media (min-width: @tablet-width) {
+    .common-font(24px, 24px, 700);
+    margin-bottom: 0;
+
+    &::before {
+      .common-font(24px, 24px, 700);
+      position: absolute;
+      right: -15px;
+      top: -2px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+
+    &::before {
+      position: relative;
+      margin-right: 36px;
+    }
   }
 }
 
@@ -34,11 +100,28 @@
   margin-top: 0;
 
   &--ntravellers {
+    grid-area: plan-ntravellers;
     margin-bottom: 5px;
   }
 
   &--dates {
+    grid-area: plan-dates;
     margin-bottom: 24px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .common-font(20px, 20px, 500);
+    letter-spacing: 0.1em;
+    margin-top: 0;
+
+
+    &--ntravellers {
+      margin-bottom: 0;
+    }
+
+    &--dates {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -48,4 +131,15 @@
   text-transform: uppercase;
   color: @fg-black;
   opacity: 0.3;
+  grid-area: plan-change;
+
+  @media (min-width: @tablet-width) {
+    .common-font(20px, 20px, 500);
+    letter-spacing: 0.1em;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0.08em;
+  }
 }

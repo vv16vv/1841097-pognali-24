@@ -9,16 +9,36 @@
   z-index: @z-index-my-plans;
 
   @media (min-width: @tablet-width) {
-    .ladder-down2top-tablet(30px);
+    padding-top: 57px;
+    .ladder-down2top-tablet(76px);
     .ladder__margin-top(@block-overlap-tablet);
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-down2top-desktop(30px);
+    padding-top: 54px;
+    .ladder-down2top-desktop(64px);
     .ladder__margin-top(@block-overlap-desktop);
+  }
+}
+
+.my-plans__wrapper {
+  padding-left: 0;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 71px;
   }
 }
 
 .my-plans__title {
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
 }
