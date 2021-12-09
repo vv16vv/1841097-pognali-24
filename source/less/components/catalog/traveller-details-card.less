@@ -1,8 +1,16 @@
 .traveller-details-card {
   background-color: @fg-main;
-  border-radius: @block-overlap;
+  border-radius: @block-overlap-mobile;
 
   padding: 15px 0 23px;
+
+  @media (min-width: @tablet-width) {
+    border-radius: @block-overlap-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: @block-overlap-desktop;
+  }
 }
 
 .traveller-details-card__wrapper {

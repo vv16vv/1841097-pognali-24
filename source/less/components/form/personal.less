@@ -1,10 +1,26 @@
 .personal {
-  .ladder__padding-top(24px);
-  .ladder__margin-top();
-  .ladder__padding-bottom(34px);
-  @break-point: @block-overlap + 3px;
+  .ladder__padding-top(24px, @block-overlap-mobile);
+  .ladder__margin-top(@block-overlap-mobile);
+  .ladder__padding-bottom(34px, @block-overlap-mobile);
+  @break-point: @block-overlap-mobile + 3px;
   background: linear-gradient(@basic-yellow @break-point, @bg-lighter @break-point);
 
   position: relative;
   z-index: @z-index-personal;
+
+  @media (min-width: @tablet-width) {
+    .ladder__padding-top(24px, @block-overlap-tablet);
+    .ladder__padding-bottom(34px, @block-overlap-tablet);
+    .ladder__margin-top(@block-overlap-tablet);
+    @break-point: @block-overlap-tablet + 3px;
+    background: linear-gradient(@basic-yellow @break-point, @bg-lighter @break-point);
+  }
+
+  @media (min-width: @desktop-width) {
+    .ladder__padding-top(24px, @block-overlap-desktop);
+    .ladder__padding-bottom(34px, @block-overlap-desktop);
+    .ladder__margin-top(@block-overlap-desktop);
+    @break-point: @block-overlap-desktop + 3px;
+    background: linear-gradient(@basic-yellow @break-point, @bg-lighter @break-point);
+  }
 }

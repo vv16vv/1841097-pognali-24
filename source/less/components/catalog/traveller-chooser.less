@@ -1,7 +1,17 @@
 .traveller-chooser {
   background-color: @bg-lighter;
 
-  .ladder__padding-top(21px);
-  .ladder__margin-top();
+  .ladder__padding-top(21px, @block-overlap-mobile);
+  .ladder__margin-top(@block-overlap-mobile);
   padding-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    .ladder__padding-top(21px, @block-overlap-tablet);
+    .ladder__margin-top(@block-overlap-tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    .ladder__padding-top(21px, @block-overlap-desktop);
+    .ladder__margin-top(@block-overlap-desktop);
+  }
 }

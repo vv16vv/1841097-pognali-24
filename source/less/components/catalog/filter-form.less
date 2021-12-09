@@ -2,9 +2,17 @@
   background-color: @basic-yellow;
   color: @fg-blue-light;
   box-sizing: border-box;
-  border-radius: @block-overlap;
+  border-radius: @block-overlap-mobile;
 
   padding: 26px 25px 24px 25px;
+
+  @media (min-width: @tablet-width) {
+    border-radius: @block-overlap-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: @block-overlap-desktop;
+  }
 }
 
 .filter-form__title {

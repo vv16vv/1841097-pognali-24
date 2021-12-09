@@ -1,9 +1,19 @@
 .new-plan {
-  .ladder-down2top(43px);
-  .ladder__margin-top();
+  .ladder-down2top-mobile(43px);
+  .ladder__margin-top(@block-overlap-mobile);
   padding-top: 30px;
   background-color: @bg-grey-extra-darker;
 
   position: relative;
   z-index: @z-index-add-plan;
+
+  @media (min-width: @tablet-width) {
+    .ladder-down2top-tablet(30px);
+    .ladder__margin-top(@block-overlap-tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    .ladder-down2top-desktop(30px);
+    .ladder__margin-top(@block-overlap-desktop);
+  }
 }

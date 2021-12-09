@@ -31,8 +31,16 @@
   }
 
   &--inner {
-    .ladder__bottom();
+    .ladder__bottom(@block-overlap-mobile);
     z-index: @z-index-header;
+
+    @media (min-width: @tablet-width) {
+      .ladder__bottom(@block-overlap-tablet);
+    }
+
+    @media (min-width: @desktop-width) {
+      .ladder__bottom(@block-overlap-desktop);
+    }
   }
 }
 
