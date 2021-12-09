@@ -12,6 +12,16 @@ function toggleMenu() {
     .getElementsByClassName("page-header")[0]
   pageHeader.classList.toggle("page-header--dark")
   pageHeader.classList.toggle("page-header--light")
+  const paths = pageHeader.getElementsByClassName("logo__path")
+  for (let i = 0; i < paths.length; i++) {
+    paths[i].classList.toggle("logo__path--light")
+    paths[i].classList.toggle("logo__path--dark")
+  }
+  const rects = pageHeader.getElementsByClassName("logo__burger")
+  for (let i = 0; i < rects.length; i++) {
+    rects[i].classList.toggle("logo__burger--light")
+    rects[i].classList.toggle("logo__burger--dark")
+  }
 }
 
 function toggleFilter() {

@@ -13,21 +13,15 @@
     @media (min-width: @tablet-width) {
       background-color: @bg-dark;
     }
-  }
 
-  &--dark path,
-  &--dark rect {
-    fill: @fg-main;
+    @media (min-width: @desktop-width) {
+      background-color: @bg-main;
+    }
   }
 
   &--light {
     background-color: @fg-main;
     color: @bg-secondary;
-  }
-
-  &--light path,
-  &--light rect {
-    fill: @bg-secondary;
   }
 
   &--inner {
