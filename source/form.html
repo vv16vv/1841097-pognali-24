@@ -8,7 +8,8 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
-<header class="page-header page-header--dark page-header--inner">
+<header
+  class="page-header page-header--dark page-header--inner page-header--destination">
   <div class="wrapper page-header__wrapper">
     <div class="page-header__title-bar">
       <a href="index.html" class="page-header__logo logo button">
@@ -202,27 +203,25 @@
         class="personal__form personal-form"
         action="https://echo.htmlacademy.ru/"
         method="post">
-        <header class="personal-form__header">
-          <p class="personal-form__level traveller-level">
+        <p class="personal-form__level traveller-level">
             <span
               class="traveller-level__number traveller-level__number--personal-form">
-              99
+              80
             </span>
-            <span
-              class="traveller-level__text traveller-level__text--personal-form">
+          <span
+            class="traveller-level__text traveller-level__text--personal-form">
               level
             </span>
-          </p>
-          <img
-            class="personal-form__photo"
-            src="img/people/demin.png"
-            width="270" height="270"
-            alt="Петя Демин.">
-        </header>
+        </p>
+        <img
+          class="personal-form__photo"
+          src="img/people/demin.png"
+          width="270" height="270"
+          alt="Петя Демин.">
         <button
           class="personal-form__button button button--form-oval"
           type="button">
-          сменить фото
+          <span class="personal-form__button--desktop">сменить</span> фото
         </button>
         <fieldset
           class="personal-form__tags filter-form-group filter-form-group--personal-form">
@@ -234,9 +233,7 @@
             <textarea
               class="personal-form__textarea"
               name="tags"
-            >#бургер #бар #футбол #концерт
-              #крафт
-            </textarea>
+            >#бургер #бар #футбол #концерт #крафт</textarea>
           </label>
         </fieldset>
         <fieldset class="personal-form__transport filter-form-group filter-form-group--personal-form">

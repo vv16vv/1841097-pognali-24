@@ -16,16 +16,37 @@
   border: none;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 
 .filter-form-group__title {
   .common-font(16px, 18px, 700);
   text-transform: uppercase;
   padding-bottom: 16px;
+  padding-left: 14px;
+  padding-right: 14px;
 
   &--personal-form {
     text-align: center;
     padding-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    .common-font(20px, 20px, 500);
+    letter-spacing: 0.07em;
+    position: absolute;
+    bottom: -13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: @bg-lighter;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 18px;
+    padding-right: 18px;
+
+    text-align: center;
+    letter-spacing: 0.09em;
   }
 }
 
