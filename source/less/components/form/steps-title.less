@@ -1,6 +1,18 @@
 .steps-title {
   display: flex;
   flex-direction: column;
+  gap: 2px;
+
   .common-font(20px, 20px, 700);
   color: @fg-blue-light;
+
+  @media (min-width: @tablet-width) {
+    .common-font(36px, 36px, 700);
+    gap: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 7px;
+  }
 }

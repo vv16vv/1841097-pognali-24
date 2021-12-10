@@ -67,12 +67,24 @@
 }
 
 .new-plan-markers__step-name {
-  display: none;
+  @media (max-width: @desktop-width - 1) {
+    .visually-hide();
+  }
 
   @media (min-width: @desktop-width) {
     display: block;
     .common-font(20px, 24px, 400);
     letter-spacing: 0.11em;
     text-transform: uppercase;
+  }
+}
+
+.new-plan-markers__step-dot {
+  @media (max-width: @desktop-width - 1) {
+    .visually-hide();
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }

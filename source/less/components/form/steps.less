@@ -8,6 +8,14 @@
   border-radius: 10px;
   background-color: @fg-main;
   padding: 24px 25px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 48px 40px 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 98px 160px 106px;
+  }
 }
 
 .steps__item + .steps__item {
@@ -16,6 +24,14 @@
 
 .steps__title {
   margin: 0 0 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 33px;
+  }
 }
 
 .steps__description {
