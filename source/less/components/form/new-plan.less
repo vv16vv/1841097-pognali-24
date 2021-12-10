@@ -8,12 +8,32 @@
   z-index: @z-index-add-plan;
 
   @media (min-width: @tablet-width) {
-    .ladder-down2top-tablet(30px);
+    .ladder-down2top-tablet(63px);
     .ladder__margin-top(@block-overlap-tablet);
+    padding-top: 53px;
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-down2top-desktop(30px);
+    .ladder-down2top-desktop(74px);
     .ladder__margin-top(@block-overlap-desktop);
+    padding-top: 55px;
+  }
+}
+
+.new-plan__header {
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.new-plan__title {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 54px;
   }
 }
