@@ -4,18 +4,30 @@
   align-items: center;
   gap: 5px;
 
-  height: 43px;
+  padding-top: 12px;
+  padding-bottom: 11px;
 
   border-top: 1px solid @fg-border;
   border-bottom: 1px solid @fg-border;
 
   .common-font(20px, 20px, 700);
   color: @fg-blue-light;
+
+  @media (min-width: @tablet-width) {
+    .common-font(36px, 36px, 700);
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 28px;
+  }
 }
 
 .calendar-month__button {
   width: 15px;
-  height: 42px;
+  height: 18px;
 
   background-color: transparent;
   background-repeat: no-repeat;
@@ -27,6 +39,18 @@
 
   &--next {
     background-image: url("../../../img/icons/month-next.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 19px;
+    height: 34px;
+    background-size: 19px 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 16px;
+    height: 28px;
+    background-size: 16px 28px;
   }
 }
 

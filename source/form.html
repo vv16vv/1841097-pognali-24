@@ -350,25 +350,29 @@
         </ol>
       </div>
       <ol class="new-plan__list steps">
-        <li class="steps__item step-dates">
+        <li class="steps__item">
+          <h3 class="steps__title steps-title">
+            <span>Шаг 1.</span>
+            <span>Даты пребывания</span>
+          </h3>
+          <p class="steps__description">
+            Укажите предпочтительное количество попутчиков, которых
+            вы хотели бы позвать в поездку, и ее предполагаемую длительность.
+          </p>
           <form
-            class="step-dates__form"
+            class="step-dates"
             action="https://echo.htmlacademy.ru/"
             method="post">
-            <h3 class="steps__title steps-title">
-              <span>Шаг 1.</span>
-              <span>Даты пребывания</span>
-            </h3>
-            <p class="steps__description description">
-              Укажите предпочтительное количество попутчиков, которых
-              вы хотели бы позвать в поездку, и ее предполагаемую длительность.
-            </p>
-            <div class="step-dates__item step-dates__item--travellers range-control">
+            <div class="step-dates__travellers range-control">
               <label
-                class="range-control__title range-control-title"
+                class="range-control__title range-control__title-name"
                 for="field-total-travellers">
-                <span class="range-control-title__name">ищу попутчиков:</span>
-                <span class="range-control-title__unit">чел.</span>
+                ищу попутчиков:
+              </label>
+              <label
+                class="range-control__title range-control__title-unit"
+                for="field-total-travellers">
+                чел.
               </label>
               <div class="range-control__field-with-buttons">
                 <button
@@ -391,12 +395,16 @@
                 </button>
               </div>
             </div>
-            <div class="step-dates__item step-dates__item--dates range-control">
+            <div class="step-dates__dates range-control">
               <label
-                class="range-control__title range-control-title"
+                class="range-control__title range-control__title-name"
                 for="field-duration">
-                <span class="range-control-title__name">длительность:</span>
-                <span class="range-control-title__unit">дн.</span>
+                длительность:
+              </label>
+              <label
+                class="range-control__title range-control__title-unit"
+                for="field-duration">
+                дн.
               </label>
               <div class="range-control__field-with-buttons">
                 <button
@@ -420,7 +428,7 @@
               </div>
             </div>
             <div
-              class="step-dates__item step-dates__item--with-children with-children-control">
+              class="step-dates__with-children with-children-control">
               <label class="with-children-control__label">
                 <input
                   class="with-children-control__checkbox"
@@ -434,7 +442,7 @@
                   </span>
               </label>
             </div>
-            <div class="steps__calendar calendar">
+            <div class="steps-dates__calendar calendar">
               <div class="calendar__month calendar-month">
                 <button
                   class="calendar-month__button button calendar-month__button--prev"
@@ -450,56 +458,140 @@
                 </button>
               </div>
               <ul class="calendar__days">
-                <li class="calendar__day calendar__day--name">П</li>
-                <li class="calendar__day calendar__day--name">В</li>
-                <li class="calendar__day calendar__day--name">С</li>
-                <li class="calendar__day calendar__day--name">Ч</li>
-                <li class="calendar__day calendar__day--name">П</li>
-                <li class="calendar__day calendar__day calendar__day--weekend">С
+                <li class="calendar__day calendar__day--name">
+                  П<span class="calendar__day--long">н</span>
                 </li>
-                <li class="calendar__day calendar__day--weekend">В
+                <li class="calendar__day calendar__day--name">
+                  В<span class="calendar__day--long">т</span>
                 </li>
-                <li class="calendar__day">23</li>
-                <li class="calendar__day">24</li>
-                <li class="calendar__day">25</li>
-                <li class="calendar__day">26</li>
-                <li class="calendar__day">27</li>
-                <li class="calendar__day">28</li>
-                <li class="calendar__day">1</li>
-                <li class="calendar__day">2</li>
-                <li class="calendar__day">3</li>
-                <li class="calendar__day">4</li>
-                <li class="calendar__day">5</li>
-                <li class="calendar__day">6</li>
-                <li class="calendar__day">7</li>
-                <li class="calendar__day">8</li>
-                <li class="calendar__day">9</li>
-                <li class="calendar__day">10</li>
-                <li class="calendar__day">11</li>
-                <li class="calendar__day">12</li>
-                <li class="calendar__day">13</li>
-                <li class="calendar__day">14</li>
-                <li class="calendar__day">15</li>
-                <li class="calendar__day">16</li>
-                <li class="calendar__day">17</li>
-                <li class="calendar__day">18</li>
-                <li class="calendar__day">19</li>
-                <li class="calendar__day">20</li>
-                <li class="calendar__day">21</li>
-                <li class="calendar__day">22</li>
-                <li class="calendar__day">23</li>
-                <li class="calendar__day">24</li>
-                <li class="calendar__day">25</li>
+                <li class="calendar__day calendar__day--name">
+                  С<span class="calendar__day--long">р</span>
+                </li>
+                <li class="calendar__day calendar__day--name">
+                  Ч<span class="calendar__day--long">т</span>
+                </li>
+                <li class="calendar__day calendar__day--name">
+                  П<span class="calendar__day--long">т</span>
+                </li>
+                <li class="calendar__day calendar__day--weekend">
+                  С<span class="calendar__day--long">б</span>
+                </li>
+                <li class="calendar__day calendar__day--weekend">
+                  В<span class="calendar__day--long">с</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">23</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">24</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">25</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">26</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">27</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">28</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">
+                    1
+                    <span class="calendar__day--new-month">мар</span>
+                  </span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">2</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">3</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">4</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">5</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">6</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">7</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">8</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">9</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">10</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">11</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">12</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">13</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">14</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">15</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">16</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">17</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">18</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">19</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">20</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">21</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">22</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">23</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">24</span>
+                </li>
+                <li class="calendar__day">
+                  <span class="calendar__day--past">25</span>
+                </li>
                 <li
                   class="calendar__day calendar__day--today calendar__day--trip">
                   26
+                  <p class="calendar__day--trip-mark">Заезд</p>
                 </li>
                 <li class="calendar__day calendar__day--trip">27</li>
-                <li class="calendar__day calendar__day--trip">28</li>
+                <li class="calendar__day calendar__day--trip">
+                  28
+                  <p class="calendar__day--trip-mark">Выезд</p>
+                </li>
                 <li class="calendar__day calendar__day--future">29</li>
                 <li class="calendar__day calendar__day--future">30</li>
                 <li class="calendar__day calendar__day--future">31</li>
-                <li class="calendar__day calendar__day--future">1</li>
+                <li class="calendar__day calendar__day--future">
+                  1
+                  <span class="calendar__day--new-month">апр</span>
+                </li>
                 <li class="calendar__day calendar__day--future">2</li>
                 <li class="calendar__day calendar__day--future">3</li>
                 <li class="calendar__day calendar__day--future">4</li>
@@ -507,7 +599,7 @@
               </ul>
             </div>
             <button
-              class="steps__button button button--form-oval button--primary"
+              class="steps-dates__button steps__button button button--form-oval button--primary"
               type="submit">
               Следующий шаг
             </button>
@@ -522,7 +614,7 @@
               <span>Шаг 2.</span>
               <span>Маршрут</span>
             </h3>
-            <p class="steps__description description">
+            <p class="steps__description">
               Укажите страны, которые вы хотели бы посетить.
               Это может быть одна или сразу несколько. </p>
             <div class="steps__select steps-select">
@@ -745,7 +837,7 @@
               <span>Шаг 3.</span>
               <span>Развлечения</span>
             </h3>
-            <p class="steps__description description">
+            <p class="steps__description">
               Наконец, расскажите о своих планах времяпровождения.
               Можно писать в свободной форме и ставить тэги.
             </p>

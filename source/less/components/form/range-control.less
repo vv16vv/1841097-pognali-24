@@ -1,9 +1,61 @@
+.range-control {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  grid-template-areas: "name unit" "field field";
+  grid-row-gap: 8px;
+
+  @media (min-width: @tablet-width) {
+    border-top: 1px solid @fg-border-lighter;
+    padding-top: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-top: none;
+    padding-top: 0;
+    grid-template-columns: 1fr 180px 40px;
+    grid-row-gap: 0;
+    grid-column-gap: 35px;
+    grid-template-areas: "name field unit";
+    align-items: center;
+  }
+}
+
 .range-control__title {
-  margin-bottom: 8px;
+  .common-font(16px, 16px, 500);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: @fg-blue-light;
+
+  @media (min-width: @tablet-width) {
+    .common-font(20px, 18px, 500);
+    letter-spacing: 0.1em;
+  }
+}
+
+.range-control__title-name {
+  grid-area: name;
+}
+
+.range-control__title-unit {
+  grid-area: unit;
+  letter-spacing: 0.07em;
+  opacity: 0.3;
+  text-align: right;
+
+  @media (min-width: @tablet-width) {
+    letter-spacing: 0.08em;
+  }
+
+  @media (min-width: @desktop-width) {
+    opacity: 1;
+  }
 }
 
 .range-control__field-with-buttons {
+  grid-area: field;
+
   display: flex;
+  align-items: center;
   width: 100%;
   border: 1px solid @fg-border;
   border-radius: 4px;
@@ -15,6 +67,20 @@
   width: 136px;
   text-align: center;
   border: none;
+
+  .common-font(15px, 14px, 500);
+
+  @media (min-width: @tablet-width) {
+    .common-font(20px, 20px, 500);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 60px;
+  }
 }
 
 .range-control__button {
@@ -33,5 +99,15 @@
 
   &--plus {
     background-image: url("../../../img/icons/range-control-plus.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 66px;
+    height: 70px;
+    background-size: 20px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 60px;
   }
 }
