@@ -842,7 +842,7 @@
             </div>
           </form>
         </li>
-        <li class="steps__item step-recreation">
+        <li class="steps__item">
           <h3 class="steps__title steps-title">
             <span>Шаг 3.</span>
             <span>Развлечения</span>
@@ -852,59 +852,58 @@
             <span>Можно писать в свободной форме и ставить тэги.</span>
           </p>
           <form
-            class="step-recreation__form"
+            class="step-recreation"
             action="https://echo.htmlacademy.ru/"
             method="post">
-            <ul class="steps__agenda agenda">
+            <ul class="step-recreation__agenda agenda">
               <li class="agenda__item">
-                <label class="agenda__country">
-                  <span class="agenda__country-name">
-                    Босния и герцеговина
-                  </span>
-                  <img
-                    class="agenda__flag"
-                    src="img/flags/Bosnia%20and%20Herzegovina.png"
-                    width="35" height="24"
-                    alt="Флаг Боснии и Герцеговины."
-                  >
-                  <textarea
-                    class="agenda__plan"
-                    id="agenda-plan-1"
-                    name="agenda-plan-1"></textarea>
+                <label class="agenda__country" for="agenda-plan-1">
+                  Босния и Герцеговина
                 </label>
+                <img
+                  class="agenda__flag"
+                  src="img/flags/Bosnia%20and%20Herzegovina.png"
+                  width="35" height="24"
+                  alt="Флаг Боснии и Герцеговины."
+                >
+                <textarea
+                  class="agenda__plan"
+                  id="agenda-plan-1"
+                  name="agenda-plan-1"
+                  placeholder="План действий"></textarea>
                 <span class="agenda__marker"></span>
               </li>
               <li class="agenda__item">
-                <label class="agenda__country">
-                  <span class="agenda__country-name">
-                    Чехия
-                  </span>
-                  <img
-                    class="agenda__flag"
-                    src="img/flags/Czech.png"
-                    width="35" height="24"
-                    alt="Флаг Чехии."
-                  >
-                  <textarea
-                    class="agenda__plan"
-                    id="agenda-plan-2"
-                    name="agenda-plan-2">Пить пиво и лазить
+                <label class="agenda__country" for="agenda-plan-2">
+                  Чехия
+                </label>
+                <img
+                  class="agenda__flag"
+                  src="img/flags/Czech.png"
+                  width="35" height="24"
+                  alt="Флаг Чехии."
+                >
+                <textarea
+                  class="agenda__plan"
+                  id="agenda-plan-2"
+                  name="agenda-plan-2">Пить пиво и лазить
 по старым замкам, наслаждаться архитектурой и вот это все.
                   </textarea>
-                </label>
                 <span class="agenda__marker"></span>
               </li>
             </ul>
-            <button
-              class="steps__button button button--form-oval button--primary"
-              type="submit">
-              Отправить
-            </button>
-            <button
-              class="steps__button steps__button--back button"
-              type="submit">
-              На шаг назад
-            </button>
+            <div class="steps__buttons">
+              <button
+                class="steps__button steps__button--next button button--form-oval button--primary"
+                type="submit">
+                Отправить
+              </button>
+              <button
+                class="steps__button steps__button--back button"
+                type="submit">
+                На шаг назад
+              </button>
+            </div>
           </form>
         </li>
       </ol>
