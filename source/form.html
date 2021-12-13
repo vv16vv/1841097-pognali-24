@@ -672,22 +672,47 @@
                 <span class="visually-hidden">Убрать выбранную страну.</span>
               </button>
             </div>
-            <label class="steps-select steps-select__chooser">
-              <span class="visually-hidden">Выберите страну</span>
-              <select
-                class="steps-select__select"
-                name="country-chooser-3">
-                <option value="choose-country">Выберите страну</option>
-              </select>
-            </label>
-            <label class="steps-select steps-select__adder">
-              <span class="visually-hidden">Выберите страну</span>
-              <select
-                class="steps-select__select"
-                name="country-chooser-3">
-                <option value="choose-country">Добавить страну</option>
-              </select>
-            </label>
+            <div class="steps-select">
+              <label class="visually-hidden" for="country-chooser-3">
+                Выберите страну
+              </label>
+              <div
+                class="steps-select__select-wrapper steps-select__select-wrapper--chooser">
+                <select
+                  class="steps-select__select steps-select__select--chooser"
+                  id="country-chooser-3"
+                  name="country-chooser-3">
+                  <option value="choose-country">Выберите страну</option>
+                </select>
+              </div>
+              <div class="steps-select__no-flag"></div>
+              <button
+                class="steps-select__button steps-select__button--chooser button button--form-round"
+                type="button">
+                <span class="visually-hidden">Убрать выбранную страну.</span>
+              </button>
+            </div>
+            <div class="steps-select">
+              <label class="visually-hidden" for="country-chooser-4">
+                Выберите страну
+              </label>
+              <div
+                class="steps-select__select-wrapper steps-select__select-wrapper--adder">
+                <select
+                  class="steps-select__select steps-select__select--adder"
+                  id="country-chooser-4"
+                  name="country-chooser-3">
+                  <option value="choose-country">Добавить страну</option>
+                </select>
+              </div>
+              <div
+                class="steps-select__no-flag steps-select__no-flag--adder"></div>
+              <button
+                class="steps-select__button steps-select__button--adder button button--form-round"
+                type="button">
+                <span class="visually-hidden">Убрать выбранную страну.</span>
+              </button>
+            </div>
             <div class="steps-select__popup step-select-popup popup hidden">
               <ul class="step-route-popup__letters letters">
                 <li class="letters__item letter">

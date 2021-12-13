@@ -54,6 +54,12 @@
   }
 }
 
+.steps__buttons {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
 .steps__button {
   width: 100%;
   padding: 7px;
@@ -82,5 +88,14 @@
 
     .common-font(24px, 24px, 700);
     text-transform: none;
+
+    &--back {
+      background-position: left 15px center;
+      background-image: url("../../../img/icons/arrow-back.svg");
+    }
+
+    &--next {
+      margin-bottom: 0;
+    }
   }
 }
