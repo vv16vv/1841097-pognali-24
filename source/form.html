@@ -605,7 +605,7 @@
             </button>
           </form>
         </li>
-        <li class="steps__item step-route">
+        <li class="steps__item">
           <h3 class="steps__title steps-title">
             <span>Шаг 2.</span>
             <span>Маршрут</span>
@@ -615,69 +615,80 @@
             <span>Это может быть одна или сразу несколько.</span>
           </p>
           <form
-          class="step-route__form"
-          action="https://echo.htmlacademy.ru/"
-          method="post">
-            <div class="steps__select steps-select">
+            class="step-route"
+            action="https://echo.htmlacademy.ru/"
+            method="post">
+            <div class="steps-select">
               <label class="visually-hidden" for="country-chosen-country-1">
                 Выберите страну
               </label>
-              <span class="steps-select__chosen-country steps-chosen-country">
+              <div class="steps-select__select-wrapper">
                 <select
-                  class="steps-chosen-country__select"
+                  class="steps-select__select"
                   id="country-chosen-country-1"
                   name="country-chosen-country-1">
                   <option value="bosnia-and-herzegovina">Босния и
-                    герцеговина</option>
+                    герцеговина
+                  </option>
                 </select>
-                <span class="steps-chosen-country__flag">
-                  <img
-                    src="img/flags/Bosnia%20and%20Herzegovina.png"
-                    width="35" height="24"
-                    alt="Флаг Боснии и Герцеговины."
-                  >
-                </span>
-                <button
-                  class="steps-chosen-country__button button button--form-round"
-                  type="button">
-                  Убрать выбранную страну.
-                </button>
-              </span>
+              </div>
+              <div class="steps-select__flag">
+                <img
+                  class="steps-select__flag-img"
+                  src="img/flags/Bosnia%20and%20Herzegovina.png"
+                  width="35" height="24"
+                  alt="Флаг Боснии и Герцеговины."
+                >
+              </div>
+              <button
+                class="steps-select__button button button--form-round"
+                type="button">
+                <span class="visually-hidden">Убрать выбранную страну.</span>
+              </button>
             </div>
-            <div class="steps__select steps-select">
+            <div class="steps-select">
               <label class="visually-hidden" for="country-chosen-country-2">
                 Выберите страну
               </label>
-              <span class="steps-select__chosen-country steps-chosen-country">
+              <div class="steps-select__select-wrapper">
                 <select
-                  class="steps-chosen-country__select"
+                  class="steps-select__select"
                   id="country-chosen-country-2"
                   name="country-chosen-country-2">
                   <option value="czech">чехия</option>
                 </select>
-                <span class="steps-chosen-country__flag">
-                  <img
-                    src="img/flags/Czech.png"
-                    width="35" height="24"
-                    alt="Флаг Чехии."
-                  >
-                </span>
-                <button
-                  class="steps-chosen-country__button button button--form-round"
-                  type="button">
-                  Убрать выбранную страну.
-                </button>
-              </span>
+              </div>
+              <div class="steps-select__flag">
+                <img
+                  class="steps-select__flag-img"
+                  src="img/flags/Czech.png"
+                  width="35" height="24"
+                  alt="Флаг Чехии."
+                >
+              </div>
+              <button
+                class="steps-select__button button button--form-round"
+                type="button">
+                <span class="visually-hidden">Убрать выбранную страну.</span>
+              </button>
             </div>
-            <label class="steps__select steps-chooser">
+            <label class="steps-select steps-select__chooser">
               <span class="visually-hidden">Выберите страну</span>
               <select
-                class="steps-chooser__select hidden"
+                class="steps-select__select"
                 name="country-chooser-3">
                 <option value="choose-country">Выберите страну</option>
               </select>
             </label>
-            <div class="step-route__popup step-route-popup popup hidden">
+            <label class="steps-select steps-select__adder">
+              <span class="visually-hidden">Выберите страну</span>
+              <select
+                class="steps-select__select"
+                name="country-chooser-3">
+                <option value="choose-country">Добавить страну</option>
+              </select>
+            </label>
+            <div class="steps-select__popup step-select-popup popup hidden">
               <ul class="step-route-popup__letters letters">
                 <li class="letters__item letter">
                   <button
@@ -817,16 +828,18 @@
                 </li>
               </ul>
             </div>
-            <button
-              class="steps__button button button--form-oval button--primary"
-              type="submit">
-              Следующий шаг
-            </button>
-            <button
-              class="steps__button steps__button--back button"
-              type="submit">
-              На шаг назад
-            </button>
+            <div class="steps__buttons">
+              <button
+                class="steps__button steps__button--next button button--form-oval button--primary"
+                type="submit">
+                Следующий шаг
+              </button>
+              <button
+                class="steps__button steps__button--back button"
+                type="submit">
+                На шаг назад
+              </button>
+            </div>
           </form>
         </li>
         <li class="steps__item step-recreation">
@@ -839,9 +852,9 @@
             <span>Можно писать в свободной форме и ставить тэги.</span>
           </p>
           <form
-          class="step-recreation__form"
-          action="https://echo.htmlacademy.ru/"
-          method="post">
+            class="step-recreation__form"
+            action="https://echo.htmlacademy.ru/"
+            method="post">
             <ul class="steps__agenda agenda">
               <li class="agenda__item">
                 <label class="agenda__country">
