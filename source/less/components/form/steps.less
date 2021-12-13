@@ -81,9 +81,12 @@
 
   @media (min-width: @tablet-width) {
     width: 285px;
+    box-sizing: border-box;
     padding-top: 29px;
     padding-bottom: 27px;
+    padding-left: 34px;
     border-radius: 10px;
+    text-align: left;
 
     .button--next();
 
@@ -117,6 +120,10 @@
       left: -32px;
 
       border: 0.5px solid @fg-border;
+    }
+
+    &--no-line::before {
+      content: none;
     }
   }
 }
