@@ -52,6 +52,22 @@
       height: 22px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    gap: 45px;
+
+    &::after {
+      top: -42px;
+      right: 218px;
+      height: 42px;
+    }
+
+    &::before {
+      bottom: -10px;
+      right: 218px;
+      height: 22px;
+    }
+  }
 }
 
 .steps-select__select-wrapper {
@@ -184,6 +200,11 @@
       top: 26px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 40px;
+    padding-right: 46px;
+  }
 }
 
 .steps-select__flag-img {
@@ -257,5 +278,9 @@
     &--adder::before {
       background-color: @bg-lighter;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 156px;
   }
 }
