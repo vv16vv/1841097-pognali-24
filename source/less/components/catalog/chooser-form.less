@@ -7,7 +7,9 @@
   padding: 26px 25px 24px 25px;
 
   @media (min-width: @tablet-width) {
-    border-radius: @block-overlap-tablet;
+    border-radius: 25px;
+
+    padding: 37px 34px 37px 34px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,6 +24,20 @@
 
 .chooser-form__title {
   margin: 0 0 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 35px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid @yellow-dark;
+
+    .common-font(30px, 30px, 700);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 34px;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 }
 
 .chooser-form__button {
@@ -33,4 +49,20 @@
 
   .common-font(17px, 17px, 700);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    margin-top: 36px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -36px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+
+      border-top: 1px solid @yellow-dark;
+    }
+  }
 }
