@@ -1,12 +1,26 @@
 .traveller-details {
+  grid-area: traveller-details;
+
   background-color: @bg-lighter;
 
   padding-bottom: 28px + @block-overlap-mobile;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 62px + @block-overlap-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 79px + @block-overlap-desktop;
+  }
 }
 
 .traveller-details__list {
   padding: 0 0 20px;
   list-style-type: none;
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .traveller-details__item + .traveller-details__item {
@@ -39,6 +53,10 @@
   justify-content: center;
   align-items: center;
   gap: 18px;
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .traveller-details__buttons {

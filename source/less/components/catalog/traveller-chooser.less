@@ -1,4 +1,6 @@
 .traveller-chooser {
+  grid-area: traveller-chooser;
+
   background-color: @bg-lighter;
 
   .ladder__padding-top(21px, @block-overlap-mobile);
@@ -11,7 +13,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .ladder__padding-top(21px, @block-overlap-desktop);
-    .ladder__margin-top(@block-overlap-desktop);
+    margin: 0;
+    padding: 0;
   }
 }
