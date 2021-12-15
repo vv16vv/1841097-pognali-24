@@ -1,0 +1,75 @@
+.traveller-level {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 19px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 3px solid @special-orange;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 95px;
+    height: 95px;
+    color: @fg-main;
+  }
+
+  &--catalog {
+    width: 45px;
+    height: 45px;
+
+    @media (min-width: @tablet-width) {
+      width: 60px;
+      height: 60px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      color: @fg-blue-light;
+    }
+  }
+}
+
+.traveller-level__number {
+  .common-font(38px, 38px, 700);
+  border-bottom: 1px solid @fg-border;
+
+  &--single {
+    .common-font(24px, 24px, 700);
+    border-bottom: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--single {
+      border-bottom: 1px solid @fg-border;
+    }
+  }
+}
+
+.traveller-level__text {
+  padding-top: 6px;
+  .common-font(18px, 18px, 400);
+  color: @fg-black;
+  opacity: 0.4;
+
+  &--single {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    .common-font(14px, 14px, 400);
+
+    &--single {
+      display: block;
+    }
+  }
+}

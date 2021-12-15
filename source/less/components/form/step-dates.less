@@ -1,0 +1,84 @@
+.step-dates {
+  display: grid;
+  grid-template-areas:
+    "travellers"
+    "dates"
+    "with-children"
+    "calendar"
+    "buttons";
+  grid-row-gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-areas:
+      "travellers"
+      "with-children"
+      "dates"
+      "calendar"
+      "buttons";
+    grid-row-gap: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 550px 1fr;
+    grid-template-areas:
+      "travellers with-children"
+      "dates with-children"
+      "calendar calendar"
+      "buttons buttons";
+    padding-top: 30px;
+    border-top: 1px solid @fg-border-lighter;
+    grid-row-gap: 14px;
+  }
+}
+
+.step-dates__item {
+  margin-bottom: 20px;
+}
+
+.step-dates__travellers {
+  grid-area: travellers;
+}
+
+.step-dates__with-children {
+  grid-area: with-children;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: 25px;
+  }
+}
+
+.step-dates__dates {
+  grid-area: dates;
+  margin-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 19px;
+  }
+}
+
+.steps-dates__calendar {
+  grid-area: calendar;
+  margin-bottom: 2px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 43px;
+  }
+}
+
+.steps-dates__button {
+  grid-area: buttons;
+}

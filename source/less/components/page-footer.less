@@ -5,10 +5,10 @@
   padding-top: 37px;
   padding-bottom: 19px;
 
-  margin-top: (@block-overlap * -1);
+  .ladder__margin-top(@block-overlap-mobile);
 
-  border-top-left-radius: @block-overlap;
-  border-top-right-radius: @block-overlap;
+  border-top-left-radius: @block-overlap-mobile;
+  border-top-right-radius: @block-overlap-mobile;
 
   position: relative;
   z-index: @z-index-footer;
@@ -18,13 +18,21 @@
   }
 
   @media (min-width: @tablet-width) {
+    .ladder__margin-top(@block-overlap-tablet);
     padding-top: 46px;
     padding-bottom: 32px;
+
+    border-top-left-radius: @block-overlap-tablet;
+    border-top-right-radius: @block-overlap-tablet;
   }
 
   @media (min-width: @desktop-width) {
+    .ladder__margin-top(@block-overlap-desktop);
     padding-top: 47px;
     padding-bottom: 43px;
+
+    border-top-left-radius: @block-overlap-desktop;
+    border-top-right-radius: @block-overlap-desktop;
   }
 }
 
@@ -39,10 +47,6 @@
 .page-footer__logo {
   text-align: center;
   margin-bottom: 40px;
-
-  & path {
-    fill: @bg-secondary;
-  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;

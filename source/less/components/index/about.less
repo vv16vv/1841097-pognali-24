@@ -4,7 +4,7 @@
   padding-top: 33px;
   padding-bottom: 82px;
 
-  .ladder__bottom();
+  .ladder__bottom(@block-overlap-mobile);
 
   background-image: url("../../../img/backgrounds/about-bg.png");
   background-repeat: no-repeat;
@@ -14,6 +14,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
+    .ladder__bottom(@block-overlap-tablet);
     padding-top: 41px;
     padding-bottom: 89px;
 
@@ -24,6 +25,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    .ladder__bottom(@block-overlap-desktop);
     padding-top: 42px;
     padding-bottom: 163px;
 

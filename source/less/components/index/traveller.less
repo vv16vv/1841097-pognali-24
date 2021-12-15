@@ -13,14 +13,14 @@
     71px 71px,
     143px 143px;
 
-  .ladder-top2down(68px);
+  .ladder-top2down-mobile(68px);
   padding-bottom: 31px;
 
   position: relative;
   z-index: @z-index-travelers;
 
   @media (min-width: @tablet-width) {
-    .ladder-top2down(208px);
+    .ladder-top2down-tablet(208px);
     padding-bottom: 87px;
 
     background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
@@ -35,7 +35,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-top2down(231px);
+    .ladder-top2down-desktop(231px);
     padding-bottom: 134px;
     background-position: calc(50% - 536px) 199px,
       calc(50% - 380px) 519px,

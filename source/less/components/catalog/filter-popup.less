@@ -2,9 +2,17 @@
   background-color: @bg-grey;
   width: 100%;
 
-  .ladder__bottom();
+  .ladder__bottom(@block-overlap-mobile);
   padding-top: 20px;
   padding-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    .ladder__bottom(@block-overlap-tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    .ladder__bottom(@block-overlap-desktop);
+  }
 }
 
 .filter-popup__parts-of-world {

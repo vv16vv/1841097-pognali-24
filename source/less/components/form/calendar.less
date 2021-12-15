@@ -1,13 +1,137 @@
 .calendar__month {
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .calendar__days {
   list-style-type: none;
   padding-left: 0;
-  margin-bottom: 22px;
+  margin: 0;
 
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 31px);
+  grid-template-rows: repeat(7, auto);
+}
+
+.calendar__day {
+  text-align: center;
+  padding: 7px 8px 6px 9px;
+  box-sizing: border-box;
+  border-bottom: 1px solid @fg-calendar-border;
+  border-right: 1px solid @fg-calendar-border;
+
+  .common-font(14px, 18px, 400);
+  color: @fg-special-grey;
+
+  &:nth-child(7n+1) {
+    border-left: 1px solid @fg-calendar-border;
+  }
+
+  &:nth-child(7n+1):first-child {
+    border-left: none;
+  }
+
+  &--name,
+  &--weekend {
+    border-right: none;
+  }
+
+  &--weekend {
+    color: @calendar-weekend;
+  }
+
+  &--long {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+    }
+  }
+
+  &--past {
+    opacity: 0.3;
+  }
+
+  &--new-month {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: inline;
+    }
+  }
+
+  &--trip-mark {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      margin: 6px 0 0;
+      padding: 0;
+    }
+  }
+
+  &--trip {
+    background-color: @fg-blue-light;
+    color: @fg-main;
+    font-weight: 500;
+  }
+
+  &--today {
+    outline: 2px solid @calendar-weekend;
+    outline-offset: -2px;
+  }
+
+  &--future {
+    font-weight: 500;
+    background-color: @bg-lighter;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 26px;
+
+    .common-font(18px, 18px, 400);
+
+    &--name,
+    &--weekend {
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+
+    &--trip,
+    &--future {
+      .common-font(20px, 20px, 500);
+    }
+
+    &--today {
+      outline-width: 4px;
+      outline-offset: -4px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    padding: 14px 15px 15px;
+    min-height: 72px;
+    box-sizing: border-box;
+
+    &--name,
+    &--weekend {
+      padding: 18px 16px 20px;
+      min-height: auto;
+    }
+
+    &--trip,
+    &--future {
+      .common-font(18px, 18px, 400);
+    }
+  }
 }

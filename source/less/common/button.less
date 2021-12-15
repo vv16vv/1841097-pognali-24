@@ -3,6 +3,7 @@
   text-decoration: none;
   cursor: pointer;
   border: none;
+  font-family: "Blogger Sans", "Arial", sans-serif;
 
   &--primary {
     background-color: @basic-yellow;
@@ -25,9 +26,13 @@
   }
 
   &--icon-right {
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    background-image: url("../../img/icons/arrow-next.svg");
-    background-size: 14px 14px;
+    .button--next();
   }
+}
+
+.button--next() {
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-image: url("../../img/icons/arrow-next.svg");
+  background-size: 14px 14px;
 }

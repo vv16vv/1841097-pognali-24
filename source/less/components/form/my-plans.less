@@ -1,14 +1,44 @@
 .my-plans {
-  .ladder-down2top(30px);
-  .ladder__margin-top();
+  .ladder-down2top-mobile(30px);
+  .ladder__margin-top(@block-overlap-mobile);
   padding-top: 28px;
   background-color: @bg-grey-blue;
   color: @fg-blue-light;
 
   position: relative;
   z-index: @z-index-my-plans;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 57px;
+    .ladder-down2top-tablet(76px);
+    .ladder__margin-top(@block-overlap-tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 54px;
+    .ladder-down2top-desktop(64px);
+    .ladder__margin-top(@block-overlap-desktop);
+  }
+}
+
+.my-plans__wrapper {
+  padding-left: 0;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 71px;
+  }
 }
 
 .my-plans__title {
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
 }

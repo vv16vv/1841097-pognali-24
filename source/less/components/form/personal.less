@@ -1,10 +1,33 @@
 .personal {
-  .ladder__padding-top(24px);
-  .ladder__margin-top();
-  .ladder__padding-bottom(34px);
-  @break-point: @block-overlap + 3px;
-  background: linear-gradient(@basic-yellow @break-point, @bg-lighter @break-point);
+  .ladder__padding-top(24px, @block-overlap-mobile);
+  .ladder__margin-top(@block-overlap-mobile);
+  .ladder__padding-bottom(34px, @block-overlap-mobile);
+  background: @bg-lighter;
 
   position: relative;
   z-index: @z-index-personal;
+
+  @media (min-width: @tablet-width) {
+    .ladder__padding-top(66px, @block-overlap-tablet);
+    .ladder__padding-bottom(52px, @block-overlap-tablet);
+    .ladder__margin-top(@block-overlap-tablet);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 69px;
+    margin-top: 0;
+    .ladder__padding-bottom(54px, @block-overlap-desktop);
+  }
+}
+
+.personal__wrapper {
+  padding-left: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 64px;
+  }
 }

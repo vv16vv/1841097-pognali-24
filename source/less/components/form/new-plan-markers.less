@@ -5,6 +5,10 @@
 
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .new-plan__header {
@@ -14,18 +18,73 @@
 }
 
 .new-plan-markers__item {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
   opacity: 0.3;
+  display: flex;
+  align-items: center;
 
-  background-color: @fg-blue-light;
+  &::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    opacity: 0.3;
 
-  &--current {
+    background-color: @fg-blue-light;
+  }
+
+  &--current,
+  &--current::before {
     opacity: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 27px;
+
+    &::before {
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      margin-right: 36px;
+      margin-top: -2px;
+    }
   }
 }
 
 .new-plan-markers__item + .new-plan-markers__item {
   margin-left: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.new-plan-markers__step-name {
+  @media (max-width: @desktop-width - 1) {
+    .visually-hide();
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    .common-font(20px, 24px, 400);
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+}
+
+.new-plan-markers__step-dot {
+  @media (max-width: @desktop-width - 1) {
+    .visually-hide();
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

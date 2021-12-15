@@ -3,15 +3,9 @@
 @desktop-width: 1440px;
 
 // Шаг лесенки - на сколько один элемент заезжает на другой
-@block-overlap: 25px;
-
-@media (min-width: @tablet-width) {
-  @block-overlap: 76px;
-}
-
-@media (min-width: @desktop-width) {
-  @block-overlap: 87px;
-}
+@block-overlap-mobile: 25px;
+@block-overlap-tablet: 60px;
+@block-overlap-desktop: 60px;
 
 // z-indices on index.html
 // т.к. компоненты отображаются один как бы из под другого
