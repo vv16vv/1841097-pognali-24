@@ -8,12 +8,9 @@
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 185px;
-    grid-template-areas: "title image"
-      "slogan image"
-      "subscribers image";
+    flex-direction: row-reverse;
     border-radius: 20px;
+    width: 618px;
   }
 
   @media (min-width: @desktop-width) {
@@ -29,9 +26,11 @@
 
   @media (min-width: @tablet-width) {
     width: 185px;
+    height: 140px;
     border-top-left-radius: 0;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+    object-fit: cover;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,6 +51,14 @@
   grid-template-columns: 1fr 60px;
   grid-template-areas: "title subscribers"
     "slogan .";
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 432px;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 25px 40px 26px 25px;
+  }
 }
 
 .country__title {
@@ -64,7 +71,7 @@
 
   @media (min-width: @tablet-width) {
     .common-font(24px, 24px, 700);
-    margin: 30px 0 5px 30px;
+    margin-bottom: 5px;
   }
 
   @media (min-width: @desktop-width) {
@@ -85,7 +92,6 @@
   @media (min-width: @tablet-width) {
     .common-font(20px, 20px, 400);
     margin-bottom: 20px;
-    margin-left: 30px;
     width: 100%;
   }
 
