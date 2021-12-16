@@ -1,0 +1,143 @@
+.country {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  text-decoration: none;
+  background-color: @fg-main;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 185px;
+    grid-template-areas: "title image"
+      "slogan image"
+      "subscribers image";
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 187px;
+  }
+}
+
+.country__image {
+  grid-area: image;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 185px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 187px;
+  }
+}
+
+.country__info {
+  margin-top: -10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: @fg-main;
+
+  padding: 26px 25px 24px;
+
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  grid-template-areas: "title subscribers"
+    "slogan .";
+}
+
+.country__title {
+  grid-area: title;
+  color: @fg-black;
+
+  .common-font(21px, 21px, 700);
+  margin: 0 0 2px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    .common-font(24px, 24px, 700);
+    margin: 30px 0 5px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 24px 0 4px 29px;
+  }
+}
+
+.country__slogan {
+  grid-area: slogan;
+
+  .common-font(16px, 18px, 400);
+  color: @fg-special-grey;
+  opacity: 0.3;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    .common-font(20px, 20px, 400);
+    margin-bottom: 20px;
+    margin-left: 30px;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-weight: 500;
+    margin-bottom: 26px;
+  }
+}
+
+.country__subscribers {
+  grid-area: subscribers;
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+
+  .common-font(16px, 20px, 400);
+  color: @bg-main;
+  opacity: 0.3;
+
+  margin: 0;
+  padding: 0;
+
+  &::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../../img/icons/user.svg");
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+  }
+}
+
+.country__flag {
+  position: absolute;
+  width: 35px;
+  height: 24px;
+
+  top: 86px;
+  left: 25px;
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 47px;
+
+    top: 17px;
+    left: 398px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 23px;
+    left: 337px;
+  }
+}
