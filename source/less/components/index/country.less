@@ -11,10 +11,6 @@
     flex-direction: row-reverse;
     border-radius: 20px;
   }
-
-  @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 187px;
-  }
 }
 
 .country__image {
@@ -34,6 +30,7 @@
 
   @media (min-width: @desktop-width) {
     width: 187px;
+    height: 140px;
   }
 }
 
@@ -58,6 +55,10 @@
     border-radius: 20px;
     padding: 25px 40px 26px 25px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 20px 40px 27px 25px;
+  }
 }
 
 .country__title {
@@ -74,7 +75,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 24px 0 4px 29px;
+    margin-bottom: 4px;
   }
 }
 
@@ -96,7 +97,7 @@
 
   @media (min-width: @desktop-width) {
     font-weight: 500;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 }
 
