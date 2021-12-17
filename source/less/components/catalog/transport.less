@@ -1,13 +1,113 @@
 .transport {
   list-style-type: none;
+  padding-left: 0;
   display: flex;
-  justify-content: flex-start;
-  gap: 1px;
+  justify-content: center;
+  gap: 15px;
+
+  @media (min-width: @tablet-width) {
+    gap: 14px;
+  }
+
+  &--traveller-details-card {
+    gap: 1px;
+
+    @media (min-width: @tablet-width) {
+      gap: 11px;
+    }
+
+    @media (min-width: @desktop-width) {
+      gap: 14px;
+    }
+  }
+
+  &--checkbox {
+    gap: 1px;
+    justify-content: flex-start;
+  }
+
+  &--chooser-form-group {
+    gap: 1px;
+    justify-content: center;
+    margin-top: 15px;
+  }
 }
 
 .transport__item {
-  width: 32px;
-  height: 32px;
   border-radius: 50%;
-  background-color: @bg-lighter;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--checkbox {
+    background-color: @fg-main;
+    width: 32px;
+    height: 32px;
+
+    @media (min-width: @tablet-width) {
+      width: 43px;
+      height: 43px;
+    }
+  }
+
+  &--traveller-details-card {
+    background-color: @bg-lighter;
+    width: 32px;
+    height: 32px;
+
+    @media (min-width: @tablet-width) {
+      background-color: transparent;
+      width: auto;
+      height: auto;
+    }
+  }
 }
+
+
+.transport__image {
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 21px 21px;
+
+  &--aircraft {
+    background-image: url("../../../img/icons/aircraft-active.svg");
+    opacity: 0.15;
+  }
+
+  &--bus {
+    background-image: url("../../../img/icons/bus-active.svg");
+    opacity: 0.15;
+  }
+
+  &--bicycle {
+    background-image: url("../../../img/icons/bicycle-active.svg");
+    opacity: 0.15;
+  }
+
+  &--walk {
+    background-image: url("../../../img/icons/walk-active.svg");
+    opacity: 0.15;
+  }
+
+  &--preferable {
+    opacity: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 22px;
+    background-size: 23px 22px;
+  }
+
+  &--checkbox {
+    width: 17px;
+    height: 16px;
+    background-size: 17px 16px;
+  }
+}
+
