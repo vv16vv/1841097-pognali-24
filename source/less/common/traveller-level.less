@@ -37,6 +37,13 @@
       color: @fg-blue-light;
     }
   }
+
+  &--index {
+    width: 56px;
+    height: 56px;
+
+    background-color: fade(@fg-black, 30%);
+  }
 }
 
 .traveller-level__number {
@@ -46,6 +53,11 @@
   &--single {
     .common-font(24px, 24px, 700);
     border-bottom: none;
+  }
+
+  &--index {
+    .common-font(24px, 24px, 700);
+    color: @fg-main;
   }
 
   @media (min-width: @tablet-width) {
@@ -63,6 +75,11 @@
 
   &--single {
     display: none;
+  }
+
+  &--index {
+    color: @fg-main;
+    opacity: 1;
   }
 
   @media (min-width: @tablet-width) {
