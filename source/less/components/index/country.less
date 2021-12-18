@@ -35,13 +35,13 @@
 }
 
 .country__info {
-  margin-top: -10px;
+  margin-top: -11px;
   width: 100%;
   box-sizing: border-box;
   border-radius: 10px;
   background-color: @fg-main;
 
-  padding: 26px 25px 24px;
+  padding: 26px 25px 0 23px;
 
   display: grid;
   grid-template-columns: 1fr 60px;
@@ -66,7 +66,7 @@
   color: @fg-black;
 
   .common-font(21px, 21px, 700);
-  margin: 0 0 2px;
+  margin: 0 0 3px 1px;
   padding: 0;
 
   @media (min-width: @tablet-width) {
@@ -82,11 +82,12 @@
 .country__slogan {
   grid-area: slogan;
 
-  .common-font(16px, 18px, 400);
+  .common-font(16px, 18px, 500);
   color: @fg-special-grey;
   opacity: 0.3;
   width: 150px;
-  margin: 0;
+  margin: 0 0 0 2px;
+  min-height: 40px;
   padding: 0;
 
   @media (min-width: @tablet-width) {
@@ -111,7 +112,7 @@
   color: @bg-main;
   opacity: 0.3;
 
-  margin: 0;
+  margin: 1px 0 0 0;
   padding: 0;
 
   &::before {

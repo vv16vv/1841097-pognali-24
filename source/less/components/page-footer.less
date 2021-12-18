@@ -3,9 +3,10 @@
   color: @fg-special-grey;
 
   padding-top: 37px;
-  padding-bottom: 19px;
+  padding-bottom: 14px;
 
   .ladder__margin-top(@block-overlap-mobile);
+  margin-top: -134px;
 
   border-top-left-radius: @block-overlap-mobile;
   border-top-right-radius: @block-overlap-mobile;
@@ -46,7 +47,7 @@
 
 .page-footer__logo {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -57,11 +58,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 13px;
+
+  border-top: 1px solid @fg-border-light;
 }
 
 .page-footer__developer-text {
   .common-font(16px, 18px, 400);
   color: @fg-special-grey;
+  margin-top: -3px;
 
   @media (min-width: @tablet-width) {
     .common-font(20px, 20px, 400);
@@ -71,4 +78,8 @@
   @media (min-width: @desktop-width) {
     margin-right: 24px;
   }
+}
+
+.page-footer__social {
+  margin-bottom: 36px;
 }

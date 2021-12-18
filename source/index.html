@@ -256,9 +256,11 @@
     <div class="wrapper about__wrapper">
       <h2 class="about__title title">О сервисе</h2>
       <p class="about__description description">
-        Любое путешествие веселее с попутчиками,
-        которые на одной волне с тобой! Делитесь
-        своими идеями путешествий и черпайте вдохновение в чужих.
+        Любое путешествие веселее <br>
+        с попутчиками, которые на <br>
+        одной волне с тобой! Делитесь <br>
+        своими идеями путешествий и <br>
+        черпайте вдохновение в чужих.
       </p>
       <p class="about__slogan description description--selected">
         <span>А если найдете кого-то близкого по духу &#8213;</span>
@@ -396,7 +398,18 @@
               </li>
             </ul>
             <p class="traveller-card__name traveller-card__wrapper">
-              Таня Фирсова
+              <span
+                class="traveller-card__status traveller-card__status--offline">
+                <span class="visually-hidden">В сети.</span>
+                <svg
+                  width="6"
+                  height="7"
+                  viewBox="0 0 6 7"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="3" cy="3.8584" r="3"/>
+                </svg>
+              </span>
+              <span>Таня Фирсова</span>
             </p>
             <ul class="traveller-card__tags traveller-card__wrapper tags">
               <li class="tags__item">#ЗОЖ</li>
@@ -457,8 +470,20 @@
                   alt="Флаг Чехии.">
               </li>
             </ul>
-            <p class="traveller-card__name traveller-card__wrapper">Петя
-              Демин</p>
+            <p class="traveller-card__name traveller-card__wrapper">
+              <span
+                class="traveller-card__status traveller-card__status--online">
+                <span class="visually-hidden">В сети.</span>
+                <svg
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+              </span>
+              <span>Петя Демин</span>
+            </p>
             <ul class="traveller-card__tags traveller-card__wrapper tags">
               <li class="tags__item">#бургер</li>
               <li class="tags__item">#бар</li>
