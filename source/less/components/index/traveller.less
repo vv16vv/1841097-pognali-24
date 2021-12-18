@@ -20,15 +20,15 @@
   z-index: @z-index-travelers;
 
   @media (min-width: @tablet-width) {
-    .ladder-top2down-tablet(208px);
+    .ladder-top2down-tablet(141px);
     padding-bottom: 87px;
 
     background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
       url("../../../img/backgrounds/traveller-rogovaya.png"),
       url("../../../img/backgrounds/traveller-smolov.png");
-    background-position: calc(50% - 237px) 118px,
-      calc(50% + 180px) 118px,
-      calc(50% - 268px) 490px;
+    background-position: calc(50% - 238px) 130px,
+      calc(50% + 167px) 140px,
+      calc(50% - 272px) 486px;
     background-size: 212px 212px,
       285px 285px,
       143px 143px;
@@ -78,6 +78,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 55px;
+    margin-left: -2px;
   }
 }
 
@@ -86,6 +87,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 39px;
+    line-height: 34px;
   }
 
   @media (min-width: @desktop-width) {
@@ -105,6 +107,15 @@
   background-color: @basic-yellow;
   color: @fg-blue-light;
 
+  @media (min-width: @tablet-width) {
+    margin-left: 34px;
+    margin-right: 38px;
+    padding-top: 28px;
+    padding-left: 31px;
+    padding-bottom: 52px;
+    .common-font(24px, 24px, 700);
+  }
+
   @media (min-width: @desktop-width) {
     grid-area: traveller-button;
     margin-left: 72px;
@@ -123,7 +134,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 81px;
+    margin-bottom: 80px;
     padding-left: 35px;
     padding-right: 35px;
     gap: 50px;
@@ -135,5 +146,13 @@
     margin-bottom: 0;
     grid-area: traveller-list;
     gap: 60px;
+  }
+}
+
+.traveller__slogan {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
   }
 }

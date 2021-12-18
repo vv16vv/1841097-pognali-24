@@ -34,6 +34,11 @@
 
   margin-top: 0;
   margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    left: 21px;
+  }
 }
 
 .traveller-card__image {
@@ -72,7 +77,10 @@
 
   @media (min-width: @tablet-width) {
     .common-font(24px, 22px, 700);
+    align-self: flex-start;
     margin-bottom: 23px;
+    margin-top: 16px;
+    margin-left: 45px;
   }
 }
 
@@ -87,6 +95,7 @@
   @media (min-width: @tablet-width) {
     .common-font(20px, 23px, 400);
     margin-bottom: 26px;
+    margin-left: 27px;
   }
 }
 
@@ -105,5 +114,14 @@
 
   &--online circle {
     fill: @status-online;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 14px;
+
+    svg {
+      width: 8px;
+      height: 8px;
+    }
   }
 }

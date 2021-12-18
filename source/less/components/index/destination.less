@@ -10,10 +10,11 @@
   @media (min-width: @tablet-width) {
     .ladder-top2down-tablet(73px);
     background-repeat: no-repeat;
-    background-position: calc(50% + 269px) 181px, calc(50% - 344px) 482px;
+    background-position: calc(50% + 200px) 139px, calc(50% - 273px) 466px;
     background-image: url("../../../img/backgrounds/dst-flags.png"),
       url("../../../img/backgrounds/dst-rectangle.svg");
     background-size: 288px 574px, 141px 141px;
+    padding-bottom: 80px;
   }
 
   @media (min-width: @desktop-width) {
@@ -48,6 +49,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 57px;
+    margin-left: -2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -73,6 +75,12 @@
 
   @media (min-width: @tablet-width) {
     .common-font(24px, 24px, 700);
+    padding-top: 31px;
+    padding-left: 33px;
+    padding-bottom: 27px;
+
+    background-position: right 29px top 34px;
+    background-size: 13px 17px;
   }
 
   @media (min-width: @desktop-width) {
@@ -99,6 +107,10 @@
 .destination__list {
   .common-list();
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+  }
 
   @media (min-width: @desktop-width) {
     grid-column: 2;

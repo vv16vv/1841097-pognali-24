@@ -23,6 +23,10 @@
 
   &--form-rectangle {
     border-radius: 10px;
+
+    @media (min-width: @tablet-width) {
+      border-radius: 20px;
+    }
   }
 
   &--icon-right {
@@ -35,4 +39,9 @@
   background-position: right 22px center;
   background-image: url("../../img/icons/arrow-forward.svg");
   background-size: 12px 22px;
+
+  @media (min-width: @tablet-width) {
+    background-position: right 31px center;
+    background-size: 14px 22px;
+  }
 }

@@ -9,7 +9,7 @@
   z-index: @z-index-address;
 
   @media (min-width: @tablet-width) {
-    .ladder-top2down-tablet(70px);
+    .ladder-top2down-tablet(49px);
     padding-bottom: 84px;
   }
 
@@ -68,13 +68,14 @@
     .common-font(28px, 28px, 700);
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     margin-bottom: 44px;
 
     &::before {
       width: 68px;
       height: 68px;
       background-size: 32px 32px;
+      margin-right: 21px;
     }
   }
 
@@ -109,6 +110,11 @@
 
   @media (min-width: @tablet-width) {
     .common-font(24px, 24px, 700);
+    padding-top: 28px;
+    padding-bottom: 24px;
+    padding-left: 35px;
+
+    background-position: right 30px center;
   }
 
   @media (min-width: @desktop-width) {
