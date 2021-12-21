@@ -15,7 +15,7 @@
 
   @media (min-width: @desktop-width) {
     .ladder-top2down-desktop(109px);
-    padding-bottom: 104px;
+    padding-bottom: 100px;
   }
 }
 
@@ -55,6 +55,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 60px;
+    line-height: 31px;
   }
 }
 
@@ -68,7 +69,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 69px;
   }
 }
 
@@ -92,11 +93,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 42px;
+    margin-bottom: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
   }
 }
 
 .contacts__authorize {
   display: inline;
   color: @basic-yellow;
+}
+
+.contacts__common-part {
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    padding-left: 37px;
+    padding-right: 37px;
+  }
 }

@@ -79,9 +79,15 @@
 
   @media (min-width: @desktop-width) {
     width: 812px;
-    margin-left: 163px;
-    padding-top: 19px;
-    padding-bottom: 19px;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    &::before {
+      left: -90px;
+      top: -2px;
+    }
   }
 }
 
@@ -103,5 +109,9 @@
   @media (min-width: @tablet-width) {
     margin-top: 1px;
     margin-right: -1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: -4px;
   }
 }

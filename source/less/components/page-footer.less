@@ -28,7 +28,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .ladder__margin-top(@block-overlap-desktop);
+    .ladder__margin-top(134px);
     padding-top: 47px;
     padding-bottom: 43px;
 
@@ -65,6 +65,10 @@
   padding-top: 13px;
 
   border-top: 1px solid @fg-border-light;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+  }
 }
 
 .page-footer__developer-text {

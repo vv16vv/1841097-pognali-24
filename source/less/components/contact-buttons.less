@@ -5,6 +5,7 @@
 }
 
 @contact-buttons__height: 40px;
+@contact-buttons__height--desktop: 50px;
 
 .contact-buttons__button {
   width: @contact-buttons__height;
@@ -22,6 +23,11 @@
     background-image: url("../../img/icons/email1.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @contact-buttons__height--desktop;
+    height: @contact-buttons__height--desktop;
   }
 }
 

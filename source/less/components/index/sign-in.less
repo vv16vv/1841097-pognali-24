@@ -7,6 +7,11 @@
     grid-template-columns: 536px 80px;
     grid-template-rows: 80px;
   }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 325px;
+    grid-template-rows: 80px;
+  }
 }
 
 .sign-in__email {
@@ -32,6 +37,11 @@
       .common-font(24px, 24px, 700);
     }
   }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    padding-left: 32px;
+  }
 }
 
 .sign-in__button {
@@ -43,6 +53,16 @@
     margin-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .common-font(24px, 24px, 700);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 36px;
+    padding-top: 30px;
+    padding-bottom: 27px;
   }
 }
 

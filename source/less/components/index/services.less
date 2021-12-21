@@ -14,8 +14,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-top2down-desktop(175px);
-    padding-bottom: 165px;
+    .ladder-top2down-desktop(107px);
+    padding-bottom: 163px;
   }
 }
 
@@ -27,7 +27,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 72px;
+    box-sizing: border-box;
+    padding-left: 159px;
+    padding-right: 159px;
   }
 }
 
@@ -97,16 +99,16 @@
       width: 198px;
       height: 198px;
 
-      right: 79px;
-      top: 8px;
+      right: -85px;
+      top: 0;
     }
 
     &::after {
       top: -51px;
-      right: 180px;
+      right: 25px;
 
       width: 446px;
-      height: calc(100% + 102px);
+      height: calc(100% + 101px);
     }
   }
 }
@@ -123,7 +125,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //margin-top: 5px;
 
     &::before {
       content: "";
@@ -139,5 +140,10 @@
       background-image: url("../../../img/icons/businessman.svg");
       background-size: 27px 27px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 32px;
+    margin-left: -89px;
   }
 }

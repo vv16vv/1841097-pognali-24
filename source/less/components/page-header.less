@@ -17,6 +17,7 @@
 
     @media (min-width: @desktop-width) {
       background-color: @bg-main;
+      padding-top: 49px;
     }
   }
 
@@ -62,7 +63,7 @@
 
 .page-header__logo {
   @media (min-width: @desktop-width) {
-    margin-right: 40px;
+    margin-right: 74px;
   }
 }
 
@@ -124,7 +125,7 @@
   display: none;
 
   @media (min-width: @tablet-width) {
-    display: flex;
+    display: block;
   }
 }
 
@@ -151,13 +152,18 @@
   @media (min-width: @desktop-width) {
     display: flex;
     gap: 34px;
+    margin-top: 5px;
     margin-right: auto;
+    position: relative;
+    padding-left: 105px;
 
     &::before {
       content: "";
-      width: 60px;
+      position: absolute;
+      width: 58px;
       height: 0;
-      margin-right: 45px;
+      top: 8px;
+      left: 0;
       border: 1px solid @fg-main;
     }
   }
