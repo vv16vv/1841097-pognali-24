@@ -126,40 +126,20 @@
 
 .address__map {
   width: 100%;
-  display: none;
 
   .ladder__margin-top(@block-overlap-mobile);
 
   position: relative;
   z-index: @z-index-map;
 
-  &--mobile {
-    display: block;
-  }
 
   @media (min-width: @tablet-width) {
     .ladder__margin-top(@block-overlap-tablet);
-
-    &--mobile,
-    &--desktop {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
+    height: 581px;
   }
 
   @media (min-width: @desktop-width) {
     .ladder__margin-top(@block-overlap-desktop);
-
-    &--mobile,
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
+    height: 584px;
   }
 }
