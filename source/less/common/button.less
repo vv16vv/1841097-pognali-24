@@ -12,6 +12,14 @@
 
   &--primary {
     background-color: @basic-yellow;
+
+    &:hover {
+      background-color: @special-yellow-dark;
+    }
+
+    &:active {
+      color: fade(@bg-main, 30%);
+    }
   }
 
   &--secondary {

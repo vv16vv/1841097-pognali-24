@@ -75,6 +75,14 @@
 
 .contacts__contact .contact__button {
   color: @basic-yellow;
+
+  &:hover {
+    color: @special-yellow-dark;
+  }
+
+  &:active {
+    .active();
+  }
 }
 
 .contacts__slogan {
@@ -103,9 +111,18 @@
 .contacts__authorize {
   display: inline;
   color: @basic-yellow;
+  text-decoration: underline;
 
   &:focus {
     border-radius: 4px;
+  }
+
+  &:hover {
+    color: @special-orange;
+  }
+
+  &:active {
+    .active();
   }
 }
 

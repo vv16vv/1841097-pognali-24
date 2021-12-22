@@ -113,6 +113,16 @@
     outline-color: @bg-main;
   }
 
+  &:hover {
+    background-color: @bg-secondary;
+    color: @fg-main;
+  }
+
+  &:active {
+    background-color: @bg-secondary;
+    color: fade(@fg-main, 30%);
+  }
+
   @media (min-width: @tablet-width) {
     .common-font(24px, 24px, 700);
     padding-top: 28px;
