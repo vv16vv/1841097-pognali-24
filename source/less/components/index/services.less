@@ -117,8 +117,13 @@
   background-color: transparent;
   color: @fg-blue-darker;
   padding-left: 0;
-  padding-right: 0;
+  padding-right: 20px;
   .common-font(16px, 16px, 700);
+
+  &:focus {
+    outline-color: @bg-main;
+    border-radius: 4px;
+  }
 
   @media (min-width: @tablet-width) {
     .common-font(20px, 20px, 700);

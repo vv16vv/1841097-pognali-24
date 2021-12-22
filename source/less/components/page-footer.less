@@ -28,7 +28,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .ladder__margin-top(134px);
+    .ladder__margin-top(143px);
     padding-top: 47px;
     padding-bottom: 43px;
 
@@ -49,6 +49,10 @@
   text-align: center;
   margin-bottom: 34px;
 
+  &:focus {
+    outline-color: @bg-main;
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
     margin-top: 12px;
@@ -65,6 +69,12 @@
   padding-top: 13px;
 
   border-top: 1px solid @fg-border-light;
+
+  &:focus-within {
+    outline: 1px solid @bg-main;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
 
   @media (min-width: @tablet-width) {
     border-top: none;
@@ -87,6 +97,10 @@
 }
 
 .page-footer__developer-button {
+  &:focus {
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 4px;
   }
