@@ -10,6 +10,10 @@
 
   padding: 0 0 23px;
 
+  &:hover {
+    .card-hover(@fg-black);
+  }
+
   @media (min-width: @tablet-width) {
     border-radius: 20px;
     padding-bottom: 29px;
@@ -74,6 +78,14 @@
   margin-top: 14px;
   margin-bottom: 15px;
   margin-left: 22px;
+
+  &:hover {
+    .hover();
+  }
+
+  &:active {
+    .active();
+  }
 
   @media (min-width: @tablet-width) {
     .common-font(24px, 22px, 700);

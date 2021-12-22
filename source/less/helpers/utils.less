@@ -25,6 +25,12 @@
   opacity: 0.3;
 }
 
+.card-hover(@shadow-color) {
+  box-shadow: 0 4px 4px fade(@shadow-color, 16%);
+  transform: scale(1.01);
+  transition: transform 0.3s;
+}
+
 .common-list() {
   margin: 0;
   padding: 0;
