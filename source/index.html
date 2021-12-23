@@ -52,7 +52,7 @@
         />
       </svg>
     </a>
-    <ul class="page-header__menu-content-list menu">
+    <ul class="page-header__menu-content-list menu menu--light">
       <li class="menu__item">
         <a
           class="menu__button button button--menu"
@@ -80,7 +80,7 @@
     <button
       class="page-header__menu-button page-header__menu-button--open button"
       type="button"
-      onclick="toggleMenu()">
+      onclick="toggleMenu(true)">
       <svg
         width="25" height="11" viewBox="0 0 25 11"
         xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@
     <button
       class="page-header__menu-button page-header__menu-button--close button hidden"
       type="button"
-      onclick="toggleMenu()">
+      onclick="toggleMenu(false)">
       <span class="visually-hidden">Закрыть меню.</span>
     </button>
     <div class="page-header__contact-buttons">
