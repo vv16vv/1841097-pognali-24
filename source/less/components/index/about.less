@@ -19,7 +19,7 @@
     padding-bottom: 89px;
 
     background-repeat: no-repeat;
-    background-position: calc(50% + 207px) 49px;
+    background-position: calc(50% + 189px) 49px;
     background-image: url("../../../img/backgrounds/about-tablet.png");
     background-size: 376px 548px;
   }
@@ -30,9 +30,9 @@
     padding-bottom: 163px;
 
     background-repeat: no-repeat;
-    background-position: calc(50% + 340px) 0;
+    background-position: calc(50% + 342px) 0;
     background-image: url("../../../img/backgrounds/about-desktop.png");
-    background-size: 630px 665px;
+    background-size: 630px 659px;
   }
 }
 
@@ -43,11 +43,11 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 34px;
-    padding-right: 352px;
+    padding-right: 345px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 72px;
+    padding-left: 70px;
     padding-right: 632px;
   }
 }
@@ -65,10 +65,14 @@
 }
 
 .about__description {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 31px;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {

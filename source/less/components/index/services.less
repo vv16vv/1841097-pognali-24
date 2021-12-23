@@ -3,41 +3,43 @@
   color: @fg-special-grey;
 
   .ladder-top2down-mobile(53px);
-  padding-bottom: 38px;
+  padding-bottom: 33px;
 
   position: relative;
   z-index: @z-index-services;
 
   @media (min-width: @tablet-width) {
-    .ladder-top2down-tablet(135px);
-    padding-bottom: 63px;
+    .ladder-top2down-tablet(74px);
+    padding-bottom: 62px;
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-top2down-desktop(175px);
-    padding-bottom: 165px;
+    .ladder-top2down-desktop(107px);
+    padding-bottom: 163px;
   }
 }
 
 .services__wrapper {
-  padding-left: 25px;
+  padding-left: 46px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 72px;
+    box-sizing: border-box;
+    padding-left: 159px;
+    padding-right: 159px;
   }
 }
 
 .services__title {
   width: 107px;
 
-  margin-bottom: 56px;
+  margin-bottom: 42px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 73px;
+    margin-bottom: 72px;
     width: 100%;
     text-align: center;
   }
@@ -49,7 +51,7 @@
 
 .services__list {
   .common-list();
-  margin-bottom: 46px;
+  margin-bottom: 26px;
   counter-reset: services-counter;
   position: relative;
 
@@ -59,8 +61,8 @@
     height: 100px;
     position: absolute;
 
-    right: 25px;
-    top: -144px;
+    right: 24px;
+    top: -130px;
 
     background-repeat: no-repeat;
     background-position: center;
@@ -72,8 +74,8 @@
     margin-bottom: 30px;
 
     &::before {
-      right: 56px;
-      top: 211px;
+      right: 46px;
+      top: 218px;
     }
 
     &::after {
@@ -97,16 +99,16 @@
       width: 198px;
       height: 198px;
 
-      right: 79px;
-      top: 8px;
+      right: -85px;
+      top: 0;
     }
 
     &::after {
       top: -51px;
-      right: 180px;
+      right: 25px;
 
       width: 446px;
-      height: calc(100% + 102px);
+      height: calc(100% + 101px);
     }
   }
 }
@@ -115,8 +117,21 @@
   background-color: transparent;
   color: @fg-blue-darker;
   padding-left: 0;
-  padding-right: 0;
+  padding-right: 20px;
   .common-font(16px, 16px, 700);
+
+  &:focus {
+    outline-color: @bg-main;
+    border-radius: 4px;
+  }
+
+  &:hover {
+    .hover();
+  }
+
+  &:active {
+    .active();
+  }
 
   @media (min-width: @tablet-width) {
     .common-font(20px, 20px, 700);
@@ -138,5 +153,10 @@
       background-image: url("../../../img/icons/businessman.svg");
       background-size: 27px 27px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 32px;
+    margin-left: -89px;
   }
 }

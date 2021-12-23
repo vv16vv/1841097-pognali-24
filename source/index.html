@@ -10,7 +10,7 @@
 <body class="page__body">
 <header class="page-header page-header--dark">
   <div class="wrapper page-header__title-bar">
-    <a href="index.html" class="page-header__logo logo button">
+    <a class="page-header__logo logo button">
       <svg
         xmlns="http://www.w3.org/2000/svg">
         <path
@@ -52,15 +52,18 @@
         />
       </svg>
     </a>
-    <ul class="page-header__menu-content-list menu">
+    <ul class="page-header__menu-content-list menu menu--light">
       <li class="menu__item">
-        <a class="menu__button button button--menu" href="index.html">
+        <a
+          class="menu__button button button--menu"
+          data-hover="О сервисе">
           О сервисе
         </a>
       </li>
       <li class="menu__item">
         <a
           class="menu__button button button--menu"
+          data-hover="Направления"
           href="form.html">
           Направления
         </a>
@@ -68,6 +71,7 @@
       <li class="menu__item">
         <a
           class="menu__button button button--menu"
+          data-hover="Попутчики"
           href="catalog.html">
           Попутчики
         </a>
@@ -76,7 +80,7 @@
     <button
       class="page-header__menu-button page-header__menu-button--open button"
       type="button"
-      onclick="toggleMenu()">
+      onclick="toggleMenu(true)">
       <svg
         width="25" height="11" viewBox="0 0 25 11"
         xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +101,7 @@
     <button
       class="page-header__menu-button page-header__menu-button--close button hidden"
       type="button"
-      onclick="toggleMenu()">
+      onclick="toggleMenu(false)">
       <span class="visually-hidden">Закрыть меню.</span>
     </button>
     <div class="page-header__contact-buttons">
@@ -120,17 +124,20 @@
       </div>
     </div>
   </div>
-  <div class="menu-content-popup popup hidden">
+  <div class="menu-content-popup menu-content-popup--nojs popup">
     <nav class="menu-content wrapper">
       <ul class="menu-content__list menu">
         <li class="menu__item">
-          <a class="menu__button button button--menu" href="index.html">
+          <a
+            class="menu__button button button--menu"
+            data-hover="О сервисе">
             О сервисе
           </a>
         </li>
         <li class="menu__item">
           <a
             class="menu__button button button--menu"
+            data-hover="Направления"
             href="form.html">
             Направления
           </a>
@@ -138,6 +145,7 @@
         <li class="menu__item">
           <a
             class="menu__button button button--menu"
+            data-hover="Попутчики"
             href="catalog.html">
             Попутчики
           </a>
@@ -153,14 +161,14 @@
           <a
             class="contact__button contact__button--phone button"
             href="tel:88005558628">
-            8 800 555-86-28
+            <span class="contact__button-text">8 800 555-86-28</span>
           </a>
         </li>
         <li class="contact__item">
           <a
             class="contact__button contact__button--email button"
             href="mailto:mail@htmlacademy.ru">
-            mail@htmlacademy.ru
+            <span class="contact__button-text">mail@htmlacademy.ru</span>
           </a>
         </li>
       </ul>
@@ -256,9 +264,10 @@
     <div class="wrapper about__wrapper">
       <h2 class="about__title title">О сервисе</h2>
       <p class="about__description description">
-        Любое путешествие веселее с попутчиками,
-        которые на одной волне с тобой! Делитесь
-        своими идеями путешествий и черпайте вдохновение в чужих.
+        Любое путешествие веселее <br>
+        с попутчиками, которые на <br>
+        одной волне с&nbsp;тобой! Делитесь <br>
+        своими идеями путешествий и&nbsp;<br>черпайте вдохновение в&nbsp;чужих.
       </p>
       <p class="about__slogan description description--selected">
         <span>А если найдете кого-то близкого по духу &#8213;</span>
@@ -276,10 +285,10 @@
       <header class="destination__header">
         <h2 class="destination__title title">Направления</h2>
         <p class="destination__description description">
-          Мы не продаем туры
-          и ничего не рекламируем.
-          Люди сами пишут о странах,
-          куда хотели бы отправиться
+          Мы не продаем туры <br>
+          и ничего не рекламируем. <br>
+          Люди сами пишут о странах, <br>
+          куда хотели бы отправиться <br>
           и чем можно там заняться.
         </p>
       </header>
@@ -296,9 +305,11 @@
               src="img/flags/Thailand.png"
               width="35" height="24"
               alt="Флаг Таиланда.">
-            <h3 class="country__title">Таиланд</h3>
-            <p class="country__slogan">Джунгли зовут!</p>
-            <p class="country__subscribers">18321</p>
+            <div class="country__info">
+              <h3 class="country__title">Таиланд</h3>
+              <p class="country__slogan">Джунгли зовут!</p>
+              <p class="country__subscribers">18321</p>
+            </div>
           </a>
         </li>
         <li class="destination__item">
@@ -313,9 +324,11 @@
               src="img/flags/France.png"
               width="35" height="24"
               alt="Флаг Франции.">
-            <h3 class="country__title">Франция</h3>
-            <p class="country__slogan">Трэ бьен, манифик!</p>
-            <p class="country__subscribers">12518</p>
+            <div class="country__info">
+              <h3 class="country__title">Франция</h3>
+              <p class="country__slogan">Трэ бьен, манифик!</p>
+              <p class="country__subscribers">12518</p>
+            </div>
           </a>
         </li>
         <li class="destination__item">
@@ -330,9 +343,11 @@
               src="img/flags/Czech.png"
               width="35" height="24"
               alt="Флаг Чехии.">
-            <h3 class="country__title">Чехия</h3>
-            <p class="country__slogan">Закоулки старой Европы</p>
-            <p class="country__subscribers">5326</p>
+            <div class="country__info">
+              <h3 class="country__title">Чехия</h3>
+              <p class="country__slogan">Закоулки старой Европы</p>
+              <p class="country__subscribers">5326</p>
+            </div>
           </a>
         </li>
       </ul>
@@ -349,11 +364,11 @@
         <h2 class="traveller__title title">Попутчики</h2>
         <p class="traveller__description description">
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
-          Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+          Одному нужен пляж и коктейль, а&nbsp;другому маршрут для хайкинга.
         </p>
         <p class="traveller__slogan description description--selected">
-          Теперь можно легко найти
-          единомышленников!
+          <span>Теперь можно легко</span>
+          <span>найти единомышленников!</span>
         </p>
       </header>
       <ul class="traveller__list">
@@ -364,7 +379,8 @@
               src="img/people/firsova.png"
               width="270" height="270"
               alt="Таня Фирсова.">
-            <p class="traveller-card__level traveller-level">
+            <p
+              class="traveller-card__level traveller-level traveller-level--firsova traveller-level--index">
               <span class="traveller-level__number">99</span>
               <span class="traveller-level__text">level</span>
             </p>
@@ -388,8 +404,21 @@
                   alt="Флаг Сейшельских островов.">
               </li>
             </ul>
-            <p class="traveller-card__name">Таня Фирсова</p>
-            <ul class="traveller-card__tags tags">
+            <p class="traveller-card__name traveller-card__wrapper">
+              <span
+                class="traveller-card__status traveller-card__status--offline">
+                <span class="visually-hidden">В сети.</span>
+                <svg
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+              </span>
+              <span>Таня Фирсова</span>
+            </p>
+            <ul class="traveller-card__tags traveller-card__wrapper tags">
               <li class="tags__item">#ЗОЖ</li>
               <li class="tags__item">#ПП</li>
               <li class="tags__item">#Фитнес</li>
@@ -397,17 +426,26 @@
               <li class="tags__item">#авокадо</li>
               <li class="tags__item">#смузи</li>
             </ul>
-            <ul class="traveller-card__transport transport">
-              <li class="transport__item transport__aircraft transport__item--preferable">
+            <ul
+              class="traveller-card__transport traveller-card__wrapper transport">
+              <li class="transport__item">
+                <span
+                  class="transport__image transport__image--aircraft transport__image--preferable"></span>
                 <span class="visually-hidden">Самолет.</span>
               </li>
-              <li class="transport__item transport__car">
+              <li class="transport__item">
+                <span
+                  class="transport__image transport__image--bus"></span>
                 <span class="visually-hidden">Автомобиль.</span>
               </li>
-              <li class="transport__item transport__bicycle">
+              <li class="transport__item">
+                <span
+                  class="transport__image transport__image--bicycle"></span>
                 <span class="visually-hidden">Велосипед.</span>
               </li>
-              <li class="transport__item transport__walk">
+              <li class="transport__item">
+                <span
+                  class="transport__image transport__image--walk"></span>
                 <span class="visually-hidden">Пешком.</span>
               </li>
             </ul>
@@ -420,7 +458,8 @@
               src="img/people/demin.png"
               width="270" height="270"
               alt="Петя Демин.">
-            <p class="traveller-card__level traveller-level">
+            <p
+              class="traveller-card__level traveller-level traveller-level--demin traveller-level--index">
               <span class="traveller-level__number">80</span>
               <span class="traveller-level__text">level</span>
             </p>
@@ -438,25 +477,49 @@
                   alt="Флаг Чехии.">
               </li>
             </ul>
-            <p class="traveller-card__name">Петя Демин</p>
-            <ul class="traveller-card__tags tags">
+            <p class="traveller-card__name traveller-card__wrapper">
+              <span
+                class="traveller-card__status traveller-card__status--online">
+                <span class="visually-hidden">В сети.</span>
+                <svg
+                  width="8"
+                  height="8"
+                  viewBox="0 0 8 8"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="4" cy="4" r="4"/>
+                </svg>
+              </span>
+              <span>Петя Демин</span>
+            </p>
+            <ul class="traveller-card__tags traveller-card__wrapper tags">
               <li class="tags__item">#бургер</li>
               <li class="tags__item">#бар</li>
               <li class="tags__item">#футбол</li>
               <li class="tags__item">#концерт</li>
               <li class="tags__item">#крафт</li>
             </ul>
-            <ul class="traveller-card__transport transport">
-              <li class="transport__item transport__aircraft transport__item--preferable">
+            <ul
+              class="traveller-card__wrapper traveller-card__transport transport">
+              <li
+                class="transport__item">
+                <span
+                  class="transport__image transport__image--aircraft transport__image--preferable"></span>
                 <span class="visually-hidden">Самолет.</span>
               </li>
-              <li class="transport__item transport__car transport__item--preferable">
+              <li
+                class="transport__item">
+                <span
+                  class="transport__image transport__image--bus transport__image--preferable"></span>
                 <span class="visually-hidden">Автомобиль.</span>
               </li>
-              <li class="transport__item transport__bicycle">
+              <li class="transport__item">
+                <span
+                  class="transport__image transport__image--bicycle"></span>
                 <span class="visually-hidden">Велосипед.</span>
               </li>
-              <li class="transport__item transport__walk transport__item--preferable">
+              <li class="transport__item">
+                <span
+                  class="transport__image transport__image--walk transport__image--preferable"></span>
                 <span class="visually-hidden">Пешком.</span>
               </li>
             </ul>
@@ -464,7 +527,7 @@
         </li>
       </ul>
       <a
-        class="traveller__button button button--form-rectangle button--icon-right "
+        class="traveller__button button button--form-rectangle button--icon-right button--primary"
         href="catalog.html">
         Показать всех
       </a>
@@ -493,7 +556,7 @@
         class="services__show-rates button button--rates"
         type="button"
         onclick="toggleHidden('business-rates')">
-        <span class="description description--selected">
+        <span>
           Показать тарифы для бизнеса
         </span>
       </button>
@@ -524,7 +587,7 @@
           </ul>
         </div>
         <button
-          class="business-rates__close button"
+          class="business-rates__close business-rates__close-button button"
           type="button"
           onclick="toggleHidden('business-rates')">
           Закрыть окно
@@ -544,9 +607,9 @@
             <span>это быстро и бесплатно! <br></span>
             <span>Уже зарегистрированы? Тогда</span>
             <span>скорее
-              <a class="contacts__authorize" href="#">
-                авторизуйтесь
-              </a>.</span>
+              <a class="contacts__authorize button" href="#">
+                авторизуйтесь.
+              </a></span>
           </p>
         </header>
         <form
@@ -564,9 +627,10 @@
             placeholder="E-mail"
             required>
           <button
-            class="sign-in__button button button--form-rectangle button--icon-right"
+            class="sign-in__button button button--form-rectangle button--icon-right button--primary"
             type="submit">
             <span class="visually-hidden">Зарегистрироваться.</span>
+            <span class="sign-in__button-text">Регистрация</span>
           </button>
         </form>
         <p class="contacts__slogan description">
@@ -605,24 +669,13 @@
           </button>
         </div>
       </div>
-      <img
-        class="address__map address__map--mobile"
-        src="img/backgrounds/background-map-mobile.png"
+      <iframe
+        class="address__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
         width="320"
         height="424"
-        alt="Расположение офиса.">
-      <img
-        class="address__map address__map--tablet"
-        src="img/backgrounds/background-map-tablet.png"
-        width="768"
-        height="581"
-        alt="Расположение офиса.">
-      <img
-        class="address__map address__map--desktop"
-        src="img/backgrounds/background-map-desktop.png"
-        width="1440"
-        height="584"
-        alt="Расположение офиса.">
+        title="Офис компании."
+      ></iframe>
       <span class="address__locator"></span>
     </address>
   </section>
@@ -694,20 +747,17 @@
         </a>
       </li>
     </ul>
-    <p class="page-footer__developer">
+    <a
+      class="page-footer__developer-button button">
       <span class="page-footer__developer-text">Разработано</span>
-      <a
-        class="page-footer__developer-button button"
-        href="https://htmlacademy.ru/">
-        <img
-          class="developer-logo__image"
-          src="img/htmlacademy-big.svg"
-          width="27"
-          height="34"
-          alt="Логотип HTML академии."
-        >
-      </a>
-    </p>
+      <img
+        class="developer-logo__image"
+        src="img/htmlacademy-big.svg"
+        width="27"
+        height="34"
+        alt="Логотип HTML академии."
+      >
+    </a>
   </div>
 </footer>
 <script src="./js/app.js"></script>

@@ -5,6 +5,7 @@
 }
 
 @contact-buttons__height: 40px;
+@contact-buttons__height--desktop: 50px;
 
 .contact-buttons__button {
   width: @contact-buttons__height;
@@ -15,6 +16,10 @@
     background-image: url("../../img/icons/phone-call.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    &:hover {
+      background-color: @special-orange-hover;
+    }
   }
 
   &--email {
@@ -22,14 +27,35 @@
     background-image: url("../../img/icons/email1.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    &:hover {
+      background-color: @special-orange;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @contact-buttons__height--desktop;
+    height: @contact-buttons__height--desktop;
   }
 }
 
 .contact-buttons__authorize {
   flex-grow: 1;
-  height: @contact-buttons__height;
+  padding-top: 12px;
+  padding-bottom: 8px;
 
   .common-font(17px, 20px, 700);
   color: @fg-blue-light;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: @special-yellow-dark;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }

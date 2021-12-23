@@ -6,11 +6,11 @@
   background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
     url("../../../img/backgrounds/traveller-rogovaya-small.png"),
     url("../../../img/backgrounds/traveller-smolov.png");
-  background-position: calc(50% - 108px) 58px,
-    calc(50% - 124px) 330px,
-    calc(50% + 60px) 58px;
-  background-size: 113px 132px,
-    71px 71px,
+  background-position: calc(50% - 115px) 64px,
+    calc(50% - 131px) 337px,
+    calc(50% + 62px) 65px;
+  background-size: 132px 132px,
+    64px 71px,
     143px 143px;
 
   .ladder-top2down-mobile(68px);
@@ -20,26 +20,26 @@
   z-index: @z-index-travelers;
 
   @media (min-width: @tablet-width) {
-    .ladder-top2down-tablet(208px);
+    .ladder-top2down-tablet(141px);
     padding-bottom: 87px;
 
     background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
       url("../../../img/backgrounds/traveller-rogovaya.png"),
       url("../../../img/backgrounds/traveller-smolov.png");
-    background-position: calc(50% - 237px) 118px,
-      calc(50% + 180px) 118px,
-      calc(50% - 268px) 490px;
+    background-position: calc(50% - 238px) 130px,
+      calc(50% + 167px) 140px,
+      calc(50% - 272px) 486px;
     background-size: 212px 212px,
       285px 285px,
       143px 143px;
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-top2down-desktop(231px);
+    .ladder-top2down-desktop(130px);
     padding-bottom: 134px;
-    background-position: calc(50% - 536px) 199px,
-      calc(50% - 380px) 519px,
-      calc(50% - 102px) 247px;
+    background-position: calc(50% - 554px) 124px,
+      calc(50% - 388px) 440px,
+      calc(50% - 102px) 188px;
   }
 }
 
@@ -55,7 +55,7 @@
 
 .traveller__header {
   margin-bottom: 54px;
-  padding-left: 24px;
+  padding-left: 23px;
   padding-right: 27px;
   box-sizing: border-box;
 
@@ -66,7 +66,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 72px;
+    padding-left: 70px;
     padding-right: 193px;
     margin-bottom: 85px;
     grid-area: traveller-header;
@@ -78,23 +78,21 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 55px;
+    margin-left: -2px;
   }
 }
 
 .traveller__description {
-  margin-bottom: 25px;
+  margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 39px;
+    line-height: 34px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 42px;
+    margin-bottom: 38px;
   }
-}
-
-.traveller__item {
-  background-color: @bg-extra-light;
 }
 
 .traveller__button {
@@ -109,9 +107,21 @@
   background-color: @basic-yellow;
   color: @fg-blue-light;
 
+  @media (min-width: @tablet-width) {
+    margin-left: 34px;
+    margin-right: 38px;
+    padding-top: 28px;
+    padding-left: 31px;
+    padding-bottom: 52px;
+    .common-font(24px, 24px, 700);
+  }
+
   @media (min-width: @desktop-width) {
     grid-area: traveller-button;
-    margin-left: 72px;
+    margin-left: 70px;
+    padding-top: 29px;
+    padding-bottom: 51px;
+    padding-left: 33px;
     box-sizing: border-box;
     width: 280px;
   }
@@ -119,7 +129,7 @@
 
 .traveller__list {
   .common-list();
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   display: flex;
   flex-direction: column;
   gap: 9px;
@@ -127,15 +137,26 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 81px;
+    margin-bottom: 80px;
     padding-left: 35px;
     padding-right: 35px;
+    gap: 50px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
+    margin-top: 3px;
     grid-area: traveller-list;
+    gap: 60px;
+  }
+}
+
+.traveller__slogan {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
   }
 }

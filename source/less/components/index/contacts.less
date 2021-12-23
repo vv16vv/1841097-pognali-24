@@ -2,25 +2,25 @@
   background-color: @bg-secondary;
   color: @fg-main;
 
-  .ladder-top2down-mobile(72px);
-  padding-bottom: 44px;
+  .ladder-top2down-mobile(73px);
+  padding-bottom: 30px;
 
   position: relative;
   z-index: @z-index-contacts;
 
   @media (min-width: @tablet-width) {
     .ladder-top2down-tablet(76px);
-    padding-bottom: 60px;
+    padding-bottom: 63px;
   }
 
   @media (min-width: @desktop-width) {
     .ladder-top2down-desktop(109px);
-    padding-bottom: 104px;
+    padding-bottom: 100px;
   }
 }
 
 .contacts__additional-padding() {
-  padding-left: 25px;
+  padding-left: 23px;
   padding-right: 25px;
 }
 
@@ -48,28 +48,41 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    margin-bottom: 65px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 60px;
+    line-height: 31px;
   }
 }
 
 .contacts__sign-in {
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 60px;
+    margin-left: 36px;
+    margin-right: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 69px;
   }
 }
 
 .contacts__contact .contact__button {
   color: @basic-yellow;
+
+  &:hover {
+    color: @special-yellow-dark;
+  }
+
+  &:active {
+    .active();
+  }
 }
 
 .contacts__slogan {
@@ -77,17 +90,46 @@
   margin-bottom: 17px;
   text-align: center;
   letter-spacing: 0.01em;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 40px;
+    flex-direction: row;
+    margin-left: 17px;
+    gap: 8px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 42px;
+    margin-bottom: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
   }
 }
 
 .contacts__authorize {
   display: inline;
   color: @basic-yellow;
+  text-decoration: underline;
+
+  &:focus {
+    border-radius: 4px;
+  }
+
+  &:hover {
+    color: @special-orange;
+  }
+
+  &:active {
+    .active();
+  }
+}
+
+.contacts__common-part {
+  @media (min-width: @desktop-width) {
+    box-sizing: border-box;
+    padding-left: 37px;
+    padding-right: 37px;
+  }
 }

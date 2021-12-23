@@ -2,6 +2,15 @@
   top: 73px;
   left: 0;
   width: 100%;
+  box-sizing: border-box;
+
+  &--nojs {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 90px;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;

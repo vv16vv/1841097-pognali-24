@@ -71,7 +71,7 @@
     .promo__font();
     color: @fg-main;
 
-    right: 24px;
+    right: 22px;
     top: 22px;
     width: 10px;
     height: 18px;
@@ -137,18 +137,22 @@
   @media (min-width: @desktop-width) {
     @overlap: 30px;
     @base-width: 315px;
+    @padding-bottom--desktop: 29px;
+    @border-radius--desktop: 20px;
 
-    border-radius: (@overlap / 2) 0 0 (@overlap / 2);
+    border-radius: @border-radius--desktop 0 0 @border-radius--desktop;
 
-    padding: 30px 34px;
+    box-sizing: border-box;
+    padding: 30px 30px @padding-bottom--desktop;
 
     &::after {
-      right: 33px + @overlap;
-      top: 22px;
+      right: 37px + @overlap;
+      top: 29px;
     }
 
     &:first-child {
-      padding-bottom: 30px;
+      padding-left: 34px;
+      padding-bottom: @padding-bottom--desktop;
       width: @base-width + @overlap;
     }
 
@@ -156,17 +160,22 @@
       width: @base-width + @overlap * 2;
       margin-right: 0;
       margin-top: 0;
-      padding-bottom: 34px;
+      padding-left: 30px;
+      padding-bottom: @padding-bottom--desktop;
       margin-left: @overlap * -1;
+
+      &::after {
+        right: 36px + @overlap;
+      }
     }
 
     &:last-child {
       width: @base-width;
-      border-top-right-radius: (@overlap / 2);
-      border-bottom-right-radius: (@overlap / 2);
+      border-top-right-radius: @border-radius--desktop;
+      border-bottom-right-radius: @border-radius--desktop;
 
       &::after {
-        right: 33px;
+        right: 36px;
       }
     }
   }
