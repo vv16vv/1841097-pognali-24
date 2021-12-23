@@ -120,3 +120,9 @@ window.onscroll = () => {
     toggleHeader(lightSuffix, darkSuffix, true)
   }
 };
+
+window.onload = () => {
+  const menuContentPopup = document.getElementsByClassName("menu-content-popup")[0]
+  menuContentPopup.classList.remove("menu-content-popup--nojs")
+  menuContentPopup.classList.add("hidden")
+}
