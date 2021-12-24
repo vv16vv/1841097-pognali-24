@@ -31,11 +31,16 @@ function toggleFilter() {
 }
 
 function toggleGroup(searchedName, toggledName = "chooser-form-group__list") {
-  const group = document.getElementsByClassName(searchedName)[0]
-  const button = group.getElementsByClassName("chooser-form-group__button")[0]
-  button.classList.toggle("chooser-form-group__button--state-closed")
-  button.classList.toggle("chooser-form-group__button--state-opened")
-  toggleHidden(toggledName, group)
+  const mediaTablet = window.matchMedia(`(min-width : ${tabletWidth}px)`)
+  const mediaDesktop = window.matchMedia(`(min-width : ${desktopWidth}px)`)
+  if(mediaDesktop.matches || !mediaTablet.matches) {
+    const group = document.getElementsByClassName(searchedName)[0]
+    const button = group.getElementsByClassName("chooser-form-group__button")[0]
+    button.classList.toggle("chooser-form-group__button--state-closed")
+    button.classList.toggle("chooser-form-group__button--state-opened")
+    const content = group.getElementsByClassName(toggledName)[0]
+    content.classList.toggle("chooser-form-group__list-hidden")
+  }
 }
 
 const tabletWidth = 768;
