@@ -17,6 +17,10 @@
   &:active {
     .active();
   }
+
+  @media (min-width: @tablet-width) {
+    gap: 12px;
+  }
 }
 
 .checkbox-control__input {
@@ -49,8 +53,23 @@
     transform: rotate(-45deg);
     .transition(border-color);
   }
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 24px;
+    top: -1px;
+
+    &::before {
+      top: 7px;
+      left: 7px;
+    }
+  }
 }
 
 .checkbox-control__label {
   .common-font(15px, 20px, 400);
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }

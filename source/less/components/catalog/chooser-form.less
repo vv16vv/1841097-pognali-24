@@ -42,8 +42,7 @@
 
 .chooser-form__button {
   width: 100%;
-  height: 41px;
-  padding: 0;
+  padding: 14px 0 15px;
   background-color: @fg-main;
   color: @bg-main;
 
@@ -69,6 +68,9 @@
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
     margin-top: 36px;
     position: relative;
+    .common-font(20px, 20px, 700);
+    padding-top: 18px;
+    padding-bottom: 17px;
 
     &::before {
       content: "";
@@ -80,5 +82,11 @@
 
       border-top: 1px solid @yellow-dark;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    .common-font(20px, 20px, 700);
+    padding-top: 18px;
+    padding-bottom: 17px;
   }
 }
