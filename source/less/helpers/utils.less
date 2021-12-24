@@ -27,6 +27,11 @@
   .transition(opacity);
 }
 
+.focus() {
+  outline: 1px solid @bg-main;
+  outline-offset: 2px;
+}
+
 .card-hover(@shadow-color) {
   box-shadow: 0 4px 4px fade(@shadow-color, 16%);
   transform: scale(1.01);

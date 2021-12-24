@@ -45,6 +45,10 @@
     width: 32px;
     height: 32px;
 
+    &:focus-within {
+      .focus();
+    }
+
     @media (min-width: @tablet-width) {
       width: 43px;
       height: 43px;
@@ -108,5 +112,17 @@
     width: 17px;
     height: 16px;
     background-size: 17px 16px;
+  }
+}
+
+.transport__control-input {
+  & + .transport__image {
+    opacity: 0.15;
+    .transition(opacity);
+  }
+
+  &:checked + .transport__image {
+    opacity: 1;
+    .transition(opacity);
   }
 }

@@ -43,6 +43,9 @@
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &--personal-form {
     padding-left: 14px;
@@ -55,6 +58,11 @@
 
   &:active {
     .active();
+  }
+
+  &:focus-within {
+    border-radius: 4px;
+    .focus();
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
@@ -97,31 +105,24 @@
 }
 
 .chooser-form-group__button {
-  position: absolute;
   width: 10px;
   height: 6px;
 
   border: none;
-  right: 0;
-  top: -15px;
 
   background-repeat: no-repeat;
   background-color: transparent;
 
-  &:hover {
-    .hover();
-  }
-
-  &:active {
-    .active();
+  &:focus {
+    outline: none;
   }
 
   &--state-closed {
-    background-image: url("../../../img/icons/group-close.svg");
+    background-image: url("../../../img/icons/group-open.svg");
   }
 
   &--state-opened {
-    background-image: url("../../../img/icons/group-open.svg");
+    background-image: url("../../../img/icons/group-close.svg");
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
