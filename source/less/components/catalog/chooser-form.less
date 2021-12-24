@@ -50,6 +50,18 @@
   .common-font(17px, 17px, 700);
   text-transform: uppercase;
 
+  &:hover {
+    box-shadow: 0 3px 4px fade(@fg-black, 14%);
+    .transition(box-shadow);
+  }
+
+  &:active {
+    background-color: @yellow-dark;
+    color: fade(@fg-blue-light, 30%);
+    box-shadow: none;
+    .transition(background-color, color, box-shadow;);
+  }
+
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
     margin-top: 36px;
     position: relative;
