@@ -17,6 +17,14 @@
 
 .filter-popup__parts-of-world {
   margin-bottom: 25px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .filter-popup__letters {
@@ -52,5 +60,9 @@
     background-image: url("../../../img/icons/filter-close.svg");
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  &:focus {
+    outline-color: @bg-main;
   }
 }

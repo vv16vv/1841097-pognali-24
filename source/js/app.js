@@ -22,12 +22,27 @@ function toggleMenu(show) {
 }
 
 function toggleFilter() {
-  toggleHidden("filter-popup")
+  const filterClassName = "filter";
   const filter = document
-    .getElementsByClassName("filter")[0]
-  filter.classList.toggle("filter--opened")
-  toggleHidden("filter__button--state-open")
-  toggleHidden("filter__button--state-close")
+    .getElementsByClassName(filterClassName)[0]
+  filter.classList.toggle(`${filterClassName}--opened`)
+
+  const buttonClassName = `${filterClassName}__button`
+  const button = document.getElementsByClassName(buttonClassName)[0]
+  button.classList.toggle(`${buttonClassName}--state-open`)
+  button.classList.toggle(`${buttonClassName}--state-close`)
+
+  const spanClassName = `filter__button-name`
+  const spans = button.getElementsByClassName(spanClassName)
+  for (let i = 0; i < spans.length; i++) {
+    spans[i].classList.toggle(`${spanClassName}--state-in-flow`)
+    spans[i].classList.toggle(`${spanClassName}--state-in-popup`)
+  }
+
+  const popupClassName = `filter__popup`
+  const popup = filter.getElementsByClassName(popupClassName)[0]
+  popup.classList.toggle(`${popupClassName}--state-in-flow`)
+  popup.classList.toggle(`${popupClassName}--state-in-popup`)
 }
 
 function toggleGroup(searchedName, toggledName = "chooser-form-group__list") {

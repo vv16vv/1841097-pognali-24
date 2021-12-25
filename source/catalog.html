@@ -210,20 +210,53 @@
       <h2 class="filter__title">
         Фильтрация по странам:
       </h2>
+      <ul class="filter__parts-of-world parts-of-world">
+        <li class="parts-of-world__item continent">
+          <button
+            class="continent__name button continent__name--selected"
+            type="button">
+            Европа
+          </button>
+        </li>
+        <li class="parts-of-world__item continent">
+          <button
+            class="continent__name button"
+            type="button">
+            Азия
+          </button>
+        </li>
+        <li class="parts-of-world__item continent">
+          <button
+            class="continent__name button"
+            type="button">
+            Америка
+          </button>
+        </li>
+        <li class="parts-of-world__item continent">
+          <button
+            class="continent__name button"
+            type="button">
+            Острова
+          </button>
+        </li>
+      </ul>
       <button
         class="filter__button filter__button--state-open button"
         type="button"
-        onclick="toggleFilter()">
-        <span class="visually-hidden">Открыть фильтр.</span>
-      </button>
-      <button
-        class="filter__button filter__button--state-close button hidden"
-        type="button"
-        onclick="toggleFilter()">
-        <span class="visually-hidden">Закрыть фильтр.</span>
+        onclick="toggleFilter()"
+      >
+        <span
+          class="filter__button-name filter__button-name--show filter__button-name--state-in-flow">
+          Показать все
+        </span>
+        <span
+          class="filter__button-name filter__button-name--hide filter__button-name--state-in-popup">
+          Свернуть
+        </span>
+        <span class="filter__button--dot">.</span>
       </button>
     </div>
-    <div class="filter__popup filter-popup popup hidden">
+    <div class="filter__popup filter-popup filter__popup--state-in-flow">
       <div class="wrapper">
         <ul class="filter-popup__parts-of-world parts-of-world">
           <li class="parts-of-world__item continent">

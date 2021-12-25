@@ -2,6 +2,20 @@
   box-sizing: border-box;
   width: 44px;
   height: 44px;
+  border-bottom: 1px solid @fg-border;
+  border-left: 1px solid @fg-border;
+
+  &:nth-child(5n) {
+    border-right: 1px solid @fg-border;
+  }
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5) {
+    border-top: 1px solid @fg-border;
+  }
 }
 
 .letter__name {
@@ -14,9 +28,18 @@
   background-color: @fg-main;
   color: @fg-blue-light;
 
+  &:focus {
+    outline-color: @bg-main;
+    outline-offset: -1px;
+  }
+
   &--selected {
     font-weight: 500;
     color: @fg-main;
     background-color: @fg-blue-light;
+
+    &:focus {
+      outline-color: @basic-yellow;
+    }
   }
 }

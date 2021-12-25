@@ -10,4 +10,18 @@
   &--selected {
     opacity: 1;
   }
+
+  &:hover {
+    .hover();
+  }
+
+  &:active {
+    opacity: 1;
+    .transition(opacity);
+  }
+
+  &:focus {
+    outline-color: @bg-main;
+    border-radius: 4px;
+  }
 }
