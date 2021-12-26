@@ -42,7 +42,7 @@
   &--sticky {
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: @z-index-popup;
     width: 100%;
 
     .page-header__inner-title {
@@ -90,6 +90,12 @@
     @media (min-width: @desktop-width) {
       z-index: 1;
     }
+  }
+}
+
+.page-header--destination.page-header--sticky {
+  @media (min-width: @desktop-width) {
+    z-index: @z-index-popup;
   }
 }
 
