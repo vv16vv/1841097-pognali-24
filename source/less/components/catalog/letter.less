@@ -1,6 +1,5 @@
 .letter {
   box-sizing: border-box;
-  width: 44px;
   height: 44px;
   border-bottom: 1px solid @fg-border;
   border-left: 1px solid @fg-border;
@@ -16,11 +15,35 @@
   &:nth-child(5) {
     border-top: 1px solid @fg-border;
   }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    height: 86px;
+
+    &:nth-child(5n) {
+      border-right: none;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      border-top: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    height: max-content;
+  }
 }
 
 .letter__name {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .common-font(14px, 14px, 400);
   text-transform: uppercase;
@@ -33,13 +56,55 @@
     outline-offset: -1px;
   }
 
-  &--selected {
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    color: @bg-secondary;
+    .common-font(60px, 60px, 700);
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    opacity: 1;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+}
+
+.letter__name-radio {
+  .visually-hide();
+
+  & ~ .filter-popup__countries-list {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &:checked ~ .filter-popup__countries-list {
+    display: block;
+  }
+
+  &:focus + .letter__name {
+    outline: 1px solid @basic-yellow;
+    outline-offset: -2px;
+
+    @media (min-width: @tablet-width) {
+      border-radius: 4px;
+      outline-color: @bg-secondary;
+    }
+  }
+
+  &:checked + .letter__name {
     font-weight: 500;
     color: @fg-main;
     background-color: @fg-blue-light;
 
-    &:focus {
-      outline-color: @basic-yellow;
+    @media (min-width: @tablet-width) {
+      background-color: transparent;
+      opacity: 1;
+      font-weight: 700;
+      color: inherit;
     }
   }
 }

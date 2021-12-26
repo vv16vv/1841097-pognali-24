@@ -35,6 +35,10 @@
       "image . tags tags tags . country country"
       "image . button favorite subscribers . transport level";
   }
+
+  &:hover {
+    .card-hover(@fg-black);
+  }
 }
 
 .traveller-details-card__wrapper {
@@ -44,7 +48,7 @@
 
 .traveller-details-card__title {
   grid-area: title;
-  margin: 0 0 8px;
+  margin: 0 22px 8px 0;
   display: flex;
   justify-content: space-between;
   gap: 22px;
@@ -62,6 +66,20 @@
     margin-top: 46px;
     margin-bottom: 20px;
   }
+
+  &:hover {
+    .hover();
+  }
+
+  &:active {
+    .active();
+  }
+
+  &:focus-within {
+    .focus();
+    outline-color: @bg-secondary;
+    border-radius: 4px;
+  }
 }
 
 .traveller-details-card__name {
@@ -70,6 +88,10 @@
 
   @media (min-width: @tablet-width) {
     .common-font(30px, 30px, 700);
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
@@ -95,12 +117,16 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 48px;
   }
+
+  &:focus {
+    outline-color: @bg-secondary;
+  }
 }
 
 .traveller-details-card__status {
   grid-area: status;
   text-align: right;
-  padding-right: 22px;
+  padding-right: 2px;
   margin: 0;
 
   &--offline circle {
@@ -139,12 +165,19 @@
   @media (min-width: @desktop-width) {
     margin: 0;
   }
+
+  &:focus {
+    .focus();
+    outline-color: @bg-secondary;
+    border-radius: 4px;
+  }
 }
 
 .traveller-details-card__image {
   display: block;
   width: 70px;
   height: 70px;
+  .transition(transform);
 
   @media (min-width: @tablet-width) {
     width: 190px;
@@ -157,6 +190,18 @@
     height: 285px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+
+    @media (min-width: @desktop-width) {
+      transform: scale(1.03);
+    }
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
