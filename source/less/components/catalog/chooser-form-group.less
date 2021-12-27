@@ -9,6 +9,16 @@
     border-radius: 10px;
     padding-top: 16px;
     color: @fg-blue-light;
+    .transition(border-color);
+
+    &:hover {
+      border-color: @fg-border-darker;
+    }
+
+    &:active,
+    &:focus-within {
+      border-color: @bg-main;
+    }
   }
 
   @media (min-width: @tablet-width) {

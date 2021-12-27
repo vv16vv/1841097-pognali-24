@@ -31,7 +31,10 @@
   &--chooser-form-group {
     gap: 1px;
     justify-content: center;
-    margin-top: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -41,6 +44,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  .transition(outline);
 
   &--checkbox {
     background-color: @fg-main;
@@ -79,6 +83,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 21px 21px;
+  .transition(opacity);
 
   &--aircraft {
     background-image: url("../../../img/icons/aircraft-active.svg");
@@ -120,11 +125,9 @@
 .transport__control-input {
   & + .transport__image {
     opacity: 0.15;
-    .transition(opacity);
   }
 
   &:checked + .transport__image {
     opacity: 1;
-    .transition(opacity);
   }
 }
