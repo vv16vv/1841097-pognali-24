@@ -16,6 +16,30 @@
     border-top: 1px solid @fg-border;
   }
 
+  &--form {
+    .letter__name {
+      font-weight: 500;
+    }
+
+    &:nth-child(5n) {
+      border-right: none;
+    }
+
+    &:nth-child(5n + 1) {
+      border-left: none;
+    }
+
+    .letter__name-radio:checked + .letter__name {
+      background-color: @bg-lighter;
+      color: inherit;
+    }
+
+    .letter__name-radio:focus + .letter__name {
+      outline-color: @bg-secondary;
+      border-radius: 4px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     border: none;
     height: 86px;

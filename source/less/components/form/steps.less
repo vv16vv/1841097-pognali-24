@@ -77,6 +77,15 @@
   &--back {
     background-color: transparent;
     padding: 0;
+    .transition(opacity);
+
+    &:hover {
+      .hover();
+    }
+
+    &:active {
+      .active();
+    }
   }
 
   &:focus {

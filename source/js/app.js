@@ -122,6 +122,21 @@ function toggleHeader(firstSuffix, secondSuffix, removeSticky = undefined) {
   }
 }
 
+function toggleCountryChooser(id) {
+  const chooser = document.getElementById(id)
+
+  const selectWrapper = chooser.getElementsByClassName("steps-select__select-wrapper")[0]
+  selectWrapper.classList.toggle("steps-select__select-wrapper--adder")
+  selectWrapper.classList.toggle("steps-select__select-wrapper--chooser")
+
+  const select = chooser.getElementsByClassName("steps-select__select")[0]
+  select.classList.toggle("steps-select__select--adder")
+  select.classList.toggle("steps-select__select--chooser")
+
+  const popup = chooser.getElementsByClassName("steps-select__popup")[0]
+  popup.classList.toggle("hidden")
+}
+
 window.onscroll = () => {
   const mediaTablet = window.matchMedia(`(min-width : ${tabletWidth}px)`)
   const mediaDesktop = window.matchMedia(`(min-width : ${desktopWidth}px)`)

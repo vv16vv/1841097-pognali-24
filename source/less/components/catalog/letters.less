@@ -8,6 +8,14 @@
   display: grid;
   grid-template-columns: repeat(5, 44px);
 
+  &--form {
+    width: 100%;
+    box-sizing: border-box;
+    grid-template-columns: repeat(5, 1fr);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
     padding-right: 256px;
