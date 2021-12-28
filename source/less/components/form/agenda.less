@@ -10,6 +10,29 @@
   grid-template-areas: "name flag" "plan plan";
   grid-row-gap: 18px;
   align-items: center;
+  position: relative;
+
+  &--error {
+    .agenda__plan {
+      border: 1px solid @error-border;
+    }
+
+    &::after {
+      content: "Это поле должно быть заполнено";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      padding: 20px 21px 16px;
+      color: @error;
+      background-color: @bg-error;
+      border: 1px solid @error-border;
+      border-top: none;
+      font: inherit;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 70px;
@@ -67,6 +90,21 @@
   font-family: inherit;
   .common-font(16px, 22px, 400);
   color: @fg-special-grey;
+  resize: none;
+  .transition(color, border-color;);
+
+  border: 1px solid @fg-border;
+
+  &:hover {
+    color: fade(@fg-special-grey, 30%);
+    border-color: @fg-border-hover;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: @bg-main;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 18px 19px;
