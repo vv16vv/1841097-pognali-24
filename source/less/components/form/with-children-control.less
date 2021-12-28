@@ -1,3 +1,47 @@
+.with-children-control {
+  &:focus-within {
+    .focus();
+    outline-color: @bg-secondary;
+    border-radius: 4px;
+  }
+}
+
+.with-children-control__label {
+  display: flex;
+  align-items: center;
+}
+
+.with-children-control__checkbox {
+  .visually-hide();
+
+  &:checked + .with-children-control__mark::before {
+    border-color: @bg-main;
+  }
+}
+
+.with-children-control__mark {
+  width: 26px;
+  height: 26px;
+  background-color: @fg-main;
+  border-radius: 4px;
+  border: 1px solid @fg-border;
+  margin-right: 13px;
+  display: flex;
+
+  &::before {
+    content: "";
+    width: 10px;
+    height: 5px;
+    margin: auto;
+    .transition(border-color);
+
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+
+    transform: rotate(-45deg) translate(2px, -1px);
+  }
+}
+
 .with-children-control__text {
   .common-font(15px, 15px, 400);
   color: @fg-blue-light;
