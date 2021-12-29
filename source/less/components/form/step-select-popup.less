@@ -3,5 +3,13 @@
   box-sizing: border-box;
   border: 1px solid @fg-border;
   border-top: none;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 735px;
+  }
 }
 

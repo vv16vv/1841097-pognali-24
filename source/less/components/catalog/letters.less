@@ -21,6 +21,21 @@
     padding-right: 256px;
     padding-left: 0;
     grid-template-columns: repeat(5, 77px);
+
+    &--form {
+      grid-template-columns: repeat(5, 51px);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -35px;
+        right: 179px;
+
+        height: calc(100% + 70px);
+        width: 1px;
+        background-color: fade(@fg-calendar-border, 50%);
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -28,5 +43,22 @@
     grid-template-columns: repeat(5, 213px);
     grid-column-gap: 38px;
     grid-row-gap: 51px;
+
+    &--form {
+      grid-template-columns: repeat(5, 60px);
+      grid-row-gap: 14px;
+      grid-column-gap: 16px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -35px;
+        right: 179px;
+
+        height: calc(100% + 70px);
+        width: 1px;
+        background-color: fade(@fg-calendar-border, 50%);
+      }
+    }
   }
 }

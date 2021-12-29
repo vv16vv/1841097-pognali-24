@@ -36,7 +36,14 @@
 
     .letter__name-radio:focus + .letter__name {
       outline-color: @bg-secondary;
-      border-radius: 4px;
+    }
+
+    .letter__name-radio ~ .letter__countries-list {
+      display: none;
+    }
+
+    .letter__name-radio:checked ~ .letter__countries-list {
+      display: block;
     }
   }
 
@@ -55,10 +62,83 @@
     &:nth-child(5) {
       border-top: none;
     }
+
+    &--form {
+      height: 70px;
+      border-left: 1px solid @fg-border;
+      border-bottom: 1px solid @fg-border;
+
+      &:nth-child(5n) {
+        border-right: 1px solid @fg-border;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        border-top: 1px solid @fg-border;
+      }
+
+      &:nth-child(5n + 1) {
+        border-left: 1px solid @fg-border;
+      }
+
+      .letter__name {
+        .common-font(20px, 20px, 500);
+        opacity: 1;
+        color: @fg-blue-light;
+      }
+
+      .letter__name-radio:checked + .letter__name {
+        background-color: @fg-blue-light;
+        color: @fg-main;
+      }
+
+      .letter__name-radio:focus + .letter__name {
+        outline-color: @basic-yellow;
+        border-radius: 0;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
     height: max-content;
+
+    &--form {
+      height: 70px;
+      border: 1px solid @fg-border;
+      border-radius: 4px;
+      display: flex;
+
+      &:nth-child(5n) {
+        border-right: 1px solid @fg-border;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        border-top: 1px solid @fg-border;
+      }
+
+      &:nth-child(5n + 1) {
+        border-left: 1px solid @fg-border;
+      }
+
+      .letter__name {
+        margin-left: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+        border-radius: 4px;
+      }
+
+      .letter__name-radio:focus + .letter__name {
+        border-radius: 4px;
+      }
+    }
   }
 }
 
@@ -88,6 +168,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: max-content;
+    padding: 10px;
+    margin-left: -10px;
     opacity: 1;
     justify-content: flex-start;
     margin-bottom: 30px;
@@ -130,5 +213,23 @@
       font-weight: 700;
       color: inherit;
     }
+  }
+}
+
+.letter__countries-list {
+  position: absolute;
+  top: 235px;
+  left: 0;
+  height: fit-content;
+  width: 220px;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 526px;
   }
 }

@@ -43,6 +43,10 @@
     grid-template-columns: 1fr 271px;
     grid-row-gap: 26px;
     grid-template-areas: "name flag" "plan .";
+
+    &--error::after {
+      width: calc(100% - 271px);
+    }
   }
 }
 
