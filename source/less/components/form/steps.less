@@ -77,6 +77,19 @@
   &--back {
     background-color: transparent;
     padding: 0;
+    .transition(opacity);
+
+    &:hover {
+      .hover();
+    }
+
+    &:active {
+      .active();
+    }
+  }
+
+  &:focus {
+    outline-color: @bg-secondary;
   }
 
   @media (min-width: @tablet-width) {
@@ -88,19 +101,19 @@
     border-radius: 10px;
     text-align: left;
 
-    .button--next();
-
     .common-font(24px, 24px, 700);
     text-transform: none;
 
     &--next {
       margin-bottom: 0;
+      .button--next();
     }
 
     &--back {
-      background-position: left 15px center;
+      background-position: left 19px center;
+      background-repeat: no-repeat;
       background-image: url("../../../img/icons/arrow-back.svg");
-      width: 187px;
+      width: 194px;
       text-align: right;
       padding-right: 0;
       padding-left: 12px;
@@ -117,7 +130,7 @@
       height: 95px;
 
       top: -16px;
-      left: -32px;
+      left: -25px;
 
       border: 0.5px solid @fg-border;
     }

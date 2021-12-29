@@ -19,10 +19,17 @@
 
 .hover() {
   opacity: 0.7;
+  .transition(opacity);
 }
 
 .active() {
   opacity: 0.3;
+  .transition(opacity);
+}
+
+.focus() {
+  outline: 1px solid @bg-main;
+  outline-offset: 2px;
 }
 
 .card-hover(@shadow-color) {
@@ -35,4 +42,9 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.transition(@properties) {
+  transition-property: @properties;
+  transition-duration: @transition-duration;
 }

@@ -22,12 +22,13 @@
     grid-template-columns: 550px 1fr;
     grid-template-areas:
       "travellers with-children"
-      "dates with-children"
+      "dates ."
       "calendar calendar"
       "buttons buttons";
     padding-top: 30px;
     border-top: 1px solid @fg-border-lighter;
     grid-row-gap: 14px;
+    align-items: center;
   }
 }
 
@@ -49,7 +50,8 @@
   @media (min-width: @desktop-width) {
     text-align: right;
     margin-bottom: 0;
-    margin-top: 25px;
+    margin-top: 0;
+    margin-left: auto;
   }
 }
 

@@ -21,12 +21,14 @@
   grid-template-areas: "filter" "traveller-chooser" "traveller-details";
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width - 120px;
+    width: 100%;
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
 
-    grid-template-areas: "filter filter" "traveller-details traveller-chooser";
-    grid-template-columns: 949px 285px;
+    grid-template-areas: "filter filter filter filter"
+      ". traveller-details traveller-chooser .";
+    grid-template-columns: 1fr 949px 285px 1fr;
     grid-column-gap: 86px;
     grid-row-gap: 151px;
   }

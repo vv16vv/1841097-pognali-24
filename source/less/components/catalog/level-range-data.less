@@ -1,0 +1,120 @@
+.level-range-data {
+  display: flex;
+  position: relative;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    width: 148px;
+  }
+}
+
+.level-range-data__input {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+
+  .common-font(14px, 13px, 500);
+  letter-spacing: 0.06em;
+  color: @fg-blue-light;
+  text-align: center;
+  border: 1px solid @fg-border;
+  //noinspection CssInvalidPropertyValue
+  appearance: textfield;
+
+  padding: 13px 13px 9px;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &--min {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: none;
+  }
+
+  &--max {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: none;
+    margin-left: -1px;
+  }
+
+  &:hover {
+    border-color: @fg-border-hover;
+
+    & ~ .level-range-data__separator {
+      border-color: @fg-border-hover;
+    }
+  }
+
+  &:focus {
+    border-color: @bg-main;
+    outline: none;
+
+    & ~ .level-range-data__separator {
+      border-color: @bg-main;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 15px 11px;
+    .common-font(20px, 20px, 700);
+    letter-spacing: 0.04em;
+  }
+}
+
+.level-range-data__separator {
+  position: absolute;
+  width: 0;
+  height: 38px;
+  top: 0;
+  left: 109px;
+  border: 0.5px solid @fg-border;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 16px;
+    top: 14px;
+    bottom: 14px;
+    left: -8px;
+
+    background-color: @fg-main;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 0;
+    top: 18px;
+    background-color: @fg-main;
+    left: calc(50% - 9px);
+    border: 0.5px solid @fg-border;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 73px;
+    height: 50px;
+
+    &::before {
+      width: 21px;
+      top: 16px;
+      bottom: 16px;
+      left: -10px;
+    }
+
+    &::after {
+      width: 21px;
+      top: 23px;
+      left: calc(50% - 11px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 94px;
+  }
+}

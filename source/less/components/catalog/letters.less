@@ -1,8 +1,64 @@
 .letters {
   padding-left: 25px;
   padding-right: 25px;
+  padding-bottom: 310px;
   list-style-type: none;
+  position: relative;
 
   display: grid;
   grid-template-columns: repeat(5, 44px);
+
+  &--form {
+    width: 100%;
+    box-sizing: border-box;
+    grid-template-columns: repeat(5, 1fr);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+    padding-right: 256px;
+    padding-left: 0;
+    grid-template-columns: repeat(5, 77px);
+
+    &--form {
+      grid-template-columns: repeat(5, 51px);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -35px;
+        right: 179px;
+
+        height: calc(100% + 70px);
+        width: 1px;
+        background-color: fade(@fg-calendar-border, 50%);
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+    grid-template-columns: repeat(5, 213px);
+    grid-column-gap: 38px;
+    grid-row-gap: 51px;
+
+    &--form {
+      grid-template-columns: repeat(5, 60px);
+      grid-row-gap: 14px;
+      grid-column-gap: 16px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -35px;
+        right: 179px;
+
+        height: calc(100% + 70px);
+        width: 1px;
+        background-color: fade(@fg-calendar-border, 50%);
+      }
+    }
+  }
 }

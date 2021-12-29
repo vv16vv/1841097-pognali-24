@@ -2,6 +2,10 @@
   list-style-type: none;
   padding-left: 0;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 33px;
+  }
 }
 
 .agenda__item {
@@ -10,6 +14,33 @@
   grid-template-areas: "name flag" "plan plan";
   grid-row-gap: 18px;
   align-items: center;
+  position: relative;
+
+  &--error {
+    .agenda__plan {
+      border: 1px solid @error-border;
+    }
+
+    &::after {
+      content: "Это поле должно быть заполнено";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      padding: 20px 21px 16px;
+      color: @error;
+      background-color: @bg-error;
+      border: 1px solid @error-border;
+      border-top: none;
+      font: inherit;
+    }
+  }
+
+  &:last-child .agenda__marker {
+    background-color: transparent;
+  }
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 70px;
@@ -20,6 +51,10 @@
     grid-template-columns: 1fr 271px;
     grid-row-gap: 26px;
     grid-template-areas: "name flag" "plan .";
+
+    &--error::after {
+      width: calc(100% - 271px);
+    }
   }
 }
 
@@ -34,6 +69,7 @@
 .agenda__country {
   grid-area: name;
   display: block;
+  padding-left: 15px;
 
   .common-font(18px, 18px, 500);
   letter-spacing: 0.01em;
@@ -67,6 +103,21 @@
   font-family: inherit;
   .common-font(16px, 22px, 400);
   color: @fg-special-grey;
+  resize: none;
+  .transition(color, border-color;);
+
+  border: 1px solid @fg-border;
+
+  &:hover {
+    color: fade(@fg-special-grey, 30%);
+    border-color: @fg-border-hover;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: @bg-main;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 18px 19px;
@@ -81,4 +132,62 @@
 
 .agenda__marker {
   position: absolute;
+
+  top: 10px;
+  left: -11px;
+
+  width: 2px;
+  height: calc(100% + 29px);
+
+  background-color: @fg-blue-light;
+  border: none;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: -2px;
+    left: 10px;
+
+    width: 6px;
+    height: 6px;
+    background-color: @fg-blue-light;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 1px;
+
+    width: 11px;
+    height: 2px;
+
+    background-color: @fg-blue-light;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: auto;
+    right: -25px;
+    top: 19px;
+    height: calc(100% + 54px);
+
+    &::before {
+      width: 14px;
+      height: 14px;
+
+      left: -6px;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 225px;
+  }
 }

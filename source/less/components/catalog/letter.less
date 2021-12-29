@@ -1,12 +1,153 @@
 .letter {
   box-sizing: border-box;
-  width: 44px;
   height: 44px;
+  border-bottom: 1px solid @fg-border;
+  border-left: 1px solid @fg-border;
+
+  &:nth-child(5n) {
+    border-right: 1px solid @fg-border;
+  }
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5) {
+    border-top: 1px solid @fg-border;
+  }
+
+  &--form {
+    .letter__name {
+      font-weight: 500;
+    }
+
+    &:nth-child(5n) {
+      border-right: none;
+    }
+
+    &:nth-child(5n + 1) {
+      border-left: none;
+    }
+
+    .letter__name-radio:checked + .letter__name {
+      background-color: @bg-lighter;
+      color: inherit;
+    }
+
+    .letter__name-radio:focus + .letter__name {
+      outline-color: @bg-secondary;
+    }
+
+    .letter__name-radio ~ .letter__countries-list {
+      display: none;
+    }
+
+    .letter__name-radio:checked ~ .letter__countries-list {
+      display: block;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    height: 86px;
+
+    &:nth-child(5n) {
+      border-right: none;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      border-top: none;
+    }
+
+    &--form {
+      height: 70px;
+      border-left: 1px solid @fg-border;
+      border-bottom: 1px solid @fg-border;
+
+      &:nth-child(5n) {
+        border-right: 1px solid @fg-border;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        border-top: 1px solid @fg-border;
+      }
+
+      &:nth-child(5n + 1) {
+        border-left: 1px solid @fg-border;
+      }
+
+      .letter__name {
+        .common-font(20px, 20px, 500);
+        opacity: 1;
+        color: @fg-blue-light;
+      }
+
+      .letter__name-radio:checked + .letter__name {
+        background-color: @fg-blue-light;
+        color: @fg-main;
+      }
+
+      .letter__name-radio:focus + .letter__name {
+        outline-color: @basic-yellow;
+        border-radius: 0;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    height: max-content;
+
+    &--form {
+      height: 70px;
+      border: 1px solid @fg-border;
+      border-radius: 4px;
+      display: flex;
+
+      &:nth-child(5n) {
+        border-right: 1px solid @fg-border;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        border-top: 1px solid @fg-border;
+      }
+
+      &:nth-child(5n + 1) {
+        border-left: 1px solid @fg-border;
+      }
+
+      .letter__name {
+        margin-left: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+        border-radius: 4px;
+      }
+
+      .letter__name-radio:focus + .letter__name {
+        border-radius: 4px;
+      }
+    }
+  }
 }
 
 .letter__name {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .common-font(14px, 14px, 400);
   text-transform: uppercase;
@@ -14,9 +155,81 @@
   background-color: @fg-main;
   color: @fg-blue-light;
 
-  &--selected {
+  &:focus {
+    outline-color: @bg-main;
+    outline-offset: -1px;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+    color: @bg-secondary;
+    .common-font(60px, 60px, 700);
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: max-content;
+    padding: 10px;
+    margin-left: -10px;
+    opacity: 1;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+}
+
+.letter__name-radio {
+  .visually-hide();
+
+  & ~ .filter-popup__countries-list {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  &:checked ~ .filter-popup__countries-list {
+    display: block;
+  }
+
+  &:focus + .letter__name {
+    outline: 1px solid @basic-yellow;
+    outline-offset: -2px;
+
+    @media (min-width: @tablet-width) {
+      border-radius: 4px;
+      outline-color: @bg-secondary;
+    }
+  }
+
+  &:checked + .letter__name {
     font-weight: 500;
     color: @fg-main;
     background-color: @fg-blue-light;
+
+    @media (min-width: @tablet-width) {
+      background-color: transparent;
+      opacity: 1;
+      font-weight: 700;
+      color: inherit;
+    }
+  }
+}
+
+.letter__countries-list {
+  position: absolute;
+  top: 235px;
+  left: 0;
+  height: fit-content;
+  width: 220px;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 526px;
   }
 }

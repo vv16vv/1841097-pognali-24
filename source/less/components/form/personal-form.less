@@ -74,10 +74,24 @@
   padding-bottom: 12px;
   margin-bottom: 7px;
   background-color: @bg-grey-blue;
-  color: @fg-blue-light;
+  color: @bg-main;
   .common-font(20px, 18px, 500);
   text-transform: uppercase;
   grid-area: change-photo;
+  .transition(outline, background-color, color;);
+
+  &:focus {
+    outline-color: @bg-secondary;
+  }
+
+  &:hover {
+    background-color: @bg-grey-extra-darkest;
+  }
+
+  &:active {
+    background-color: @bg-grey-blue;
+    color: fade(@bg-main, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     border-radius: 10px;
@@ -91,6 +105,8 @@
   @media (min-width: @desktop-width) {
     width: 190px;
     margin-bottom: 27px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 
     &--desktop {
       display: none;
@@ -124,10 +140,21 @@
   width: 100%;
   padding: 18px 25px 27px 25px;
   border: none;
+  resize: none;
 
-  color: @fg-special-grey;
+  color: fade(@fg-special-grey, 60%);
   background-color: transparent;
   .common-font(16px, 18px, 400);
+  .transition(color);
+
+  &:focus {
+    outline: none;
+    color: @fg-special-grey;
+  }
+
+  &:active {
+    color: @fg-special-grey;
+  }
 
   @media (min-width: @tablet-width) {
     .common-font(20px, 22px, 400);
@@ -144,6 +171,7 @@
   grid-area: transport;
   margin-left: 0;
   margin-right: 0;
+  padding-top: 20px;
 
   .chooser-form-group__title {
     @media (min-width: @tablet-width) {

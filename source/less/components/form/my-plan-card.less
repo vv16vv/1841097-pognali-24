@@ -129,9 +129,22 @@
   .common-font(14px, 14px, 500);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: @fg-black;
-  opacity: 0.3;
+  color: fade(@fg-black, 30%);
   grid-area: plan-change;
+  .transition(color, outline;);
+
+  &:hover {
+    color: fade(@fg-black, 60%);
+  }
+
+  &:active {
+    color: fade(@fg-black, 10%);
+  }
+
+  &:focus {
+    outline-color: @bg-secondary;
+    border-radius: 4px;
+  }
 
   @media (min-width: @tablet-width) {
     .common-font(20px, 20px, 500);

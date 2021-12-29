@@ -1,20 +1,92 @@
+.pagination {
+  @media (min-width: @tablet-width) {
+    background-color: @fg-main;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px 28px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+}
+
 .pagination__button {
   width: 50%;
+  box-sizing: border-box;
   height: 51px;
   padding: 0;
   background-color: @fg-main;
   background-position: center;
   background-repeat: no-repeat;
 
+  @media (min-width: @tablet-width) {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
   &--back {
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     background-image: url("../../../img/icons/arrow-back.svg");
+
+    @media (min-width: @tablet-width) {
+      margin-left: auto;
+      border-radius: 50%;
+    }
   }
 
   &--forward {
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     background-image: url("../../../img/icons/arrow-next.svg");
+
+    @media (min-width: @tablet-width) {
+      border-radius: 50%;
+    }
+  }
+
+  &:hover {
+    .hover();
+  }
+
+  &:active {
+    .active();
+  }
+
+  &:focus {
+    outline-color: @bg-secondary;
+    outline-offset: -1px;
+  }
+
+  &--number {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      .common-font(20px, 20px, 700);
+      color: @fg-blue-light;
+
+      span {
+        margin: auto;
+      }
+
+      &:hover {
+        .hover();
+      }
+
+      &:active {
+        opacity: 1;
+        background-color: @basic-yellow;
+      }
+    }
+  }
+
+  &--current {
+    @media (min-width: @tablet-width) {
+      background-color: @basic-yellow;
+    }
   }
 }

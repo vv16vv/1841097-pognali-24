@@ -59,6 +59,17 @@
   width: 100%;
   border: 1px solid @fg-border;
   border-radius: 4px;
+
+  .transition(border-color);
+
+  &:hover {
+    border-color: @fg-border-hover;
+  }
+
+  &:active,
+  &:focus-within {
+    border-color: @bg-main;
+  }
 }
 
 .range-control__field {
@@ -67,8 +78,21 @@
   width: 136px;
   text-align: center;
   border: none;
+  //noinspection CssInvalidPropertyValue
+  appearance: textfield;
 
   .common-font(15px, 14px, 500);
+  color: @fg-blue-light;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
 
   @media (min-width: @tablet-width) {
     .common-font(20px, 20px, 500);
@@ -99,6 +123,12 @@
 
   &--plus {
     background-image: url("../../../img/icons/range-control-plus.svg");
+  }
+
+  &:focus {
+    outline-color: @bg-secondary;
+    outline-offset: -4px;
+    border-radius: 8px;
   }
 
   @media (min-width: @tablet-width) {

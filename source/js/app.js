@@ -22,19 +22,40 @@ function toggleMenu(show) {
 }
 
 function toggleFilter() {
-  toggleHidden("filter-popup")
+  const filterClassName = "filter";
   const filter = document
-    .getElementsByClassName("filter")[0]
-  filter.classList.toggle("filter--opened")
-  toggleHidden("filter__button--state-open")
-  toggleHidden("filter__button--state-close")
+    .getElementsByClassName(filterClassName)[0]
+  filter.classList.toggle(`${filterClassName}--opened`)
+
+  const buttonClassName = `${filterClassName}__button`
+  const button = document.getElementsByClassName(buttonClassName)[0]
+  button.classList.toggle(`${buttonClassName}--state-open`)
+  button.classList.toggle(`${buttonClassName}--state-close`)
+
+  const spanClassName = `filter__button-name`
+  const spans = button.getElementsByClassName(spanClassName)
+  for (let i = 0; i < spans.length; i++) {
+    spans[i].classList.toggle(`${spanClassName}--state-in-flow`)
+    spans[i].classList.toggle(`${spanClassName}--state-in-popup`)
+  }
+
+  const popupClassName = `filter__popup`
+  const popup = filter.getElementsByClassName(popupClassName)[0]
+  popup.classList.toggle(`${popupClassName}--state-in-flow`)
+  popup.classList.toggle(`${popupClassName}--state-in-popup`)
 }
 
 function toggleGroup(searchedName, toggledName = "chooser-form-group__list") {
-  const group = document.getElementsByClassName(searchedName)[0]
-  toggleHidden("chooser-form-group__button--state-closed", group)
-  toggleHidden("chooser-form-group__button--state-opened", group)
-  toggleHidden(toggledName, group)
+  const mediaTablet = window.matchMedia(`(min-width : ${tabletWidth}px)`)
+  const mediaDesktop = window.matchMedia(`(min-width : ${desktopWidth}px)`)
+  if(mediaDesktop.matches || !mediaTablet.matches) {
+    const group = document.getElementsByClassName(searchedName)[0]
+    const button = group.getElementsByClassName("chooser-form-group__button")[0]
+    button.classList.toggle("chooser-form-group__button--state-closed")
+    button.classList.toggle("chooser-form-group__button--state-opened")
+    const content = group.getElementsByClassName(toggledName)[0]
+    content.classList.toggle("chooser-form-group__list-hidden")
+  }
 }
 
 const tabletWidth = 768;
@@ -99,6 +120,21 @@ function toggleHeader(firstSuffix, secondSuffix, removeSticky = undefined) {
       `${logoBurger}${firstSuffix}`
     )
   }
+}
+
+function toggleCountryChooser(id) {
+  const chooser = document.getElementById(id)
+
+  const selectWrapper = chooser.getElementsByClassName("steps-select__select-wrapper")[0]
+  selectWrapper.classList.toggle("steps-select__select-wrapper--adder")
+  selectWrapper.classList.toggle("steps-select__select-wrapper--chooser")
+
+  const select = chooser.getElementsByClassName("steps-select__select")[0]
+  select.classList.toggle("steps-select__select--adder")
+  select.classList.toggle("steps-select__select--chooser")
+
+  const popup = chooser.getElementsByClassName("steps-select__popup")[0]
+  popup.classList.toggle("hidden")
 }
 
 window.onscroll = () => {

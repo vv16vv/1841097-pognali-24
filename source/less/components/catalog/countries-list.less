@@ -1,9 +1,31 @@
 .countries-list {
   padding-left: 25px;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
 }
 
 .countries-list__button {
   .common-font(16px, 22px, 400);
   color: @fg-special-grey;
+  width: max-content;
+
+  &:hover {
+    .hover();
+  }
+
+  &:active {
+    .active();
+  }
+
+  &:focus {
+    outline-color: @bg-main;
+    border-radius: 4px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .common-font(20px, 30px, 400);
+  }
 }
