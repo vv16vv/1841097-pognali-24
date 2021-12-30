@@ -216,11 +216,20 @@
           <span class="traveller-level__number">80</span>
           <span class="traveller-level__text">level</span>
         </p>
-        <img
-          class="personal-form__photo"
-          src="img/people/demin.png"
-          width="270" height="270"
-          alt="Петя Демин.">
+        <picture class="personal-form__photo">
+          <source
+            media="(min-width: 1440px)"
+            srcset="img/people/demin-form-desktop.png, img/people/demin-form-desktop@2x.png 2x">
+          <source
+            media="(min-width: 768px)"
+            srcset="img/people/demin-form-tablet.png, img/people/demin-form-tablet@2x.png 2x">
+          <img
+            class="personal-form__photo"
+            src="img/people/demin-form-mobile.png"
+            srcset="img/people/demin-form-mobile@2x.png 2x"
+            width="270" height="270"
+            alt="Петя Демин.">
+        </picture>
         <button
           class="personal-form__button button button--form-oval"
           type="button">
