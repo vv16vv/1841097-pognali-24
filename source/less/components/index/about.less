@@ -6,9 +6,14 @@
 
   .ladder__bottom(@block-overlap-mobile);
 
-  background-image: url("../../../img/backgrounds/about-bg.png");
+  background-image: url("../../../img/backgrounds/about-mobile.png");
+  background-size: 292px auto;
+  background-position: 20px 0;
   background-repeat: no-repeat;
-  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../../img/backgrounds/about-mobile@2x.png");
+  }
 
   z-index: @z-index-about;
   position: relative;
@@ -22,6 +27,10 @@
     background-position: calc(50% + 189px) 49px;
     background-image: url("../../../img/backgrounds/about-tablet.png");
     background-size: 376px 548px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/backgrounds/about-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -33,6 +42,10 @@
     background-position: calc(50% + 342px) 0;
     background-image: url("../../../img/backgrounds/about-desktop.png");
     background-size: 630px 659px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/backgrounds/about-desktop@2x.png");
+    }
   }
 }
 
