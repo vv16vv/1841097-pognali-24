@@ -295,11 +295,17 @@
       <ul class="destination__list">
         <li class="destination__item">
           <a class="button country" href="#">
-            <img
-              class="country__image"
-              src="img/countries/thailand-mobile.png"
-              width="270" height="110"
-              alt="Таиланд.">
+            <picture class="country__image">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/countries/thailand-tablet.png 1x, img/countries/thailand-tablet@2x.png 2x"
+              >
+              <img
+                class="country__image"
+                src="img/countries/thailand-mobile.png"
+                srcset="img/countries/thailand-mobile@2x.png 2x"
+                alt="Таиланд.">
+            </picture>
             <img
               class="country__flag"
               src="img/flags/Thailand.png"
@@ -314,11 +320,16 @@
         </li>
         <li class="destination__item">
           <a class="link country" href="#">
-            <img
-              class="country__image"
-              src="img/countries/france-mobile.png"
-              width="270" height="110"
-              alt="Франция.">
+            <picture class="country__image">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/countries/france-tablet.png 1x, img/countries/france-tablet@2x.png 2x"
+              >
+              <img
+                src="img/countries/france-mobile.png"
+                srcset="img/countries/france-mobile@2x.png 2x"
+                alt="Франция.">
+            </picture>
             <img
               class="country__flag"
               src="img/flags/France.png"
@@ -333,11 +344,16 @@
         </li>
         <li class="destination__item">
           <a class="link country" href="#">
-            <img
-              class="country__image"
-              src="img/countries/czech-mobile.png"
-              width="270" height="110"
-              alt="Чехия.">
+            <picture class="country__image">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/countries/czech-tablet.png 1x, img/countries/czech-tablet@2x.png 2x"
+              >
+              <img
+                src="img/countries/czech-mobile.png"
+                srcset="img/countries/czech-mobile@2x.png 2x"
+                alt="Чехия.">
+            </picture>
             <img
               class="country__flag"
               src="img/flags/Czech.png"
