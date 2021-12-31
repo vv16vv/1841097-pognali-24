@@ -4,14 +4,21 @@
 
   background-repeat: no-repeat;
   background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
-    url("../../../img/backgrounds/traveller-rogovaya-small.png"),
-    url("../../../img/backgrounds/traveller-smolov.png");
+    url("../../../img/backgrounds/traveller-rogovaya-mobile.png"),
+    url("../../../img/backgrounds/traveller-smolov-mobile.png");
   background-position: calc(50% - 115px) 64px,
     calc(50% - 131px) 337px,
     calc(50% + 62px) 65px;
   background-size: 132px 132px,
     64px 71px,
     143px 143px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
+      url("../../../img/backgrounds/traveller-rogovaya-mobile@2x.png"),
+      url("../../../img/backgrounds/traveller-smolov-mobile@2x.png");
+  }
+
 
   .ladder-top2down-mobile(68px);
   padding-bottom: 31px;
@@ -24,14 +31,20 @@
     padding-bottom: 87px;
 
     background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
-      url("../../../img/backgrounds/traveller-rogovaya.png"),
-      url("../../../img/backgrounds/traveller-smolov.png");
+      url("../../../img/backgrounds/traveller-rogovaya-tablet.png"),
+      url("../../../img/backgrounds/traveller-smolov-tablet.png");
     background-position: calc(50% - 238px) 130px,
       calc(50% + 167px) 140px,
       calc(50% - 272px) 486px;
     background-size: 212px 212px,
       285px 285px,
       143px 143px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
+        url("../../../img/backgrounds/traveller-rogovaya-tablet@2x.png"),
+        url("../../../img/backgrounds/traveller-smolov-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {

@@ -216,11 +216,20 @@
           <span class="traveller-level__number">80</span>
           <span class="traveller-level__text">level</span>
         </p>
-        <img
-          class="personal-form__photo"
-          src="img/people/demin.png"
-          width="270" height="270"
-          alt="Петя Демин.">
+        <picture class="personal-form__photo">
+          <source
+            media="(min-width: 1440px)"
+            srcset="img/people/demin-form-desktop.png, img/people/demin-form-desktop@2x.png 2x">
+          <source
+            media="(min-width: 768px)"
+            srcset="img/people/demin-form-tablet.png, img/people/demin-form-tablet@2x.png 2x">
+          <img
+            class="personal-form__photo"
+            src="img/people/demin-form-mobile.png"
+            srcset="img/people/demin-form-mobile@2x.png 2x"
+            width="270" height="270"
+            alt="Петя Демин.">
+        </picture>
         <button
           class="personal-form__button button button--form-oval"
           type="button">
@@ -643,12 +652,17 @@
                 </select>
               </div>
               <div class="steps-select__flag">
-                <img
-                  class="steps-select__flag-img"
-                  src="img/flags/Bosnia%20and%20Herzegovina.png"
-                  width="35" height="24"
-                  alt="Флаг Боснии и Герцеговины."
-                >
+                <picture class="steps-select__flag-img">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/flags/Bosnia-and-Herzegovina-tablet.png 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.png 2x"
+                  >
+                  <img
+                    src="img/flags/Bosnia-and-Herzegovina.png"
+                    srcset="img/flags/Bosnia-and-Herzegovina@2x.png 2x"
+                    alt="Флаг Боснии и Герцеговины."
+                  >
+                </picture>
               </div>
               <button
                 class="steps-select__button button button--form-round"
@@ -669,12 +683,17 @@
                 </select>
               </div>
               <div class="steps-select__flag">
-                <img
-                  class="steps-select__flag-img"
-                  src="img/flags/Czech.png"
-                  width="35" height="24"
-                  alt="Флаг Чехии."
-                >
+                <picture class="steps-select__flag-img">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
+                  >
+                  <img
+                    src="img/flags/Czech.png"
+                    srcset="img/flags/Czech@2x.png 2x"
+                    alt="Флаг Чехии."
+                  >
+                </picture>
               </div>
               <button
                 class="steps-select__button button button--form-round"
@@ -1664,12 +1683,17 @@
                 <label class="agenda__country" for="agenda-plan-1">
                   Босния и Герцеговина
                 </label>
-                <img
-                  class="agenda__flag"
-                  src="img/flags/Bosnia%20and%20Herzegovina.png"
-                  width="35" height="24"
-                  alt="Флаг Боснии и Герцеговины."
-                >
+                <picture class="agenda__flag">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/flags/Bosnia-and-Herzegovina-tablet.png 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.png 2x"
+                  >
+                  <img
+                    src="img/flags/Bosnia-and-Herzegovina.png"
+                    srcset="img/flags/Bosnia-and-Herzegovina@2x.png 2x"
+                    alt="Флаг Боснии и Герцеговины."
+                  >
+                </picture>
                 <textarea
                   class="agenda__plan"
                   id="agenda-plan-1"
@@ -1681,12 +1705,17 @@
                 <label class="agenda__country" for="agenda-plan-2">
                   Чехия
                 </label>
-                <img
-                  class="agenda__flag"
-                  src="img/flags/Czech.png"
-                  width="35" height="24"
-                  alt="Флаг Чехии."
-                >
+                <picture class="agenda__flag">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
+                  >
+                  <img
+                    src="img/flags/Czech.png"
+                    srcset="img/flags/Czech@2x.png 2x"
+                    alt="Флаг Чехии."
+                  >
+                </picture>
                 <textarea
                   class="agenda__plan"
                   id="agenda-plan-2"

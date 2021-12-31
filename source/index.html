@@ -295,16 +295,26 @@
       <ul class="destination__list">
         <li class="destination__item">
           <a class="button country" href="#">
-            <img
-              class="country__image"
-              src="img/countries/thailand-mobile.png"
-              width="270" height="110"
-              alt="Таиланд.">
-            <img
-              class="country__flag"
-              src="img/flags/Thailand.png"
-              width="35" height="24"
-              alt="Флаг Таиланда.">
+            <picture class="country__image">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/countries/thailand-tablet.png 1x, img/countries/thailand-tablet@2x.png 2x"
+              >
+              <img
+                src="img/countries/thailand-mobile.png"
+                srcset="img/countries/thailand-mobile@2x.png 2x"
+                alt="Таиланд.">
+            </picture>
+            <picture class="country__flag">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/flags/Thailand-tablet.png 1x, img/flags/Thailand-tablet@2x.png 2x"
+              >
+              <img
+                src="img/flags/Thailand@2x.png"
+                srcset="img/flags/Thailand@2x.png 2x"
+                alt="Флаг Таиланда.">
+            </picture>
             <div class="country__info">
               <h3 class="country__title">Таиланд</h3>
               <p class="country__slogan">Джунгли зовут!</p>
@@ -314,16 +324,26 @@
         </li>
         <li class="destination__item">
           <a class="link country" href="#">
-            <img
-              class="country__image"
-              src="img/countries/france-mobile.png"
-              width="270" height="110"
-              alt="Франция.">
-            <img
-              class="country__flag"
-              src="img/flags/France.png"
-              width="35" height="24"
-              alt="Флаг Франции.">
+            <picture class="country__image">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/countries/france-tablet.png 1x, img/countries/france-tablet@2x.png 2x"
+              >
+              <img
+                src="img/countries/france-mobile.png"
+                srcset="img/countries/france-mobile@2x.png 2x"
+                alt="Франция.">
+            </picture>
+            <picture class="country__flag">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/flags/France-tablet.png 1x, img/flags/France-tablet@2x.png 2x"
+              >
+              <img
+                src="img/flags/France.png"
+                srcset="img/flags/France@2x.png 2x"
+                alt="Флаг Франции.">
+            </picture>
             <div class="country__info">
               <h3 class="country__title">Франция</h3>
               <p class="country__slogan">Трэ бьен, манифик!</p>
@@ -333,16 +353,26 @@
         </li>
         <li class="destination__item">
           <a class="link country" href="#">
-            <img
-              class="country__image"
-              src="img/countries/czech-mobile.png"
-              width="270" height="110"
-              alt="Чехия.">
-            <img
-              class="country__flag"
-              src="img/flags/Czech.png"
-              width="35" height="24"
-              alt="Флаг Чехии.">
+            <picture class="country__image">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/countries/czech-tablet.png 1x, img/countries/czech-tablet@2x.png 2x"
+              >
+              <img
+                src="img/countries/czech-mobile.png"
+                srcset="img/countries/czech-mobile@2x.png 2x"
+                alt="Чехия.">
+            </picture>
+            <picture class="country__flag">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
+              >
+              <img
+                src="img/flags/Czech.png"
+                srcset="img/flags/Czech@2x.png 2x"
+                alt="Флаг Чехии.">
+            </picture>
             <div class="country__info">
               <h3 class="country__title">Чехия</h3>
               <p class="country__slogan">Закоулки старой Европы</p>
@@ -374,11 +404,16 @@
       <ul class="traveller__list">
         <li class="traveller__item">
           <a class="traveller-card button" href="#">
-            <img
-              class="traveller-card__image"
-              src="img/people/firsova.png"
-              width="270" height="270"
-              alt="Таня Фирсова.">
+            <picture class="traveller-card__image">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/people/firsova-tablet.png 1x, img/people/firsova-tablet@2x.png 2x"
+              >
+              <img
+                src="img/people/firsova-mobile.png"
+                srcset="img/people/firsova-mobile@2x.png 2x"
+                alt="Таня Фирсова.">
+            </picture>
             <p
               class="traveller-card__level traveller-level traveller-level--firsova traveller-level--index">
               <span class="traveller-level__number">99</span>
@@ -386,22 +421,28 @@
             </p>
             <ul class="traveller-card__flags flags">
               <li class="flags__item">
-                <img
-                  src="img/flags/Sri-Lanka.png"
-                  width="35" height="25"
-                  alt="Флаг Шри-Ланки.">
+                <picture>
+                  <img
+                    src="img/flags/Sri-Lanka.png"
+                    srcset="img/flags/Sri-Lanka@2x.png 2x"
+                    alt="Флаг Шри-Ланки.">
+                </picture>
               </li>
               <li class="flags__item">
-                <img
-                  src="img/flags/Thailand.png"
-                  width="35" height="25"
-                  alt="Флаг Таиланда.">
+                <picture>
+                  <img
+                    src="img/flags/Thailand.png"
+                    srcset="img/flags/Thailand@2x.png 2x"
+                    alt="Флаг Таиланда.">
+                </picture>
               </li>
               <li class="flags__item">
-                <img
-                  src="img/flags/Seychelles.png"
-                  width="35" height="25"
-                  alt="Флаг Сейшельских островов.">
+                <picture>
+                  <img
+                    src="img/flags/Seychelles.png"
+                    srcset="img/flags/Seychelles@2x.png 2x"
+                    alt="Флаг Сейшельских островов.">
+                </picture>
               </li>
             </ul>
             <p class="traveller-card__name traveller-card__wrapper">
@@ -453,11 +494,16 @@
         </li>
         <li class="traveller__item">
           <a class="traveller-card button" href="#">
-            <img
-              class="traveller-card__image"
-              src="img/people/demin.png"
-              width="270" height="270"
-              alt="Петя Демин.">
+            <picture class="traveller-card__image">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/people/demin-tablet.png 1x, img/people/demin-tablet@2x.png 2x"
+              >
+              <img
+                src="img/people/demin-mobile.png"
+                srcset="img/people/demin-mobile@2x.png 2x"
+                alt="Петя Демин.">
+            </picture>
             <p
               class="traveller-card__level traveller-level traveller-level--demin traveller-level--index">
               <span class="traveller-level__number">80</span>
@@ -465,16 +511,20 @@
             </p>
             <ul class="traveller-card__flags flags">
               <li class="flags__item">
-                <img
-                  src="img/flags/Belgium.png"
-                  width="35" height="24"
-                  alt="Флаг Бельгии.">
+                <picture>
+                  <img
+                    src="img/flags/Belgium.png"
+                    srcset="img/flags/Belgium@2x.png 2x"
+                    alt="Флаг Бельгии.">
+                </picture>
               </li>
               <li class="flags__item">
-                <img
-                  src="img/flags/Czech.png"
-                  width="35" height="24"
-                  alt="Флаг Чехии.">
+                <picture>
+                  <img
+                    src="img/flags/Czech.png"
+                    srcset="img/flags/Czech@2x.png 2x"
+                    alt="Флаг Чехии.">
+                </picture>
               </li>
             </ul>
             <p class="traveller-card__name traveller-card__wrapper">
