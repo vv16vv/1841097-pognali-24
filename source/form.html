@@ -13,23 +13,23 @@
   class="page-header page-header--dark page-header--inner page-header--destination">
   <div class="wrapper page-header__wrapper">
     <div class="page-header__title-bar">
-      <a href="index.html" class="page-header__logo button">
+      <a class="page-header__logo page-header__logo--dark button" href="index.html">
         <svg
-          class="logo logo--mobile logo--light"
+          class="logo logo--mobile"
           width="96"
           height="15"
         >
           <use href="img/logo.svg#logo-mobile"></use>
         </svg>
         <svg
-          class="logo logo--tablet logo--light"
+          class="logo logo--tablet"
           width="166"
           height="42"
         >
           <use href="img/logo.svg#logo"></use>
         </svg>
       </a>
-      <ul class="page-header__menu-content-list menu menu--light">
+      <ul class="page-header__menu-content-list menu menu--dark">
         <li class="menu__item">
           <a
             class="menu__button button button--menu"
@@ -55,30 +55,21 @@
         </li>
       </ul>
       <button
-        class="page-header__menu-button page-header__menu-button--open button"
+        class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--open button"
         type="button"
         onclick="toggleMenu(true)">
-        <span class="visually-hidden">Открыть меню.</span>
-        <svg
-          width="25" height="11" viewBox="0 0 25 11"
-          xmlns="http://www.w3.org/2000/svg">
-          <rect
-            class="logo__burger logo__burger--light"
-            width="25"
-            height="3"
-            rx="1.5"/>
-          <rect
-            class="logo__burger logo__burger--light"
-            y="8"
-            width="25"
-            height="3"
-            rx="1.5"/>
+        <svg width="25" height="11">
+          <use href="img/icons.svg#menu-burger"/>
         </svg>
+        <span class="visually-hidden">Открыть меню.</span>
       </button>
       <button
-        class="page-header__menu-button page-header__menu-button--close button hidden"
+        class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--close button hidden"
         type="button"
         onclick="toggleMenu(false)">
+        <svg width="18" height="19">
+          <use href="img/icons.svg#menu-close"/>
+        </svg>
         <span class="visually-hidden">Закрыть меню.</span>
       </button>
       <div class="page-header__contact-buttons">
