@@ -110,8 +110,20 @@
 }
 
 .page-header__logo {
+  &--dark {
+    color: @fg-main;
+  }
+
+  &--light {
+    color: @bg-secondary;
+  }
+
+  &:focus {
+    border-radius: 4px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-right: 74px;
+    margin-right: 40px;
   }
 }
 
@@ -125,8 +137,32 @@
   background-position: center;
   background-color: transparent;
 
-  &--close {
-    background-image: url("../../img/icons/close.svg");
+  &--dark {
+    color: @fg-main;
+
+    &:focus {
+      outline-color: @basic-yellow;
+    }
+  }
+
+  &--light {
+    color: @fg-burger;
+
+    &:focus {
+      outline-color: @bg-secondary;
+    }
+  }
+
+  &:focus {
+    border-radius: 4px;
+  }
+
+  &:hover {
+    .hover();
+  }
+
+  &:active svg {
+    .active();
   }
 
   @media (min-width: @tablet-width) {

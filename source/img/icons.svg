@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="menu-burger" viewBox="0 0 25 11" fill="currentColor">
+    <rect
+      width="25"
+      height="3"
+      rx="1.5"/>
+    <rect
+      y="8"
+      width="25"
+      height="3"
+      rx="1.5"/>
+  </symbol>
+  <symbol id="menu-close" viewBox="0 0 20 20">
+    <line x1="0" y1="0" x2="20" y2="20" stroke="#CCCCCC" stroke-width="2" />
+    <line x1="20" y1="0" x2="0" y2="20" stroke="#CCCCCC" stroke-width="2" />
+  </symbol>
+</svg>
