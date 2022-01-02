@@ -77,8 +77,9 @@
 
   border: 1px solid @fg-border;
   border-radius: 4px;
+  outline-color: transparent;
 
-  .transition(outline, background-color;);
+  .transition(outline-color, background-color, border-color;);
 
   &::after {
     content: "";
@@ -93,6 +94,10 @@
       linear-gradient(to left, @fg-main 33px, transparent 45px, transparent);
     background-repeat: no-repeat, no-repeat;
     background-position: right 7px top 16px, center;
+  }
+
+  &:hover {
+    border-color: @fg-border-hover;
   }
 
   @media (min-width: @tablet-width) {
@@ -140,15 +145,14 @@
       background-color: @bg-grey-blue;
     }
 
-    &:focus-within {
-      .focus();
-      outline-color: @bg-secondary;
-    }
-
     @media (min-width: @tablet-width) {
       background-size: 16px 16px;
       background-position: right 27px top 26px;
     }
+  }
+
+  &:focus-within {
+    border: none;
   }
 }
 
@@ -170,17 +174,19 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   text-overflow: clip;
+  text-align: left;
 
   background-color: transparent;
+
+  &:focus {
+    .focus();
+    outline-offset: 1px;
+  }
 
   @media (min-width: @tablet-width) {
     .common-font(20px, 20px, 500);
     letter-spacing: 0.1em;
     padding: 27px 92px 23px 26px;
-  }
-
-  &:focus {
-    outline: none;
   }
 
   &--chooser {

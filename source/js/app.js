@@ -133,6 +133,16 @@ function toggleCountryChooser(id) {
   select.classList.toggle("steps-select__select--adder")
   select.classList.toggle("steps-select__select--chooser")
 
+  select.ariaExpanded = !!select.ariaExpanded
+
+  const texts = select.getElementsByClassName("steps-select__select-text")
+  for (let i = 0; i < texts.length; i++) {
+    texts[i].classList.toggle("hidden")
+  }
+
+  const flagMarker = chooser.getElementsByClassName("steps-select__no-flag")[0]
+  flagMarker.classList.toggle("steps-select__no-flag--adder")
+
   const popup = chooser.getElementsByClassName("steps-select__popup")[0]
   popup.classList.toggle("hidden")
 }

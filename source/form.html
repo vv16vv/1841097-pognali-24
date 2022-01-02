@@ -642,14 +642,15 @@
                 Выберите страну
               </label>
               <div class="steps-select__select-wrapper">
-                <select
+                <button
                   class="steps-select__select"
                   id="country-chosen-country-1"
-                  name="country-chosen-country-1">
-                  <option value="bosnia-and-herzegovina">Босния и
-                    герцеговина
-                  </option>
-                </select>
+                  name="country-chosen-country-1"
+                  aria-expanded="false"
+                  type="button"
+                >
+                    Босния и герцеговина
+                </button>
               </div>
               <div class="steps-select__flag">
                 <picture class="steps-select__flag-img">
@@ -675,12 +676,15 @@
                 Выберите страну
               </label>
               <div class="steps-select__select-wrapper">
-                <select
+                <button
                   class="steps-select__select"
                   id="country-chosen-country-2"
-                  name="country-chosen-country-2">
-                  <option value="czech">чехия</option>
-                </select>
+                  name="country-chosen-country-2"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  чехия
+                </button>
               </div>
               <div class="steps-select__flag">
                 <picture class="steps-select__flag-img">
@@ -707,16 +711,25 @@
               </label>
               <div
                 class="steps-select__select-wrapper steps-select__select-wrapper--adder">
-                <select
+                <button
                   class="steps-select__select steps-select__select--adder"
                   id="country-chooser-3"
                   name="country-chooser-3"
+                  aria-expanded="false"
                   onclick="toggleCountryChooser('steps-select-3')"
+                  type="button"
                 >
-                  <option value="choose-country">Выберите страну</option>
-                </select>
+                  <span
+                    class="steps-select__select-text hidden">
+                    Выберите страну
+                  </span>
+                  <span
+                    class="steps-select__select-text">
+                    Добавить страну
+                  </span>
+                </button>
               </div>
-              <div class="steps-select__no-flag"></div>
+              <div class="steps-select__no-flag steps-select__no-flag--adder"></div>
               <button
                 class="steps-select__button steps-select__button--chooser button button--form-round"
                 type="button">
@@ -1636,12 +1649,15 @@
               </label>
               <div
                 class="steps-select__select-wrapper steps-select__select-wrapper--adder">
-                <select
+                <button
                   class="steps-select__select steps-select__select--adder"
                   id="country-chooser-4"
-                  name="country-chooser-4">
-                  <option value="choose-country">Добавить страну</option>
-                </select>
+                  name="country-chooser-4"
+                  aria-expanded="false"
+                  type="button"
+                >
+                  Добавить страну
+                </button>
               </div>
               <div
                 class="steps-select__no-flag steps-select__no-flag--adder"></div>
