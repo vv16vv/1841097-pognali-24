@@ -10,12 +10,10 @@
 .contact-buttons__button {
   width: @contact-buttons__height;
   height: @contact-buttons__height;
+  display: flex;
 
   &--phone {
     background-color: @special-orange;
-    background-image: url("../../img/icons/phone-call.svg");
-    background-repeat: no-repeat;
-    background-position: center;
 
     &:hover {
       background-color: @special-orange-hover;
@@ -24,19 +22,25 @@
 
   &--email {
     background-color: @special-yellow-dark;
-    background-image: url("../../img/icons/email1.svg");
-    background-repeat: no-repeat;
-    background-position: center;
 
     &:hover {
       background-color: @special-orange;
     }
   }
 
+  &:active .contact-buttons__button-image {
+    .active();
+  }
+
   @media (min-width: @desktop-width) {
     width: @contact-buttons__height--desktop;
     height: @contact-buttons__height--desktop;
   }
+}
+
+.contact-buttons__button-image {
+  display: block;
+  margin: auto;
 }
 
 .contact-buttons__authorize {
