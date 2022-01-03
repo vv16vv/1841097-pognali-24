@@ -20,7 +20,7 @@
   padding-left: 25px;
   width: 220px;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   .common-font(18px, 18px, 500);
   border: 1px solid @fg-main;
 
@@ -73,10 +73,12 @@
 .sign-in__button {
   margin-left: -10px;
   width: 60px;
+  padding: 24px 22px;
 
   @media (min-width: @tablet-width) {
     width: 80px;
     margin-left: 0;
+    padding: 34px 33px 32px 31px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -87,16 +89,22 @@
     width: 100%;
     box-sizing: border-box;
     text-align: left;
-    padding-left: 36px;
-    padding-top: 30px;
-    padding-bottom: 27px;
+    padding: 30px 34px 27px 40px;
   }
 }
 
 .sign-in__button-text {
-  display: none;
+  @media (max-width: @desktop-width - 1) {
+    .visually-hide();
+  }
+}
+
+.sign-in__button-dot {
+  @media (max-width: @desktop-width - 1) {
+    .visually-hide();
+  }
 
   @media (min-width: @desktop-width) {
-    display: block;
+    display: none;
   }
 }

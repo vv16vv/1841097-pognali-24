@@ -101,11 +101,8 @@
   .common-font(18px, 18px, 700);
   text-align: left;
 
-  padding-top: 20px;
-  padding-bottom: 18px;
-  padding-left: 19px;
+  padding: 22px;
   margin-left: -1px;
-  background-position: right 19px center;
   width: 100%;
   border: 3px solid @fg-blue-light;
 
@@ -125,16 +122,18 @@
 
   @media (min-width: @tablet-width) {
     .common-font(24px, 24px, 700);
-    padding-top: 28px;
-    padding-bottom: 24px;
-    padding-left: 35px;
+    padding: 29px 36px 27px 37px;
 
-    background-position: right 30px center;
+    .button__icon-right {
+      width: 15px;
+      height: 15px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
     width: 324px;
+    padding-right: 35px;
   }
 }
 
