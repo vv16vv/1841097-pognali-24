@@ -1,6 +1,8 @@
 .logo {
   width: 96px;
   height: 15px;
+  outline-color: transparent;
+  .transition(opacity, outline-color;);
 
   &--mobile {
     @media (min-width: @tablet-width) {
@@ -12,6 +14,19 @@
     @media (max-width: @tablet-width - 1) {
       display: none;
     }
+  }
+
+  &:hover {
+    .hover();
+  }
+
+  &:active {
+    .active();
+  }
+
+  &:focus {
+    .focus();
+    border-radius: 4px;
   }
 
   @media (min-width: @tablet-width) {

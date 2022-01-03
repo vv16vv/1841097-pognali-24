@@ -70,6 +70,17 @@
   color: @fg-blue-light;
   text-transform: uppercase;
 
+  outline-color: transparent;
+  .transition(opacity, outline-color;);
+
+  &:hover {
+    .hover();
+  }
+
+  &:active {
+    .active();
+  }
+
   &--next {
     margin-bottom: 13px;
   }
@@ -77,15 +88,6 @@
   &--back {
     background-color: transparent;
     padding: 0;
-    .transition(opacity);
-
-    &:hover {
-      .hover();
-    }
-
-    &:active {
-      .active();
-    }
   }
 
   &:focus {
