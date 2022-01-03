@@ -1,4 +1,22 @@
 .pagination {
+  @media (max-width: @tablet-width - 1) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: 1px;
+      height: 100%;
+      left: 50%;
+      top: 0;
+
+      background-color: @bg-lighter;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     background-color: @fg-main;
     display: flex;
@@ -11,14 +29,15 @@
 }
 
 .pagination__button {
-  width: 50%;
   box-sizing: border-box;
+  width: calc(50% - 0.5px);
   height: 51px;
   padding: 0;
-  background-color: @fg-main;
-  background-position: center;
-  background-repeat: no-repeat;
 
+  display: flex;
+  position: relative;
+
+  background-color: @fg-main;
   outline-color: transparent;
   .transition(opacity, outline-color;);
 
@@ -31,7 +50,6 @@
   &--back {
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
-    background-image: url("../../../img/icons/arrow-back.svg");
 
     @media (min-width: @tablet-width) {
       margin-left: auto;
@@ -42,7 +60,6 @@
   &--forward {
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
-    background-image: url("../../../img/icons/arrow-next.svg");
 
     @media (min-width: @tablet-width) {
       border-radius: 50%;
@@ -50,11 +67,15 @@
   }
 
   &:hover {
-    .hover();
+    .pagination__button-content {
+      .hover();
+    }
   }
 
   &:active {
-    .active();
+    .pagination__button-content {
+      .active();
+    }
   }
 
   &:focus {
@@ -89,5 +110,15 @@
       background-color: @basic-yellow;
       .transition(opacity, outline-color, background-color;);
     }
+  }
+}
+
+.pagination__button-content {
+  margin: auto;
+  width: 13px;
+  height: 20px;
+
+  &--back {
+    transform: rotate(180deg);
   }
 }
