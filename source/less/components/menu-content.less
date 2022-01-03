@@ -38,6 +38,22 @@
 
 .menu-content__contact .contact__button {
   color: @bg-secondary;
+
+  &:hover {
+    .contact__button-text {
+      .hover();
+    }
+  }
+
+  &:active {
+    .contact__button-text {
+      .active();
+    }
+  }
+
+  &:focus {
+    outline-color: @bg-secondary;
+  }
 }
 
 .menu-content__authorize {
