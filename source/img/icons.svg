@@ -68,4 +68,11 @@
   <symbol id="pagination-next" viewBox="0 0 10 18">
     <path d="M10 8.89478L0.25 17.555L0.25 0.234521L10 8.89478Z" fill="#1D2E5B"/>
   </symbol>
+  <symbol id="range-control-minus" viewBox="0 0 14 2" stroke="currentColor">
+    <line y1="1" x2="14" y2="1" stroke-width="2"/>
+  </symbol>
+  <symbol id="range-control-plus" viewBox="0 0 14 14" stroke="currentColor">
+    <line y1="6.69995" x2="14" y2="6.69995" stroke-width="2"/>
+    <line x1="6.7" y1="14" x2="6.7" stroke-width="2"/>
+  </symbol>
 </svg>
