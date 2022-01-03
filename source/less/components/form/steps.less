@@ -74,7 +74,8 @@
   outline-color: transparent;
   .transition(opacity, outline-color, background-color;);
 
-  .button__icon-right {
+  .button__icon-right,
+  .button__icon-left {
     display: none;
 
     @media (min-width: @tablet-width) {
@@ -92,7 +93,17 @@
 
   &--back {
     background-color: transparent;
-    padding: 0;
+    padding: 5px;
+    .transition(opacity, outline-color;);
+
+    &:hover {
+      background-color: transparent;
+      color: fade(@fg-blue-light, 60%);
+    }
+
+    &:active {
+      color: fade(@fg-blue-light, 30%);
+    }
   }
 
   &:focus {
@@ -113,31 +124,14 @@
     }
 
     &--back {
-      background-position: left 19px center;
-      background-repeat: no-repeat;
-      background-image: url("../../../img/icons/arrow-back.svg");
       width: 194px;
       text-align: right;
       padding-right: 0;
       padding-left: 12px;
-      position: relative;
     }
   }
 
   @media (min-width: @desktop-width) {
-    &--back::before {
-      content: "";
-      position: absolute;
-
-      width: 0;
-      height: 95px;
-
-      top: -16px;
-      left: -25px;
-
-      border: 0.5px solid @fg-border;
-    }
-
     &--no-line::before {
       content: none;
     }
