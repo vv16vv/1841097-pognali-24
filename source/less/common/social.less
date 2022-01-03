@@ -8,31 +8,23 @@
   background-color: @basic-yellow;
   width: 45px;
   height: 45px;
-
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:focus {
     outline-color: @bg-main;
+    outline-offset: -1px;
   }
 
   &:hover {
     background-color: @special-yellow-dark;
   }
 
-  &--network-fb {
-    background-image: url("../../img/icons/facebook.svg");
-    background-size: 11px 21px;
-  }
-
-  &--network-vk {
-    background-image: url("../../img/icons/vkontakte.svg");
-    background-size: 23px 12px;
-  }
-
-  &--network-in {
-    background-image: url("../../img/icons/instagram.svg");
-    background-size: 18px 18px;
+  &:active {
+    .social__button-image {
+      .active();
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -63,6 +55,54 @@
 
     &--network-in {
       background-size: 24px 24px;
+    }
+  }
+}
+
+.social__button-image {
+  .transition(opacity);
+
+  &--fb {
+    width: 11px;
+    height: 21px;
+
+    @media (min-width: @tablet-width) {
+      width: 14px;
+      height: 26px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 28px;
+    }
+  }
+
+  &--vk {
+    width: 23px;
+    height: 12px;
+
+    @media (min-width: @tablet-width) {
+      width: 28px;
+      height: 18px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 31px;
+      height: 16px;
+    }
+  }
+
+  &--in {
+    width: 18px;
+    height: 18px;
+
+    @media (min-width: @tablet-width) {
+      width: 22px;
+      height: 22px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 24px;
+      height: 24px;
     }
   }
 }

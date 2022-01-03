@@ -77,4 +77,16 @@
 
 .menu-content__social .social__button {
   background-color: @fg-main;
+
+  &:hover {
+    .social__button-image {
+      .hover();
+    }
+  }
+
+  &:active {
+    .social__button-image {
+      .active();
+    }
+  }
 }
