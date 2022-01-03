@@ -117,14 +117,17 @@
 .contacts__authorize {
   display: inline;
   color: @basic-yellow;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid @basic-yellow;
+  .transition(color, opacity, border-color;);
 
   &:focus {
-    border-radius: 4px;
+    border-radius: 2px;
   }
 
   &:hover {
     color: @special-orange;
+    border-color: @special-orange;
   }
 
   &:active {
