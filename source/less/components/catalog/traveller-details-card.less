@@ -79,8 +79,7 @@
   }
 
   &:focus-within {
-    .focus();
-    outline-color: @bg-secondary;
+    .focus(@bg-secondary);
     border-radius: 4px;
   }
 }
@@ -170,8 +169,7 @@
   }
 
   &:focus {
-    .focus();
-    outline-color: @bg-secondary;
+    .focus(@bg-secondary);
     border-radius: 4px;
   }
 }
