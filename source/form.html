@@ -13,7 +13,9 @@
   class="page-header page-header--dark page-header--inner page-header--destination">
   <div class="wrapper page-header__wrapper">
     <div class="page-header__title-bar">
-      <a class="page-header__logo page-header__logo--dark button" href="index.html">
+      <a
+        class="page-header__logo page-header__logo--dark button"
+        href="index.html">
         <svg
           class="logo logo--mobile"
           width="96"
@@ -156,7 +158,8 @@
             class="contact__button button"
             href="mailto:mail@htmlacademy.ru">
               <span class="contact__button-image-wrapper">
-                <svg class="contact__button-image contact__button-image--email"
+                <svg
+                  class="contact__button-image contact__button-image--email"
                   width="19"
                   height="13">
                   <use href="img/icons.svg#menu-mail"/>
@@ -172,7 +175,8 @@
             class="social__button button button--form-round"
             href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook.</span>
-            <svg class="social__button-image social__button-image--fb"
+            <svg
+              class="social__button-image social__button-image--fb"
               width="11" height="21">
               <use href="img/icons.svg#fb"/>
             </svg>
@@ -183,7 +187,8 @@
             class="social__button button button--form-round"
             href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте.</span>
-            <svg class="social__button-image social__button-image--vk"
+            <svg
+              class="social__button-image social__button-image--vk"
               width="23" height="12">
               <use href="img/icons.svg#vk"/>
             </svg>
@@ -194,7 +199,10 @@
             class="social__button button button--form-round"
             href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Instagram.</span>
-            <svg class="social__button-image social__button-image--in" width="18" height="18">
+            <svg
+              class="social__button-image social__button-image--in"
+              width="18"
+              height="18">
               <use href="img/icons.svg#in"/>
             </svg>
           </a>
@@ -681,17 +689,35 @@
               <label class="visually-hidden" for="country-chosen-country-1">
                 Выберите страну
               </label>
-              <div class="steps-select__select-wrapper">
-                <button
-                  class="steps-select__select"
-                  id="country-chosen-country-1"
-                  name="country-chosen-country-1"
-                  aria-expanded="false"
-                  type="button"
-                >
-                    Босния и герцеговина
-                </button>
-              </div>
+              <button
+                class="steps-select__select"
+                id="country-chosen-country-1"
+                name="country-chosen-country-1"
+                aria-expanded="false"
+                type="button"
+              >
+                <span class="steps-select__select-text">
+                  Босния и герцеговина
+                </span>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--selector"
+                  width="7"
+                  height="11">
+                  <use href="img/icons.svg#arrow-select"/>
+                </svg>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--adder"
+                  width="9"
+                  height="9">
+                  <use href="img/icons.svg#range-control-plus"/>
+                </svg>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--chooser"
+                  width="9"
+                  height="9">
+                  <use href="img/icons.svg#filter-close"/>
+                </svg>
+              </button>
               <div class="steps-select__flag">
                 <picture class="steps-select__flag-img">
                   <source
@@ -718,17 +744,33 @@
               <label class="visually-hidden" for="country-chosen-country-2">
                 Выберите страну
               </label>
-              <div class="steps-select__select-wrapper">
-                <button
-                  class="steps-select__select"
-                  id="country-chosen-country-2"
-                  name="country-chosen-country-2"
-                  type="button"
-                  aria-expanded="false"
-                >
-                  чехия
-                </button>
-              </div>
+              <button
+                class="steps-select__select"
+                id="country-chosen-country-2"
+                name="country-chosen-country-2"
+                type="button"
+                aria-expanded="false"
+              >
+                <span>чехия</span>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--selector"
+                  width="7"
+                  height="11">
+                  <use href="img/icons.svg#arrow-select"/>
+                </svg>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--adder"
+                  width="9"
+                  height="9">
+                  <use href="img/icons.svg#range-control-plus"/>
+                </svg>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--chooser"
+                  width="9"
+                  height="9">
+                  <use href="img/icons.svg#filter-close"/>
+                </svg>
+              </button>
               <div class="steps-select__flag">
                 <picture class="steps-select__flag-img">
                   <source
@@ -755,26 +797,40 @@
               <label class="visually-hidden" for="country-chooser-3">
                 Выберите страну
               </label>
-              <div
-                class="steps-select__select-wrapper steps-select__select-wrapper--adder">
-                <button
-                  class="steps-select__select steps-select__select--adder"
-                  id="country-chooser-3"
-                  name="country-chooser-3"
-                  aria-expanded="false"
-                  onclick="toggleCountryChooser('steps-select-3')"
-                  type="button"
-                >
+              <button
+                class="steps-select__select steps-select__select--adder"
+                id="country-chooser-3"
+                name="country-chooser-3"
+                aria-expanded="false"
+                onclick="toggleCountryChooser('steps-select-3')"
+                type="button"
+              >
                   <span
                     class="steps-select__select-text hidden">
                     Выберите страну
                   </span>
-                  <span
-                    class="steps-select__select-text">
+                <span class="steps-select__select-text">
                     Добавить страну
                   </span>
-                </button>
-              </div>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--selector"
+                  width="7"
+                  height="11">
+                  <use href="img/icons.svg#arrow-select"/>
+                </svg>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--adder"
+                  width="9"
+                  height="9">
+                  <use href="img/icons.svg#range-control-plus"/>
+                </svg>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--chooser"
+                  width="9"
+                  height="9">
+                  <use href="img/icons.svg#filter-close"/>
+                </svg>
+              </button>
               <div class="steps-select__no-flag steps-select__no-flag--adder"></div>
               <button
                 class="steps-select__button steps-select__button--chooser button button--form-round"
@@ -1696,18 +1752,35 @@
               <label class="visually-hidden" for="country-chooser-4">
                 Выберите страну
               </label>
-              <div
-                class="steps-select__select-wrapper steps-select__select-wrapper--adder">
-                <button
-                  class="steps-select__select steps-select__select--adder"
-                  id="country-chooser-4"
-                  name="country-chooser-4"
-                  aria-expanded="false"
-                  type="button"
-                >
-                  Добавить страну
-                </button>
-              </div>
+              <button
+                class="steps-select__select steps-select__select--adder"
+                id="country-chooser-4"
+                name="country-chooser-4"
+                aria-expanded="false"
+                type="button"
+              >
+                  <span class="steps-select__select-text">
+                    Добавить страну
+                  </span>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--selector"
+                  width="7"
+                  height="11">
+                  <use href="img/icons.svg#arrow-select"/>
+                </svg>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--adder"
+                  width="9"
+                  height="9">
+                  <use href="img/icons.svg#range-control-plus"/>
+                </svg>
+                <svg
+                  class="steps-select__select-image steps-select__select-image--chooser"
+                  width="9"
+                  height="9">
+                  <use href="img/icons.svg#filter-close"/>
+                </svg>
+              </button>
               <div
                 class="steps-select__no-flag steps-select__no-flag--adder"></div>
               <button

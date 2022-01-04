@@ -124,10 +124,6 @@ function toggleHeader(removedSuffix, addedSuffix, removeSticky = undefined) {
 function toggleCountryChooser(id) {
   const chooser = document.getElementById(id)
 
-  const selectWrapper = chooser.getElementsByClassName("steps-select__select-wrapper")[0]
-  selectWrapper.classList.toggle("steps-select__select-wrapper--adder")
-  selectWrapper.classList.toggle("steps-select__select-wrapper--chooser")
-
   const select = chooser.getElementsByClassName("steps-select__select")[0]
   select.classList.toggle("steps-select__select--adder")
   select.classList.toggle("steps-select__select--chooser")
