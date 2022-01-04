@@ -61,9 +61,9 @@
       d="M17.9041 7.41264C18.6145 7.41264 19.1905 6.8367 19.1905 6.12624C19.1905 5.41578 18.6145 4.83984 17.9041 4.83984C17.1936 4.83984 16.6177 5.41578 16.6177 6.12624C16.6177 6.8367 17.1936 7.41264 17.9041 7.41264Z"
       fill="#192144"/>
   </symbol>
-  <symbol id="filter-close" viewBox="0 0 14 14">
-    <path d="M12.25 1.75L1.75 12.25" stroke="#192144" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M1.75 1.75L12.25 12.25" stroke="#192144" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <symbol id="filter-close" viewBox="0 0 14 14" stroke="currentColor">
+    <path d="M12.25 1.75L1.75 12.25" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1.75 1.75L12.25 12.25" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
   <symbol id="pagination-next" viewBox="0 0 10 18">
     <path d="M10 8.89478L0.25 17.555L0.25 0.234521L10 8.89478Z" fill="#1D2E5B"/>

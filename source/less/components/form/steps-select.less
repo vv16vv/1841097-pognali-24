@@ -247,11 +247,11 @@
   height: 21px;
   top: -10px;
   right: -10px;
+  padding: 0;
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../../../img/icons/close.svg");
-  background-size: 7px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   outline-color: transparent;
   .transition(opacity, outline-color;);
@@ -262,11 +262,15 @@
   }
 
   &:hover {
-    .hover();
+    .steps-select__button-image {
+      opacity: 0.3;
+    }
   }
 
   &:active {
-    .active();
+    .steps-select__button-image {
+      opacity: 0.05;
+    }
   }
 
   &:focus {
@@ -275,19 +279,30 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    width: 17px;
-    height: 18px;
+    width: 22px;
+    height: 24px;
 
     top: 0;
     right: 0;
 
     background-color: transparent;
-    background-size: 17px 18px;
 
     &--chooser,
     &--adder {
       display: block;
     }
+  }
+}
+
+.steps-select__button-image {
+  width: 9px;
+  height: 9px;
+  color: @fg-black;
+  opacity: 0.1;
+
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    height: 24px;
   }
 }
 
