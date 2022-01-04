@@ -26,19 +26,20 @@
 }
 
 .calendar-month__button {
-  width: 15px;
-  height: 18px;
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  &--prev {
-    background-image: url("../../../img/icons/month-back.svg");
-  }
 
   &--next {
-    background-image: url("../../../img/icons/month-next.svg");
+    margin-right: -5px;
+  }
+
+  &--prev {
+    margin-left: -5px;
   }
 
   &:focus {
@@ -46,16 +47,46 @@
     border-radius: 4px;
   }
 
+  &:hover {
+    .calendar-month__button-image {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    .calendar-month__button-image {
+      opacity: 0.1;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    &--next {
+      margin-right: 13px;
+    }
+
+    &--prev {
+      margin-left: 13px;
+    }
+  }
+}
+
+.calendar-month__button-image {
+  width: 9px;
+  height: 18px;
+  opacity: 0.3;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+
   @media (min-width: @tablet-width) {
     width: 19px;
     height: 34px;
-    background-size: 19px 34px;
   }
 
   @media (min-width: @desktop-width) {
     width: 16px;
     height: 28px;
-    background-size: 16px 28px;
   }
 }
 
