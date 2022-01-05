@@ -8,6 +8,15 @@
     }
   }
 
+  &:active .with-children-control__mark {
+    background-color: @bg-greyish;
+    border-color: @bg-greyish;
+  }
+
+  &:active .with-children-control__checkbox:checked + .with-children-control__mark::before {
+    .active();
+  }
+
   &:focus-within {
     .focus(@bg-secondary);
     border-radius: 4px;
@@ -19,17 +28,6 @@
 
   &:checked + .with-children-control__mark::before {
     border-color: @bg-main;
-  }
-
-  &:active + .with-children-control__mark,
-  &:active:focus + .with-children-control__mark {
-    background-color: @bg-greyish;
-    border-color: @bg-greyish;
-  }
-
-  &:checked:active + .with-children-control__mark::before,
-  &:checked:active:focus + .with-children-control__mark::before {
-    .active();
   }
 }
 
