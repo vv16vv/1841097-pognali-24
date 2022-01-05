@@ -1,54 +1,41 @@
 .logo {
+  width: 96px;
+  height: 15px;
+  outline-color: transparent;
+  .transition(opacity, outline-color;);
+
+  &--mobile {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    @media (max-width: @tablet-width - 1) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .hover();
+  }
+
+  &:active {
+    .active();
+  }
+
   &:focus {
+    .focus();
     border-radius: 4px;
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 40px;
-    background-image: url("../../img/logo-bag.svg"),
-      url("../../img/logo-figures.svg");
-    background-repeat: no-repeat, no-repeat;
     width: 166px;
-    background-position: 0 top, 32px top;
-    background-size: 42px 39px, 123px 40px;
-    display: flex;
-    align-items: center;
-  }
-}
-
-.logo svg {
-  width: 96px;
-  height: 15px;
-
-  @media (min-width: @tablet-width) {
-    width: 107px;
-    height: 16px;
-    padding-left: 69px;
+    height: 42px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 129px;
-    height: 20px;
-    padding-left: 69px;
-  }
-}
-
-.logo__path {
-  &--light {
-    fill: @fg-main;
-  }
-
-  &--dark {
-    fill: @bg-secondary;
-  }
-}
-
-.logo__burger {
-  &--light {
-    fill: @fg-main;
-  }
-
-  &--dark {
-    fill: @fg-burger;
+    width: 200px;
+    height: 50px;
   }
 }

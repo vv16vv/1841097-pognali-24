@@ -64,11 +64,19 @@
 
   &:hover {
     border-color: @fg-border-hover;
+
+    .range-control__button-content {
+      color: @fg-border-hover;
+    }
   }
 
   &:active,
   &:focus-within {
     border-color: @bg-main;
+
+    .range-control__button-content {
+      color: @bg-main;
+    }
   }
 }
 
@@ -114,15 +122,20 @@
   padding: 0;
 
   background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &--minus {
-    background-image: url("../../../img/icons/range-control-minus.svg");
+  &:hover {
+    .range-control__button-content {
+      color: @fg-range-hover;
+    }
   }
 
-  &--plus {
-    background-image: url("../../../img/icons/range-control-plus.svg");
+  &:active {
+    .range-control__button-content {
+      color: @bg-greyer;
+    }
   }
 
   &:focus {
@@ -134,10 +147,32 @@
   @media (min-width: @tablet-width) {
     width: 66px;
     height: 70px;
-    background-size: 20px 20px;
   }
 
   @media (min-width: @desktop-width) {
     width: 60px;
+  }
+}
+
+.range-control__button-content {
+  width: 14px;
+  color: @fg-burger;
+  .transition(color);
+
+  &--minus {
+    height: 2px;
+  }
+
+  &--plus {
+    height: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 2px;
+
+    &--plus {
+      height: 20px;
+    }
   }
 }

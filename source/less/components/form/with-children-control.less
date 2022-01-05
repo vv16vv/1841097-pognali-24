@@ -1,14 +1,26 @@
-.with-children-control {
-  &:focus-within {
-    .focus();
-    outline-color: @bg-secondary;
-    border-radius: 4px;
-  }
-}
-
 .with-children-control__label {
   display: flex;
   align-items: center;
+
+  &:hover {
+    .with-children-control__mark {
+      border-color: @fg-border-hover;
+    }
+  }
+
+  &:active .with-children-control__mark {
+    background-color: @bg-greyish;
+    border-color: @bg-greyish;
+  }
+
+  &:active .with-children-control__checkbox:checked + .with-children-control__mark::before {
+    .active();
+  }
+
+  &:focus-within {
+    .focus(@bg-secondary);
+    border-radius: 4px;
+  }
 }
 
 .with-children-control__checkbox {
@@ -28,12 +40,14 @@
   margin-right: 13px;
   display: flex;
 
+  .transition(background-color, border-color;);
+
   &::before {
     content: "";
     width: 10px;
     height: 5px;
     margin: auto;
-    .transition(border-color);
+    .transition(border-color, opacity;);
 
     border-bottom: 2px solid transparent;
     border-left: 2px solid transparent;

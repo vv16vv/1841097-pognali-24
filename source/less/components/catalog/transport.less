@@ -44,7 +44,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .transition(outline);
+  .transition(outline, box-shadow, background-color, opacity;);
+
+  &:hover {
+    box-shadow: 0 2px 6px fade(@bg-main, 17%);
+
+    .transport__image,
+    .transport__control-input:checked + .transport__image {
+      .hover();
+    }
+  }
+
+  &:active {
+    background-color: @bg-greyish;
+
+    .transport__image,
+    .transport__control-input:checked + .transport__image {
+      .active();
+    }
+  }
 
   &--checkbox {
     background-color: @fg-main;

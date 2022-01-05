@@ -63,12 +63,29 @@
 
 .steps__button {
   width: 100%;
-  padding: 7px;
+  padding: 7px 7px 5px;
   border: none;
+  justify-content: center;
 
   .common-font(17px, 30px, 700);
   color: @fg-blue-light;
   text-transform: uppercase;
+
+  outline-color: transparent;
+  .transition(opacity, outline-color, background-color;);
+
+  .button__icon-right,
+  .button__icon-left {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  &:hover {
+    background-color: @special-yellow-dark;
+  }
 
   &--next {
     margin-bottom: 13px;
@@ -76,15 +93,16 @@
 
   &--back {
     background-color: transparent;
-    padding: 0;
-    .transition(opacity);
+    padding: 5px 5px 0;
+    .transition(opacity, outline-color;);
 
     &:hover {
-      .hover();
+      background-color: transparent;
+      color: fade(@fg-blue-light, 60%);
     }
 
     &:active {
-      .active();
+      color: fade(@fg-blue-light, 30%);
     }
   }
 
@@ -95,46 +113,27 @@
   @media (min-width: @tablet-width) {
     width: 285px;
     box-sizing: border-box;
-    padding-top: 29px;
-    padding-bottom: 27px;
-    padding-left: 34px;
-    border-radius: 10px;
-    text-align: left;
+    padding: 29px 37px 27px 34px;
+    border-radius: 20px;
 
     .common-font(24px, 24px, 700);
     text-transform: none;
 
     &--next {
       margin-bottom: 0;
-      .button--next();
     }
 
     &--back {
-      background-position: left 19px center;
-      background-repeat: no-repeat;
-      background-image: url("../../../img/icons/arrow-back.svg");
-      width: 194px;
+      width: 204px;
       text-align: right;
-      padding-right: 0;
+      padding-right: 12px;
       padding-left: 12px;
-      position: relative;
+      margin-right: -12px;
+      gap: 19px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    &--back::before {
-      content: "";
-      position: absolute;
-
-      width: 0;
-      height: 95px;
-
-      top: -16px;
-      left: -25px;
-
-      border: 0.5px solid @fg-border;
-    }
-
     &--no-line::before {
       content: none;
     }

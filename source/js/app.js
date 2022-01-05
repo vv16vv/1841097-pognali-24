@@ -11,11 +11,13 @@ function toggleMenu(show) {
 
   const lightSuffix = "--light"
   const darkSuffix = "--dark"
-  const isDarkShown = document.getElementsByClassName(`page-header${darkSuffix}`).length > 0;
-  if (isDarkShown) {
-    if (show) {
-      toggleHeader(darkSuffix, lightSuffix)
-    } else {
+  if (show) {
+    toggleHeader(darkSuffix, lightSuffix)
+  } else {
+    const isNotSticky = document
+      .getElementsByClassName(`page-header--sticky`)
+      .length === 0;
+    if (isNotSticky) {
       toggleHeader(lightSuffix, darkSuffix)
     }
   }
@@ -48,7 +50,7 @@ function toggleFilter() {
 function toggleGroup(searchedName, toggledName = "chooser-form-group__list") {
   const mediaTablet = window.matchMedia(`(min-width : ${tabletWidth}px)`)
   const mediaDesktop = window.matchMedia(`(min-width : ${desktopWidth}px)`)
-  if(mediaDesktop.matches || !mediaTablet.matches) {
+  if (mediaDesktop.matches || !mediaTablet.matches) {
     const group = document.getElementsByClassName(searchedName)[0]
     const button = group.getElementsByClassName("chooser-form-group__button")[0]
     button.classList.toggle("chooser-form-group__button--state-closed")
@@ -76,29 +78,33 @@ function toggleClassNames(component, removedClassName, addedClassName) {
   addIfAbsent(component, addedClassName)
 }
 
-function toggleHeader(firstSuffix, secondSuffix, removeSticky = undefined) {
+function toggleHeader(removedSuffix, addedSuffix, removeSticky = undefined) {
   const baseHeader = "page-header"
-  const logoPath = "logo__path"
-  const logoBurger = "logo__burger"
   const stickyHeader = "page-header--sticky"
   const menuContentList = "page-header__menu-content-list"
+  const menuButtons = "page-header__menu-button"
+  const menuLogo = "page-header__logo"
   const menu = "menu"
 
   const pageHeader = document
     .getElementsByClassName(baseHeader)[0]
-  const paths = pageHeader.getElementsByClassName(logoPath)
-  const rects = pageHeader.getElementsByClassName(logoBurger)
+  const buttons = pageHeader.getElementsByClassName(menuButtons)
   const menuList = pageHeader.getElementsByClassName(menuContentList)[0]
+  const logo = pageHeader.getElementsByClassName(menuLogo)[0]
 
   toggleClassNames(
     pageHeader,
-    `${baseHeader}${firstSuffix}`,
-    `${baseHeader}${secondSuffix}`
+    `${baseHeader}${removedSuffix}`,
+    `${baseHeader}${addedSuffix}`
   )
 
   toggleClassNames(menuList,
-    `${menu}${secondSuffix}`,
-    `${menu}${firstSuffix}`)
+    `${menu}${removedSuffix}`,
+    `${menu}${addedSuffix}`)
+
+  toggleClassNames(logo,
+    `${menuLogo}${removedSuffix}`,
+    `${menuLogo}${addedSuffix}`)
 
   if (removeSticky !== undefined) {
     removeSticky
@@ -106,18 +112,11 @@ function toggleHeader(firstSuffix, secondSuffix, removeSticky = undefined) {
       : addIfAbsent(pageHeader, stickyHeader)
   }
 
-  for (let i = 0; i < paths.length; i++) {
+  for (let i = 0; i < buttons.length; i++) {
     toggleClassNames(
-      paths[i],
-      `${logoPath}${secondSuffix}`,
-      `${logoPath}${firstSuffix}`
-    )
-  }
-  for (let i = 0; i < rects.length; i++) {
-    toggleClassNames(
-      rects[i],
-      `${logoBurger}${secondSuffix}`,
-      `${logoBurger}${firstSuffix}`
+      buttons[i],
+      `${menuButtons}${removedSuffix}`,
+      `${menuButtons}${addedSuffix}`
     )
   }
 }
@@ -125,13 +124,19 @@ function toggleHeader(firstSuffix, secondSuffix, removeSticky = undefined) {
 function toggleCountryChooser(id) {
   const chooser = document.getElementById(id)
 
-  const selectWrapper = chooser.getElementsByClassName("steps-select__select-wrapper")[0]
-  selectWrapper.classList.toggle("steps-select__select-wrapper--adder")
-  selectWrapper.classList.toggle("steps-select__select-wrapper--chooser")
-
   const select = chooser.getElementsByClassName("steps-select__select")[0]
   select.classList.toggle("steps-select__select--adder")
   select.classList.toggle("steps-select__select--chooser")
+
+  select.ariaExpanded = !!select.ariaExpanded
+
+  const texts = select.getElementsByClassName("steps-select__select-text")
+  for (let i = 0; i < texts.length; i++) {
+    texts[i].classList.toggle("hidden")
+  }
+
+  const flagMarker = chooser.getElementsByClassName("steps-select__no-flag")[0]
+  flagMarker.classList.toggle("steps-select__no-flag--adder")
 
   const popup = chooser.getElementsByClassName("steps-select__popup")[0]
   popup.classList.toggle("hidden")

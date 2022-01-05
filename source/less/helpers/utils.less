@@ -19,16 +19,14 @@
 
 .hover() {
   opacity: 0.7;
-  .transition(opacity);
 }
 
 .active() {
   opacity: 0.3;
-  .transition(opacity);
 }
 
-.focus() {
-  outline: 1px solid @bg-main;
+.focus(@outline-color: @bg-main) {
+  outline: 1px solid @outline-color;
   outline-offset: 2px;
 }
 
