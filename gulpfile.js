@@ -1,29 +1,98 @@
-import gulp from 'gulp';
-import plumber from 'gulp-plumber';
-import less from 'gulp-less';
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import browser from 'browser-sync';
+import autoprefixer from "autoprefixer";
+import browser from "browser-sync";
+import del from "del";
+import csso from "postcss-csso";
+import path from "path";
 
-// Styles
+import gulp from "gulp";
+import htmlmin from "gulp-htmlmin";
+import less from "gulp-less";
+import squoosh from "gulp-libsquoosh";
+import plumber from "gulp-plumber";
+import postcss from "gulp-postcss";
+import rename from "gulp-rename";
+import svgo from "gulp-svgmin";
+import terser from "gulp-terser";
 
-export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
+const BUILD = "build"
+const SOURCE = "source"
+
+const minimizeStyles = (dst) => {
+  return gulp.src(`${SOURCE}/less/style.less`, {sourcemaps: true})
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest(`${dst}/css`, {sourcemaps: "."}))
     .pipe(browser.stream());
 }
 
-// Server
+const buildMinimizeStyles = () => minimizeStyles(BUILD)
+const devMinimizeStyles = () => minimizeStyles(SOURCE)
 
-const server = (done) => {
+const minimizeHTMLs = () => {
+  return gulp.src(`${SOURCE}/*.html`)
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(BUILD))
+}
+
+const minimizeJS = () => {
+  return gulp.src(`${SOURCE}/js/*.js`)
+    .pipe(terser())
+    .pipe(gulp.dest(`${BUILD}/js`))
+}
+
+const clean = () => {
+  return del(BUILD)
+}
+
+const optimizePNGs = () => {
+  return gulp.src(`${SOURCE}/img/**/*.png`)
+    .pipe(squoosh())
+    .pipe(gulp.dest(`${BUILD}/img`))
+}
+
+export const convertToWebP = () => {
+  return gulp.src(`${SOURCE}/img/**/*.png`)
+    .pipe(squoosh({webp: {}}))
+    .pipe(gulp.dest(`${SOURCE}/img`))
+}
+
+const copyWebP = () => {
+  return gulp.src(`${SOURCE}/img/**/*.webp`)
+    .pipe(gulp.dest(`${BUILD}/img`))
+}
+
+export const covertSVGsToSprite = () => {
+  return gulp.src([`${SOURCE}/img/icons/*.svg`, `${SOURCE}/img/people/*.svg`])
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest(`${SOURCE}/img`))
+}
+
+const processPath = (filePath) => () => gulp.src(`${SOURCE}/${filePath}`)
+      .pipe(svgo())
+      .pipe(gulp.dest(`${BUILD}/${(path.dirname(filePath))}`))
+
+const minimizeSVGs = gulp.parallel(
+  processPath(`img/icons/*.svg`),
+  processPath(`img/backgrounds/*.svg`),
+  processPath(`img/people/*.svg`),
+  processPath(`img/htmlacademy-big.svg`),
+)
+
+const copySVGSprites = () => {
+  return gulp.src([`${SOURCE}/img/icons.svg`, `${SOURCE}/img/logo.svg`])
+    .pipe(gulp.dest(`${BUILD}/img`))
+}
+
+const server = (baseDir, done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir
     },
     cors: true,
     notify: false,
@@ -32,15 +101,30 @@ const server = (done) => {
   done();
 }
 
-// Watcher
+const buildServer = (done) => server(BUILD, done)
+const devServer = (done) => server(SOURCE, done)
 
-const watcher = () => {
-  gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
-  gulp.watch('source/js/*.js').on('change', browser.reload);
+const copyFonts = () => {
+  return gulp.src(`${SOURCE}/fonts/*.{woff,woff2}`)
+    .pipe(gulp.dest(`${BUILD}/fonts`))
 }
 
+const watcher = () => {
+  gulp.watch(`${SOURCE}/less/**/*.less`, gulp.series(minimizeStyles));
+  gulp.watch(`${SOURCE}/*.html`).on("change", browser.reload);
+  gulp.watch(`${SOURCE}/js/*.js`).on("change", browser.reload);
+}
+
+export const build = gulp.series(
+  clean,
+  buildMinimizeStyles, minimizeHTMLs, minimizeJS,
+  optimizePNGs,
+  convertToWebP, copyWebP,
+  minimizeSVGs, copySVGSprites,
+  copyFonts,
+  buildServer
+)
 
 export default gulp.series(
-  styles, server, watcher
+  devMinimizeStyles, devServer, watcher
 );
