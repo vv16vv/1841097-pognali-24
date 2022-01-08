@@ -12,6 +12,7 @@ import plumber from "gulp-plumber";
 import postcss from "gulp-postcss";
 import rename from "gulp-rename";
 import svgo from "gulp-svgmin";
+import svgstore from "gulp-svgstore";
 import terser from "gulp-terser";
 
 const BUILD = "build"
@@ -66,7 +67,7 @@ const copyWebP = () => {
     .pipe(gulp.dest(`${BUILD}/img`))
 }
 
-export const covertSVGsToSprite = () => {
+export const convertSVGsToSprite = () => {
   return gulp.src([`${SOURCE}/img/icons/*.svg`, `${SOURCE}/img/people/*.svg`])
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite.svg"))
