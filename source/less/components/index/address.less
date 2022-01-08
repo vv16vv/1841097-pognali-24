@@ -139,13 +139,14 @@
 
 .address__map {
   width: 100%;
+  height: 424px;
   box-sizing: border-box;
+  display: block;
 
   .ladder__margin-top(@block-overlap-mobile);
 
   position: relative;
   z-index: @z-index-map;
-
 
   @media (min-width: @tablet-width) {
     .ladder__margin-top(@block-overlap-tablet);
@@ -154,6 +155,20 @@
 
   @media (min-width: @desktop-width) {
     .ladder__margin-top(@block-overlap-desktop);
+    height: 584px;
+  }
+}
+
+.address__map-image {
+  width: 100%;
+  object-fit: cover;
+  height: 424px;
+
+  @media (min-width: @tablet-width) {
+    height: 581px;
+  }
+
+  @media (min-width: @desktop-width) {
     height: 584px;
   }
 }
