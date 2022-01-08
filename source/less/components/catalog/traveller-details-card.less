@@ -401,3 +401,25 @@
     }
   }
 }
+
+.traveller-details-card__level {
+  color: @fg-blue-light;
+
+  &--mobile {
+    display: block;
+  }
+
+  &--tablet {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+}
