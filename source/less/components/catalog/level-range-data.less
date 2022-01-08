@@ -20,7 +20,7 @@
   //noinspection CssInvalidPropertyValue
   appearance: textfield;
 
-  padding: 13px 13px 9px;
+  padding: 9px 13px 8px;
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -67,11 +67,11 @@
 
 .level-range-data__separator {
   position: absolute;
-  width: 0;
-  height: 38px;
+  width: 1px;
+  height: 100%;
   top: 0;
-  left: 109px;
-  border: 0.5px solid @fg-border;
+  left: 111px;
+  background-color: @fg-border;
 
   &::before {
     content: "";
@@ -89,11 +89,12 @@
     content: "";
     position: absolute;
     width: 16px;
-    height: 0;
-    top: 18px;
-    background-color: @fg-main;
+    height: 1px;
+
+    top: calc(50% - 1px);
     left: calc(50% - 9px);
-    border: 0.5px solid @fg-border;
+
+    background-color: @fg-border;
   }
 
   @media (min-width: @tablet-width) {

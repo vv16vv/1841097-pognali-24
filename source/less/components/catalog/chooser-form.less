@@ -2,9 +2,9 @@
   background-color: @basic-yellow;
   color: @fg-blue-light;
   box-sizing: border-box;
-  border-radius: @block-overlap-mobile;
+  border-radius: @block-overlap-mobile-catalog;
 
-  padding: 26px 25px 24px 25px;
+  padding: 26px 8px 22px 25px;
 
   @media (min-width: @tablet-width) {
     border-radius: 25px;
@@ -23,7 +23,9 @@
 }
 
 .chooser-form__title {
-  margin: 0 0 23px;
+  margin: 0 8px 22px 0;
+  .common-font(22px, 22px, 700);
+  letter-spacing: 0.02em;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 35px;
@@ -41,8 +43,10 @@
 }
 
 .chooser-form__button {
-  width: 100%;
-  padding: 14px 0 15px;
+  width: 230px;
+  padding: 15px 0 9px;
+  margin-top: 3px;
+  margin-left: -5px;
   background-color: @fg-main;
   color: @bg-main;
 

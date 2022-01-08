@@ -4,9 +4,9 @@
   background-color: @bg-grey;
   color: @bg-secondary;
 
-  .ladder-top2down-mobile(20px);
-  padding-bottom: 15px;
-  padding-right: 4px;
+  .ladder-top2down-common(22px, @block-overlap-mobile-catalog);
+  padding-bottom: 10px;
+  padding-right: 0;
 
   position: relative;
   z-index: @z-index-filter;
@@ -22,7 +22,6 @@
 
 .filter__wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding-bottom: 5px;
 
@@ -33,7 +32,7 @@
 
 .filter__title {
   padding: 0 0 0 25px;
-  margin: 0;
+  margin: 0 auto 0 2px;
 
   .common-font(16px, 18px, 700);
   text-transform: uppercase;
@@ -62,7 +61,7 @@
   width: 17px;
   height: 17px;
 
-  margin: 0;
+  margin: 0 4px 0 0;
   padding: 0;
 
   background-repeat: no-repeat;

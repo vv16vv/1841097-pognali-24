@@ -1,7 +1,7 @@
 .chooser-form-group {
   border-top: 1px solid @yellow-dark;
   padding-top: 12px;
-  padding-bottom: 14px;
+  padding-bottom: 9px;
   position: relative;
 
   &--personal-form {
@@ -165,7 +165,7 @@
 }
 
 .chooser-form-group__list {
-  padding: 16px 0 7px;
+  padding: 14px 16px 8px 0;
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
     grid-area: options;
@@ -181,7 +181,7 @@
 .chooser-form-group__checkbox-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   list-style-type: none;
   padding-left: 0;
   margin-top: 0;
@@ -211,7 +211,8 @@
 }
 
 .chooser-form-group__level {
-  padding-bottom: 5px;
+  padding-bottom: 0;
+  margin-top: -2px;
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
     display: flex;
