@@ -110,7 +110,8 @@ const copyFonts = () => {
 }
 
 const watcher = () => {
-  gulp.watch(`${SOURCE}/less/**/*.less`, gulp.series(minimizeStyles));
+  gulp.watch(`${SOURCE}/less/**/*.less`, gulp.series(devMinimizeStyles));
+  gulp.watch(`${SOURCE}/css/*.css`).on("change", browser.reload);
   gulp.watch(`${SOURCE}/*.html`).on("change", browser.reload);
   gulp.watch(`${SOURCE}/js/*.js`).on("change", browser.reload);
 }
