@@ -57,7 +57,7 @@ const optimizePNGs = () => {
 }
 
 export const convertToWebP = () => {
-  return gulp.src(`${SOURCE}/img/**/*.png`)
+  return gulp.src([`${SOURCE}/img/**/*.png`, `!${SOURCE}/img/backgrounds/*.png`])
     .pipe(squoosh({webp: {}}))
     .pipe(gulp.dest(`${SOURCE}/img`))
 }
