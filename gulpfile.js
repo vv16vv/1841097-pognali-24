@@ -68,7 +68,7 @@ const copyWebP = () => {
 }
 
 export const convertSVGsToSprite = () => {
-  return gulp.src([`${SOURCE}/img/icons/*.svg`, `${SOURCE}/img/people/*.svg`])
+  return gulp.src(`${SOURCE}/img/icons/*.svg`)
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest(`${SOURCE}/img`))
@@ -80,14 +80,12 @@ const processPath = (filePath) => () => gulp.src(`${SOURCE}/${filePath}`)
 
 const minimizeSVGs = gulp.parallel(
   processPath(`img/icons/*.svg`),
-  processPath(`img/backgrounds/*.svg`),
-  processPath(`img/people/*.svg`),
   processPath(`img/htmlacademy-big.svg`),
 )
 
 const copySVGSprites = () => {
-  return gulp.src([`${SOURCE}/img/icons.svg`, `${SOURCE}/img/logo.svg`])
-    .pipe(gulp.dest(`${BUILD}/img`))
+  return gulp.src(`${SOURCE}/img/sprites/*.svg`)
+    .pipe(gulp.dest(`${BUILD}/img/sprites`))
 }
 
 const server = (baseDir, done) => {
