@@ -7,6 +7,10 @@
   <title>HTML Academy: Погнали</title>
   <link href="css/style.min.css" rel="stylesheet">
   <link href="favicon.svg" rel="icon">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
 </head>
 <body class="page__body">
 <header
@@ -757,7 +761,7 @@
                 </svg>
               </button>
               <div class="steps-select__flag">
-                <picture class="steps-select__flag-img">
+                <picture>
                   <source
                     media="(min-width: 768px)"
                     type="image/webp"
@@ -772,8 +776,11 @@
                     srcset="img/flags/Bosnia-and-Herzegovina-tablet.png 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.png 2x"
                   >
                   <img
+                    class="steps-select__flag-img"
                     src="img/flags/Bosnia-and-Herzegovina.png"
                     srcset="img/flags/Bosnia-and-Herzegovina@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Боснии и Герцеговины."
                   >
                 </picture>
@@ -837,8 +844,11 @@
                     srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
                   >
                   <img
+                    class="steps-select__flag-img"
                     src="img/flags/Czech.png"
                     srcset="img/flags/Czech@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Чехии."
                   >
                 </picture>
@@ -1913,8 +1923,11 @@
                     srcset="img/flags/Bosnia-and-Herzegovina-tablet.png 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.png 2x"
                   >
                   <img
+                    class="steps-select__flag-img"
                     src="img/flags/Bosnia-and-Herzegovina.png"
                     srcset="img/flags/Bosnia-and-Herzegovina@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Боснии и Герцеговины."
                   >
                 </picture>
@@ -1944,8 +1957,11 @@
                     srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
                   >
                   <img
+                    class="steps-select__flag-img"
                     src="img/flags/Czech.png"
                     srcset="img/flags/Czech@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Чехии."
                   >
                 </picture>
