@@ -176,4 +176,7 @@
         fill="#1D2E5B"/>
     </g>
   </symbol>
+  <symbol id="status" viewBox="0 0 8 8" fill="currentColor">
+    <circle cx="4" cy="4" r="4"/>
+  </symbol>
 </svg>
