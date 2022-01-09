@@ -142,7 +142,7 @@ function toggleCountryChooser(id) {
   popup.classList.toggle("hidden")
 }
 
-window.onscroll = () => {
+const onScroll = () => {
   const mediaTablet = window.matchMedia(`(min-width : ${tabletWidth}px)`)
   const mediaDesktop = window.matchMedia(`(min-width : ${desktopWidth}px)`)
 
@@ -161,6 +161,8 @@ window.onscroll = () => {
     toggleHeader(lightSuffix, darkSuffix, true)
   }
 };
+
+window.addEventListener("onscroll", onScroll, {passive: true});
 
 window.onload = () => {
   const menuContentPopup = document.getElementsByClassName("menu-content-popup")[0]
