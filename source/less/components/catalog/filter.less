@@ -141,10 +141,6 @@
     .filter__expand {
       display: none;
     }
-
-    @media (min-width: @desktop-width) {
-      background-image: url("../../../img/icons/filter-expand.svg");
-    }
   }
 
   &:hover {
@@ -185,6 +181,20 @@
       margin-top: 2px;
       margin-right: 34px;
       justify-content: space-between;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 184px;
+
+    &--state-close {
+      .filter__expand {
+        display: block;
+      }
+
+      .filter__close {
+        display: none;
+      }
     }
   }
 }
