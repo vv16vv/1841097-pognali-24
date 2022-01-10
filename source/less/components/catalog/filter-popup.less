@@ -2,8 +2,8 @@
   background-color: @bg-grey;
   width: 100%;
 
-  .ladder__bottom(@block-overlap-mobile);
-  padding-top: 20px;
+  .ladder__bottom(20px);
+  padding-top: 28px;
   padding-bottom: 28px;
 
   @media (min-width: @tablet-width) {
@@ -20,7 +20,7 @@
   padding-left: 25px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 9px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -33,10 +33,14 @@
 
 .filter-popup__countries-list {
   position: absolute;
-  top: 235px;
+
+  top: 218px;
   left: 0;
-  height: fit-content;
+
   width: 220px;
+  height: 243px;
+  overflow-x: auto;
+
   margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
@@ -54,7 +58,7 @@
 
 .filter-popup__button {
   width: 100%;
-  padding: 12px 0 10px;
+  padding: 9px 0 7px;
 
   background-color: @bg-grey-darker;
   color: @bg-secondary;
