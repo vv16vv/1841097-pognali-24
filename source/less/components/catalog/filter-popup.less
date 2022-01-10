@@ -1,6 +1,7 @@
 .filter-popup {
   background-color: @bg-grey;
   width: 100%;
+  z-index: @z-index-popup;
 
   .ladder__bottom(20px);
   padding-top: 28px;
@@ -8,6 +9,7 @@
 
   @media (min-width: @tablet-width) {
     .ladder__bottom(@block-overlap-tablet);
+    padding-top: 44px;
   }
 
   @media (min-width: @desktop-width) {
@@ -29,6 +31,11 @@
 
 .filter-popup__letters {
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 13px;
+    margin-bottom: 49px;
+  }
 }
 
 .filter-popup__countries-list {
@@ -44,8 +51,9 @@
   margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
-    top: 0;
-    left: 400px;
+    top: 10px;
+    left: 464px;
+    height: 362px;
   }
 
   @media (min-width: @desktop-width) {
@@ -88,8 +96,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 42px;
-    padding-bottom: 42px;
+    padding-top: 40px;
+    padding-bottom: 36px;
+    margin-left: 36px;
+    width: 615px;
+
     font-size: 20px;
     border-radius: 20px;
   }
@@ -105,6 +116,7 @@
     width: 22px;
     height: 24px;
     margin-right: 18px;
+    margin-top: -2px;
   }
 }
 
@@ -117,5 +129,6 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+    letter-spacing: 0;
   }
 }

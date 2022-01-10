@@ -16,10 +16,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 84px;
+    .ladder-top2down-common(64px, @block-overlap-tablet);
     padding-bottom: 50px;
-    border-bottom-left-radius: @block-overlap-tablet;
-    border-bottom-right-radius: @block-overlap-tablet;
   }
 
   @media (min-width: @desktop-width) {
@@ -163,6 +161,13 @@
     margin-left: auto;
     margin-top: -2px;
     padding-top: 0;
+
+    &--state-close {
+      width: 174px;
+      margin-top: 2px;
+      margin-right: 34px;
+      justify-content: space-between;
+    }
   }
 }
 
