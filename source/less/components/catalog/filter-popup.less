@@ -13,7 +13,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    background-color: @bg-greyer;
     .ladder__bottom(@block-overlap-desktop);
+    padding-top: 58px;
   }
 }
 
@@ -35,6 +37,10 @@
   @media (min-width: @tablet-width) {
     margin-left: 13px;
     margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 59px;
   }
 }
 
@@ -60,6 +66,9 @@
     position: relative;
     top: auto;
     left: auto;
+
+    height: max-content;
+
     margin-bottom: 0;
   }
 }
@@ -103,6 +112,14 @@
 
     font-size: 20px;
     border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin-left: -26px;
+    margin-right: 0;
+    padding-right: 3px;
+    padding-bottom: 38px;
   }
 }
 
