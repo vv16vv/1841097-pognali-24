@@ -7,6 +7,10 @@
   <title>HTML Academy: Погнали</title>
   <link href="css/style.min.css" rel="stylesheet">
   <link href="favicon.svg" rel="icon">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
 </head>
 <body class="page__body">
 <header
@@ -21,14 +25,14 @@
           width="96"
           height="15"
         >
-          <use href="img/logo.svg#logo-mobile"></use>
+          <use href="img/sprites/logo.svg#logo-mobile"></use>
         </svg>
         <svg
           class="logo logo--tablet"
           width="166"
           height="42"
         >
-          <use href="img/logo.svg#logo"></use>
+          <use href="img/sprites/logo.svg#logo"></use>
         </svg>
       </a>
       <ul class="page-header__menu-content-list menu menu--dark">
@@ -61,7 +65,7 @@
         type="button"
         onclick="toggleMenu(true)">
         <svg width="25" height="11">
-          <use href="img/icons.svg#menu-burger"/>
+          <use href="img/sprites/icons.svg#menu-burger"/>
         </svg>
         <span class="visually-hidden">Открыть меню.</span>
       </button>
@@ -70,7 +74,7 @@
         type="button"
         onclick="toggleMenu(false)">
         <svg width="18" height="19">
-          <use href="img/icons.svg#menu-close"/>
+          <use href="img/sprites/icons.svg#menu-close"/>
         </svg>
         <span class="visually-hidden">Закрыть меню.</span>
       </button>
@@ -80,7 +84,7 @@
             class="contact-buttons__button contact-buttons__button--phone button button--form-round"
             href="tel:88005558628">
             <svg class="contact-buttons__button-image" width="18" height="18">
-              <use href="img/icons.svg#auth-phone"/>
+              <use href="img/sprites/icons.svg#auth-phone"/>
             </svg>
             <span class="visually-hidden">8 800 555-86-28</span>
           </a>
@@ -91,7 +95,7 @@
               class="contact-buttons__button-image"
               width="16"
               height="14">
-              <use href="img/icons.svg#auth-mail"/>
+              <use href="img/sprites/icons.svg#auth-mail"/>
             </svg>
             <span class="visually-hidden">mail@htmlacademy.ru</span>
           </a>
@@ -147,7 +151,7 @@
                   class="contact__button-image contact__button-image--phone"
                   width="18"
                   height="17">
-                  <use href="img/icons.svg#menu-phone"/>
+                  <use href="img/sprites/icons.svg#menu-phone"/>
                 </svg>
               </span>
             <span class="contact__button-text">8 800 555-86-28</span>
@@ -162,7 +166,7 @@
                   class="contact__button-image contact__button-image--email"
                   width="19"
                   height="13">
-                  <use href="img/icons.svg#menu-mail"/>
+                  <use href="img/sprites/icons.svg#menu-mail"/>
                 </svg>
               </span>
             <span class="contact__button-text">mail@htmlacademy.ru</span>
@@ -178,7 +182,7 @@
             <svg
               class="social__button-image social__button-image--fb"
               width="11" height="21">
-              <use href="img/icons.svg#fb"/>
+              <use href="img/sprites/icons.svg#fb"/>
             </svg>
           </a>
         </li>
@@ -190,7 +194,7 @@
             <svg
               class="social__button-image social__button-image--vk"
               width="23" height="12">
-              <use href="img/icons.svg#vk"/>
+              <use href="img/sprites/icons.svg#vk"/>
             </svg>
           </a>
         </li>
@@ -203,7 +207,7 @@
               class="social__button-image social__button-image--in"
               width="18"
               height="18">
-              <use href="img/icons.svg#in"/>
+              <use href="img/sprites/icons.svg#in"/>
             </svg>
           </a>
         </li>
@@ -220,10 +224,10 @@
         class="personal__form personal-form"
         action="https://echo.htmlacademy.ru/"
         method="post">
-        <p
-          class="personal-form__level traveller-level traveller-level--demin traveller-level--form">
-          <span class="traveller-level__number">80</span>
-          <span class="traveller-level__text">level</span>
+        <p class="personal-form__level">
+          <svg width="100" height="100" viewBox="0 0 64 64" fill="none">
+            <use href="img/sprites/icons.svg#demin-rating-tablet"/>
+          </svg>
         </p>
         <picture class="personal-form__photo">
           <source
@@ -288,9 +292,13 @@
                   id="aircraft"
                   name="aircraft"
                   checked>
-                <span
-                  class="transport__image transport__image--aircraft transport__image--preferable">
-                </span>
+                <svg
+                  class="transport__image transport__image--preferable"
+                  width="21"
+                  height="21"
+                >
+                  <use href="img/sprites/icons.svg#aircraft"/>
+                </svg>
               </label>
             </li>
             <li class="transport__item transport__item--checkbox">
@@ -302,9 +310,13 @@
                   type="checkbox"
                   name="bus"
                   checked>
-                <span
-                  class="transport__image transport__image--bus transport__image--preferable">
-                </span>
+                <svg
+                  class="transport__image transport__image--preferable"
+                  width="18"
+                  height="21"
+                >
+                  <use href="img/sprites/icons.svg#bus"/>
+                </svg>
                 <span class="visually-hidden">Автомобиль.</span>
               </label>
             </li>
@@ -316,9 +328,13 @@
                   class="visually-hidden transport__control-input"
                   type="checkbox"
                   name="bicycle">
-                <span
-                  class="transport__image transport__image--bicycle">
-                </span>
+                <svg
+                  class="transport__image"
+                  width="25"
+                  height="24"
+                >
+                  <use href="img/sprites/icons.svg#bicycle"/>
+                </svg>
                 <span class="visually-hidden">Велосипед.</span>
               </label>
             </li>
@@ -331,9 +347,13 @@
                   type="checkbox"
                   name="walk"
                   checked>
-                <span
-                  class="transport__image transport__image--walk transport__image--preferable">
-                </span>
+                <svg
+                  class="transport__image transport__image--preferable"
+                  width="21"
+                  height="24"
+                >
+                  <use href="img/sprites/icons.svg#walk"/>
+                </svg>
                 <span class="visually-hidden">Пешком.</span>
               </label>
             </li>
@@ -432,7 +452,7 @@
                     class="range-control__button-content range-control__button-content--minus"
                     width="14"
                     height="2">
-                    <use href="img/icons.svg#range-control-minus"/>
+                    <use href="img/sprites/icons.svg#range-control-minus"/>
                   </svg>
                   <span class="visually-hidden">Уменьшить на 1.</span>
                 </button>
@@ -451,7 +471,7 @@
                     class="range-control__button-content range-control__button-content--plus"
                     width="14"
                     height="14">
-                    <use href="img/icons.svg#range-control-plus"/>
+                    <use href="img/sprites/icons.svg#range-control-plus"/>
                   </svg>
                   <span class="visually-hidden">Увеличить на 1.</span>
                 </button>
@@ -476,7 +496,7 @@
                     class="range-control__button-content range-control__button-content--minus"
                     width="14"
                     height="2">
-                    <use href="img/icons.svg#range-control-minus"/>
+                    <use href="img/sprites/icons.svg#range-control-minus"/>
                   </svg>
                   <span class="visually-hidden">Уменьшить на 1.</span>
                 </button>
@@ -495,7 +515,7 @@
                     class="range-control__button-content range-control__button-content--plus"
                     width="14"
                     height="14">
-                    <use href="img/icons.svg#range-control-plus"/>
+                    <use href="img/sprites/icons.svg#range-control-plus"/>
                   </svg>
                   <span class="visually-hidden">Увеличить на 1.</span>
                 </button>
@@ -525,7 +545,7 @@
                     class="calendar-month__button-image calendar-month__button-image--prev"
                     width="9"
                     height="18">
-                    <use href="img/icons.svg#month-back"/>
+                    <use href="img/sprites/icons.svg#month-back"/>
                   </svg>
                   <span class="visually-hidden">Предыдущий месяц.</span>
                 </button>
@@ -538,7 +558,7 @@
                     class="calendar-month__button-image calendar-month__button-image--next"
                     width="9"
                     height="18">
-                    <use href="img/icons.svg#month-back"/>
+                    <use href="img/sprites/icons.svg#month-back"/>
                   </svg>
                   <span class="visually-hidden">Следующий месяц.</span>
                 </button>
@@ -689,7 +709,7 @@
               type="submit">
               <span class="button__text">Следующий шаг</span>
               <svg class="button__icon-right" width="14" height="14">
-                <use href="img/icons.svg#arrow-forward"/>
+                <use href="img/sprites/icons.svg#arrow-forward"/>
               </svg>
             </button>
           </form>
@@ -725,23 +745,23 @@
                   class="steps-select__select-image steps-select__select-image--selector"
                   width="7"
                   height="11">
-                  <use href="img/icons.svg#arrow-select"/>
+                  <use href="img/sprites/icons.svg#arrow-select"/>
                 </svg>
                 <svg
                   class="steps-select__select-image steps-select__select-image--adder"
                   width="9"
                   height="9">
-                  <use href="img/icons.svg#range-control-plus"/>
+                  <use href="img/sprites/icons.svg#range-control-plus"/>
                 </svg>
                 <svg
                   class="steps-select__select-image steps-select__select-image--chooser"
                   width="9"
                   height="9">
-                  <use href="img/icons.svg#filter-close"/>
+                  <use href="img/sprites/icons.svg#filter-close"/>
                 </svg>
               </button>
               <div class="steps-select__flag">
-                <picture class="steps-select__flag-img">
+                <picture>
                   <source
                     media="(min-width: 768px)"
                     type="image/webp"
@@ -756,8 +776,11 @@
                     srcset="img/flags/Bosnia-and-Herzegovina-tablet.png 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.png 2x"
                   >
                   <img
+                    class="steps-select__flag-img"
                     src="img/flags/Bosnia-and-Herzegovina.png"
                     srcset="img/flags/Bosnia-and-Herzegovina@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Боснии и Герцеговины."
                   >
                 </picture>
@@ -766,12 +789,12 @@
                 class="steps-select__button button button--form-round"
                 type="button">
                 <svg class="steps-select__button-image" width="9" height="9">
-                  <use href="img/icons.svg#filter-close"/>
+                  <use href="img/sprites/icons.svg#filter-close"/>
                 </svg>
                 <span class="visually-hidden">Убрать выбранную страну.</span>
               </button>
               <svg class="steps-select__decorate-arrow" width="8" height="11">
-                <use href="img/icons.svg#arrow-down"/>
+                <use href="img/sprites/icons.svg#arrow-down"/>
               </svg>
             </div>
             <div class="steps-select" id="steps-select-2">
@@ -790,19 +813,19 @@
                   class="steps-select__select-image steps-select__select-image--selector"
                   width="7"
                   height="11">
-                  <use href="img/icons.svg#arrow-select"/>
+                  <use href="img/sprites/icons.svg#arrow-select"/>
                 </svg>
                 <svg
                   class="steps-select__select-image steps-select__select-image--adder"
                   width="9"
                   height="9">
-                  <use href="img/icons.svg#range-control-plus"/>
+                  <use href="img/sprites/icons.svg#range-control-plus"/>
                 </svg>
                 <svg
                   class="steps-select__select-image steps-select__select-image--chooser"
                   width="9"
                   height="9">
-                  <use href="img/icons.svg#filter-close"/>
+                  <use href="img/sprites/icons.svg#filter-close"/>
                 </svg>
               </button>
               <div class="steps-select__flag">
@@ -821,8 +844,11 @@
                     srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
                   >
                   <img
+                    class="steps-select__flag-img"
                     src="img/flags/Czech.png"
                     srcset="img/flags/Czech@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Чехии."
                   >
                 </picture>
@@ -831,12 +857,12 @@
                 class="steps-select__button button button--form-round"
                 type="button">
                 <svg class="steps-select__button-image" width="9" height="9">
-                  <use href="img/icons.svg#filter-close"/>
+                  <use href="img/sprites/icons.svg#filter-close"/>
                 </svg>
                 <span class="visually-hidden">Убрать выбранную страну.</span>
               </button>
               <svg class="steps-select__decorate-arrow" width="8" height="11">
-                <use href="img/icons.svg#arrow-down"/>
+                <use href="img/sprites/icons.svg#arrow-down"/>
               </svg>
             </div>
             <div class="steps-select" id="steps-select-3">
@@ -862,19 +888,19 @@
                   class="steps-select__select-image steps-select__select-image--selector"
                   width="7"
                   height="11">
-                  <use href="img/icons.svg#arrow-select"/>
+                  <use href="img/sprites/icons.svg#arrow-select"/>
                 </svg>
                 <svg
                   class="steps-select__select-image steps-select__select-image--adder"
                   width="9"
                   height="9">
-                  <use href="img/icons.svg#range-control-plus"/>
+                  <use href="img/sprites/icons.svg#range-control-plus"/>
                 </svg>
                 <svg
                   class="steps-select__select-image steps-select__select-image--chooser"
                   width="9"
                   height="9">
-                  <use href="img/icons.svg#filter-close"/>
+                  <use href="img/sprites/icons.svg#filter-close"/>
                 </svg>
               </button>
               <div class="steps-select__no-flag steps-select__no-flag--adder"></div>
@@ -882,12 +908,12 @@
                 class="steps-select__button steps-select__button--chooser button button--form-round"
                 type="button">
                 <svg class="steps-select__button-image" width="9" height="9">
-                  <use href="img/icons.svg#filter-close"/>
+                  <use href="img/sprites/icons.svg#filter-close"/>
                 </svg>
                 <span class="visually-hidden">Убрать выбранную страну.</span>
               </button>
               <svg class="steps-select__decorate-arrow" width="8" height="11">
-                <use href="img/icons.svg#arrow-down"/>
+                <use href="img/sprites/icons.svg#arrow-down"/>
               </svg>
               <div class="steps-select__popup step-select-popup popup hidden">
                 <ul class="step-select-popup__letters letters letters--form">
@@ -1815,19 +1841,19 @@
                   class="steps-select__select-image steps-select__select-image--selector"
                   width="7"
                   height="11">
-                  <use href="img/icons.svg#arrow-select"/>
+                  <use href="img/sprites/icons.svg#arrow-select"/>
                 </svg>
                 <svg
                   class="steps-select__select-image steps-select__select-image--adder"
                   width="9"
                   height="9">
-                  <use href="img/icons.svg#range-control-plus"/>
+                  <use href="img/sprites/icons.svg#range-control-plus"/>
                 </svg>
                 <svg
                   class="steps-select__select-image steps-select__select-image--chooser"
                   width="9"
                   height="9">
-                  <use href="img/icons.svg#filter-close"/>
+                  <use href="img/sprites/icons.svg#filter-close"/>
                 </svg>
               </button>
               <div
@@ -1836,12 +1862,12 @@
                 class="steps-select__button steps-select__button--adder button button--form-round"
                 type="button">
                 <svg class="steps-select__button-image" width="9" height="9">
-                  <use href="img/icons.svg#filter-close"/>
+                  <use href="img/sprites/icons.svg#filter-close"/>
                 </svg>
                 <span class="visually-hidden">Убрать выбранную страну.</span>
               </button>
               <svg class="steps-select__decorate-arrow" width="8" height="11">
-                <use href="img/icons.svg#arrow-down"/>
+                <use href="img/sprites/icons.svg#arrow-down"/>
               </svg>
             </div>
             <div class="steps__buttons">
@@ -1850,14 +1876,14 @@
                 type="submit">
                 <span class="button__text">Следующий шаг</span>
                 <svg class="button__icon-right" width="14" height="14">
-                  <use href="img/icons.svg#arrow-forward"/>
+                  <use href="img/sprites/icons.svg#arrow-forward"/>
                 </svg>
               </button>
               <button
                 class="steps__button steps__button--back button--with-icon button button--form-oval"
                 type="submit">
                 <svg class="button__icon-left" width="14" height="14">
-                  <use href="img/icons.svg#arrow-forward"/>
+                  <use href="img/sprites/icons.svg#arrow-forward"/>
                 </svg>
                 <span class="button__text">На шаг назад</span>
               </button>
@@ -1897,8 +1923,11 @@
                     srcset="img/flags/Bosnia-and-Herzegovina-tablet.png 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.png 2x"
                   >
                   <img
+                    class="steps-select__flag-img"
                     src="img/flags/Bosnia-and-Herzegovina.png"
                     srcset="img/flags/Bosnia-and-Herzegovina@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Боснии и Герцеговины."
                   >
                 </picture>
@@ -1928,8 +1957,11 @@
                     srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
                   >
                   <img
+                    class="steps-select__flag-img"
                     src="img/flags/Czech.png"
                     srcset="img/flags/Czech@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Чехии."
                   >
                 </picture>
@@ -1948,14 +1980,14 @@
                 type="submit">
                 <span class="button__text">Отправить</span>
                 <svg class="button__icon-right" width="14" height="14">
-                  <use href="img/icons.svg#arrow-forward"/>
+                  <use href="img/sprites/icons.svg#arrow-forward"/>
                 </svg>
               </button>
               <button
                 class="steps__button steps__button--back steps__button--no-line button--with-icon button button--form-oval"
                 type="submit">
                 <svg class="button__icon-left" width="14" height="14">
-                  <use href="img/icons.svg#arrow-forward"/>
+                  <use href="img/sprites/icons.svg#arrow-forward"/>
                 </svg>
                 <span class="button__text">На шаг назад</span>
               </button>
@@ -1974,14 +2006,14 @@
         width="96"
         height="15"
       >
-        <use href="img/logo.svg#logo-mobile"></use>
+        <use href="img/sprites/logo.svg#logo-mobile"></use>
       </svg>
       <svg
         class="logo logo--tablet"
         width="166"
         height="42"
       >
-        <use href="img/logo.svg#logo"></use>
+        <use href="img/sprites/logo.svg#logo"></use>
       </svg>
     </a>
     <ul class="page-footer__social social">
@@ -1994,7 +2026,7 @@
             class="social__button-image social__button-image--fb"
             width="11"
             height="21">
-            <use href="img/icons.svg#fb"/>
+            <use href="img/sprites/icons.svg#fb"/>
           </svg>
         </a>
       </li>
@@ -2007,7 +2039,7 @@
             class="social__button-image social__button-image--vk"
             width="23"
             height="12">
-            <use href="img/icons.svg#vk"/>
+            <use href="img/sprites/icons.svg#vk"/>
           </svg>
         </a>
       </li>
@@ -2020,7 +2052,7 @@
             class="social__button-image social__button-image--in"
             width="18"
             height="18">
-            <use href="img/icons.svg#in"/>
+            <use href="img/sprites/icons.svg#in"/>
           </svg>
         </a>
       </li>

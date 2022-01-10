@@ -45,6 +45,11 @@
   }
 }
 
+.traveller-card__level-image {
+  width: 60px;
+  height: 60px;
+}
+
 .traveller-card__image {
   width: 270px;
   height: 270px;
@@ -123,20 +128,7 @@
   margin-right: 10px;
   margin-top: -3px;
 
-  &--offline circle {
-    fill: @status-offline;
-  }
-
-  &--online circle {
-    fill: @status-online;
-  }
-
   @media (min-width: @tablet-width) {
     margin-right: 14px;
-
-    svg {
-      width: 8px;
-      height: 8px;
-    }
   }
 }

@@ -7,6 +7,12 @@
   <title>HTML Academy: Погнали</title>
   <link href="css/style.min.css" rel="stylesheet">
   <link href="favicon.svg" rel="icon">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+  <link rel="preconnect" href="https://maps.gstatic.com" crossorigin="anonymous">
+  <link rel="preconnect" href="https://maps.googleapis.com" crossorigin="anonymous">
 </head>
 <body class="page__body">
 <header class="page-header page-header--dark">
@@ -17,14 +23,14 @@
         width="96"
         height="15"
       >
-        <use href="img/logo.svg#logo-mobile"></use>
+        <use href="img/sprites/logo.svg#logo-mobile"></use>
       </svg>
       <svg
         class="logo logo--tablet"
         width="166"
         height="42"
       >
-        <use href="img/logo.svg#logo"></use>
+        <use href="img/sprites/logo.svg#logo"></use>
       </svg>
     </a>
     <ul class="page-header__menu-content-list menu menu--dark">
@@ -57,7 +63,7 @@
       type="button"
       onclick="toggleMenu(true)">
       <svg width="25" height="11">
-        <use href="img/icons.svg#menu-burger"/>
+        <use href="img/sprites/icons.svg#menu-burger"/>
       </svg>
       <span class="visually-hidden">Открыть меню.</span>
     </button>
@@ -66,7 +72,7 @@
       type="button"
       onclick="toggleMenu(false)">
       <svg width="18" height="19">
-        <use href="img/icons.svg#menu-close"/>
+        <use href="img/sprites/icons.svg#menu-close"/>
       </svg>
       <span class="visually-hidden">Закрыть меню.</span>
     </button>
@@ -76,7 +82,7 @@
           class="contact-buttons__button contact-buttons__button--phone button button--form-round"
           href="tel:88005558628">
           <svg class="contact-buttons__button-image" width="18" height="18">
-            <use href="img/icons.svg#auth-phone"/>
+            <use href="img/sprites/icons.svg#auth-phone"/>
           </svg>
           <span class="visually-hidden">8 800 555-86-28</span>
         </a>
@@ -87,7 +93,7 @@
             class="contact-buttons__button-image"
             width="16"
             height="14">
-            <use href="img/icons.svg#auth-mail"/>
+            <use href="img/sprites/icons.svg#auth-mail"/>
           </svg>
           <span class="visually-hidden">mail@htmlacademy.ru</span>
         </a>
@@ -141,7 +147,7 @@
                   class="contact__button-image contact__button-image--phone"
                   width="18"
                   height="17">
-                  <use href="img/icons.svg#menu-phone"/>
+                  <use href="img/sprites/icons.svg#menu-phone"/>
                 </svg>
               </span>
             <span class="contact__button-text">8 800 555-86-28</span>
@@ -152,10 +158,11 @@
             class="contact__button button"
             href="mailto:mail@htmlacademy.ru">
               <span class="contact__button-image-wrapper">
-                <svg class="contact__button-image contact__button-image--email"
+                <svg
+                  class="contact__button-image contact__button-image--email"
                   width="19"
                   height="13">
-                  <use href="img/icons.svg#menu-mail"/>
+                  <use href="img/sprites/icons.svg#menu-mail"/>
                 </svg>
               </span>
             <span class="contact__button-text">mail@htmlacademy.ru</span>
@@ -168,9 +175,10 @@
             class="social__button button button--form-round"
             href="https://www.facebook.com/htmlacademy">
             <span class="visually-hidden">Facebook.</span>
-            <svg class="social__button-image social__button-image--fb"
+            <svg
+              class="social__button-image social__button-image--fb"
               width="11" height="21">
-              <use href="img/icons.svg#fb"/>
+              <use href="img/sprites/icons.svg#fb"/>
             </svg>
           </a>
         </li>
@@ -179,9 +187,10 @@
             class="social__button button button--form-round"
             href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте.</span>
-            <svg class="social__button-image social__button-image--vk"
+            <svg
+              class="social__button-image social__button-image--vk"
               width="23" height="12">
-              <use href="img/icons.svg#vk"/>
+              <use href="img/sprites/icons.svg#vk"/>
             </svg>
           </a>
         </li>
@@ -190,8 +199,11 @@
             class="social__button button button--form-round"
             href="https://www.instagram.com/htmlacademy">
             <span class="visually-hidden">Instagram.</span>
-            <svg class="social__button-image social__button-image--in" width="18" height="18">
-              <use href="img/icons.svg#in"/>
+            <svg
+              class="social__button-image social__button-image--in"
+              width="18"
+              height="18">
+              <use href="img/sprites/icons.svg#in"/>
             </svg>
           </a>
         </li>
@@ -214,7 +226,7 @@
             class="contact-buttons__button contact-buttons__button--phone button button--form-round"
             href="tel:88005558628">
             <svg class="contact-buttons__button-image" width="18" height="18">
-              <use href="img/icons.svg#auth-phone"/>
+              <use href="img/sprites/icons.svg#auth-phone"/>
             </svg>
             <span class="visually-hidden">8 800 555-86-28</span>
           </a>
@@ -225,7 +237,7 @@
               class="contact-buttons__button-image"
               width="16"
               height="14">
-              <use href="img/icons.svg#auth-mail"/>
+              <use href="img/sprites/icons.svg#auth-mail"/>
             </svg>
             <span class="visually-hidden">mail@htmlacademy.ru</span>
           </a>
@@ -288,7 +300,7 @@
         href="#">
         <span class="button__text">Подробнее</span>
         <svg class="button__icon-right" width="11" height="12">
-          <use href="img/icons.svg#arrow-forward"/>
+          <use href="img/sprites/icons.svg#arrow-forward"/>
         </svg>
       </a>
     </div>
@@ -308,7 +320,7 @@
       <ul class="destination__list">
         <li class="destination__item">
           <a class="button country" href="#">
-            <picture class="country__image">
+            <picture class="country__image-wrapper">
               <source
                 media="(min-width: 768px)"
                 type="image/webp"
@@ -323,8 +335,11 @@
                 srcset="img/countries/thailand-tablet.png 1x, img/countries/thailand-tablet@2x.png 2x"
               >
               <img
+                class="country__image"
                 src="img/countries/thailand-mobile.png"
                 srcset="img/countries/thailand-mobile@2x.png 2x"
+                width="270"
+                height="110"
                 alt="Таиланд.">
             </picture>
             <picture class="country__flag">
@@ -342,8 +357,11 @@
                 srcset="img/flags/Thailand-tablet.png 1x, img/flags/Thailand-tablet@2x.png 2x"
               >
               <img
+                class="country__flag-image"
                 src="img/flags/Thailand.png"
                 srcset="img/flags/Thailand@2x.png 2x"
+                width="35"
+                height="24"
                 alt="Флаг Таиланда.">
             </picture>
             <div class="country__info">
@@ -355,7 +373,7 @@
         </li>
         <li class="destination__item">
           <a class="link country" href="#">
-            <picture class="country__image">
+            <picture class="country__image-wrapper">
               <source
                 media="(min-width: 768px)"
                 type="image/webp"
@@ -370,8 +388,11 @@
                 srcset="img/countries/france-tablet.png 1x, img/countries/france-tablet@2x.png 2x"
               >
               <img
+                class="country__image"
                 src="img/countries/france-mobile.png"
                 srcset="img/countries/france-mobile@2x.png 2x"
+                width="270"
+                height="110"
                 alt="Франция.">
             </picture>
             <picture class="country__flag">
@@ -389,8 +410,11 @@
                 srcset="img/flags/France-tablet.png 1x, img/flags/France-tablet@2x.png 2x"
               >
               <img
+                class="country__flag-image"
                 src="img/flags/France.png"
                 srcset="img/flags/France@2x.png 2x"
+                width="35"
+                height="24"
                 alt="Флаг Франции.">
             </picture>
             <div class="country__info">
@@ -402,7 +426,7 @@
         </li>
         <li class="destination__item">
           <a class="link country" href="#">
-            <picture class="country__image">
+            <picture class="country__image-wrapper">
               <source
                 media="(min-width: 768px)"
                 type="image/webp"
@@ -417,8 +441,11 @@
                 srcset="img/countries/czech-tablet.png 1x, img/countries/czech-tablet@2x.png 2x"
               >
               <img
+                class="country__image"
                 src="img/countries/czech-mobile.png"
                 srcset="img/countries/czech-mobile@2x.png 2x"
+                width="270"
+                height="110"
                 alt="Чехия.">
             </picture>
             <picture class="country__flag">
@@ -436,8 +463,11 @@
                 srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
               >
               <img
+                class="country__flag-image"
                 src="img/flags/Czech.png"
                 srcset="img/flags/Czech@2x.png 2x"
+                width="35"
+                height="24"
                 alt="Флаг Чехии.">
             </picture>
             <div class="country__info">
@@ -453,7 +483,7 @@
         href="form.html">
         <span class="button__text">Показать все</span>
         <svg class="button__icon-right" width="11" height="12">
-          <use href="img/icons.svg#arrow-forward"/>
+          <use href="img/sprites/icons.svg#arrow-forward"/>
         </svg>
       </a>
     </div>
@@ -474,7 +504,7 @@
       <ul class="traveller__list">
         <li class="traveller__item">
           <a class="traveller-card button" href="#">
-            <picture class="traveller-card__image">
+            <picture>
               <source
                 media="(min-width: 768px)"
                 type="image/webp"
@@ -489,14 +519,29 @@
                 srcset="img/people/firsova-tablet.png 1x, img/people/firsova-tablet@2x.png 2x"
               >
               <img
+                class="traveller-card__image"
                 src="img/people/firsova-mobile.png"
                 srcset="img/people/firsova-mobile@2x.png 2x"
+                loading="lazy"
+                width="270"
+                height="270"
                 alt="Таня Фирсова.">
             </picture>
-            <p
-              class="traveller-card__level traveller-level traveller-level--firsova traveller-level--index">
-              <span class="traveller-level__number">99</span>
-              <span class="traveller-level__text">level</span>
+            <p class="traveller-card__level">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="img/people/firsova-rating-index.webp 1x, img/people/firsova-rating-index@2x.webp 2x"
+                >
+                <img
+                  class="traveller-card__level-image"
+                  src="img/people/firsova-rating-index.png"
+                  srcset="img/people/firsova-rating-index@2x.png 2x"
+                  loading="lazy"
+                  width="60"
+                  height="60"
+                  alt="Таня Фирсова.">
+              </picture>
             </p>
             <ul class="traveller-card__flags flags">
               <li class="flags__item">
@@ -508,6 +553,8 @@
                   <img
                     src="img/flags/Sri-Lanka.png"
                     srcset="img/flags/Sri-Lanka@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Шри-Ланки.">
                 </picture>
               </li>
@@ -520,6 +567,8 @@
                   <img
                     src="img/flags/Thailand.png"
                     srcset="img/flags/Thailand@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Таиланда.">
                 </picture>
               </li>
@@ -532,22 +581,22 @@
                   <img
                     src="img/flags/Seychelles.png"
                     srcset="img/flags/Seychelles@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Сейшельских островов.">
                 </picture>
               </li>
             </ul>
             <p class="traveller-card__name traveller-card__wrapper">
-              <span
-                class="traveller-card__status traveller-card__status--offline">
-                <span class="visually-hidden">В сети.</span>
-                <svg
-                  width="8"
-                  height="8"
-                  viewBox="0 0 8 8"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="4" cy="4" r="4"/>
-                </svg>
-              </span>
+              <svg
+                class="traveller-card__status status status--offline"
+                width="6"
+                height="6"
+                role="img"
+                aria-label="Не в сети."
+              >
+                <use href="img/sprites/icons.svg#status"/>
+              </svg>
               <span>Таня Фирсова</span>
             </p>
             <ul class="traveller-card__tags traveller-card__wrapper tags">
@@ -560,30 +609,52 @@
             </ul>
             <ul
               class="traveller-card__transport traveller-card__wrapper transport">
-              <li class="transport__item tooltip tooltip--top" data-tooltip="Авиаперелёт">
-                <span
-                  class="transport__image transport__image--aircraft transport__image--preferable"></span>
+              <li
+                class="transport__item tooltip tooltip--top"
+                data-tooltip="Авиаперелёт">
+                <svg
+                  class="transport__image transport__image--preferable"
+                  width="21"
+                  height="21"
+                >
+                  <use href="img/sprites/icons.svg#aircraft"/>
+                </svg>
                 <span class="visually-hidden">Самолет.</span>
               </li>
               <li
                 class="transport__item tooltip tooltip--top"
                 data-tooltip="Автотранспорт">
-                <span
-                  class="transport__image transport__image--bus"></span>
+                <svg
+                  class="transport__image"
+                  width="18"
+                  height="21"
+                >
+                  <use href="img/sprites/icons.svg#bus"/>
+                </svg>
                 <span class="visually-hidden">Автомобиль.</span>
               </li>
               <li
                 class="transport__item tooltip tooltip--top"
                 data-tooltip="Велосипед">
-                <span
-                  class="transport__image transport__image--bicycle"></span>
+                <svg
+                  class="transport__image"
+                  width="25"
+                  height="24"
+                >
+                  <use href="img/sprites/icons.svg#bicycle"/>
+                </svg>
                 <span class="visually-hidden">Велосипед.</span>
               </li>
               <li
                 class="transport__item tooltip tooltip--top"
                 data-tooltip="Пешком">
-                <span
-                  class="transport__image transport__image--walk"></span>
+                <svg
+                  class="transport__image"
+                  width="21"
+                  height="24"
+                >
+                  <use href="img/sprites/icons.svg#walk"/>
+                </svg>
                 <span class="visually-hidden">Пешком.</span>
               </li>
             </ul>
@@ -591,7 +662,7 @@
         </li>
         <li class="traveller__item">
           <a class="traveller-card button" href="#">
-            <picture class="traveller-card__image">
+            <picture>
               <source
                 media="(min-width: 768px)"
                 type="image/webp"
@@ -606,14 +677,29 @@
                 srcset="img/people/demin-tablet.png 1x, img/people/demin-tablet@2x.png 2x"
               >
               <img
+                class="traveller-card__image"
                 src="img/people/demin-mobile.png"
                 srcset="img/people/demin-mobile@2x.png 2x"
+                loading="lazy"
+                width="270"
+                height="270"
                 alt="Петя Демин.">
             </picture>
-            <p
-              class="traveller-card__level traveller-level traveller-level--demin traveller-level--index">
-              <span class="traveller-level__number">80</span>
-              <span class="traveller-level__text">level</span>
+            <p class="traveller-card__level">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="img/people/demin-rating-index.webp 1x, img/people/demin-rating-index@2x.webp 2x"
+                >
+                <img
+                  class="traveller-card__level-image"
+                  src="img/people/demin-rating-index.png"
+                  srcset="img/people/demin-rating-index@2x.png 2x"
+                  loading="lazy"
+                  width="60"
+                  height="60"
+                  alt="Петя Демин.">
+              </picture>
             </p>
             <ul class="traveller-card__flags flags">
               <li class="flags__item">
@@ -625,6 +711,8 @@
                   <img
                     src="img/flags/Belgium.png"
                     srcset="img/flags/Belgium@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Бельгии.">
                 </picture>
               </li>
@@ -637,22 +725,22 @@
                   <img
                     src="img/flags/Czech.png"
                     srcset="img/flags/Czech@2x.png 2x"
+                    width="35"
+                    height="25"
                     alt="Флаг Чехии.">
                 </picture>
               </li>
             </ul>
             <p class="traveller-card__name traveller-card__wrapper">
-              <span
-                class="traveller-card__status traveller-card__status--online">
-                <span class="visually-hidden">В сети.</span>
-                <svg
-                  width="8"
-                  height="8"
-                  viewBox="0 0 8 8"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="4" cy="4" r="4"/>
-                </svg>
-              </span>
+              <svg
+                class="traveller-card__status status status--online"
+                width="6"
+                height="6"
+                role="img"
+                aria-label="В сети."
+              >
+                <use href="img/sprites/icons.svg#status"/>
+              </svg>
               <span>Петя Демин</span>
             </p>
             <ul class="traveller-card__tags traveller-card__wrapper tags">
@@ -667,27 +755,49 @@
               <li
                 class="transport__item tooltip tooltip--top"
                 data-tooltip="Авиаперелёт">
-                <span
-                  class="transport__image transport__image--aircraft transport__image--preferable"></span>
+                <svg
+                  class="transport__image transport__image--preferable"
+                  width="21"
+                  height="21"
+                >
+                  <use href="img/sprites/icons.svg#aircraft"/>
+                </svg>
                 <span class="visually-hidden">Самолет.</span>
               </li>
               <li
                 class="transport__item tooltip tooltip--top"
                 data-tooltip="Автотранспорт">
-                <span
-                  class="transport__image transport__image--bus transport__image--preferable"></span>
+                <svg
+                  class="transport__image transport__image--preferable"
+                  width="18"
+                  height="21"
+                >
+                  <use href="img/sprites/icons.svg#bus"/>
+                </svg>
                 <span class="visually-hidden">Автомобиль.</span>
               </li>
-              <li class="transport__item tooltip tooltip--top"
+              <li
+                class="transport__item tooltip tooltip--top"
                 data-tooltip="Велосипед">
-                <span
-                  class="transport__image transport__image--bicycle"></span>
+                <svg
+                  class="transport__image"
+                  width="25"
+                  height="24"
+                >
+                  <use href="img/sprites/icons.svg#bicycle"/>
+                </svg>
                 <span class="visually-hidden">Велосипед.</span>
               </li>
-              <li class="transport__item tooltip tooltip--top"
+              <li
+                class="transport__item tooltip tooltip--top"
                 data-tooltip="Пешком">
-                <span
-                  class="transport__image transport__image--walk transport__image--preferable"></span>
+                <svg
+                  class="transport__image transport__image--preferable"
+                  width="21"
+                  height="24"
+                >
+                  <use href="img/sprites/icons.svg#walk"/>
+                </svg>
                 <span class="visually-hidden">Пешком.</span>
               </li>
             </ul>
@@ -699,7 +809,7 @@
         href="catalog.html">
         <span class="button__text">Показать всех</span>
         <svg class="button__icon-right" width="11" height="12">
-          <use href="img/icons.svg#arrow-forward"/>
+          <use href="img/sprites/icons.svg#arrow-forward"/>
         </svg>
       </a>
     </div>
@@ -727,6 +837,14 @@
         class="services__show-rates button button--rates"
         type="button"
         onclick="toggleHidden('business-rates')">
+        <span class="services__show-rates-image-wrapper">
+          <svg
+            class="services__show-rates-image"
+            width="28"
+            height="28">
+            <use href="img/sprites/icons.svg#businessman"/>
+          </svg>
+        </span>
         <span>
           Показать тарифы для бизнеса
         </span>
@@ -803,7 +921,7 @@
             <span class="sign-in__button-text button__text">Регистрация</span>
             <span class="sign-in__button-dot button__text">.</span>
             <svg class="button__icon-right" width="14" height="16">
-              <use href="img/icons.svg#arrow-forward"/>
+              <use href="img/sprites/icons.svg#arrow-forward"/>
             </svg>
           </button>
         </form>
@@ -821,7 +939,7 @@
                   class="contact__button-image contact__button-image--phone"
                   width="18"
                   height="17">
-                  <use href="img/icons.svg#menu-phone"/>
+                  <use href="img/sprites/icons.svg#menu-phone"/>
                 </svg>
               </span>
               <span class="contact__button-text">8 800 555-86-28</span>
@@ -832,10 +950,11 @@
               class="contact__button button"
               href="mailto:mail@htmlacademy.ru">
               <span class="contact__button-image-wrapper">
-                <svg class="contact__button-image contact__button-image--email"
+                <svg
+                  class="contact__button-image contact__button-image--email"
                   width="19"
                   height="13">
-                  <use href="img/icons.svg#menu-mail"/>
+                  <use href="img/sprites/icons.svg#menu-mail"/>
                 </svg>
               </span>
               <span class="contact__button-text">mail@htmlacademy.ru</span>
@@ -856,7 +975,7 @@
             type="button">
             <span class="button__text">Проложить маршрут</span>
             <svg class="button__icon-right" width="14" height="16">
-              <use href="img/icons.svg#arrow-forward"/>
+              <use href="img/sprites/icons.svg#arrow-forward"/>
             </svg>
           </button>
         </div>
@@ -895,6 +1014,9 @@
           class="address__map-image"
           src="img/backgrounds/map/background-map-mobile.png"
           srcset="img/backgrounds/map/background-map-mobile@2x.png 2x"
+          loading="lazy"
+          width="320"
+          height="424"
           alt="Расположение офиса.">
       </picture>
       <span class="address__locator"></span>
@@ -909,14 +1031,14 @@
         width="96"
         height="15"
       >
-        <use href="img/logo.svg#logo-mobile"></use>
+        <use href="img/sprites/logo.svg#logo-mobile"></use>
       </svg>
       <svg
         class="logo logo--tablet"
         width="166"
         height="42"
       >
-        <use href="img/logo.svg#logo"></use>
+        <use href="img/sprites/logo.svg#logo"></use>
       </svg>
     </a>
     <ul class="page-footer__social social">
@@ -929,7 +1051,7 @@
             class="social__button-image social__button-image--fb"
             width="11"
             height="21">
-            <use href="img/icons.svg#fb"/>
+            <use href="img/sprites/icons.svg#fb"/>
           </svg>
         </a>
       </li>
@@ -942,7 +1064,7 @@
             class="social__button-image social__button-image--vk"
             width="23"
             height="12">
-            <use href="img/icons.svg#vk"/>
+            <use href="img/sprites/icons.svg#vk"/>
           </svg>
         </a>
       </li>
@@ -955,7 +1077,7 @@
             class="social__button-image social__button-image--in"
             width="18"
             height="18">
-            <use href="img/icons.svg#in"/>
+            <use href="img/sprites/icons.svg#in"/>
           </svg>
         </a>
       </li>

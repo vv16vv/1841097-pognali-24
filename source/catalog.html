@@ -20,14 +20,14 @@
           width="96"
           height="15"
         >
-          <use href="img/logo.svg#logo-mobile"></use>
+          <use href="img/sprites/logo.svg#logo-mobile"></use>
         </svg>
         <svg
           class="logo logo--tablet"
           width="166"
           height="42"
         >
-          <use href="img/logo.svg#logo"></use>
+          <use href="img/sprites/logo.svg#logo"></use>
         </svg>
       </a>
       <ul class="page-header__menu-content-list menu menu--dark">
@@ -60,7 +60,7 @@
         type="button"
         onclick="toggleMenu(true)">
         <svg width="25" height="11">
-          <use href="img/icons.svg#menu-burger"/>
+          <use href="img/sprites/icons.svg#menu-burger"/>
         </svg>
         <span class="visually-hidden">Открыть меню.</span>
       </button>
@@ -69,7 +69,7 @@
         type="button"
         onclick="toggleMenu(false)">
         <svg width="18" height="19">
-          <use href="img/icons.svg#menu-close"/>
+          <use href="img/sprites/icons.svg#menu-close"/>
         </svg>
         <span class="visually-hidden">Закрыть меню.</span>
       </button>
@@ -79,7 +79,7 @@
             class="contact-buttons__button contact-buttons__button--phone button button--form-round"
             href="tel:88005558628">
             <svg class="contact-buttons__button-image" width="18" height="18">
-              <use href="img/icons.svg#auth-phone"/>
+              <use href="img/sprites/icons.svg#auth-phone"/>
             </svg>
             <span class="visually-hidden">8 800 555-86-28</span>
           </a>
@@ -90,7 +90,7 @@
               class="contact-buttons__button-image"
               width="16"
               height="14">
-              <use href="img/icons.svg#auth-mail"/>
+              <use href="img/sprites/icons.svg#auth-mail"/>
             </svg>
             <span class="visually-hidden">mail@htmlacademy.ru</span>
           </a>
@@ -147,7 +147,7 @@
                   class="contact__button-image contact__button-image--phone"
                   width="18"
                   height="17">
-                  <use href="img/icons.svg#menu-phone"/>
+                  <use href="img/sprites/icons.svg#menu-phone"/>
                 </svg>
               </span>
             <span class="contact__button-text">8 800 555-86-28</span>
@@ -162,7 +162,7 @@
                   class="contact__button-image contact__button-image--email"
                   width="19"
                   height="13">
-                  <use href="img/icons.svg#menu-mail"/>
+                  <use href="img/sprites/icons.svg#menu-mail"/>
                 </svg>
               </span>
             <span class="contact__button-text">mail@htmlacademy.ru</span>
@@ -178,7 +178,7 @@
             <svg
               class="social__button-image social__button-image--fb"
               width="11" height="21">
-              <use href="img/icons.svg#fb"/>
+              <use href="img/sprites/icons.svg#fb"/>
             </svg>
           </a>
         </li>
@@ -190,7 +190,7 @@
             <svg
               class="social__button-image social__button-image--vk"
               width="23" height="12">
-              <use href="img/icons.svg#vk"/>
+              <use href="img/sprites/icons.svg#vk"/>
             </svg>
           </a>
         </li>
@@ -203,7 +203,7 @@
               class="social__button-image social__button-image--in"
               width="18"
               height="18">
-              <use href="img/icons.svg#in"/>
+              <use href="img/sprites/icons.svg#in"/>
             </svg>
           </a>
         </li>
@@ -1127,7 +1127,7 @@
           type="button"
           onclick="toggleFilter()">
           <svg class="filter-popup__button-image" width="14" height="14">
-            <use href="img/icons.svg#filter-close"/>
+            <use href="img/sprites/icons.svg#filter-close"/>
           </svg>
           <span class="filter-popup__button-text">Свернуть</span>
         </button>
@@ -1307,14 +1307,21 @@
                       type="checkbox"
                       name="aircraft"
                       checked>
-                    <span class="transport__image transport__image--aircraft"></span>
+                    <svg
+                      class="transport__image"
+                      width="21"
+                      height="21"
+                    >
+                      <use href="img/sprites/icons.svg#aircraft"/>
+                    </svg>
                     <span class="visually-hidden">Самолет.</span>
                   </label>
                 </div>
               </li>
               <li
                 class="chooser-form-transport__item transport-control transport transport--checkbox">
-                <div class="tooltip tooltip--filter"
+                <div
+                  class="tooltip tooltip--filter"
                   data-tooltip="Автотранспорт">
                   <label class="transport__item transport__item--checkbox">
                     <input
@@ -1322,8 +1329,13 @@
                       type="checkbox"
                       name="bus"
                       checked>
-                    <span class="transport__image transport__image--bus">
-                  </span>
+                    <svg
+                      class="transport__image"
+                      width="18"
+                      height="21"
+                    >
+                      <use href="img/sprites/icons.svg#bus"/>
+                    </svg>
                     <span class="visually-hidden">Автомобиль.</span>
                   </label>
                 </div>
@@ -1335,8 +1347,13 @@
                       class="visually-hidden transport__control-input"
                       type="checkbox"
                       name="bicycle">
-                    <span class="transport__image transport__image--bicycle">
-                  </span>
+                    <svg
+                      class="transport__image"
+                      width="25"
+                      height="24"
+                    >
+                      <use href="img/sprites/icons.svg#bicycle"/>
+                    </svg>
                     <span class="visually-hidden">Велосипед.</span>
                   </label>
                 </div>
@@ -1349,8 +1366,13 @@
                       type="checkbox"
                       name="walk"
                       checked>
-                    <span class="transport__image transport__image--walk">
-                  </span>
+                    <svg
+                      class="transport__image"
+                      width="21"
+                      height="24"
+                    >
+                      <use href="img/sprites/icons.svg#walk"/>
+                    </svg>
                     <span class="visually-hidden">Пешком.</span>
                   </label>
                 </div>
@@ -1432,24 +1454,20 @@
             href="/people/firsova.html">
             Таня Фирсова
           </a>
-          <span
-            class="traveller-details-card__status traveller-details-card__status--offline">
-            <span class="visually-hidden">Не в сети.</span>
-            <svg
-              class="traveller-details-card__status-mark"
-              width="6"
-              height="7"
-              viewBox="0 0 6 7"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="3" cy="3.8584" r="3"/>
-            </svg>
-          </span>
+          <svg
+            class="traveller-details-card__status status status--offline"
+            width="6"
+            height="6"
+            role="img"
+            aria-label="Не в сети."
+          >
+            <use href="img/sprites/icons.svg#status"/>
+          </svg>
         </h3>
         <a
           class="traveller-details-card__image-wrapper button"
           href="/people/firsova.html">
-          <picture
-            class="traveller-details-card__image button--form-round">
+          <picture>
             <source
               media="(min-width: 1440px)"
               type="image/webp"
@@ -1473,13 +1491,24 @@
               srcset="img/people/firsova-catalog-tablet.png 1x, img/people/firsova-catalog-tablet@2x.png 2x"
             >
             <img
+              class="traveller-details-card__image button--form-round"
               src="img/people/firsova-catalog-mobile.png"
               srcset="img/people/firsova-catalog-mobile@2x.png 2x"
+              width="70"
+              height="70"
               alt="Таня Фирсова.">
           </picture>
         </a>
-        <p class="traveller-details-card__favorite traveller-details-card__favorite--selected">
-        </p>
+        <button
+          class="traveller-details-card__favorite favorite favorite--selected button button--form-round"
+          type="button">
+          <svg
+            class="favorite__image"
+            width="12"
+            height="12">
+            <use href="img/sprites/icons.svg#like-selected"/>
+          </svg>
+        </button>
         <p class="traveller-details-card__subscribers">1,5 М</p>
         <ul class="traveller-details-card__tags tags">
           <li class="tags__item">#ЗОЖ</li>
@@ -1512,6 +1541,8 @@
                 <img
                   src="img/flags/Sri-Lanka-small.png"
                   srcset="img/flags/Sri-Lanka-small@2x.png 2x"
+                  width="35"
+                  height="25"
                   alt="Флаг Шри-Ланки.">
               </picture>
               <p class="country-with-flag__name">шри-ланка</p>
@@ -1534,6 +1565,8 @@
                 <img
                   src="img/flags/Thailand-small.png"
                   srcset="img/flags/Thailand-small@2x.png 2x"
+                  width="35"
+                  height="25"
                   alt="Флаг Таиланда.">
               </picture>
               <p class="country-with-flag__name">Таиланд</p>
@@ -1556,6 +1589,8 @@
                 <img
                   src="img/flags/Seychelles-small.png"
                   srcset="img/flags/Seychelles-small@2x.png 2x"
+                  width="35"
+                  height="25"
                   alt="Флаг Сейшельских островов.">
               </picture>
               <p class="country-with-flag__name">сейшелы</p>
@@ -1571,26 +1606,49 @@
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Авиаперелёт">
-              <span
-                class="transport__image transport__image--aircraft transport__image--preferable"></span>
+              <svg
+                class="transport__image transport__image--preferable"
+                width="21"
+                height="21"
+              >
+                <use href="img/sprites/icons.svg#aircraft"/>
+              </svg>
               <span class="visually-hidden">Самолет.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Автотранспорт">
-              <span class="transport__image transport__image--bus"></span>
+              <svg
+                class="transport__image"
+                width="18"
+                height="21"
+              >
+                <use href="img/sprites/icons.svg#bus"/>
+              </svg>
               <span class="visually-hidden">Автомобиль.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Велосипед">
-              <span class="transport__image transport__image--bicycle"></span>
+              <svg
+                class="transport__image"
+                width="25"
+                height="24"
+              >
+                <use href="img/sprites/icons.svg#bicycle"/>
+              </svg>
               <span class="visually-hidden">Велосипед.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Пешком">
-              <span class="transport__image transport__image--walk"></span>
+              <svg
+                class="transport__image"
+                width="21"
+                height="24"
+              >
+                <use href="img/sprites/icons.svg#walk"/>
+              </svg>
               <span class="visually-hidden">Пешком.</span>
             </li>
           </ul>
@@ -1599,10 +1657,19 @@
           <p class="traveller-details-card__subtitle">
             левел:
           </p>
-          <p
-            class="traveller-details-card__level traveller-level traveller-level--firsova traveller-level--catalog">
-            <span class="traveller-level__number">99</span>
-            <span class="traveller-level__text">level</span>
+          <p class="traveller-details-card__level">
+            <svg
+              class="traveller-details-card__level--mobile"
+              width="45"
+              height="45">
+              <use href="img/sprites/icons.svg#firsova-rating-mobile"/>
+            </svg>
+            <svg
+              class="traveller-details-card__level--tablet"
+              width="60"
+              height="60">
+              <use href="img/sprites/icons.svg#firsova-rating-tablet"/>
+            </svg>
           </p>
         </div>
         <a
@@ -1618,23 +1685,20 @@
             href="/people/demin.html">
             Петя Демин
           </a>
-          <span
-            class="traveller-details-card__status traveller-details-card__status--offline">
-            <span class="visually-hidden">Не в сети.</span>
-            <svg
-              width="6"
-              height="7"
-              viewBox="0 0 6 7"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="3" cy="3.8584" r="3"/>
-            </svg>
-          </span>
+          <svg
+            class="traveller-details-card__status status status--offline"
+            width="6"
+            height="6"
+            role="img"
+            aria-label="Не в сети."
+          >
+            <use href="img/sprites/icons.svg#status"/>
+          </svg>
         </h3>
         <a
           class="traveller-details-card__image-wrapper button"
           href="/people/demin.html">
-          <picture
-            class="traveller-details-card__image button--form-round">
+          <picture>
             <source
               media="(min-width: 1440px)"
               type="image/webp"
@@ -1658,13 +1722,21 @@
               srcset="img/people/demin-catalog-tablet.png 1x, img/people/demin-catalog-tablet@2x.png 2x"
             >
             <img
+              class="traveller-details-card__image button--form-round"
               src="img/people/demin-catalog-mobile.png"
               srcset="img/people/demin-catalog-mobile@2x.png 2x"
+              width="70"
+              height="70"
               alt="Петя Демин.">
           </picture>
         </a>
-        <p class="traveller-details-card__favorite">
-        </p>
+        <button
+          class="traveller-details-card__favorite favorite button button--form-round"
+          type="button">
+          <svg class="favorite__image" width="31" height="32">
+            <use href="img/sprites/icons.svg#like"/>
+          </svg>
+        </button>
         <p class="traveller-details-card__subscribers">1500</p>
         <ul class="traveller-details-card__tags tags">
           <li class="tags__item">#бургер</li>
@@ -1696,6 +1768,8 @@
                 <img
                   src="img/flags/Belgium-small.png"
                   srcset="img/flags/Belgium-small@2x.png 2x"
+                  width="35"
+                  height="25"
                   alt="Флаг Бельгии.">
               </picture>
               <p class="country-with-flag__name">бельгия</p>
@@ -1718,6 +1792,8 @@
                 <img
                   src="img/flags/Czech-small.png"
                   srcset="img/flags/Czech-small@2x.png 2x"
+                  width="35"
+                  height="25"
                   alt="Флаг Чехии.">
               </picture>
               <p class="country-with-flag__name">чехия</p>
@@ -1733,28 +1809,49 @@
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Авиаперелёт">
-              <span
-                class="transport__image transport__image--aircraft transport__image--preferable"></span>
+              <svg
+                class="transport__image transport__image--preferable"
+                width="21"
+                height="21"
+              >
+                <use href="img/sprites/icons.svg#aircraft"/>
+              </svg>
               <span class="visually-hidden">Самолет.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card transport__item--bus transport__item--preferable tooltip"
               data-tooltip="Автотранспорт">
-              <span
-                class="transport__image transport__image--bus transport__image--preferable"></span>
+              <svg
+                class="transport__image transport__image--preferable"
+                width="18"
+                height="21"
+              >
+                <use href="img/sprites/icons.svg#bus"/>
+              </svg>
               <span class="visually-hidden">Автомобиль.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card transport__item--bicycle tooltip"
               data-tooltip="Велосипед">
-              <span class="transport__image transport__image--bicycle"></span>
+              <svg
+                class="transport__image"
+                width="25"
+                height="24"
+              >
+                <use href="img/sprites/icons.svg#bicycle"/>
+              </svg>
               <span class="visually-hidden">Велосипед.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card transport__item--walk transport__item--preferable tooltip"
               data-tooltip="Пешком">
-              <span
-                class="transport__image transport__image--walk transport__image--preferable"></span>
+              <svg
+                class="transport__image transport__image--preferable"
+                width="21"
+                height="24"
+              >
+                <use href="img/sprites/icons.svg#walk"/>
+              </svg>
               <span class="visually-hidden">Пешком.</span>
             </li>
           </ul>
@@ -1763,10 +1860,19 @@
           <p class="traveller-details-card__subtitle">
             левел:
           </p>
-          <p
-            class="traveller-details-card__level traveller-level traveller-level--demin traveller-level--catalog">
-            <span class="traveller-level__number">80</span>
-            <span class="traveller-level__text">level</span>
+          <p class="traveller-details-card__level">
+            <svg
+              class="traveller-details-card__level--mobile"
+              width="45"
+              height="45">
+              <use href="img/sprites/icons.svg#demin-rating-mobile"/>
+            </svg>
+            <svg
+              class="traveller-details-card__level--tablet"
+              width="60"
+              height="60">
+              <use href="img/sprites/icons.svg#demin-rating-tablet"/>
+            </svg>
           </p>
         </div>
         <a
@@ -1782,23 +1888,20 @@
             href="/people/smolov.html">
             Марк Смолов
           </a>
-          <span
-            class="traveller-details-card__status traveller-details-card__status--offline">
-          <span class="visually-hidden">Не в сети.</span>
           <svg
+            class="traveller-details-card__status status status--offline"
             width="6"
-            height="7"
-            viewBox="0 0 6 7"
-            xmlns="http://www.w3.org/2000/svg">
-            <circle cx="3" cy="3.8584" r="3"/>
+            height="6"
+            role="img"
+            aria-label="Не в сети."
+          >
+            <use href="img/sprites/icons.svg#status"/>
           </svg>
-        </span>
         </h3>
         <a
           class="traveller-details-card__image-wrapper button"
           href="/people/smolov.html">
-          <picture
-            class="traveller-details-card__image button--form-round">
+          <picture>
             <source
               media="(min-width: 1440px)"
               type="image/webp"
@@ -1822,13 +1925,21 @@
               srcset="img/people/smolov-catalog-tablet.png 1x, img/people/smolov-catalog-tablet@2x.png 2x"
             >
             <img
+              class="traveller-details-card__image button--form-round"
               src="img/people/smolov-catalog-mobile.png"
               srcset="img/people/smolov-catalog-mobile@2x.png 2x"
+              width="70"
+              height="70"
               alt="Марк Смолов.">
           </picture>
         </a>
-        <p class="traveller-details-card__favorite">
-        </p>
+        <button
+          class="traveller-details-card__favorite favorite button button--form-round"
+          type="button">
+          <svg class="favorite__image" width="31" height="32">
+            <use href="img/sprites/icons.svg#like"/>
+          </svg>
+        </button>
         <p class="traveller-details-card__subscribers">170</p>
         <ul class="traveller-details-card__tags tags">
           <li class="tags__item">#рэп</li>
@@ -1860,6 +1971,8 @@
                 <img
                   src="img/flags/USA-small.png"
                   srcset="img/flags/USA-small@2x.png 2x"
+                  width="35"
+                  height="25"
                   alt="Флаг США.">
               </picture>
               <p class="country-with-flag__name">сша</p>
@@ -1882,6 +1995,8 @@
                 <img
                   src="img/flags/Australia-small.png"
                   srcset="img/flags/Australia-small@2x.png 2x"
+                  width="35"
+                  height="25"
                   alt="Флаг Австралии.">
               </picture>
               <p class="country-with-flag__name">австралия</p>
@@ -1904,6 +2019,8 @@
                 <img
                   src="img/flags/Dominica-small.png"
                   srcset="img/flags/Dominica-small@2x.png 2x"
+                  width="35"
+                  height="25"
                   alt="Флаг Доминики.">
               </picture>
               <p class="country-with-flag__name">Доминика</p>
@@ -1919,27 +2036,49 @@
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Авиаперелёт">
-              <span
-                class="transport__image transport__image--aircraft transport__image--preferable"></span>
+              <svg
+                class="transport__image transport__image--preferable"
+                width="21"
+                height="21"
+              >
+                <use href="img/sprites/icons.svg#aircraft"/>
+              </svg>
               <span class="visually-hidden">Самолет.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Автотранспорт">
-              <span class="transport__image transport__image--bus"></span>
+              <svg
+                class="transport__image"
+                width="18"
+                height="21"
+              >
+                <use href="img/sprites/icons.svg#bus"/>
+              </svg>
               <span class="visually-hidden">Автомобиль.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Велосипед">
-              <span
-                class="transport__image transport__image--bicycle transport__image--preferable"></span>
+              <svg
+                class="transport__image transport__image--preferable"
+                width="25"
+                height="24"
+              >
+                <use href="img/sprites/icons.svg#bicycle"/>
+              </svg>
               <span class="visually-hidden">Велосипед.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Пешком">
-              <span class="transport__image transport__image--walk"></span>
+              <svg
+                class="transport__image"
+                width="21"
+                height="24"
+              >
+                <use href="img/sprites/icons.svg#walk"/>
+              </svg>
               <span class="visually-hidden">Пешком.</span>
             </li>
           </ul>
@@ -1948,10 +2087,19 @@
           <p class="traveller-details-card__subtitle">
             левел:
           </p>
-          <p
-            class="traveller-details-card__level traveller-level traveller-level--smolov traveller-level--catalog">
-            <span class="traveller-level__number">25</span>
-            <span class="traveller-level__text">level</span>
+          <p class="traveller-details-card__level">
+            <svg
+              class="traveller-details-card__level--mobile"
+              width="45"
+              height="45">
+              <use href="img/sprites/icons.svg#smolov-rating-mobile"/>
+            </svg>
+            <svg
+              class="traveller-details-card__level--tablet"
+              width="60"
+              height="60">
+              <use href="img/sprites/icons.svg#smolov-rating-tablet"/>
+            </svg>
           </p>
         </div>
         <a
@@ -1967,23 +2115,20 @@
             href="/people/rogovaya.html">
             Лариса Роговая
           </a>
-          <span
-            class="traveller-details-card__status traveller-details-card__status--online">
-          <span class="visually-hidden">В сети.</span>
           <svg
+            class="traveller-details-card__status status status--online"
             width="6"
-            height="7"
-            viewBox="0 0 6 7"
-            xmlns="http://www.w3.org/2000/svg">
-            <circle cx="3" cy="3.8584" r="3"/>
+            height="6"
+            role="img"
+            aria-label="В сети."
+          >
+            <use href="img/sprites/icons.svg#status"/>
           </svg>
-        </span>
         </h3>
         <a
           class="traveller-details-card__image-wrapper button"
           href="/people/rogovaya.html">
-          <picture
-            class="traveller-details-card__image button--form-round">
+          <picture>
             <source
               media="(min-width: 1440px)"
               type="image/webp"
@@ -2007,13 +2152,21 @@
               srcset="img/people/rogovaya-catalog-tablet.png 1x, img/people/rogovaya-catalog-tablet@2x.png 2x"
             >
             <img
+              class="traveller-details-card__image button--form-round"
               src="img/people/rogovaya-catalog-mobile.png"
               srcset="img/people/rogovaya-catalog-mobile@2x.png 2x"
+              width="70"
+              height="70"
               alt="Лариса Роговая.">
           </picture>
         </a>
-        <p class="traveller-details-card__favorite">
-        </p>
+        <button
+          class="traveller-details-card__favorite favorite button button--form-round"
+          type="button">
+          <svg class="favorite__image" width="31" height="32">
+            <use href="img/sprites/icons.svg#like"/>
+          </svg>
+        </button>
         <p class="traveller-details-card__subscribers">23</p>
         <ul class="traveller-details-card__tags tags">
           <li class="tags__item">#образование</li>
@@ -2044,6 +2197,8 @@
                 <img
                   src="img/flags/UK-small.png"
                   srcset="img/flags/UK-small@2x.png 2x"
+                  width="35"
+                  height="25"
                   alt="Флаг Великобритании.">
               </picture>
               <p class="country-with-flag__name">Великобритания</p>
@@ -2066,6 +2221,8 @@
                 <img
                   src="img/flags/Germany-small.png"
                   srcset="img/flags/Germany-small@2x.png 2x"
+                  width="35"
+                  height="25"
                   alt="Флаг Германии.">
               </picture>
               <p class="country-with-flag__name">Германия</p>
@@ -2081,27 +2238,49 @@
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Авиаперелёт">
-              <span
-                class="transport__image transport__image--aircraft transport__image--preferable"></span>
+              <svg
+                class="transport__image transport__image--preferable"
+                width="21"
+                height="21"
+              >
+                <use href="img/sprites/icons.svg#aircraft"/>
+              </svg>
               <span class="visually-hidden">Самолет.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Автотранспорт">
-              <span
-                class="transport__image transport__image--bus transport__image--preferable"></span>
+              <svg
+                class="transport__image transport__image--preferable"
+                width="18"
+                height="21"
+              >
+                <use href="img/sprites/icons.svg#bus"/>
+              </svg>
               <span class="visually-hidden">Автомобиль.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Велосипед">
-              <span class="transport__image transport__image--bicycle"></span>
+              <svg
+                class="transport__image"
+                width="25"
+                height="24"
+              >
+                <use href="img/sprites/icons.svg#bicycle"/>
+              </svg>
               <span class="visually-hidden">Велосипед.</span>
             </li>
             <li
               class="transport__item transport__item--traveller-details-card tooltip"
               data-tooltip="Пешком">
-              <span class="transport__image transport__image--walk"></span>
+              <svg
+                class="transport__image"
+                width="21"
+                height="24"
+              >
+                <use href="img/sprites/icons.svg#walk"/>
+              </svg>
               <span class="visually-hidden">Пешком.</span>
             </li>
           </ul>
@@ -2110,10 +2289,19 @@
           <p class="traveller-details-card__subtitle">
             левел:
           </p>
-          <p
-            class="traveller-details-card__level traveller-level traveller-level--rogovaya traveller-level--catalog">
-            <span class="traveller-level__number">50</span>
-            <span class="traveller-level__text">level</span>
+          <p class="traveller-details-card__level">
+            <svg
+              class="traveller-details-card__level--mobile"
+              width="45"
+              height="45">
+              <use href="img/sprites/icons.svg#rogovaya-rating-mobile"/>
+            </svg>
+            <svg
+              class="traveller-details-card__level--tablet"
+              width="60"
+              height="60">
+              <use href="img/sprites/icons.svg#rogovaya-rating-tablet"/>
+            </svg>
           </p>
         </div>
         <a
@@ -2155,7 +2343,7 @@
             class="pagination__button-content pagination__button-content--back"
             width="13"
             height="20">
-            <use href="img/icons.svg#pagination-next"/>
+            <use href="img/sprites/icons.svg#pagination-next"/>
           </svg>
           <span class="visually-hidden">Предыдущая страница.</span>
         </a>
@@ -2166,7 +2354,7 @@
             class="pagination__button-content pagination__button-content--forward"
             width="13"
             height="20">
-            <use href="img/icons.svg#pagination-next"/>
+            <use href="img/sprites/icons.svg#pagination-next"/>
           </svg>
           <span class="visually-hidden">Следующая страница.</span>
         </a>
@@ -2182,14 +2370,14 @@
         width="96"
         height="15"
       >
-        <use href="img/logo.svg#logo-mobile"></use>
+        <use href="img/sprites/logo.svg#logo-mobile"></use>
       </svg>
       <svg
         class="logo logo--tablet"
         width="166"
         height="42"
       >
-        <use href="img/logo.svg#logo"></use>
+        <use href="img/sprites/logo.svg#logo"></use>
       </svg>
     </a>
     <ul class="page-footer__social social">
@@ -2202,7 +2390,7 @@
             class="social__button-image social__button-image--fb"
             width="11"
             height="21">
-            <use href="img/icons.svg#fb"/>
+            <use href="img/sprites/icons.svg#fb"/>
           </svg>
         </a>
       </li>
@@ -2215,7 +2403,7 @@
             class="social__button-image social__button-image--vk"
             width="23"
             height="12">
-            <use href="img/icons.svg#vk"/>
+            <use href="img/sprites/icons.svg#vk"/>
           </svg>
         </a>
       </li>
@@ -2228,7 +2416,7 @@
             class="social__button-image social__button-image--in"
             width="18"
             height="18">
-            <use href="img/icons.svg#in"/>
+            <use href="img/sprites/icons.svg#in"/>
           </svg>
         </a>
       </li>

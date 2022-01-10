@@ -141,25 +141,35 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &::before {
-      content: "";
-      width: 68px;
-      height: 68px;
-
-      margin-right: 21px;
-
-      border-radius: 50%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: @bg-grey;
-      background-image: url("../../../img/icons/businessman.svg");
-      background-size: 27px 27px;
-    }
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 32px;
     margin-left: -89px;
+  }
+}
+
+.services__show-rates-image-wrapper {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+
+    border-radius: 50%;
+    background-color: @bg-grey;
+
+    margin-right: 21px;
+  }
+}
+
+.services__show-rates-image {
+  @media (min-width: @tablet-width) {
+    width: 28px;
+    height: 28px;
   }
 }

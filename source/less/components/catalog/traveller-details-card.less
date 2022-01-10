@@ -131,23 +131,8 @@
   padding-right: 2px;
   margin: 0;
 
-  &--offline circle {
-    fill: @status-offline;
-  }
-
-  &--online circle {
-    fill: @status-online;
-  }
-
   @media (min-width: @desktop-width) {
     padding-right: 0;
-  }
-}
-
-.traveller-details-card__status-mark {
-  @media (min-width: @tablet-width) {
-    width: 8px;
-    height: 8px;
   }
 }
 
@@ -212,29 +197,12 @@
 
   top: 57px;
   left: 65px;
-
-  width: 31px;
-  height: 31px;
   margin: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../../../img/icons/like.svg");
-
-  &--selected {
-    background-image: url("../../../img/icons/like-active.svg");
-  }
 
   @media (min-width: @tablet-width) {
     position: relative;
     top: 0;
     left: 0;
-
-    width: 50px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-
-    background-size: 50px 50px;
   }
 }
 
@@ -398,6 +366,28 @@
 
     &::before {
       content: none;
+    }
+  }
+}
+
+.traveller-details-card__level {
+  color: @fg-blue-light;
+
+  &--mobile {
+    display: block;
+  }
+
+  &--tablet {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
     }
   }
 }

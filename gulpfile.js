@@ -12,6 +12,7 @@ import plumber from "gulp-plumber";
 import postcss from "gulp-postcss";
 import rename from "gulp-rename";
 import svgo from "gulp-svgmin";
+import svgstore from "gulp-svgstore";
 import terser from "gulp-terser";
 
 const BUILD = "build"
@@ -56,7 +57,7 @@ const optimizePNGs = () => {
 }
 
 export const convertToWebP = () => {
-  return gulp.src(`${SOURCE}/img/**/*.png`)
+  return gulp.src([`${SOURCE}/img/**/*.png`, `!${SOURCE}/img/backgrounds/*.png`])
     .pipe(squoosh({webp: {}}))
     .pipe(gulp.dest(`${SOURCE}/img`))
 }
@@ -66,8 +67,8 @@ const copyWebP = () => {
     .pipe(gulp.dest(`${BUILD}/img`))
 }
 
-export const covertSVGsToSprite = () => {
-  return gulp.src([`${SOURCE}/img/icons/*.svg`, `${SOURCE}/img/people/*.svg`])
+export const convertSVGsToSprite = () => {
+  return gulp.src(`${SOURCE}/img/icons/*.svg`)
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest(`${SOURCE}/img`))
@@ -79,14 +80,12 @@ const processPath = (filePath) => () => gulp.src(`${SOURCE}/${filePath}`)
 
 const minimizeSVGs = gulp.parallel(
   processPath(`img/icons/*.svg`),
-  processPath(`img/backgrounds/*.svg`),
-  processPath(`img/people/*.svg`),
   processPath(`img/htmlacademy-big.svg`),
 )
 
 const copySVGSprites = () => {
-  return gulp.src([`${SOURCE}/img/icons.svg`, `${SOURCE}/img/logo.svg`])
-    .pipe(gulp.dest(`${BUILD}/img`))
+  return gulp.src(`${SOURCE}/img/sprites/*.svg`)
+    .pipe(gulp.dest(`${BUILD}/img/sprites`))
 }
 
 const server = (baseDir, done) => {
