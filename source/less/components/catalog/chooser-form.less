@@ -7,7 +7,7 @@
   padding: 26px 8px 22px 25px;
 
   @media (min-width: @tablet-width) {
-    border-radius: 25px;
+    border-radius: 20px;
 
     padding: 37px 34px 37px 34px;
   }
@@ -32,6 +32,7 @@
     padding-bottom: 38px;
     border-bottom: 1px solid @yellow-dark;
 
+    letter-spacing: 0;
     .common-font(30px, 30px, 700);
   }
 
@@ -70,11 +71,15 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
-    margin-top: 36px;
     position: relative;
-    .common-font(20px, 20px, 700);
+
+    width: 100%;
+    margin-top: 45px;
+    margin-left: 0;
     padding-top: 18px;
-    padding-bottom: 17px;
+    padding-bottom: 13px;
+
+    .common-font(20px, 20px, 700);
 
     &::before {
       content: "";

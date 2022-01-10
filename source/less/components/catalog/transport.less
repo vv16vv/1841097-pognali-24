@@ -26,6 +26,10 @@
     justify-content: flex-start;
     margin-top: 0;
     margin-bottom: 1px;
+
+    @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+      gap: 2px;
+    }
   }
 
   &--chooser-form-group {
