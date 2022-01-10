@@ -258,7 +258,7 @@
         </li>
       </ul>
       <button
-        class="filter__button filter__button--state-open button"
+        class="filter__button filter__button--state-open button button--with-icon"
         type="button"
         onclick="toggleFilter()"
       >
@@ -271,6 +271,12 @@
           Свернуть
         </span>
         <span class="filter__button--dot">.</span>
+        <svg class="filter__expand" width="17" height="3">
+          <use href="img/sprites/icons.svg#filter-expand"/>
+        </svg>
+        <svg class="filter__close" width="16" height="16">
+          <use href="img/sprites/icons.svg#filter-close"/>
+        </svg>
       </button>
     </div>
     <div class="filter__popup filter-popup filter__popup--state-in-flow">
