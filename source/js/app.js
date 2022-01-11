@@ -166,13 +166,13 @@ window.onscroll = () => onScroll()
 
 window.onload = () => {
   const menuContentPopup = document.getElementsByClassName("menu-content-popup")[0]
-  menuContentPopup.classList.remove("menu-content-popup--nojs")
-  menuContentPopup.classList.add("hidden")
+  menuContentPopup?.classList?.remove("menu-content-popup--nojs")
+  menuContentPopup?.classList?.add("hidden")
 
   const mapIframe = document.getElementsByClassName("address__map--iframe")[0]
-  mapIframe.classList.remove("hidden")
+  mapIframe?.classList?.remove("hidden")
 
   const mapPicture = document.getElementsByClassName("address__map--no-js")[0]
-  mapPicture.classList.remove("address__map--no-js")
-  mapPicture.classList.add("hidden")
+  mapPicture?.classList?.remove("address__map--no-js")
+  mapPicture?.classList?.add("hidden")
 }
