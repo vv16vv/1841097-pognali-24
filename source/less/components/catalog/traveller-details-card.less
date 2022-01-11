@@ -17,8 +17,8 @@
 
   @media (min-width: @tablet-width) {
     border-radius: 20px;
-    padding: 35px 0 25px;
-    grid-template-columns: 255px 150px 50px 50px 1fr 85px;
+    padding: 33px 0 25px;
+    grid-template-columns: 257px 150px 50px 60px 1fr 85px;
     grid-template-areas:
       "image title title title title transport"
       "image tags tags tags . transport"
@@ -58,6 +58,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 19px;
+    gap: 24px;
     justify-content: flex-start;
   }
 
@@ -110,9 +111,9 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding: 15px 18px 15px;
-    margin-left: 0;
-    margin-right: 0;
+    padding: 17px 0 13px;
+    margin-left: -4px;
+    margin-right: 4px;
 
     .common-font(20px, 20px, 700);
   }
@@ -216,6 +217,7 @@
   @media (min-width: @tablet-width) {
     .common-font(20px, 20px, 700);
     align-self: center;
+    margin-left: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -236,7 +238,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 46px;
+    margin: 0 0 46px 4px;
     color: @fg-black;
   }
 
@@ -304,7 +306,7 @@
     margin-top: 17px;
 
     .traveller-details-card__subtitle {
-      margin-left: 35px;
+      margin-left: 73px;
       margin-bottom: 19px;
     }
   }
@@ -396,8 +398,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: -5px;
-    justify-self: center;
+    justify-self: left;
+    margin-top: -8px;
+    margin-left: -2px;
 
     .traveller-details-card__subtitle {
       display: none;
@@ -424,6 +427,10 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 64px;
+    height: 64px;
+    margin-left: 0;
+
     &--mobile {
       display: none;
     }
