@@ -29,7 +29,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    grid-template-columns: 285px 62px 150px 50px 50px 1fr 182px 103px;
+    grid-template-columns: 285px 62px 150px 50px 60px 1fr 174px 104px;
     grid-template-areas:
       "image title title title title . country country"
       "image . tags tags tags . country country"
@@ -89,12 +89,16 @@
   color: @fg-blue-light;
   .common-font(20px, 20px, 700);
 
+  &:focus {
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     .common-font(30px, 30px, 700);
   }
 
-  &:focus {
-    outline: none;
+  @media (min-width: @desktop-width) {
+    margin-left: 2px;
   }
 }
 
@@ -120,6 +124,8 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 48px;
+    margin-left: -7px;
+    margin-right: 8px;
   }
 
   &:focus {
@@ -135,6 +141,8 @@
 
   @media (min-width: @desktop-width) {
     padding-right: 0;
+    margin-top: 11px;
+    margin-left: -2px;
   }
 }
 
@@ -206,6 +214,10 @@
     top: 0;
     left: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -7px;
+  }
 }
 
 .traveller-details-card__subscribers {
@@ -222,6 +234,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 48px;
+    margin-left: -1px;
   }
 }
 
@@ -244,6 +257,8 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 45px;
+    margin-left: 0;
+    width: 250px;
   }
 }
 
@@ -312,7 +327,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 46px;
+    margin-top: 48px;
 
     .traveller-details-card__subtitle {
       display: none;
@@ -342,7 +357,7 @@
   @media (min-width: @desktop-width) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 13px;
+    gap: 10px;
     margin: 0;
   }
 }
@@ -409,6 +424,10 @@
     &::before {
       content: none;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -6px;
   }
 }
 
