@@ -162,7 +162,7 @@ const onScroll = () => {
   }
 };
 
-window.addEventListener("onscroll", onScroll, {passive: true});
+window.onscroll = () => onScroll()
 
 window.onload = () => {
   const menuContentPopup = document.getElementsByClassName("menu-content-popup")[0]
