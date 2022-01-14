@@ -12,9 +12,11 @@
   display: grid;
   grid-template-columns: 1fr 35px;
   grid-template-areas: "name flag" "plan plan";
-  grid-row-gap: 18px;
+  grid-row-gap: 11px;
   align-items: center;
   position: relative;
+
+  padding-top: 9px;
 
   &--error {
     .agenda__plan {
@@ -38,8 +40,22 @@
     }
   }
 
+  &:first-child .agenda__plan {
+    height: 200px;
+  }
+
   &:last-child .agenda__marker {
     background-color: transparent;
+
+    &::before {
+      top: 10px;
+      left: 12px;
+    }
+
+    &::after {
+      top: 12px;
+      left: 0;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -59,7 +75,7 @@
 }
 
 .agenda__item + .agenda__item {
-  margin-top: 27px;
+  margin-top: 11px;
 
   @media (min-width: @tablet-width) {
     margin-top: 51px;
@@ -137,7 +153,7 @@
   left: -14px;
 
   width: 2px;
-  height: calc(100% + 29px);
+  height: calc(100% + 25px);
 
   background-color: @fg-blue-light;
   border: none;

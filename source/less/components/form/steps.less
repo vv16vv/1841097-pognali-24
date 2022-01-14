@@ -9,6 +9,23 @@
   background-color: @fg-main;
   padding: 24px 25px 21px;
 
+  &--dates .steps__button {
+    width: 221px;
+    margin-left: 0;
+  }
+
+  &--entertainment {
+    padding-bottom: 9px;
+  }
+
+  &--route {
+    padding-bottom: 9px;
+
+    .steps__button--next {
+      margin-top: 23px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding: 48px 40px 56px;
   }
@@ -55,8 +72,6 @@
 }
 
 .steps__buttons {
-  margin-top: -2px;
-
   @media (min-width: @tablet-width) {
     margin-top: 0;
     display: flex;
@@ -65,8 +80,9 @@
 }
 
 .steps__button {
-  width: 100%;
+  width: 230px;
   padding: 7px 7px 4px;
+  margin-left: -4px;
   border: none;
   justify-content: center;
 
@@ -91,7 +107,7 @@
   }
 
   &--next {
-    margin-bottom: 4px;
+    margin-bottom: 7px;
   }
 
   &--back {
