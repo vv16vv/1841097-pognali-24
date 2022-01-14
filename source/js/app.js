@@ -79,44 +79,46 @@ function toggleClassNames(component, removedClassName, addedClassName) {
 }
 
 function toggleHeader(removedSuffix, addedSuffix, removeSticky = undefined) {
-  const baseHeader = "page-header"
-  const stickyHeader = "page-header--sticky"
-  const menuContentList = "page-header__menu-content-list"
-  const menuButtons = "page-header__menu-button"
-  const menuLogo = "page-header__logo"
-  const menu = "menu"
+  const pageHeaderClass = "page-header"
+  const formWrapperClass = `${pageHeaderClass}__form-wrapper`
+  const stickyClass = `${pageHeaderClass}--sticky`
+  const menuContentListClass = `${pageHeaderClass}__menu-content-list`
+  const menuButtonClass = `${pageHeaderClass}__menu-button`
+  const logoClass = `${pageHeaderClass}__logo`
+  const menuClass = "menu"
 
   const pageHeader = document
-    .getElementsByClassName(baseHeader)[0]
-  const buttons = pageHeader.getElementsByClassName(menuButtons)
-  const menuList = pageHeader.getElementsByClassName(menuContentList)[0]
-  const logo = pageHeader.getElementsByClassName(menuLogo)[0]
+    .getElementsByClassName(pageHeaderClass)[0]
+  const formWrapper = pageHeader.getElementsByClassName(formWrapperClass)[0]
+  const buttons = pageHeader.getElementsByClassName(menuButtonClass)
+  const menuContentList = pageHeader.getElementsByClassName(menuContentListClass)[0]
+  const logo = pageHeader.getElementsByClassName(logoClass)[0]
 
   toggleClassNames(
-    pageHeader,
-    `${baseHeader}${removedSuffix}`,
-    `${baseHeader}${addedSuffix}`
+    formWrapper,
+    `${formWrapperClass}${removedSuffix}`,
+    `${formWrapperClass}${addedSuffix}`
   )
 
-  toggleClassNames(menuList,
-    `${menu}${removedSuffix}`,
-    `${menu}${addedSuffix}`)
+  toggleClassNames(menuContentList,
+    `${menuClass}${removedSuffix}`,
+    `${menuClass}${addedSuffix}`)
 
   toggleClassNames(logo,
-    `${menuLogo}${removedSuffix}`,
-    `${menuLogo}${addedSuffix}`)
+    `${logoClass}${removedSuffix}`,
+    `${logoClass}${addedSuffix}`)
 
   if (removeSticky !== undefined) {
     removeSticky
-      ? pageHeader.classList.remove(stickyHeader)
-      : addIfAbsent(pageHeader, stickyHeader)
+      ? pageHeader.classList.remove(stickyClass)
+      : addIfAbsent(pageHeader, stickyClass)
   }
 
   for (let i = 0; i < buttons.length; i++) {
     toggleClassNames(
       buttons[i],
-      `${menuButtons}${removedSuffix}`,
-      `${menuButtons}${addedSuffix}`
+      `${menuButtonClass}${removedSuffix}`,
+      `${menuButtonClass}${addedSuffix}`
     )
   }
 }
