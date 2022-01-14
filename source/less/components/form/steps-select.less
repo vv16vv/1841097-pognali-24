@@ -1,8 +1,9 @@
 .steps-select {
   display: flex;
-  align-items: center;
   position: relative;
-  margin-bottom: 22px;
+
+  margin-bottom: 17px;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     gap: 25px;
@@ -30,7 +31,8 @@
   position: relative;
 
   box-sizing: border-box;
-  padding: 13px 10px;
+  padding: 11px 10px 12px;
+  margin-bottom: 4px;
   background-color: transparent;
 
   border: 1px solid @fg-border;
@@ -89,6 +91,10 @@
   background-color: @fg-blue-light;
   border: none;
 
+  padding-top: 15px;
+  padding-left: 16px;
+  padding-bottom: 11px;
+
   .steps-select__select-text {
     width: 183px;
 
@@ -110,6 +116,10 @@
     display: block;
     color: @fg-main;
     opacity: 0.3;
+
+    position: relative;
+    top: -2px;
+    left: -6px;
   }
 
   &:hover {
@@ -183,9 +193,15 @@
   width: 130px;
   position: relative;
 
+  display: block;
+
   white-space: nowrap;
   overflow: hidden;
   text-align: left;
+
+  &--chooser {
+    letter-spacing: 0.02em;
+  }
 
   &::after {
     content: "";
@@ -206,7 +222,9 @@
 }
 
 .steps-select__flag {
-  padding: 8px;
+  padding: 8px 8px 0;
+  margin-bottom: 4px;
+
   border: 1px solid @fg-border;
   border-radius: 4px;
   position: relative;
@@ -362,7 +380,7 @@
 .steps-select__decorate-arrow {
   position: absolute;
   color: @fg-border;
-  bottom: -15px;
+  bottom: -11px;
   right: 49px;
 
   @media (min-width: @tablet-width) {
