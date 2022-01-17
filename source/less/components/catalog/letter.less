@@ -63,7 +63,8 @@
     }
 
     &--form {
-      height: 70px;
+      height: auto;
+      padding: 0;
       border-left: 1px solid @fg-border;
       border-bottom: 1px solid @fg-border;
 
@@ -165,6 +166,10 @@
     color: @bg-secondary;
     .common-font(60px, 60px, 700);
     opacity: 0.3;
+
+    &--form {
+      padding: 26px 16px 22px 20px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -230,6 +235,12 @@
       color: inherit;
     }
   }
+
+  &:checked + .letter__name--form {
+    @media (min-width: @tablet-width) {
+      font-weight: 500;
+    }
+  }
 }
 
 .letter__countries-list {
@@ -259,5 +270,15 @@
 
   .countries-list__item + .countries-list__item {
     margin-top: 4px;
+  }
+}
+
+.letter__countries-list--form.countries-list {
+  left: 350px;
+  top: 0;
+  height: 330px;
+
+  .countries-list__item + .countries-list__item {
+    margin-top: 0;
   }
 }
