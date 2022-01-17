@@ -20,7 +20,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: -259px;
+    margin-top: -258px;
     grid-template-columns: 1fr 95px 285px;
     grid-column-gap: 44px;
     grid-row-gap: 0;
@@ -42,8 +42,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 0;
-    margin-top: 42px;
+    margin-left: -4px;
+    margin-top: 31px;
     color: @fg-main;
   }
 }
@@ -108,8 +108,13 @@
 
   @media (min-width: @desktop-width) {
     width: 190px;
-    margin-bottom: 27px;
+    margin-bottom: 23px;
     margin-top: -4px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+
+    letter-spacing: 0;
+
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 
@@ -132,7 +137,8 @@
     }
 
     @media (min-width: @desktop-width) {
-      left: 30px;
+      left: 21px;
+      bottom: -14px;
     }
   }
 
@@ -164,14 +170,18 @@
   }
 
   @media (min-width: @tablet-width) {
-    .common-font(20px, 22px, 400);
     padding: 33px 38px 8px;
+
+    .common-font(20px, 22px, 400);
     letter-spacing: -0.15em;
   }
 
   @media (min-width: @desktop-width) {
-    .common-font(20px, 20px, 400);
+    padding-top: 37px;
+    padding-bottom: 12px;
     margin-right: 56px;
+
+    .common-font(20px, 20px, 400);
   }
 }
 
@@ -189,7 +199,16 @@
     }
 
     @media (min-width: @desktop-width) {
-      left: 145px;
+      left: 115px;
+      bottom: -11px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 3px;
+    margin-left: 41px;
+    margin-bottom: 3px;
+    padding-top: 22px;
+    padding-left: 18px;
   }
 }

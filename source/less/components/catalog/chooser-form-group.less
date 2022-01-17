@@ -134,10 +134,21 @@
     .common-font(20px, 22px, 700);
 
     &--personal-form {
+      position: absolute;
+      bottom: -12px;
+      left: 15px;
+
       padding-left: 18px;
       padding-right: 18px;
+
       text-align: center;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.07em;
+
+      background-color: @bg-lighter;
+
+      &::after {
+        content: none;
+      }
     }
   }
 }
