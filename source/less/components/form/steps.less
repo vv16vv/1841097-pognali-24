@@ -12,6 +12,10 @@
   &--dates .steps__button {
     width: 221px;
     margin-left: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 284px;
+    }
   }
 
   &--entertainment {
@@ -28,6 +32,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 48px 40px 56px;
+    border-radius: @block-overlap-form-tablet;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,6 +42,10 @@
 
 .steps__item + .steps__item {
   margin-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 38px;
+  }
 }
 
 .steps__title {

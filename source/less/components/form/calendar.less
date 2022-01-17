@@ -1,5 +1,9 @@
 .calendar {
   width: 220px;
+
+  @media (min-width: @tablet-width) {
+    width: 538px;
+  }
 }
 
 .calendar__month {
@@ -25,6 +29,10 @@
   align-items: center;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, auto);
+
+  @media (min-width: @tablet-width) {
+    width: 538px;
+  }
 }
 
 .calendar__day {
@@ -103,7 +111,8 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 25px;
-    padding-bottom: 26px;
+    padding-bottom: 25px;
+    padding-left: 14px;
 
     .common-font(18px, 18px, 400);
 
@@ -111,6 +120,17 @@
     &--weekend {
       padding-top: 9px;
       padding-bottom: 9px;
+    }
+
+    &--trip {
+      margin-top: -2px;
+      margin-left: -2px;
+      padding-left: 9px;
+    }
+
+    &--future {
+      padding-bottom: 24px;
+      padding-left: 9px;
     }
 
     &--trip,
