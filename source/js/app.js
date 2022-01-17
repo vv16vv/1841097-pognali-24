@@ -140,6 +140,11 @@ function toggleCountryChooser(id) {
   const flagMarker = chooser.getElementsByClassName("steps-select__no-flag")[0]
   flagMarker.classList.toggle("steps-select__no-flag--adder")
 
+  const buttonClass = "steps-select__button"
+  const button = chooser.getElementsByClassName(buttonClass)[0]
+  button.classList.toggle(`${buttonClass}--adder`)
+  button.classList.toggle(`${buttonClass}--chooser`)
+
   const popup = chooser.getElementsByClassName("steps-select__popup")[0]
   popup.classList.toggle("hidden")
 }
