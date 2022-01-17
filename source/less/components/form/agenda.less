@@ -50,12 +50,12 @@
     background-color: transparent;
 
     &::before {
-      top: 10px;
-      left: 12px;
+      top: 7px;
+      left: 11px;
     }
 
     &::after {
-      top: 12px;
+      top: 9px;
       left: 0;
     }
   }
@@ -82,18 +82,19 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 271px;
+    grid-template-columns: 730px 1fr;
     grid-row-gap: 26px;
     grid-template-areas: "name flag" "plan .";
 
     &--error::after {
-      width: calc(100% - 271px);
+      width: 730px;
+      margin-left: 0;
     }
   }
 }
 
 .agenda__item + .agenda__item {
-  margin-top: 13px;
+  margin-top: 16px;
 
   @media (min-width: @tablet-width) {
     margin-top: 45px;
@@ -114,6 +115,10 @@
     .common-font(30px, 30px, 700);
     letter-spacing: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -2px;
+  }
 }
 
 .agenda__flag {
@@ -127,7 +132,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 85px;
+    margin-top: 2px;
+    margin-left: 88px;
   }
 }
 
@@ -166,7 +172,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 26px 25px;
+    padding: 26px 15px 26px 25px;
+    margin-left: 0;
+
     line-height: 20px;
   }
 }
@@ -174,8 +182,8 @@
 .agenda__marker {
   position: absolute;
 
-  top: 10px;
-  left: -14px;
+  top: 11px;
+  left: -15px;
 
   width: 2px;
   height: calc(100% + 25px);
@@ -228,6 +236,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    right: 225px;
+    right: 192px;
   }
 }
