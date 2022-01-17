@@ -34,14 +34,18 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 37px 40px 37px;
+    padding: 38px 40px 37px;
     display: grid;
-    grid-template-columns: 1fr 175px 306px 106px;
+    grid-template-columns: 1fr 177px 304px 109px;
     grid-row-gap: 0;
     grid-template-areas: "plan-header plan-ntravellers plan-dates plan-change";
 
     &::before {
       content: none;
+    }
+
+    &:last-child .my-plan-card__description--dates {
+      margin-left: -9px;
     }
   }
 }
@@ -85,10 +89,15 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+    margin-top: -2px;
 
     &::before {
       position: relative;
-      margin-right: 36px;
+      margin-right: 33px;
+      right: -3px;
+      top: -1px;
+
+      .common-font(20px, 20px, 500);
     }
   }
 }
