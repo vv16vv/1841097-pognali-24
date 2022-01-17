@@ -21,7 +21,9 @@
 }
 
 .new-plan__wrapper {
-  width: 618px;
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    width: 618px;
+  }
 }
 
 .new-plan__header {
@@ -38,19 +40,20 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+    padding-left: 70px;
   }
 }
 
 .new-plan__title {
   @media (min-width: @desktop-width) {
-    margin-bottom: 54px;
+    margin-bottom: 53px;
   }
 }
 
 .new-plan__markers {
   @media (min-width: @desktop-width) {
     position: absolute;
-    right: 388px;
-    top: 252px;
+    right: 261px;
+    top: 250px;
   }
 }

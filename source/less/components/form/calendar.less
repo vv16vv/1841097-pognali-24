@@ -4,6 +4,10 @@
   @media (min-width: @tablet-width) {
     width: 538px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .calendar__month {
@@ -32,6 +36,10 @@
 
   @media (min-width: @tablet-width) {
     width: 538px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
@@ -138,7 +146,8 @@
       .common-font(20px, 20px, 500);
     }
 
-    &--today {
+    &--today,
+    &:focus {
       outline-width: 4px;
       outline-offset: -4px;
     }
@@ -146,19 +155,34 @@
 
   @media (min-width: @desktop-width) {
     text-align: left;
-    padding: 14px 15px 15px;
+    padding: 15px 15px 14px;
     min-height: 72px;
     box-sizing: border-box;
 
     &--name,
     &--weekend {
-      padding: 18px 16px 20px;
+      padding: 18px 16px 19px;
       min-height: auto;
+    }
+
+    &--trip {
+      margin-top: -11px;
+      margin-left: 0;
+    }
+
+    &--future {
+      margin-top: -7px;
+      margin-left: 0;
     }
 
     &--trip,
     &--future {
       .common-font(18px, 18px, 400);
+    }
+
+    &--today,
+    &:focus {
+      outline-offset: -2px;
     }
   }
 }
