@@ -5,7 +5,7 @@
     "change-photo change-photo"
     "tags tags"
     "transport transport";
-  grid-row-gap: 15px;
+  grid-row-gap: 16px;
   grid-column-gap: 35px;
   margin-bottom: 0;
 
@@ -32,7 +32,7 @@
 }
 
 .personal-form__level {
-  margin: 0 0 0 16px;
+  margin: -4px 0 0 16px;
   grid-area: level;
   color: @fg-blue-light;
 
@@ -189,9 +189,8 @@
   grid-area: transport;
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 8px;
-  padding-top: 24px;
-  padding-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 15px;
 
   .chooser-form-group__title {
     @media (min-width: @tablet-width) {
@@ -199,9 +198,17 @@
     }
 
     @media (min-width: @desktop-width) {
+      margin-bottom: -1px;
+
       left: 115px;
       bottom: -11px;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+    padding-bottom: 0;
+    margin-bottom: 8px;
   }
 
   @media (min-width: @desktop-width) {
