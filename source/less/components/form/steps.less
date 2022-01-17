@@ -59,6 +59,10 @@
       .steps__title {
         margin-bottom: 34px;
       }
+
+      .steps__button {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -190,9 +194,16 @@
 
   @media (min-width: @desktop-width) {
     padding-right: 33px;
+    margin-left: 0;
+    width: 286px;
 
     &--no-line::before {
       content: none;
+    }
+
+    &--back {
+      width: 228px;
+      margin-right: -31px;
     }
   }
 }
