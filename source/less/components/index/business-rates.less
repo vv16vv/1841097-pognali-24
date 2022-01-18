@@ -27,7 +27,7 @@
 }
 
 .business-rates__title {
-  margin-bottom: 28px;
+  margin-bottom: 27px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -42,7 +42,7 @@
 .business-rates__close {
   display: flex;
   padding-top: 21px;
-  padding-bottom: 21px;
+  padding-bottom: 15px;
   width: 100%;
   background-color: @bg-very-light;
   color: @fg-blue-light;
@@ -68,12 +68,15 @@
 }
 
 .business-rates__close-button {
-  background-color: @bg-very-light;
-  color: @fg-blue-light;
-  .common-font(16px, 24px, 700);
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  background-color: @bg-very-light;
+  color: @fg-blue-light;
+
+  .common-font(16px, 24px, 700);
+  text-transform: uppercase;
 
   &:focus {
     outline-color: @bg-main;
@@ -95,7 +98,7 @@
 
 .business-rates__list {
   .common-list();
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 52px;
@@ -112,6 +115,10 @@
   border-top: 1px solid @fg-border;
   display: flex;
   flex-direction: column;
+
+  &--likes {
+    padding-top: 9px;
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
