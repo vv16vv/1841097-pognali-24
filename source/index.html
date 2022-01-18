@@ -7,101 +7,125 @@
   <title>HTML Academy: Погнали</title>
   <link href="css/style.min.css" rel="stylesheet">
   <link href="favicon.svg" rel="icon">
-  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
-  <link rel="preconnect" href="https://maps.gstatic.com" crossorigin="anonymous">
-  <link rel="preconnect" href="https://maps.googleapis.com" crossorigin="anonymous">
+  <link
+    rel="preload"
+    href="fonts/bloggersans.woff2"
+    as="font"
+    crossorigin="anonymous">
+  <link
+    rel="preload"
+    href="fonts/bloggersans-bold.woff2"
+    as="font"
+    crossorigin="anonymous">
+  <link
+    rel="preload"
+    href="fonts/bloggersans-medium.woff2"
+    as="font"
+    crossorigin="anonymous">
+  <link
+    rel="preload"
+    href="fonts/bloggersans-light.woff2"
+    as="font"
+    crossorigin="anonymous">
+  <link
+    rel="preconnect"
+    href="https://maps.gstatic.com"
+    crossorigin="anonymous">
+  <link
+    rel="preconnect"
+    href="https://maps.googleapis.com"
+    crossorigin="anonymous">
 </head>
 <body class="page__body">
-<header class="page-header page-header--dark">
-  <div class="wrapper page-header__title-bar">
-    <a class="page-header__logo page-header__logo--dark button">
-      <svg
-        class="logo logo--mobile"
-        width="96"
-        height="15"
-      >
-        <use href="img/sprites/logo.svg#logo-mobile"></use>
-      </svg>
-      <svg
-        class="logo logo--tablet"
-        width="166"
-        height="42"
-      >
-        <use href="img/sprites/logo.svg#logo"></use>
-      </svg>
-    </a>
-    <ul class="page-header__menu-content-list menu menu--dark">
-      <li class="menu__item">
-        <a
-          class="menu__button button button--menu"
-          data-hover="О сервисе">
-          О сервисе
-        </a>
-      </li>
-      <li class="menu__item">
-        <a
-          class="menu__button button button--menu"
-          data-hover="Направления"
-          href="form.html">
-          Направления
-        </a>
-      </li>
-      <li class="menu__item">
-        <a
-          class="menu__button button button--menu"
-          data-hover="Попутчики"
-          href="catalog.html">
-          Попутчики
-        </a>
-      </li>
-    </ul>
-    <button
-      class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--open button"
-      type="button"
-      onclick="toggleMenu(true)">
-      <svg width="25" height="11">
-        <use href="img/sprites/icons.svg#menu-burger"/>
-      </svg>
-      <span class="visually-hidden">Открыть меню.</span>
-    </button>
-    <button
-      class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--close button hidden"
-      type="button"
-      onclick="toggleMenu(false)">
-      <svg width="18" height="19">
-        <use href="img/sprites/icons.svg#menu-close"/>
-      </svg>
-      <span class="visually-hidden">Закрыть меню.</span>
-    </button>
-    <div class="page-header__contact-buttons">
-      <div class="contact-buttons">
-        <a
-          class="contact-buttons__button contact-buttons__button--phone button button--form-round"
-          href="tel:88005558628">
-          <svg class="contact-buttons__button-image" width="18" height="18">
-            <use href="img/sprites/icons.svg#auth-phone"/>
-          </svg>
-          <span class="visually-hidden">8 800 555-86-28</span>
-        </a>
-        <a
-          class="contact-buttons__button contact-buttons__button--email button button--form-round"
-          href="mailto:mail@htmlacademy.ru">
-          <svg
-            class="contact-buttons__button-image"
-            width="16"
-            height="14">
-            <use href="img/sprites/icons.svg#auth-mail"/>
-          </svg>
-          <span class="visually-hidden">mail@htmlacademy.ru</span>
-        </a>
-        <button
-          class="contact-buttons__authorize button button--form-oval button--primary"
-          type="button">
-          авторизация
-        </button>
+<header class="page-header">
+  <div class="page-header__form-wrapper page-header__form-wrapper--dark">
+    <div class="wrapper page-header__title-bar">
+      <a class="page-header__logo page-header__logo--dark button">
+        <svg
+          class="logo logo--mobile"
+          width="96"
+          height="15"
+        >
+          <use href="img/sprites/logo.svg#logo-mobile"></use>
+        </svg>
+        <svg
+          class="logo logo--tablet"
+          width="166"
+          height="42"
+        >
+          <use href="img/sprites/logo.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="page-header__menu-content-list menu menu--dark">
+        <li class="menu__item">
+          <a
+            class="menu__button button button--menu"
+            data-hover="О сервисе">
+            О сервисе
+          </a>
+        </li>
+        <li class="menu__item">
+          <a
+            class="menu__button button button--menu"
+            data-hover="Направления"
+            href="form.html">
+            Направления
+          </a>
+        </li>
+        <li class="menu__item">
+          <a
+            class="menu__button button button--menu"
+            data-hover="Попутчики"
+            href="catalog.html">
+            Попутчики
+          </a>
+        </li>
+      </ul>
+      <button
+        class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--open button"
+        type="button"
+        onclick="toggleMenu(true)">
+        <svg width="25" height="11">
+          <use href="img/sprites/icons.svg#menu-burger"/>
+        </svg>
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+      <button
+        class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--close button hidden"
+        type="button"
+        onclick="toggleMenu(false)">
+        <svg width="18" height="19">
+          <use href="img/sprites/icons.svg#menu-close"/>
+        </svg>
+        <span class="visually-hidden">Закрыть меню.</span>
+      </button>
+      <div class="page-header__contact-buttons">
+        <div class="contact-buttons">
+          <a
+            class="contact-buttons__button contact-buttons__button--phone button button--form-round"
+            href="tel:88005558628">
+            <svg class="contact-buttons__button-image" width="18" height="18">
+              <use href="img/sprites/icons.svg#auth-phone"/>
+            </svg>
+            <span class="visually-hidden">8 800 555-86-28</span>
+          </a>
+          <a
+            class="contact-buttons__button contact-buttons__button--email button button--form-round"
+            href="mailto:mail@htmlacademy.ru">
+            <svg
+              class="contact-buttons__button-image"
+              width="16"
+              height="14">
+              <use href="img/sprites/icons.svg#auth-mail"/>
+            </svg>
+            <span class="visually-hidden">mail@htmlacademy.ru</span>
+          </a>
+          <button
+            class="contact-buttons__authorize button button--form-oval button--primary"
+            type="button">
+            авторизация
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -216,6 +240,9 @@
   <div class="intro">
     <div class="wrapper intro__wrapper">
       <section class="slogan slogan__wrapper">
+        <h2 class="visually-hidden">
+          Контакты сервиса.
+        </h2>
         <p class="slogan__text">
           В путешествие <br>
           с крутыми <br>
@@ -494,7 +521,11 @@
         <h2 class="traveller__title title">Попутчики</h2>
         <p class="traveller__description description">
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
-          Одному нужен пляж и коктейль, а&nbsp;другому маршрут для хайкинга.
+          Одному нужен пляж и коктейль,
+          <br class="description--tablet">
+          а
+          <br class="description--mobile">
+          другому маршрут для хайкинга.
         </p>
         <p class="traveller__slogan description description--selected">
           <span>Теперь можно легко</span>
@@ -503,7 +534,7 @@
       </header>
       <ul class="traveller__list">
         <li class="traveller__item">
-          <a class="traveller-card button" href="#">
+          <a class="traveller-card traveller-card--firsova button" href="#">
             <picture>
               <source
                 media="(min-width: 768px)"
@@ -599,7 +630,8 @@
               </svg>
               <span>Таня Фирсова</span>
             </p>
-            <ul class="traveller-card__tags traveller-card__wrapper tags">
+            <ul
+              class="traveller-card__tags traveller-card__wrapper tags tags--index">
               <li class="tags__item">#ЗОЖ</li>
               <li class="tags__item">#ПП</li>
               <li class="tags__item">#Фитнес</li>
@@ -661,7 +693,7 @@
           </a>
         </li>
         <li class="traveller__item">
-          <a class="traveller-card button" href="#">
+          <a class="traveller-card traveller-card--demin button" href="#">
             <picture>
               <source
                 media="(min-width: 768px)"
@@ -743,7 +775,8 @@
               </svg>
               <span>Петя Демин</span>
             </p>
-            <ul class="traveller-card__tags traveller-card__wrapper tags">
+            <ul
+              class="traveller-card__tags traveller-card__wrapper tags tags--index">
               <li class="tags__item">#бургер</li>
               <li class="tags__item">#бар</li>
               <li class="tags__item">#футбол</li>
@@ -865,7 +898,7 @@
               <p class="business-rates__text">Накрутка подписчиков</p>
               <p class="business-rates__text">от 1 руб./шт.</p>
             </li>
-            <li class="business-rates__item">
+            <li class="business-rates__item business-rates__item--likes">
               <p class="business-rates__text">Лайки от ботов</p>
               <p class="business-rates__text">от 20 коп./лайк</p>
             </li>
@@ -896,7 +929,8 @@
             <span>это быстро и бесплатно! <br></span>
             <span>Уже зарегистрированы? Тогда</span>
             <span>скорее
-              <a class="contacts__authorize button" href="#">
+              <!--suppress HtmlUnknownTarget -->
+              <a class="contacts__authorize button" href="authorize.html">
                 авторизуйтесь.
               </a></span>
           </p>
@@ -970,14 +1004,14 @@
             <span class="address__part">ул. Большая</span>
             <span class="address__part">Конюшенная, 19/8</span>
           </p>
-          <button
+          <a
             class="address__button button button--form-rectangle button--with-icon button--route"
-            type="button">
+            href="https://www.google.ru/maps/@59.9569007,30.3333151,14.33z?hl=ru">
             <span class="button__text">Проложить маршрут</span>
             <svg class="button__icon-right" width="14" height="16">
               <use href="img/sprites/icons.svg#arrow-forward"/>
             </svg>
-          </button>
+          </a>
         </div>
       </div>
       <iframe
@@ -1023,7 +1057,7 @@
     </address>
   </section>
 </main>
-<footer class="page-footer">
+<footer class="page-footer page-footer--index">
   <div class="wrapper page-footer__wrapper">
     <a class="page-footer__logo logo button" href="#">
       <svg
@@ -1083,7 +1117,8 @@
       </li>
     </ul>
     <a
-      class="page-footer__developer-button button">
+      class="page-footer__developer-button button"
+      href="https://htmlacademy.ru/intensive/adaptive">
       <span class="page-footer__developer-text">Разработано</span>
       <img
         class="developer-logo__image"

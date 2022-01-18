@@ -7,107 +7,127 @@
   <title>HTML Academy: Погнали</title>
   <link href="css/style.min.css" rel="stylesheet">
   <link href="favicon.svg" rel="icon">
-  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
-  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+  <link
+    rel="preload"
+    href="fonts/bloggersans.woff2"
+    as="font"
+    crossorigin="anonymous">
+  <link
+    rel="preload"
+    href="fonts/bloggersans-bold.woff2"
+    as="font"
+    crossorigin="anonymous">
+  <link
+    rel="preload"
+    href="fonts/bloggersans-medium.woff2"
+    as="font"
+    crossorigin="anonymous">
+  <link
+    rel="preload"
+    href="fonts/bloggersans-light.woff2"
+    as="font"
+    crossorigin="anonymous">
 </head>
 <body class="page__body">
-<header
-  class="page-header page-header--dark page-header--inner page-header--destination">
-  <div class="wrapper page-header__wrapper">
-    <div class="page-header__title-bar">
-      <a
-        class="page-header__logo page-header__logo--dark button"
-        href="index.html">
-        <svg
-          class="logo logo--mobile"
-          width="96"
-          height="15"
-        >
-          <use href="img/sprites/logo.svg#logo-mobile"></use>
-        </svg>
-        <svg
-          class="logo logo--tablet"
-          width="166"
-          height="42"
-        >
-          <use href="img/sprites/logo.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="page-header__menu-content-list menu menu--dark">
-        <li class="menu__item">
-          <a
-            class="menu__button button button--menu"
-            data-hover="О сервисе"
-            href="index.html">
-            О сервисе
-          </a>
-        </li>
-        <li class="menu__item">
-          <a
-            class="menu__button button button--menu"
-            data-hover="Направления">
-            Направления
-          </a>
-        </li>
-        <li class="menu__item">
-          <a
-            class="menu__button button button--menu"
-            data-hover="Попутчики"
-            href="catalog.html">
-            Попутчики
-          </a>
-        </li>
-      </ul>
-      <button
-        class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--open button"
-        type="button"
-        onclick="toggleMenu(true)">
-        <svg width="25" height="11">
-          <use href="img/sprites/icons.svg#menu-burger"/>
-        </svg>
-        <span class="visually-hidden">Открыть меню.</span>
-      </button>
-      <button
-        class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--close button hidden"
-        type="button"
-        onclick="toggleMenu(false)">
-        <svg width="18" height="19">
-          <use href="img/sprites/icons.svg#menu-close"/>
-        </svg>
-        <span class="visually-hidden">Закрыть меню.</span>
-      </button>
-      <div class="page-header__contact-buttons">
-        <div class="contact-buttons">
-          <a
-            class="contact-buttons__button contact-buttons__button--phone button button--form-round"
-            href="tel:88005558628">
-            <svg class="contact-buttons__button-image" width="18" height="18">
-              <use href="img/sprites/icons.svg#auth-phone"/>
-            </svg>
-            <span class="visually-hidden">8 800 555-86-28</span>
-          </a>
-          <a
-            class="contact-buttons__button contact-buttons__button--email button button--form-round"
-            href="mailto:mail@htmlacademy.ru">
-            <svg
-              class="contact-buttons__button-image"
-              width="16"
-              height="14">
-              <use href="img/sprites/icons.svg#auth-mail"/>
-            </svg>
-            <span class="visually-hidden">mail@htmlacademy.ru</span>
-          </a>
-          <button
-            class="contact-buttons__authorize button button--form-oval button--primary"
-            type="button">
-            авторизация
-          </button>
+<header class="page-header page-header--form">
+  <div
+    class="page-header__form-wrapper page-header__form-wrapper--inner page-header__form-wrapper--dark">
+    <div class="wrapper page-header__wrapper">
+      <div class="page-header__title-bar">
+        <a
+          class="page-header__logo page-header__logo--dark button"
+          href="index.html">
+          <svg
+            class="logo logo--mobile"
+            width="96"
+            height="15"
+          >
+            <use href="img/sprites/logo.svg#logo-mobile"></use>
+          </svg>
+          <svg
+            class="logo logo--tablet"
+            width="166"
+            height="42"
+          >
+            <use href="img/sprites/logo.svg#logo"></use>
+          </svg>
+        </a>
+        <ul class="page-header__menu-content-list menu menu--dark">
+          <li class="menu__item">
+            <a
+              class="menu__button button button--menu"
+              data-hover="О сервисе"
+              href="index.html">
+              О сервисе
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              class="menu__button button button--menu"
+              data-hover="Направления">
+              Направления
+            </a>
+          </li>
+          <li class="menu__item">
+            <a
+              class="menu__button button button--menu"
+              data-hover="Попутчики"
+              href="catalog.html">
+              Попутчики
+            </a>
+          </li>
+        </ul>
+        <button
+          class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--open button"
+          type="button"
+          onclick="toggleMenu(true)">
+          <svg width="25" height="11">
+            <use href="img/sprites/icons.svg#menu-burger"/>
+          </svg>
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
+        <button
+          class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--close button hidden"
+          type="button"
+          onclick="toggleMenu(false)">
+          <svg width="18" height="19">
+            <use href="img/sprites/icons.svg#menu-close"/>
+          </svg>
+          <span class="visually-hidden">Закрыть меню.</span>
+        </button>
+        <div class="page-header__contact-buttons">
+          <div class="contact-buttons">
+            <a
+              class="contact-buttons__button contact-buttons__button--phone button button--form-round"
+              href="tel:88005558628">
+              <svg class="contact-buttons__button-image" width="18" height="18">
+                <use href="img/sprites/icons.svg#auth-phone"/>
+              </svg>
+              <span class="visually-hidden">8 800 555-86-28</span>
+            </a>
+            <a
+              class="contact-buttons__button contact-buttons__button--email button button--form-round"
+              href="mailto:mail@htmlacademy.ru">
+              <svg
+                class="contact-buttons__button-image"
+                width="16"
+                height="14">
+                <use href="img/sprites/icons.svg#auth-mail"/>
+              </svg>
+              <span class="visually-hidden">mail@htmlacademy.ru</span>
+            </a>
+            <button
+              class="contact-buttons__authorize button button--form-oval button--primary"
+              type="button">
+              авторизация
+            </button>
+          </div>
         </div>
       </div>
+      <div class="page-header__inner-bar inner-bar">
+        <p class="inner-bar__title">Направления</p>
+      </div>
     </div>
-    <p class="page-header__inner-title">Направления</p>
   </div>
   <div class="menu-content-popup menu-content-popup--nojs popup">
     <nav class="menu-content wrapper">
@@ -217,7 +237,7 @@
 </header>
 <main>
   <h1 class="visually-hidden">Персональные данные и планы.</h1>
-  <section class="personal">
+  <section class="personal personal--form">
     <div class="wrapper personal__wrapper">
       <h2 class="visually-hidden">Персональные данные.</h2>
       <form
@@ -377,9 +397,11 @@
             3 попутчика
           </p>
           <p class="my-plan-card__description my-plan-card__description--dates">
-            26 мар — 29 мар
+            26 мар &#8213; 29 мар
           </p>
-          <a class="my-plan-card__button button button--change" href="#">
+          <a
+            class="my-plan-card__button button button--change"
+            href="plan.html?id=1">
             изменить
           </a>
         </li>
@@ -389,9 +411,11 @@
             1 попутчик
           </p>
           <p class="my-plan-card__description my-plan-card__description--dates">
-            1 июл — 15 июл
+            1 июл &#8213; 15 июл
           </p>
-          <a class="my-plan-card__button button button--change" href="#">
+          <a
+            class="my-plan-card__button button button--change"
+            href="plan.html?id=2">
             изменить
           </a>
         </li>
@@ -399,1602 +423,1652 @@
     </div>
   </section>
   <section class="new-plan">
-    <div class="wrapper">
+    <div class="wrapper new-plan__wrapper">
       <div class="new-plan__header">
         <h2 class="new-plan__title title title--page-destination">
           Добавить план:
         </h2>
-        <ol class="new-plan__markers new-plan-markers">
-          <li class="new-plan-markers__item new-plan-markers__item--current">
+        <ol class="new-plan__markers new-plan__markers--dates new-plan-markers">
+          <li
+            class="new-plan-markers__item new-plan-markers__item--dates new-plan-markers__item--current">
             <span class="new-plan-markers__step-name">Даты</span>
             <span class="new-plan-markers__step-dot">.</span>
           </li>
-          <li class="new-plan-markers__item">
+          <li class="new-plan-markers__item new-plan-markers__item--route">
             <span class="new-plan-markers__step-name">маршрут</span>
             <span class="new-plan-markers__step-dot">.</span>
           </li>
-          <li class="new-plan-markers__item">
+          <li class="new-plan-markers__item new-plan-markers__item--entertainment">
             <span class="new-plan-markers__step-name">развлечения</span>
             <span class="new-plan-markers__step-dot">.</span>
           </li>
         </ol>
       </div>
-      <ol class="new-plan__list steps">
-        <li class="steps__item">
-          <h3 class="steps__title steps-title">
-            <span>Шаг 1.</span>
-            <span>Даты пребывания</span>
-          </h3>
-          <p class="steps__description">
-            <span>Укажите предпочтительное количество попутчиков, которых</span>
-            <span>вы хотели бы позвать в поездку, и ее предполагаемую длительность.</span>
-          </p>
-          <form
-            class="step-dates"
-            action="https://echo.htmlacademy.ru/"
-            method="post">
-            <div class="step-dates__travellers range-control">
-              <label
-                class="range-control__title range-control__title-name"
-                for="field-total-travellers">
-                ищу попутчиков:
-              </label>
-              <label
-                class="range-control__title range-control__title-unit"
-                for="field-total-travellers">
-                чел.
-              </label>
-              <div class="range-control__field-with-buttons">
-                <button
-                  class="range-control__button button"
-                  type="button">
-                  <svg
-                    class="range-control__button-content range-control__button-content--minus"
-                    width="14"
-                    height="2">
-                    <use href="img/sprites/icons.svg#range-control-minus"/>
-                  </svg>
-                  <span class="visually-hidden">Уменьшить на 1.</span>
-                </button>
-                <input
-                  class="range-control__field"
-                  type="number"
-                  id="field-total-travellers"
-                  name="field-total-travellers"
-                  min="0"
-                  value="2"
-                  required>
-                <button
-                  class="range-control__button button"
-                  type="button">
-                  <svg
-                    class="range-control__button-content range-control__button-content--plus"
-                    width="14"
-                    height="14">
-                    <use href="img/sprites/icons.svg#range-control-plus"/>
-                  </svg>
-                  <span class="visually-hidden">Увеличить на 1.</span>
-                </button>
+      <form
+        action="https://echo.htmlacademy.ru/"
+        method="post">
+        <ol class="new-plan__list steps">
+          <li class="steps__item steps__item--dates">
+            <h3 class="steps__title steps-title">
+              <span>Шаг 1.</span>
+              <span>Даты пребывания</span>
+            </h3>
+            <p class="steps__description">
+              <span>Укажите предпочтительное количество попутчиков, которых</span>
+              <span>вы хотели бы позвать в поездку, и ее предполагаемую длительность.</span>
+            </p>
+            <div class="step-dates">
+              <div class="step-dates__travellers range-control">
+                <label
+                  class="range-control__title range-control__title-name"
+                  for="field-total-travellers">
+                  ищу попутчиков:
+                </label>
+                <label
+                  class="range-control__title range-control__title-unit"
+                  for="field-total-travellers">
+                  чел.
+                </label>
+                <div class="range-control__field-with-buttons">
+                  <button
+                    class="range-control__button button"
+                    type="button">
+                    <svg
+                      class="range-control__button-content range-control__button-content--minus"
+                      width="14"
+                      height="2">
+                      <use href="img/sprites/icons.svg#range-control-minus"/>
+                    </svg>
+                    <span class="visually-hidden">Уменьшить на 1.</span>
+                  </button>
+                  <input
+                    class="range-control__field"
+                    type="number"
+                    id="field-total-travellers"
+                    name="field-total-travellers"
+                    min="0"
+                    value="2"
+                    required>
+                  <button
+                    class="range-control__button button"
+                    type="button">
+                    <svg
+                      class="range-control__button-content range-control__button-content--plus"
+                      width="14"
+                      height="14">
+                      <use href="img/sprites/icons.svg#range-control-plus"/>
+                    </svg>
+                    <span class="visually-hidden">Увеличить на 1.</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="step-dates__dates range-control">
-              <label
-                class="range-control__title range-control__title-name"
-                for="field-duration">
-                длительность:
-              </label>
-              <label
-                class="range-control__title range-control__title-unit"
-                for="field-duration">
-                дн.
-              </label>
-              <div class="range-control__field-with-buttons">
-                <button
-                  class="range-control__button button"
-                  type="button">
-                  <svg
-                    class="range-control__button-content range-control__button-content--minus"
-                    width="14"
-                    height="2">
-                    <use href="img/sprites/icons.svg#range-control-minus"/>
-                  </svg>
-                  <span class="visually-hidden">Уменьшить на 1.</span>
-                </button>
-                <input
-                  class="range-control__field"
-                  type="number"
-                  id="field-duration"
-                  name="field-duration"
-                  min="0"
-                  placeholder="3"
-                  required>
-                <button
-                  class="range-control__button button"
-                  type="button">
-                  <svg
-                    class="range-control__button-content range-control__button-content--plus"
-                    width="14"
-                    height="14">
-                    <use href="img/sprites/icons.svg#range-control-plus"/>
-                  </svg>
-                  <span class="visually-hidden">Увеличить на 1.</span>
-                </button>
+              <div class="step-dates__dates range-control">
+                <label
+                  class="range-control__title range-control__title-name"
+                  for="field-duration">
+                  длительность:
+                </label>
+                <label
+                  class="range-control__title range-control__title-unit"
+                  for="field-duration">
+                  дн.
+                </label>
+                <div class="range-control__field-with-buttons">
+                  <button
+                    class="range-control__button button"
+                    type="button">
+                    <svg
+                      class="range-control__button-content range-control__button-content--minus"
+                      width="14"
+                      height="2">
+                      <use href="img/sprites/icons.svg#range-control-minus"/>
+                    </svg>
+                    <span class="visually-hidden">Уменьшить на 1.</span>
+                  </button>
+                  <input
+                    class="range-control__field"
+                    type="number"
+                    id="field-duration"
+                    name="field-duration"
+                    min="0"
+                    placeholder="3"
+                    required>
+                  <button
+                    class="range-control__button button"
+                    type="button">
+                    <svg
+                      class="range-control__button-content range-control__button-content--plus"
+                      width="14"
+                      height="14">
+                      <use href="img/sprites/icons.svg#range-control-plus"/>
+                    </svg>
+                    <span class="visually-hidden">Увеличить на 1.</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div
-              class="step-dates__with-children with-children-control">
-              <label class="with-children-control__label">
-                <input
-                  class="with-children-control__checkbox"
-                  type="checkbox"
-                  id="field-with-children"
-                  name="field-with-children"
-                  checked>
-                <span class="with-children-control__mark"></span>
-                <span class="with-children-control__text">
+              <div
+                class="step-dates__with-children with-children-control">
+                <label class="with-children-control__label">
+                  <input
+                    class="with-children-control__checkbox"
+                    type="checkbox"
+                    id="field-with-children"
+                    name="field-with-children"
+                    checked>
+                  <span class="with-children-control__mark"></span>
+                  <span class="with-children-control__text">
                     Можно с детьми
                   </span>
-              </label>
-            </div>
-            <div class="step-dates__calendar calendar">
-              <div class="calendar__month calendar-month">
-                <button
-                  class="calendar-month__button calendar-month__button--prev button"
-                  type="button">
-                  <svg
-                    class="calendar-month__button-image calendar-month__button-image--prev"
-                    width="9"
-                    height="18">
-                    <use href="img/sprites/icons.svg#month-back"/>
-                  </svg>
-                  <span class="visually-hidden">Предыдущий месяц.</span>
-                </button>
-                <span class="calendar-month__name">Март</span>
-                <span class="calendar-month__year">2019</span>
-                <button
-                  class="calendar-month__button calendar-month__button--next button"
-                  type="button">
-                  <svg
-                    class="calendar-month__button-image calendar-month__button-image--next"
-                    width="9"
-                    height="18">
-                    <use href="img/sprites/icons.svg#month-back"/>
-                  </svg>
-                  <span class="visually-hidden">Следующий месяц.</span>
-                </button>
+                </label>
               </div>
-              <ul class="calendar__days">
-                <li class="calendar__day calendar__day--name">
-                  П<span class="calendar__day--long">н</span>
-                </li>
-                <li class="calendar__day calendar__day--name">
-                  В<span class="calendar__day--long">т</span>
-                </li>
-                <li class="calendar__day calendar__day--name">
-                  С<span class="calendar__day--long">р</span>
-                </li>
-                <li class="calendar__day calendar__day--name">
-                  Ч<span class="calendar__day--long">т</span>
-                </li>
-                <li class="calendar__day calendar__day--name">
-                  П<span class="calendar__day--long">т</span>
-                </li>
-                <li class="calendar__day calendar__day--weekend">
-                  С<span class="calendar__day--long">б</span>
-                </li>
-                <li class="calendar__day calendar__day--weekend">
-                  В<span class="calendar__day--long">с</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">23</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">24</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">25</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">26</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">27</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">28</span>
-                </li>
-                <li class="calendar__day">
+              <div class="step-dates__calendar calendar">
+                <div class="calendar__month calendar-month">
+                  <button
+                    class="calendar-month__button calendar-month__button--prev button"
+                    type="button">
+                    <svg
+                      class="calendar-month__button-image calendar-month__button-image--prev"
+                      width="9"
+                      height="18">
+                      <use href="img/sprites/icons.svg#month-back"/>
+                    </svg>
+                    <span class="visually-hidden">Предыдущий месяц.</span>
+                  </button>
+                  <span class="calendar-month__name">Март</span>
+                  <span class="calendar-month__year">2019</span>
+                  <button
+                    class="calendar-month__button calendar-month__button--next button"
+                    type="button">
+                    <svg
+                      class="calendar-month__button-image calendar-month__button-image--next"
+                      width="9"
+                      height="18">
+                      <use href="img/sprites/icons.svg#month-back"/>
+                    </svg>
+                    <span class="visually-hidden">Следующий месяц.</span>
+                  </button>
+                </div>
+                <ul class="calendar__days">
+                  <li class="calendar__day calendar__day--name">
+                    П<span class="calendar__day--long">н</span>
+                  </li>
+                  <li class="calendar__day calendar__day--name">
+                    В<span class="calendar__day--long">т</span>
+                  </li>
+                  <li class="calendar__day calendar__day--name">
+                    С<span class="calendar__day--long">р</span>
+                  </li>
+                  <li class="calendar__day calendar__day--name">
+                    Ч<span class="calendar__day--long">т</span>
+                  </li>
+                  <li class="calendar__day calendar__day--name">
+                    П<span class="calendar__day--long">т</span>
+                  </li>
+                  <li class="calendar__day calendar__day--weekend">
+                    С<span class="calendar__day--long">б</span>
+                  </li>
+                  <li class="calendar__day calendar__day--weekend">
+                    В<span class="calendar__day--long">с</span>
+                  </li>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">23</span>
+                  </li>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">24</span>
+                  </li>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">25</span>
+                  </li>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">26</span>
+                  </li>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">27</span>
+                  </li>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">28</span>
+                  </li>
+                  <li class="calendar__day">
                   <span class="calendar__day--past">
                     1
                     <span class="calendar__day--new-month">мар</span>
                   </span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">2</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">3</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">4</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">5</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">6</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">7</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">8</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">9</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">10</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">11</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">12</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">13</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">14</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">15</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">16</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">17</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">18</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">19</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">20</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">21</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">22</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">23</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">24</span>
-                </li>
-                <li class="calendar__day">
-                  <span class="calendar__day--past">25</span>
-                </li>
-                <li
-                  class="calendar__day calendar__day--today calendar__day--trip">
-                  26
-                  <p class="calendar__day--trip-mark">Заезд</p>
-                </li>
-                <li class="calendar__day calendar__day--trip">27</li>
-                <li class="calendar__day calendar__day--trip">
-                  28
-                  <p class="calendar__day--trip-mark">Выезд</p>
-                </li>
-                <li class="calendar__day calendar__day--future">29</li>
-                <li class="calendar__day calendar__day--future">30</li>
-                <li class="calendar__day calendar__day--future">31</li>
-                <li class="calendar__day calendar__day--future">
-                  1
-                  <span class="calendar__day--new-month">апр</span>
-                </li>
-                <li class="calendar__day calendar__day--future">2</li>
-                <li class="calendar__day calendar__day--future">3</li>
-                <li class="calendar__day calendar__day--future">4</li>
-                <li class="calendar__day calendar__day--future">5</li>
-              </ul>
-            </div>
-            <button
-              class="step-dates__button steps__button button--with-icon button button--form-oval button--primary"
-              type="submit">
-              <span class="button__text">Следующий шаг</span>
-              <svg class="button__icon-right" width="14" height="14">
-                <use href="img/sprites/icons.svg#arrow-forward"/>
-              </svg>
-            </button>
-          </form>
-        </li>
-        <li class="steps__item">
-          <h3 class="steps__title steps-title">
-            <span>Шаг 2.</span>
-            <span>Маршрут</span>
-          </h3>
-          <p class="steps__description">
-            <span>Укажите страны, которые вы хотели бы посетить.</span>
-            <span>Это может быть одна или сразу несколько.</span>
-          </p>
-          <form
-            class="step-route"
-            action="https://echo.htmlacademy.ru/"
-            method="post">
-            <div class="steps-select" id="steps-select-1">
-              <label class="visually-hidden" for="country-chosen-country-1">
-                Выберите страну
-              </label>
-              <button
-                class="steps-select__select"
-                id="country-chosen-country-1"
-                name="country-chosen-country-1"
-                aria-expanded="false"
-                type="button"
-              >
-                <span class="steps-select__select-text">
-                  Босния и герцеговина
-                </span>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--selector"
-                  width="7"
-                  height="11">
-                  <use href="img/sprites/icons.svg#arrow-select"/>
-                </svg>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--adder"
-                  width="9"
-                  height="9">
-                  <use href="img/sprites/icons.svg#range-control-plus"/>
-                </svg>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--chooser"
-                  width="9"
-                  height="9">
-                  <use href="img/sprites/icons.svg#filter-close"/>
-                </svg>
-              </button>
-              <div class="steps-select__flag">
-                <picture>
-                  <source
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                    srcset="img/flags/Bosnia-and-Herzegovina-tablet.webp 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.webp 2x"
-                  >
-                  <source
-                    type="image/webp"
-                    srcset="img/flags/Bosnia-and-Herzegovina.webp 1x, img/flags/Bosnia-and-Herzegovina@2x.webp 2x"
-                  >
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="img/flags/Bosnia-and-Herzegovina-tablet.png 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.png 2x"
-                  >
-                  <img
-                    class="steps-select__flag-img"
-                    src="img/flags/Bosnia-and-Herzegovina.png"
-                    srcset="img/flags/Bosnia-and-Herzegovina@2x.png 2x"
-                    width="35"
-                    height="25"
-                    alt="Флаг Боснии и Герцеговины."
-                  >
-                </picture>
-              </div>
-              <button
-                class="steps-select__button button button--form-round"
-                type="button">
-                <svg class="steps-select__button-image" width="9" height="9">
-                  <use href="img/sprites/icons.svg#filter-close"/>
-                </svg>
-                <span class="visually-hidden">Убрать выбранную страну.</span>
-              </button>
-              <svg class="steps-select__decorate-arrow" width="8" height="11">
-                <use href="img/sprites/icons.svg#arrow-down"/>
-              </svg>
-            </div>
-            <div class="steps-select" id="steps-select-2">
-              <label class="visually-hidden" for="country-chosen-country-2">
-                Выберите страну
-              </label>
-              <button
-                class="steps-select__select"
-                id="country-chosen-country-2"
-                name="country-chosen-country-2"
-                type="button"
-                aria-expanded="false"
-              >
-                <span>чехия</span>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--selector"
-                  width="7"
-                  height="11">
-                  <use href="img/sprites/icons.svg#arrow-select"/>
-                </svg>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--adder"
-                  width="9"
-                  height="9">
-                  <use href="img/sprites/icons.svg#range-control-plus"/>
-                </svg>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--chooser"
-                  width="9"
-                  height="9">
-                  <use href="img/sprites/icons.svg#filter-close"/>
-                </svg>
-              </button>
-              <div class="steps-select__flag">
-                <picture class="steps-select__flag-img">
-                  <source
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                    srcset="img/flags/Czech-tablet.webp 1x, img/flags/Czech-tablet@2x.webp 2x"
-                  >
-                  <source
-                    type="image/webp"
-                    srcset="img/flags/Czech.webp 1x, img/flags/Czech@2x.webp 2x"
-                  >
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
-                  >
-                  <img
-                    class="steps-select__flag-img"
-                    src="img/flags/Czech.png"
-                    srcset="img/flags/Czech@2x.png 2x"
-                    width="35"
-                    height="25"
-                    alt="Флаг Чехии."
-                  >
-                </picture>
-              </div>
-              <button
-                class="steps-select__button button button--form-round"
-                type="button">
-                <svg class="steps-select__button-image" width="9" height="9">
-                  <use href="img/sprites/icons.svg#filter-close"/>
-                </svg>
-                <span class="visually-hidden">Убрать выбранную страну.</span>
-              </button>
-              <svg class="steps-select__decorate-arrow" width="8" height="11">
-                <use href="img/sprites/icons.svg#arrow-down"/>
-              </svg>
-            </div>
-            <div class="steps-select" id="steps-select-3">
-              <label class="visually-hidden" for="country-chooser-3">
-                Выберите страну
-              </label>
-              <button
-                class="steps-select__select steps-select__select--adder"
-                id="country-chooser-3"
-                name="country-chooser-3"
-                aria-expanded="false"
-                onclick="toggleCountryChooser('steps-select-3')"
-                type="button"
-              >
-                  <span
-                    class="steps-select__select-text hidden">
-                    Выберите страну
-                  </span>
-                <span class="steps-select__select-text">
-                    Добавить страну
-                  </span>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--selector"
-                  width="7"
-                  height="11">
-                  <use href="img/sprites/icons.svg#arrow-select"/>
-                </svg>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--adder"
-                  width="9"
-                  height="9">
-                  <use href="img/sprites/icons.svg#range-control-plus"/>
-                </svg>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--chooser"
-                  width="9"
-                  height="9">
-                  <use href="img/sprites/icons.svg#filter-close"/>
-                </svg>
-              </button>
-              <div class="steps-select__no-flag steps-select__no-flag--adder"></div>
-              <button
-                class="steps-select__button steps-select__button--chooser button button--form-round"
-                type="button">
-                <svg class="steps-select__button-image" width="9" height="9">
-                  <use href="img/sprites/icons.svg#filter-close"/>
-                </svg>
-                <span class="visually-hidden">Убрать выбранную страну.</span>
-              </button>
-              <svg class="steps-select__decorate-arrow" width="8" height="11">
-                <use href="img/sprites/icons.svg#arrow-down"/>
-              </svg>
-              <div class="steps-select__popup step-select-popup popup hidden">
-                <ul class="step-select-popup__letters letters letters--form">
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-a"
-                      checked>
-                    <label class="letter__name button" for="letter-a">
-                      А
-                    </label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Австралия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Австрия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Азербайджан</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Албания</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Алжир</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Ангола</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Андорра</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Антигуа
-                          и
-                          Барбуда
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Аргентина</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Армения</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Афганистан</a>
-                      </li>
-                    </ul>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-b">
-                    <label class="letter__name button" for="letter-b">
-                      Б
-                    </label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Багамские острова
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Бангладеш</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Барбадос</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Бахрейн</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Белоруссия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Белиз</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Бельгия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Бенин</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Болгария</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Босния
-                          и
-                          Герцеговина</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Ботсвана</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Бразилия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Бруней</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Буркина-Фасо
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Бурунди</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Бутан</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">2</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-v">
-                    <label class="letter__name button" for="letter-v">
-                      В
-                    </label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Вануату
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Великобритания
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Венгрия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Венесуэла</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Восточный Тимор
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Вьетнам</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">3</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-g">
-                    <label class="letter__name button" for="letter-g">
-                      Г
-                    </label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Габон
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Гаити
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Гайана</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Гамбия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Гана
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Гватемала</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Гвинея</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Гвинея-Бисау
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Германия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Гондурас</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Гренада</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Греция</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Грузия</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">4</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-d">
-                    <label class="letter__name button" for="letter-d">
-                      Д
-                    </label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Дания
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Джибути
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Доминика</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Доминикана</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">5</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-ie">
-                    <label class="letter__name button" for="letter-ie">
-                      Е
-                    </label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Египет
-                        </a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">6</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-z">
-                    <label class="letter__name button" for="letter-z">З</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Замбия
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Зимбабве
-                        </a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">7</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-i">
-                    <label class="letter__name button" for="letter-i">И</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Израиль
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Индия
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Индонезия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Иордания</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Ирак
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Иран</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Ирландия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Исландия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Испания</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Италия</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">8</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-k">
-                    <label class="letter__name button" for="letter-k">К</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Кабо-Верде
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Казахстан
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Камбоджа</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Камерун</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Канада
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Катар</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Кения</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Кипр</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Киргизия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Кирибати</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Китай</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Колумбия</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">9</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-l">
-                    <label class="letter__name button" for="letter-l">Л</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Лаос
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Латвия
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Лесото</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Либерия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Ливан
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Ливия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Литва</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Лихтенштейн
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Люксембург</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">10</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-m">
-                    <label class="letter__name button" for="letter-m">М</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Маврикий
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Мавритания
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Мадагаскар</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Малави</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Малайзия
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Мали</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Мальдивы</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Мальта</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Марокко</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">11</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-n">
-                    <label class="letter__name button" for="letter-n">Н</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Намибия
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Науру
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Непал</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Нигер</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Нигерия
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Нидерланды</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Никарагуа</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Новая
-                          Зеландия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Норвегия</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">12</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-o">
-                    <label class="letter__name button" for="letter-o">О</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          ОАЭ
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Оман
-                        </a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">13</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-p">
-                    <label class="letter__name button" for="letter-p">П</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Пакистан
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Палау
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Панама</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Папуа
-                          -
-                          Новая Гвинея</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Парагвай
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Перу</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Польша</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Португалия</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">14</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-r">
-                    <label class="letter__name button" for="letter-r">Р</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Руанда
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Румыния
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Россия</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">15</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-s">
-                    <label class="letter__name button" for="letter-s">С</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Сальвадор
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Самоа
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Сан-Марино</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Саудовская
-                          Аравия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Сейшелы
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Сенегал</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Сербия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Сингапур</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Сирия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Словакия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Словения</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">США</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">16</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-t">
-                    <label class="letter__name button" for="letter-t">Т</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Таджикистан
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Таиланд
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Танзания</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Того</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Тонга
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Тринидад
-                          и
-                          Тобаго</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Тувалу</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Тунис</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Туркмения</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Турция</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">17</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-u">
-                    <label class="letter__name button" for="letter-u">У</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Уганда
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Узбекистан
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Украина</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Уругвай</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">18</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-f">
-                    <label class="letter__name button" for="letter-f">Ф</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Фиджи
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Филиппины
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Финляндия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Франция</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">19</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-h">
-                    <label class="letter__name button" for="letter-h">Х</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Хорватия
-                        </a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">20</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-ch">
-                    <label class="letter__name button" for="letter-ch">Ч</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Чад
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Черногория
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Чехия</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a
-                          class="countries-list__button button"
-                          href="#">Чили</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">21</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-sh">
-                    <label class="letter__name button" for="letter-sh">Ш</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Швейцария
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Швеция
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Шри-Ланка</a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">22</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-e">
-                    <label class="letter__name button" for="letter-e">Э</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Эквадор
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Эритрея
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Эсватини</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">Эстония</a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Эфиопия
-                        </a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">23</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-iu">
-                    <label class="letter__name button" for="letter-iu">Ю</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          ЮАР
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Южный Судан
-                        </a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">24</span>
                   </li>
-                  <li class="letters__item letter letter--form">
-                    <input
-                      class="letter__name-radio" type="radio"
-                      name="letters" id="letter-ia">
-                    <label class="letter__name button" for="letter-ia">Я</label>
-                    <ul class="letter__countries-list countries-list">
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Ямайка
-                        </a>
-                      </li>
-                      <li class="countries-list__item">
-                        <a class="countries-list__button button" href="#">
-                          Япония
-                        </a>
-                      </li>
-                    </ul>
+                  <li class="calendar__day">
+                    <span class="calendar__day--past">25</span>
                   </li>
+                  <li
+                    class="calendar__day calendar__day--today calendar__day--trip">
+                    26
+                    <p class="calendar__day--trip-mark">Заезд</p>
+                  </li>
+                  <li class="calendar__day calendar__day--trip">27</li>
+                  <li class="calendar__day calendar__day--trip">
+                    28
+                    <p class="calendar__day--trip-mark">Выезд</p>
+                  </li>
+                  <li class="calendar__day calendar__day--future">29</li>
+                  <li class="calendar__day calendar__day--future">30</li>
+                  <li class="calendar__day calendar__day--future">31</li>
+                  <li class="calendar__day calendar__day--future">
+                    1
+                    <span class="calendar__day--new-month">апр</span>
+                  </li>
+                  <li class="calendar__day calendar__day--future">2</li>
+                  <li class="calendar__day calendar__day--future">3</li>
+                  <li class="calendar__day calendar__day--future">4</li>
+                  <li class="calendar__day calendar__day--future">5</li>
                 </ul>
               </div>
-            </div>
-            <div class="steps-select" id="steps-select-4">
-              <label class="visually-hidden" for="country-chooser-4">
-                Выберите страну
-              </label>
               <button
-                class="steps-select__select steps-select__select--adder"
-                id="country-chooser-4"
-                name="country-chooser-4"
-                aria-expanded="false"
-                type="button"
-              >
-                  <span class="steps-select__select-text">
-                    Добавить страну
-                  </span>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--selector"
-                  width="7"
-                  height="11">
-                  <use href="img/sprites/icons.svg#arrow-select"/>
-                </svg>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--adder"
-                  width="9"
-                  height="9">
-                  <use href="img/sprites/icons.svg#range-control-plus"/>
-                </svg>
-                <svg
-                  class="steps-select__select-image steps-select__select-image--chooser"
-                  width="9"
-                  height="9">
-                  <use href="img/sprites/icons.svg#filter-close"/>
-                </svg>
-              </button>
-              <div
-                class="steps-select__no-flag steps-select__no-flag--adder"></div>
-              <button
-                class="steps-select__button steps-select__button--adder button button--form-round"
+                class="step-dates__button steps__button button--with-icon button button--form-oval button--primary"
+                onclick="switchToStep('dates', 'route')"
                 type="button">
-                <svg class="steps-select__button-image" width="9" height="9">
-                  <use href="img/sprites/icons.svg#filter-close"/>
-                </svg>
-                <span class="visually-hidden">Убрать выбранную страну.</span>
-              </button>
-              <svg class="steps-select__decorate-arrow" width="8" height="11">
-                <use href="img/sprites/icons.svg#arrow-down"/>
-              </svg>
-            </div>
-            <div class="steps__buttons">
-              <button
-                class="steps__button steps__button--next button--with-icon button button--form-oval button--primary"
-                type="submit">
                 <span class="button__text">Следующий шаг</span>
                 <svg class="button__icon-right" width="14" height="14">
                   <use href="img/sprites/icons.svg#arrow-forward"/>
                 </svg>
               </button>
-              <button
-                class="steps__button steps__button--back button--with-icon button button--form-oval"
-                type="submit">
-                <svg class="button__icon-left" width="14" height="14">
-                  <use href="img/sprites/icons.svg#arrow-forward"/>
-                </svg>
-                <span class="button__text">На шаг назад</span>
-              </button>
             </div>
-          </form>
-        </li>
-        <li class="steps__item">
-          <h3 class="steps__title steps-title">
-            <span>Шаг 3.</span>
-            <span>Развлечения</span>
-          </h3>
-          <p class="steps__description">
-            <span>Наконец, расскажите о своих планах времяпровождения.</span>
-            <span>Можно писать в свободной форме и ставить тэги.</span>
-          </p>
-          <form
-            class="step-recreation"
-            action="https://echo.htmlacademy.ru/"
-            method="post">
-            <ul class="step-recreation__agenda agenda">
-              <li class="agenda__item agenda__item--error">
-                <label class="agenda__country" for="agenda-plan-1">
-                  Босния и Герцеговина
+          </li>
+          <li class="steps__item steps__item--route">
+            <h3 class="steps__title steps-title">
+              <span>Шаг 2.</span>
+              <span>Маршрут</span>
+            </h3>
+            <p class="steps__description">
+              <span>Укажите страны, которые вы хотели бы посетить.</span>
+              <span>Это может быть одна или сразу несколько.</span>
+            </p>
+            <div class="step-route">
+              <div class="steps-select" id="steps-select-1">
+                <label class="visually-hidden" for="country-chosen-country-1">
+                  Выберите страну
                 </label>
-                <picture class="agenda__flag">
-                  <source
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                    srcset="img/flags/Bosnia-and-Herzegovina-tablet.webp 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.webp 2x"
-                  >
-                  <source
-                    type="image/webp"
-                    srcset="img/flags/Bosnia-and-Herzegovina.webp 1x, img/flags/Bosnia-and-Herzegovina@2x.webp 2x"
-                  >
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="img/flags/Bosnia-and-Herzegovina-tablet.png 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.png 2x"
-                  >
-                  <img
-                    class="steps-select__flag-img"
-                    src="img/flags/Bosnia-and-Herzegovina.png"
-                    srcset="img/flags/Bosnia-and-Herzegovina@2x.png 2x"
-                    width="35"
-                    height="25"
-                    alt="Флаг Боснии и Герцеговины."
-                  >
-                </picture>
-                <textarea
-                  class="agenda__plan"
-                  id="agenda-plan-1"
-                  name="agenda-plan-1"
-                  placeholder="План действий"></textarea>
-                <span class="agenda__marker"></span>
-              </li>
-              <li class="agenda__item">
-                <label class="agenda__country" for="agenda-plan-2">
-                  Чехия
+                <button
+                  class="steps-select__select"
+                  id="country-chosen-country-1"
+                  name="country-chosen-country-1"
+                  aria-expanded="false"
+                  type="button"
+                >
+                <span class="steps-select__select-text">
+                  Босния и герцеговина
+                </span>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--selector"
+                    width="7"
+                    height="11">
+                    <use href="img/sprites/icons.svg#arrow-select"/>
+                  </svg>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--adder"
+                    width="9"
+                    height="9">
+                    <use href="img/sprites/icons.svg#range-control-plus"/>
+                  </svg>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--chooser"
+                    width="9"
+                    height="9">
+                    <use href="img/sprites/icons.svg#filter-close"/>
+                  </svg>
+                </button>
+                <div class="steps-select__flag">
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="img/flags/Bosnia-and-Herzegovina-tablet.webp 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.webp 2x"
+                    >
+                    <source
+                      type="image/webp"
+                      srcset="img/flags/Bosnia-and-Herzegovina.webp 1x, img/flags/Bosnia-and-Herzegovina@2x.webp 2x"
+                    >
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="img/flags/Bosnia-and-Herzegovina-tablet.png 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.png 2x"
+                    >
+                    <img
+                      class="steps-select__flag-img"
+                      src="img/flags/Bosnia-and-Herzegovina.png"
+                      srcset="img/flags/Bosnia-and-Herzegovina@2x.png 2x"
+                      width="35"
+                      height="25"
+                      alt="Флаг Боснии и Герцеговины."
+                    >
+                  </picture>
+                </div>
+                <button
+                  class="steps-select__button button button--form-round"
+                  type="button">
+                  <svg class="steps-select__button-image" width="9" height="9">
+                    <use href="img/sprites/icons.svg#filter-close"/>
+                  </svg>
+                  <span class="visually-hidden">Убрать выбранную страну.</span>
+                </button>
+                <svg class="steps-select__decorate-arrow" width="8" height="11">
+                  <use href="img/sprites/icons.svg#arrow-down"/>
+                </svg>
+              </div>
+              <div class="steps-select" id="steps-select-2">
+                <label class="visually-hidden" for="country-chosen-country-2">
+                  Выберите страну
                 </label>
-                <picture class="agenda__flag">
-                  <source
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                    srcset="img/flags/Czech-tablet.webp 1x, img/flags/Czech-tablet@2x.webp 2x"
-                  >
-                  <source
-                    type="image/webp"
-                    srcset="img/flags/Czech.webp 1x, img/flags/Czech@2x.webp 2x"
-                  >
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
-                  >
-                  <img
-                    class="steps-select__flag-img"
-                    src="img/flags/Czech.png"
-                    srcset="img/flags/Czech@2x.png 2x"
-                    width="35"
-                    height="25"
-                    alt="Флаг Чехии."
-                  >
-                </picture>
-                <textarea
-                  class="agenda__plan"
-                  id="agenda-plan-2"
-                  name="agenda-plan-2">Пить пиво и лазить
-по старым замкам, наслаждаться архитектурой и вот это все.
+                <button
+                  class="steps-select__select"
+                  id="country-chosen-country-2"
+                  name="country-chosen-country-2"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  <span>чехия</span>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--selector"
+                    width="7"
+                    height="11">
+                    <use href="img/sprites/icons.svg#arrow-select"/>
+                  </svg>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--adder"
+                    width="9"
+                    height="9">
+                    <use href="img/sprites/icons.svg#range-control-plus"/>
+                  </svg>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--chooser"
+                    width="9"
+                    height="9">
+                    <use href="img/sprites/icons.svg#filter-close"/>
+                  </svg>
+                </button>
+                <div class="steps-select__flag">
+                  <picture class="steps-select__flag-img">
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="img/flags/Czech-tablet.webp 1x, img/flags/Czech-tablet@2x.webp 2x"
+                    >
+                    <source
+                      type="image/webp"
+                      srcset="img/flags/Czech.webp 1x, img/flags/Czech@2x.webp 2x"
+                    >
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
+                    >
+                    <img
+                      class="steps-select__flag-img"
+                      src="img/flags/Czech.png"
+                      srcset="img/flags/Czech@2x.png 2x"
+                      width="35"
+                      height="25"
+                      alt="Флаг Чехии."
+                    >
+                  </picture>
+                </div>
+                <button
+                  class="steps-select__button button button--form-round"
+                  type="button">
+                  <svg class="steps-select__button-image" width="9" height="9">
+                    <use href="img/sprites/icons.svg#filter-close"/>
+                  </svg>
+                  <span class="visually-hidden">Убрать выбранную страну.</span>
+                </button>
+                <svg class="steps-select__decorate-arrow" width="8" height="11">
+                  <use href="img/sprites/icons.svg#arrow-down"/>
+                </svg>
+              </div>
+              <div class="steps-select" id="steps-select-3">
+                <label class="visually-hidden" for="country-chooser-3">
+                  Выберите страну
+                </label>
+                <button
+                  class="steps-select__select steps-select__select--adder"
+                  id="country-chooser-3"
+                  name="country-chooser-3"
+                  aria-expanded="false"
+                  onclick="toggleCountryChooser('steps-select-3')"
+                  type="button"
+                >
+                  <span
+                    class="steps-select__select-text hidden">
+                    Выберите страну
+                  </span>
+                  <span class="steps-select__select-text">
+                    Добавить страну
+                  </span>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--selector"
+                    width="7"
+                    height="11">
+                    <use href="img/sprites/icons.svg#arrow-select"/>
+                  </svg>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--adder"
+                    width="9"
+                    height="9">
+                    <use href="img/sprites/icons.svg#range-control-plus"/>
+                  </svg>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--chooser"
+                    width="9"
+                    height="9">
+                    <use href="img/sprites/icons.svg#filter-close"/>
+                  </svg>
+                </button>
+                <div
+                  class="steps-select__no-flag steps-select__no-flag--adder"></div>
+                <button
+                  class="steps-select__button steps-select__button--adder button button--form-round"
+                  type="button">
+                  <svg class="steps-select__button-image" width="9" height="9">
+                    <use href="img/sprites/icons.svg#filter-close"/>
+                  </svg>
+                  <span class="visually-hidden">Убрать выбранную страну.</span>
+                </button>
+                <svg class="steps-select__decorate-arrow" width="8" height="11">
+                  <use href="img/sprites/icons.svg#arrow-down"/>
+                </svg>
+                <div class="steps-select__popup step-select-popup popup hidden">
+                  <ul class="step-select-popup__letters letters letters--form">
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-a"
+                        checked>
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-a">
+                        А
+                      </label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Австралия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Австрия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Азербайджан</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Албания</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Алжир</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Ангола</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Андорра</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Антигуа
+                            и
+                            Барбуда
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Аргентина</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Армения</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Афганистан</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-b">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-b">
+                        Б
+                      </label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Багамские острова
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Бангладеш</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Барбадос</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Бахрейн</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Белоруссия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Белиз</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Бельгия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Бенин</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Болгария</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Босния
+                            и
+                            Герцеговина</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Ботсвана</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Бразилия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Бруней</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Буркина-Фасо
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Бурунди</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Бутан</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-v">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-v">
+                        В
+                      </label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Вануату
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Великобритания
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Венгрия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Венесуэла</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Восточный Тимор
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Вьетнам</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-g">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-g">
+                        Г
+                      </label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Габон
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Гаити
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Гайана</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Гамбия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Гана
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Гватемала</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Гвинея</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Гвинея-Бисау
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Германия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Гондурас</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Гренада</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Греция</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Грузия</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-d">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-d">
+                        Д
+                      </label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Дания
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Джибути
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Доминика</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Доминикана</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-ie">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-ie">
+                        Е
+                      </label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Египет
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-z">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-z">З</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Замбия
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Зимбабве
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-i">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-i">И</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Израиль
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Индия
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Индонезия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Иордания</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Ирак
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Иран</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Ирландия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Исландия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Испания</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Италия</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-k">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-k">К</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Кабо-Верде
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Казахстан
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Камбоджа</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Камерун</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Канада
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Катар</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Кения</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Кипр</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Киргизия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Кирибати</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Китай</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Колумбия</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-l">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-l">Л</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Лаос
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Латвия
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Лесото</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Либерия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Ливан
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Ливия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Литва</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Лихтенштейн
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Люксембург</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-m">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-m">М</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Маврикий
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Мавритания
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Мадагаскар</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Малави</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Малайзия
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Мали</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Мальдивы</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Мальта</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Марокко</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-n">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-n">Н</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Намибия
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Науру
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Непал</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Нигер</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Нигерия
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Нидерланды</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Никарагуа</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Новая
+                            Зеландия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Норвегия</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-o">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-o">О</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            ОАЭ
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Оман
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-p">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-p">П</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Пакистан
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Палау
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Панама</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Папуа
+                            -
+                            Новая Гвинея</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Парагвай
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Перу</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Польша</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Португалия</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-r">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-r">Р</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Руанда
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Румыния
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Россия</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-s">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-s">С</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Сальвадор
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Самоа
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Сан-Марино</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Саудовская
+                            Аравия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Сейшелы
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Сенегал</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Сербия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Сингапур</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Сирия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Словакия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Словения</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">США</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-t">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-t">Т</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Таджикистан
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Таиланд
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Танзания</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Того</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Тонга
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Тринидад
+                            и
+                            Тобаго</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Тувалу</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Тунис</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Туркмения</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Турция</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-u">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-u">У</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Уганда
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Узбекистан
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Украина</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Уругвай</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-f">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-f">Ф</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Фиджи
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Филиппины
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Финляндия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Франция</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-h">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-h">Х</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Хорватия
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-ch">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-ch">Ч</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Чад
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Черногория
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Чехия</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a
+                            class="countries-list__button button"
+                            href="#">Чили</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-sh">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-sh">Ш</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Швейцария
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Швеция
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Шри-Ланка</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-e">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-e">Э</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Эквадор
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Эритрея
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Эсватини</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">Эстония</a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Эфиопия
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-iu">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-iu">Ю</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            ЮАР
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Южный Судан
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="letters__item letter letter--form">
+                      <input
+                        class="letter__name-radio" type="radio"
+                        name="letters" id="letter-ia">
+                      <label
+                        class="letter__name letter__name--form button"
+                        for="letter-ia">Я</label>
+                      <ul class="letter__countries-list letter__countries-list--form countries-list">
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Ямайка
+                          </a>
+                        </li>
+                        <li class="countries-list__item">
+                          <a class="countries-list__button button" href="#">
+                            Япония
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="steps-select" id="steps-select-4">
+                <label class="visually-hidden" for="country-chooser-4">
+                  Выберите страну
+                </label>
+                <button
+                  class="steps-select__select steps-select__select--adder"
+                  id="country-chooser-4"
+                  name="country-chooser-4"
+                  aria-expanded="false"
+                  type="button"
+                >
+                  <span class="steps-select__select-text">
+                    Добавить страну
+                  </span>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--selector"
+                    width="7"
+                    height="11">
+                    <use href="img/sprites/icons.svg#arrow-select"/>
+                  </svg>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--adder"
+                    width="9"
+                    height="9">
+                    <use href="img/sprites/icons.svg#range-control-plus"/>
+                  </svg>
+                  <svg
+                    class="steps-select__select-image steps-select__select-image--chooser"
+                    width="9"
+                    height="9">
+                    <use href="img/sprites/icons.svg#filter-close"/>
+                  </svg>
+                </button>
+                <div
+                  class="steps-select__no-flag steps-select__no-flag--adder"></div>
+                <button
+                  class="steps-select__button steps-select__button--adder button button--form-round"
+                  type="button">
+                  <svg class="steps-select__button-image" width="9" height="9">
+                    <use href="img/sprites/icons.svg#filter-close"/>
+                  </svg>
+                  <span class="visually-hidden">Убрать выбранную страну.</span>
+                </button>
+                <svg class="steps-select__decorate-arrow" width="8" height="11">
+                  <use href="img/sprites/icons.svg#arrow-down"/>
+                </svg>
+              </div>
+              <div class="steps__buttons">
+                <button
+                  class="steps__button steps__button--next button--with-icon button button--form-oval button--primary"
+                  onclick="switchToStep('route', 'entertainment')"
+                  type="button">
+                  <span class="button__text">Следующий шаг</span>
+                  <svg class="button__icon-right" width="14" height="14">
+                    <use href="img/sprites/icons.svg#arrow-forward"/>
+                  </svg>
+                </button>
+                <button
+                  class="steps__button steps__button--back button--with-icon button button--form-oval"
+                  onclick="switchToStep('route', 'dates')"
+                  type="button">
+                  <svg class="button__icon-left" width="14" height="14">
+                    <use href="img/sprites/icons.svg#arrow-forward"/>
+                  </svg>
+                  <span class="button__text">На шаг назад</span>
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="steps__item steps__item--entertainment">
+            <h3 class="steps__title steps-title">
+              <span>Шаг 3.</span>
+              <span>Развлечения</span>
+            </h3>
+            <p class="steps__description">
+              <span>Наконец, расскажите о своих планах времяпровождения.</span>
+              <span>Можно писать в свободной форме и ставить тэги.</span>
+            </p>
+            <div class="step-recreation">
+              <ul class="step-recreation__agenda agenda">
+                <li class="agenda__item agenda__item--error">
+                  <label class="agenda__country" for="agenda-plan-1">
+                    Босния и Герцеговина
+                  </label>
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="img/flags/Bosnia-and-Herzegovina-tablet.webp 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.webp 2x"
+                    >
+                    <source
+                      type="image/webp"
+                      srcset="img/flags/Bosnia-and-Herzegovina.webp 1x, img/flags/Bosnia-and-Herzegovina@2x.webp 2x"
+                    >
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="img/flags/Bosnia-and-Herzegovina-tablet.png 1x, img/flags/Bosnia-and-Herzegovina-tablet@2x.png 2x"
+                    >
+                    <img
+                      class="agenda__flag"
+                      src="img/flags/Bosnia-and-Herzegovina.png"
+                      srcset="img/flags/Bosnia-and-Herzegovina@2x.png 2x"
+                      width="35"
+                      height="25"
+                      alt="Флаг Боснии и Герцеговины."
+                    >
+                  </picture>
+                  <textarea
+                    class="agenda__plan"
+                    id="agenda-plan-1"
+                    name="agenda-plan-1"
+                    placeholder="План действий"></textarea>
+                  <span class="agenda__marker"></span>
+                </li>
+                <li class="agenda__item">
+                  <label class="agenda__country" for="agenda-plan-2">
+                    Чехия
+                  </label>
+                  <picture>
+                    <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="img/flags/Czech-tablet.webp 1x, img/flags/Czech-tablet@2x.webp 2x"
+                    >
+                    <source
+                      type="image/webp"
+                      srcset="img/flags/Czech.webp 1x, img/flags/Czech@2x.webp 2x"
+                    >
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="img/flags/Czech-tablet.png 1x, img/flags/Czech-tablet@2x.png 2x"
+                    >
+                    <img
+                      class="agenda__flag"
+                      src="img/flags/Czech.png"
+                      srcset="img/flags/Czech@2x.png 2x"
+                      width="35"
+                      height="25"
+                      alt="Флаг Чехии."
+                    >
+                  </picture>
+                  <textarea
+                    class="agenda__plan"
+                    id="agenda-plan-2"
+                    name="agenda-plan-2">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
                   </textarea>
-                <span class="agenda__marker"></span>
-              </li>
-            </ul>
-            <div class="steps__buttons">
-              <button
-                class="steps__button steps__button--next button--with-icon button button--form-oval button--primary"
-                type="submit">
-                <span class="button__text">Отправить</span>
-                <svg class="button__icon-right" width="14" height="14">
-                  <use href="img/sprites/icons.svg#arrow-forward"/>
-                </svg>
-              </button>
-              <button
-                class="steps__button steps__button--back steps__button--no-line button--with-icon button button--form-oval"
-                type="submit">
-                <svg class="button__icon-left" width="14" height="14">
-                  <use href="img/sprites/icons.svg#arrow-forward"/>
-                </svg>
-                <span class="button__text">На шаг назад</span>
-              </button>
+                  <span class="agenda__marker"></span>
+                </li>
+              </ul>
+              <div class="steps__buttons">
+                <button
+                  class="steps__button steps__button--next button--with-icon button button--form-oval button--primary"
+                  type="submit">
+                  <span class="button__text">Отправить</span>
+                  <svg class="button__icon-right" width="14" height="14">
+                    <use href="img/sprites/icons.svg#arrow-forward"/>
+                  </svg>
+                </button>
+                <button
+                  class="steps__button steps__button--back steps__button--no-line button--with-icon button button--form-oval"
+                  onclick="switchToStep('entertainment', 'route')"
+                  type="button">
+                  <svg class="button__icon-left" width="14" height="14">
+                    <use href="img/sprites/icons.svg#arrow-forward"/>
+                  </svg>
+                  <span class="button__text">На шаг назад</span>
+                </button>
+              </div>
             </div>
-          </form>
-        </li>
-      </ol>
+          </li>
+        </ol>
+      </form>
     </div>
   </section>
 </main>
@@ -2059,7 +2133,7 @@
     </ul>
     <a
       class="page-footer__developer-button button"
-      href="https://htmlacademy.ru/">
+      href="https://htmlacademy.ru/intensive/adaptive">
       <span class="page-footer__developer-text">Разработано</span>
       <img
         class="developer-logo__image"

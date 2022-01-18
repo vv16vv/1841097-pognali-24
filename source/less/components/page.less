@@ -26,10 +26,12 @@
     margin-left: auto;
     margin-right: auto;
 
-    grid-template-areas: "filter filter filter filter"
-      ". traveller-details traveller-chooser .";
-    grid-template-columns: 1fr 949px 285px 1fr;
-    grid-column-gap: 86px;
-    grid-row-gap: 151px;
+    background-color: @bg-greyer;
+
+    grid-template-areas: "filter filter filter filter filter"
+      ". traveller-details . traveller-chooser .";
+    grid-template-columns: 1fr 951px 85px 285px 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 72px;
   }
 }

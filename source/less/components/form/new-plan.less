@@ -1,5 +1,5 @@
 .new-plan {
-  .ladder-down2top-mobile(178px);
+  .ladder-down2top-mobile(162px);
   .ladder__margin-top(@block-overlap-mobile);
   padding-top: 30px;
   background-color: @bg-grey-extra-darker;
@@ -8,40 +8,56 @@
   z-index: @z-index-add-plan;
 
   @media (min-width: @tablet-width) {
-    .ladder-down2top-tablet(63px);
-    .ladder__margin-top(@block-overlap-tablet);
+    .ladder-down2top-common(107px, @block-overlap-form-tablet);
+    .ladder__margin-top(@block-overlap-form-tablet);
     padding-top: 53px;
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-down2top-desktop(170px);
+    .ladder-down2top-desktop(201px);
     .ladder__margin-top(@block-overlap-desktop);
     padding-top: 55px;
   }
 }
 
+.new-plan__wrapper {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    width: 618px;
+  }
+}
+
 .new-plan__header {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+
   margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 56px;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+    padding-left: 70px;
   }
 }
 
 .new-plan__title {
   @media (min-width: @desktop-width) {
-    margin-bottom: 54px;
+    margin-bottom: 53px;
   }
 }
 
 .new-plan__markers {
   @media (min-width: @desktop-width) {
     position: absolute;
-    right: 388px;
-    top: 252px;
+    left: calc(50% + 276px);
+    top: 298px;
+
+    &--dates {
+      top: 250px;
+    }
   }
 }

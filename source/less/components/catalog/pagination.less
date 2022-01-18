@@ -18,13 +18,19 @@
   }
 
   @media (min-width: @tablet-width) {
-    background-color: @fg-main;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 25px 28px;
+
+    padding: 25px 17px 25px 28px;
     box-sizing: border-box;
+
+    background-color: @fg-main;
     border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 24px;
   }
 }
 
@@ -53,6 +59,7 @@
 
     @media (min-width: @tablet-width) {
       margin-left: auto;
+      margin-right: -6px;
       border-radius: 50%;
     }
   }
@@ -80,7 +87,7 @@
 
   &:focus {
     outline-color: @bg-secondary;
-    outline-offset: -1px;
+    outline-offset: -7px;
   }
 
   &--number {

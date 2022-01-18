@@ -79,44 +79,46 @@ function toggleClassNames(component, removedClassName, addedClassName) {
 }
 
 function toggleHeader(removedSuffix, addedSuffix, removeSticky = undefined) {
-  const baseHeader = "page-header"
-  const stickyHeader = "page-header--sticky"
-  const menuContentList = "page-header__menu-content-list"
-  const menuButtons = "page-header__menu-button"
-  const menuLogo = "page-header__logo"
-  const menu = "menu"
+  const pageHeaderClass = "page-header"
+  const formWrapperClass = `${pageHeaderClass}__form-wrapper`
+  const stickyClass = `${pageHeaderClass}--sticky`
+  const menuContentListClass = `${pageHeaderClass}__menu-content-list`
+  const menuButtonClass = `${pageHeaderClass}__menu-button`
+  const logoClass = `${pageHeaderClass}__logo`
+  const menuClass = "menu"
 
   const pageHeader = document
-    .getElementsByClassName(baseHeader)[0]
-  const buttons = pageHeader.getElementsByClassName(menuButtons)
-  const menuList = pageHeader.getElementsByClassName(menuContentList)[0]
-  const logo = pageHeader.getElementsByClassName(menuLogo)[0]
+    .getElementsByClassName(pageHeaderClass)[0]
+  const formWrapper = pageHeader.getElementsByClassName(formWrapperClass)[0]
+  const buttons = pageHeader.getElementsByClassName(menuButtonClass)
+  const menuContentList = pageHeader.getElementsByClassName(menuContentListClass)[0]
+  const logo = pageHeader.getElementsByClassName(logoClass)[0]
 
   toggleClassNames(
-    pageHeader,
-    `${baseHeader}${removedSuffix}`,
-    `${baseHeader}${addedSuffix}`
+    formWrapper,
+    `${formWrapperClass}${removedSuffix}`,
+    `${formWrapperClass}${addedSuffix}`
   )
 
-  toggleClassNames(menuList,
-    `${menu}${removedSuffix}`,
-    `${menu}${addedSuffix}`)
+  toggleClassNames(menuContentList,
+    `${menuClass}${removedSuffix}`,
+    `${menuClass}${addedSuffix}`)
 
   toggleClassNames(logo,
-    `${menuLogo}${removedSuffix}`,
-    `${menuLogo}${addedSuffix}`)
+    `${logoClass}${removedSuffix}`,
+    `${logoClass}${addedSuffix}`)
 
   if (removeSticky !== undefined) {
     removeSticky
-      ? pageHeader.classList.remove(stickyHeader)
-      : addIfAbsent(pageHeader, stickyHeader)
+      ? pageHeader.classList.remove(stickyClass)
+      : addIfAbsent(pageHeader, stickyClass)
   }
 
   for (let i = 0; i < buttons.length; i++) {
     toggleClassNames(
       buttons[i],
-      `${menuButtons}${removedSuffix}`,
-      `${menuButtons}${addedSuffix}`
+      `${menuButtonClass}${removedSuffix}`,
+      `${menuButtonClass}${addedSuffix}`
     )
   }
 }
@@ -138,8 +140,40 @@ function toggleCountryChooser(id) {
   const flagMarker = chooser.getElementsByClassName("steps-select__no-flag")[0]
   flagMarker.classList.toggle("steps-select__no-flag--adder")
 
+  const buttonClass = "steps-select__button"
+  const button = chooser.getElementsByClassName(buttonClass)[0]
+  button.classList.toggle(`${buttonClass}--adder`)
+  button.classList.toggle(`${buttonClass}--chooser`)
+
   const popup = chooser.getElementsByClassName("steps-select__popup")[0]
   popup.classList.toggle("hidden")
+}
+
+const switchToStep = (stepFrom, stepTo) => {
+  const item = "steps__item"
+
+  const from = document.getElementsByClassName(`${item}--${stepFrom}`)[0]
+  from.classList.toggle("hidden")
+
+  const to = document.getElementsByClassName(`${item}--${stepTo}`)[0]
+  to.classList.toggle("hidden")
+
+  const markersItem = "new-plan-markers__item"
+  const markersItemCurrent = "new-plan-markers__item--current"
+
+  const fromMarker = document.getElementsByClassName(`${markersItem}--${stepFrom}`)[0]
+  fromMarker.classList.toggle(markersItemCurrent)
+
+  const toMarker = document.getElementsByClassName(`${markersItem}--${stepTo}`)[0]
+  toMarker.classList.toggle(markersItemCurrent)
+
+  const markersList = document.getElementsByClassName("new-plan__markers")[0]
+  if(stepFrom === "dates") {
+    markersList.classList.remove(`new-plan__markers--dates`)
+  }
+  if(stepTo === "dates") {
+    markersList.classList.add(`new-plan__markers--dates`)
+  }
 }
 
 const onScroll = () => {
@@ -162,17 +196,23 @@ const onScroll = () => {
   }
 };
 
-window.addEventListener("onscroll", onScroll, {passive: true});
+window.onscroll = () => onScroll()
 
 window.onload = () => {
   const menuContentPopup = document.getElementsByClassName("menu-content-popup")[0]
-  menuContentPopup.classList.remove("menu-content-popup--nojs")
-  menuContentPopup.classList.add("hidden")
+  menuContentPopup?.classList?.remove("menu-content-popup--nojs")
+  menuContentPopup?.classList?.add("hidden")
 
   const mapIframe = document.getElementsByClassName("address__map--iframe")[0]
-  mapIframe.classList.remove("hidden")
+  mapIframe?.classList?.remove("hidden")
 
   const mapPicture = document.getElementsByClassName("address__map--no-js")[0]
-  mapPicture.classList.remove("address__map--no-js")
-  mapPicture.classList.add("hidden")
+  mapPicture?.classList?.remove("address__map--no-js")
+  mapPicture?.classList?.add("hidden")
+
+  const routeStep = document.getElementsByClassName("steps__item--route")[0]
+  routeStep?.classList?.add("hidden")
+
+  const entertainmentStep = document.getElementsByClassName("steps__item--entertainment")[0]
+  entertainmentStep?.classList?.add("hidden")
 }

@@ -1,6 +1,5 @@
 .letter {
   box-sizing: border-box;
-  height: 44px;
   border-bottom: 1px solid @fg-border;
   border-left: 1px solid @fg-border;
 
@@ -49,7 +48,7 @@
 
   @media (min-width: @tablet-width) {
     border: none;
-    height: 86px;
+    height: 84px;
 
     &:nth-child(5n) {
       border-right: none;
@@ -64,7 +63,8 @@
     }
 
     &--form {
-      height: 70px;
+      height: auto;
+      padding: 0;
       border-left: 1px solid @fg-border;
       border-bottom: 1px solid @fg-border;
 
@@ -129,6 +129,7 @@
 
       .letter__name {
         margin-left: 0;
+        margin-bottom: 0;
         padding: 0;
         width: 100%;
         justify-content: center;
@@ -144,10 +145,11 @@
 
 .letter__name {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 13px 2px 13px 0;
 
   .common-font(14px, 14px, 400);
   text-transform: uppercase;
@@ -165,15 +167,35 @@
     color: @bg-secondary;
     .common-font(60px, 60px, 700);
     opacity: 0.3;
+
+    &--form {
+      padding: 26px 16px 22px 20px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: max-content;
     padding: 10px;
-    margin-left: -10px;
+    margin-left: -12px;
     opacity: 1;
     justify-content: flex-start;
-    margin-bottom: 30px;
+    margin-bottom: 21px;
+
+    &--s,
+    &--t,
+    &--u,
+    &--f,
+    &--h {
+      margin-top: 37px;
+    }
+
+    &--ch,
+    &--sh,
+    &--e,
+    &--iu,
+    &--ia {
+      margin-top: -4px;
+    }
   }
 }
 
@@ -214,6 +236,12 @@
       color: inherit;
     }
   }
+
+  &:checked + .letter__name--form {
+    @media (min-width: @tablet-width) {
+      font-weight: 500;
+    }
+  }
 }
 
 .letter__countries-list {
@@ -231,5 +259,35 @@
 
   @media (min-width: @desktop-width) {
     left: 526px;
+  }
+}
+
+.letter__countries-list.countries-list {
+  padding-left: 18px;
+  top: 225px;
+  height: 285px;
+  overflow-y: auto;
+  width: 200px;
+
+  .countries-list__item + .countries-list__item {
+    margin-top: 4px;
+  }
+}
+
+.letter__countries-list--form.countries-list {
+  left: 350px;
+  top: 0;
+  height: 330px;
+
+  .countries-list__item + .countries-list__item {
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 470px;
+    top: -2px;
+
+    width: 207px;
+    height: 395px;
   }
 }

@@ -3,7 +3,7 @@
   color: @fg-special-grey;
 
   .ladder-top2down-mobile(53px);
-  padding-bottom: 33px;
+  padding-bottom: 37px;
 
   position: relative;
   z-index: @z-index-services;
@@ -51,7 +51,7 @@
 
 .services__list {
   .common-list();
-  margin-bottom: 26px;
+  margin-bottom: 29px;
   counter-reset: services-counter;
   position: relative;
 
@@ -114,14 +114,15 @@
 }
 
 .services__show-rates {
-  background-color: transparent;
-  color: @fg-blue-darker;
   padding-left: 0;
   padding-right: 20px;
-  .common-font(16px, 16px, 700);
 
+  background-color: transparent;
+  color: @fg-blue-darker;
   outline-color: transparent;
   .transition(opacity, outline-color;);
+
+  .common-font(16px, 16px, 700);
 
   &:focus {
     outline-color: @bg-main;
@@ -137,10 +138,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    .common-font(20px, 20px, 700);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding-top: 5px;
+
+    .common-font(20px, 20px, 700);
   }
 
   @media (min-width: @desktop-width) {
@@ -164,6 +168,7 @@
     background-color: @bg-grey;
 
     margin-right: 21px;
+    margin-top: -4px;
   }
 }
 

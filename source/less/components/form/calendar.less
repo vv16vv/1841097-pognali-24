@@ -1,5 +1,17 @@
+.calendar {
+  width: 220px;
+
+  @media (min-width: @tablet-width) {
+    width: 538px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
 .calendar__month {
-  margin-bottom: 22px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 30px;
@@ -15,15 +27,25 @@
   padding-left: 0;
   margin: 0;
 
+  width: 220px;
+
   display: grid;
   align-items: center;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, auto);
+
+  @media (min-width: @tablet-width) {
+    width: 538px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .calendar__day {
   text-align: center;
-  padding: 7px 8px 6px 9px;
+  padding: 7px 7px 5px 8px;
   box-sizing: border-box;
   border-bottom: 1px solid @fg-calendar-border;
   border-right: 1px solid @fg-calendar-border;
@@ -97,7 +119,8 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 25px;
-    padding-bottom: 26px;
+    padding-bottom: 25px;
+    padding-left: 14px;
 
     .common-font(18px, 18px, 400);
 
@@ -107,12 +130,24 @@
       padding-bottom: 9px;
     }
 
+    &--trip {
+      margin-top: -2px;
+      margin-left: -2px;
+      padding-left: 9px;
+    }
+
+    &--future {
+      padding-bottom: 24px;
+      padding-left: 9px;
+    }
+
     &--trip,
     &--future {
       .common-font(20px, 20px, 500);
     }
 
-    &--today {
+    &--today,
+    &:focus {
       outline-width: 4px;
       outline-offset: -4px;
     }
@@ -120,19 +155,34 @@
 
   @media (min-width: @desktop-width) {
     text-align: left;
-    padding: 14px 15px 15px;
+    padding: 15px 15px 14px;
     min-height: 72px;
     box-sizing: border-box;
 
     &--name,
     &--weekend {
-      padding: 18px 16px 20px;
+      padding: 18px 16px 19px;
       min-height: auto;
+    }
+
+    &--trip {
+      margin-top: -11px;
+      margin-left: 0;
+    }
+
+    &--future {
+      margin-top: -7px;
+      margin-left: 0;
     }
 
     &--trip,
     &--future {
       .common-font(18px, 18px, 400);
+    }
+
+    &--today,
+    &:focus {
+      outline-offset: -2px;
     }
   }
 }

@@ -1,5 +1,5 @@
 .personal {
-  .ladder__padding-top(24px, @block-overlap-mobile);
+  padding-top: 19px;
   .ladder__margin-top(@block-overlap-mobile);
   .ladder__padding-bottom(34px, @block-overlap-mobile);
   background: @bg-lighter;
@@ -7,16 +7,20 @@
   position: relative;
   z-index: @z-index-personal;
 
+  &--form {
+    .ladder__margin-top(0);
+  }
+
   @media (min-width: @tablet-width) {
-    .ladder__padding-top(66px, @block-overlap-tablet);
-    .ladder__padding-bottom(52px, @block-overlap-tablet);
+    .ladder__padding-top(58px, @block-overlap-tablet);
+    .ladder__padding-bottom(56px, @block-overlap-form-tablet);
     .ladder__margin-top(@block-overlap-tablet);
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 69px;
     margin-top: 0;
-    .ladder__padding-bottom(54px, @block-overlap-desktop);
+    .ladder__padding-bottom(63px, @block-overlap-desktop);
   }
 }
 
@@ -24,10 +28,11 @@
   padding-left: 0;
 
   @media (min-width: @tablet-width) {
-    padding-left: 35px;
+    width: 618px;
   }
 
   @media (min-width: @desktop-width) {
+    width: @desktop-form-width;
     padding-left: 64px;
   }
 }

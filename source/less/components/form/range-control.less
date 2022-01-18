@@ -4,15 +4,21 @@
   grid-template-areas: "name unit" "field field";
   grid-row-gap: 8px;
 
+  width: 220px;
+  box-sizing: border-box;
+
   @media (min-width: @tablet-width) {
+    width: 100%;
+    grid-template-columns: 1fr 53px;
+    grid-row-gap: 23px;
     border-top: 1px solid @fg-border-lighter;
-    padding-top: 26px;
+    padding-top: 25px;
   }
 
   @media (min-width: @desktop-width) {
     border-top: none;
     padding-top: 0;
-    grid-template-columns: 1fr 180px 40px;
+    grid-template-columns: 1fr 179px 115px;
     grid-row-gap: 0;
     grid-column-gap: 35px;
     grid-template-areas: "name field unit";
@@ -30,6 +36,10 @@
     .common-font(20px, 18px, 500);
     letter-spacing: 0.1em;
   }
+
+  @media (min-width: @desktop-width) {
+    letter-spacing: 0;
+  }
 }
 
 .range-control__title-name {
@@ -44,10 +54,15 @@
 
   @media (min-width: @tablet-width) {
     letter-spacing: 0.08em;
+    margin-right: 4px;
   }
 
   @media (min-width: @desktop-width) {
     opacity: 1;
+    text-align: left;
+    margin-right: 0;
+    margin-left: 1px;
+    letter-spacing: 0;
   }
 }
 
@@ -82,14 +97,16 @@
 
 .range-control__field {
   box-sizing: border-box;
-  height: 43px;
   width: 136px;
-  text-align: center;
+  padding: 14px 4px 12px 0;
   border: none;
+
   //noinspection CssInvalidPropertyValue
   appearance: textfield;
 
   .common-font(15px, 14px, 500);
+  text-align: center;
+  font-family: "Blogger Sans", "Arial", sans-serif;
   color: @fg-blue-light;
 
   &::-webkit-outer-spin-button,
@@ -109,17 +126,19 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 60px;
     margin-left: 0;
     margin-right: 0;
-    width: 60px;
+    padding-right: 2px;
+
+    font-size: 18px;
   }
 }
 
 .range-control__button {
   flex-grow: 0;
   width: 42px;
-  height: 43px;
-  padding: 0;
+  padding: 12px 0;
 
   background-color: transparent;
   display: flex;

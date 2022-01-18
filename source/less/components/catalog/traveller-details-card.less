@@ -1,6 +1,6 @@
 .traveller-details-card {
   background-color: @fg-main;
-  border-radius: @block-overlap-mobile;
+  border-radius: 20px;
   position: relative;
 
   padding: 15px 0 23px;
@@ -17,8 +17,8 @@
 
   @media (min-width: @tablet-width) {
     border-radius: 20px;
-    padding: 35px 0 25px;
-    grid-template-columns: 255px 150px 50px 50px 1fr 85px;
+    padding: 33px 0 25px;
+    grid-template-columns: 257px 150px 50px 60px 1fr 85px;
     grid-template-areas:
       "image title title title title transport"
       "image tags tags tags . transport"
@@ -29,7 +29,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    grid-template-columns: 285px 62px 150px 50px 50px 1fr 182px 103px;
+    grid-template-columns: 285px 62px 150px 50px 60px 1fr 174px 104px;
     grid-template-areas:
       "image title title title title . country country"
       "image . tags tags tags . country country"
@@ -48,16 +48,17 @@
 
 .traveller-details-card__title {
   grid-area: title;
-  margin: 0 22px 8px 0;
+  margin: 0 22px 5px 0;
   display: flex;
   justify-content: space-between;
-  gap: 22px;
+  gap: 32px;
 
   outline-color: transparent;
   .transition(opacity, outline-color;);
 
   @media (min-width: @tablet-width) {
     margin-bottom: 19px;
+    gap: 24px;
     justify-content: flex-start;
   }
 
@@ -88,12 +89,16 @@
   color: @fg-blue-light;
   .common-font(20px, 20px, 700);
 
+  &:focus {
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     .common-font(30px, 30px, 700);
   }
 
-  &:focus {
-    outline: none;
+  @media (min-width: @desktop-width) {
+    margin-left: 2px;
   }
 }
 
@@ -102,22 +107,25 @@
 
   color: @bg-main;
   .common-font(17px, 17px, 700);
-  padding: 13px;
-  margin-left: 25px;
-  margin-right: 25px;
+  padding: 15px 13px 8px;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
+  text-transform: uppercase;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding: 15px 18px 15px;
-    margin-left: 0;
-    margin-right: 0;
+    padding: 17px 0 13px;
+    margin-left: -4px;
+    margin-right: 4px;
 
     .common-font(20px, 20px, 700);
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 48px;
+    margin-left: -7px;
+    margin-right: 8px;
   }
 
   &:focus {
@@ -128,11 +136,13 @@
 .traveller-details-card__status {
   grid-area: status;
   text-align: right;
-  padding-right: 2px;
-  margin: 0;
+  padding-right: 0;
+  margin: 8px 0 0;
 
   @media (min-width: @desktop-width) {
     padding-right: 0;
+    margin-top: 11px;
+    margin-left: -2px;
   }
 }
 
@@ -195,14 +205,18 @@
   grid-area: favorite;
   position: absolute;
 
-  top: 57px;
-  left: 65px;
+  top: 54px;
+  left: 68px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     position: relative;
     top: 0;
     left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -7px;
   }
 }
 
@@ -215,28 +229,36 @@
   @media (min-width: @tablet-width) {
     .common-font(20px, 20px, 700);
     align-self: center;
+    margin-left: 2px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 48px;
+    margin-left: -1px;
   }
 }
 
 .traveller-details-card__tags {
   grid-area: tags;
-  margin-top: 21px;
-  margin-bottom: 16px;
-  margin-left: 21px;
+  margin-top: 13px;
+  margin-bottom: 14px;
+  margin-left: 25px;
 
   color: @fg-special-grey;
 
+  &--rogovaya {
+    margin-top: 16px;
+  }
+
   @media (min-width: @tablet-width) {
-    margin: 0 0 46px;
+    margin: 0 0 46px 4px;
     color: @fg-black;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 45px;
+    margin-left: 0;
+    width: 250px;
   }
 }
 
@@ -248,11 +270,14 @@
     content: "";
     position: absolute;
 
-    top: 6px;
+    top: 7px;
+    left: 0;
 
     width: 100%;
-    height: 0;
-    border: 1px solid @bg-lighter;
+    height: 1px;
+
+    background-color: @bg-lighter;
+
     z-index: 1;
   }
 }
@@ -261,13 +286,32 @@
   .common-font(15px, 16px, 400);
   position: relative;
   z-index: 2;
-  margin-left: 15px;
+
+  margin-left: 17px;
   margin-top: 0;
+  margin-bottom: 17px;
   padding-left: 10px;
   padding-right: 10px;
+
   width: max-content;
   background-color: @fg-main;
   color: @fg-special-grey;
+
+  &--transport {
+    margin-bottom: 14px;
+  }
+
+  &--transport-demin {
+    margin-bottom: 20px;
+  }
+
+  &--country-rogovaya {
+    margin-bottom: 15px;
+  }
+
+  &--level {
+    margin-bottom: 8px;
+  }
 }
 
 .traveller-details-card__country-wrapper {
@@ -277,13 +321,13 @@
     margin-top: 17px;
 
     .traveller-details-card__subtitle {
-      margin-left: 35px;
+      margin-left: 73px;
       margin-bottom: 19px;
     }
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 46px;
+    margin-top: 48px;
 
     .traveller-details-card__subtitle {
       display: none;
@@ -297,10 +341,14 @@
 
 .traveller-details-card__country {
   list-style-type: none;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
     align-items: center;
+    flex-direction: row;
     gap: 25px;
     margin-left: 35px;
     padding-left: 0;
@@ -309,7 +357,7 @@
   @media (min-width: @desktop-width) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 13px;
+    gap: 10px;
     margin: 0;
   }
 }
@@ -329,7 +377,15 @@
 }
 
 .traveller-details-card__transport {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+
+  &--demin {
+    margin-bottom: 19px;
+  }
+
+  &--smolov {
+    margin-bottom: 19px;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -357,8 +413,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: -5px;
-    justify-self: center;
+    justify-self: left;
+    margin-top: -8px;
+    margin-left: -2px;
 
     .traveller-details-card__subtitle {
       display: none;
@@ -368,10 +425,17 @@
       content: none;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -6px;
+  }
 }
 
 .traveller-details-card__level {
   color: @fg-blue-light;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 7px;
 
   &--mobile {
     display: block;
@@ -382,6 +446,10 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 64px;
+    height: 64px;
+    margin-left: 0;
+
     &--mobile {
       display: none;
     }

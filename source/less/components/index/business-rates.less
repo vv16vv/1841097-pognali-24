@@ -22,27 +22,27 @@
   @media (min-width: @desktop-width) {
     width: 750px;
     padding-left: 58px;
-    padding-right: 60px;
+    padding-right: 58px;
   }
 }
 
 .business-rates__title {
-  margin-bottom: 28px;
+  margin-bottom: 27px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
 }
 
 .business-rates__close {
   display: flex;
   padding-top: 21px;
-  padding-bottom: 21px;
+  padding-bottom: 15px;
   width: 100%;
   background-color: @bg-very-light;
   color: @fg-blue-light;
@@ -52,6 +52,11 @@
 
   &:hover {
     background-color: @bg-lighter;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 41px;
+    padding-bottom: 42px;
   }
 
   @media (min-width: @desktop-width) {
@@ -68,12 +73,15 @@
 }
 
 .business-rates__close-button {
-  background-color: @bg-very-light;
-  color: @fg-blue-light;
-  .common-font(16px, 24px, 700);
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  background-color: @bg-very-light;
+  color: @fg-blue-light;
+
+  .common-font(16px, 24px, 700);
+  text-transform: uppercase;
 
   &:focus {
     outline-color: @bg-main;
@@ -90,15 +98,16 @@
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
+    text-transform: unset;
   }
 }
 
 .business-rates__list {
   .common-list();
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 52px;
+    margin-bottom: 53px;
   }
 
   @media (min-width: @desktop-width) {
@@ -113,10 +122,21 @@
   display: flex;
   flex-direction: column;
 
+  &--likes {
+    padding-top: 9px;
+  }
+
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    padding-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
 }
 

@@ -2,12 +2,12 @@
   background-color: @basic-yellow;
   color: @fg-blue-light;
   box-sizing: border-box;
-  border-radius: @block-overlap-mobile;
+  border-radius: @block-overlap-mobile-catalog;
 
-  padding: 26px 25px 24px 25px;
+  padding: 26px 25px 22px 25px;
 
   @media (min-width: @tablet-width) {
-    border-radius: 25px;
+    border-radius: 20px;
 
     padding: 37px 34px 37px 34px;
   }
@@ -23,13 +23,16 @@
 }
 
 .chooser-form__title {
-  margin: 0 0 23px;
+  margin: 0 8px 22px 0;
+  .common-font(22px, 22px, 700);
+  letter-spacing: 0.02em;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 35px;
     padding-bottom: 38px;
     border-bottom: 1px solid @yellow-dark;
 
+    letter-spacing: 0;
     .common-font(30px, 30px, 700);
   }
 
@@ -41,8 +44,10 @@
 }
 
 .chooser-form__button {
-  width: 100%;
-  padding: 14px 0 15px;
+  width: 230px;
+  padding: 15px 0 9px;
+  margin-top: 3px;
+  margin-left: -5px;
   background-color: @fg-main;
   color: @bg-main;
 
@@ -66,11 +71,15 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
-    margin-top: 36px;
     position: relative;
-    .common-font(20px, 20px, 700);
+
+    width: 100%;
+    margin-top: 45px;
+    margin-left: 0;
     padding-top: 18px;
-    padding-bottom: 17px;
+    padding-bottom: 13px;
+
+    .common-font(20px, 20px, 700);
 
     &::before {
       content: "";
@@ -87,7 +96,10 @@
   @media (min-width: @desktop-width) {
     .common-font(20px, 20px, 700);
     padding-top: 18px;
-    padding-bottom: 17px;
+    padding-bottom: 10px;
+    margin-left: 0;
+
+    width: 100%;
   }
 }
 

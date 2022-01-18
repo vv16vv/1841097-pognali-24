@@ -27,7 +27,7 @@
       "buttons buttons";
     padding-top: 30px;
     border-top: 1px solid @fg-border-lighter;
-    grid-row-gap: 14px;
+    grid-row-gap: 12px;
     align-items: center;
   }
 }
@@ -43,8 +43,10 @@
 .step-dates__with-children {
   grid-area: with-children;
 
+  margin-bottom: 2px;
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 2px;
+    margin-bottom: -2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -57,27 +59,49 @@
 
 .step-dates__dates {
   grid-area: dates;
-  margin-bottom: 4px;
+  margin-bottom: -2px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
+    position: relative;
+
+    .range-control__title-unit {
+      margin-right: -2px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      right: -40px;
+      top: 46px;
+
+      width: 40px;
+      height: 15px;
+
+      background-color: @bg-dates-decoration;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 19px;
+
+    &::before {
+      content: none;
+    }
   }
 }
 
 .step-dates__calendar {
   grid-area: calendar;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 43px;
+    margin-bottom: 44px;
   }
 }
 

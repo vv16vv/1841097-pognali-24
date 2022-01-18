@@ -1,10 +1,11 @@
 .tooltip {
   position: relative;
-  z-index: @z-index-popup;
 
   @indent: 5px;
 
   &:hover {
+    z-index: @z-index-popup;
+
     &::after {
       content: "";
       position: absolute;
@@ -78,32 +79,6 @@
     &:hover {
       &::after {
         top: calc(100% - 1px + @indent-top);
-      }
-    }
-  }
-}
-
-.tooltip--filter {
-  @indent-top: -40px;
-
-  &:hover {
-    &::after {
-      top: calc(100% + @indent-top);
-    }
-
-    &::before {
-      top: calc(-100% + 11px + @indent-top);
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    &:hover {
-      &::after {
-        top: calc(100% - 14px + @indent-top);
-      }
-
-      &::before {
-        top: calc(-100% + 19px + @indent-top);
       }
     }
   }

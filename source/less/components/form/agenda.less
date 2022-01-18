@@ -12,9 +12,11 @@
   display: grid;
   grid-template-columns: 1fr 35px;
   grid-template-areas: "name flag" "plan plan";
-  grid-row-gap: 18px;
+  grid-row-gap: 11px;
   align-items: center;
   position: relative;
+
+  padding-top: 9px;
 
   &--error {
     .agenda__plan {
@@ -38,44 +40,84 @@
     }
   }
 
+  @media (max-width: @tablet-width - 1) {
+    &:first-child .agenda__plan {
+      height: 200px;
+    }
+  }
+
   &:last-child .agenda__marker {
     background-color: transparent;
+
+    &::before {
+      top: 7px;
+      left: 11px;
+    }
+
+    &::after {
+      top: 9px;
+      left: 0;
+    }
   }
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 70px;
     grid-row-gap: 30px;
+
+    padding-top: 0;
+
+    &--error {
+      &::after {
+        width: calc(100% - 4px);
+        margin-left: 4px;
+      }
+    }
+
+    &:last-child .agenda__marker {
+      &::before {
+        top: -5px;
+        left: -5px;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 271px;
+    grid-template-columns: 730px 1fr;
     grid-row-gap: 26px;
     grid-template-areas: "name flag" "plan .";
 
     &--error::after {
-      width: calc(100% - 271px);
+      width: 730px;
+      margin-left: 0;
     }
   }
 }
 
 .agenda__item + .agenda__item {
-  margin-top: 27px;
+  margin-top: 16px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 51px;
+    margin-top: 45px;
   }
 }
 
 .agenda__country {
   grid-area: name;
   display: block;
-  padding-left: 15px;
+  padding-left: 11px;
 
   .common-font(18px, 18px, 500);
   letter-spacing: 0.01em;
 
   @media (min-width: @tablet-width) {
+    padding-left: 0;
+
     .common-font(30px, 30px, 700);
+    letter-spacing: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -2px;
   }
 }
 
@@ -90,7 +132,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 85px;
+    margin-top: 2px;
+    margin-left: 88px;
   }
 }
 
@@ -120,12 +163,18 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 18px 19px;
+    padding: 16px 30px 18px 16px;
+    margin-left: 4px;
+
+    height: 142px;
+
     .common-font(20px, 23px, 400);
   }
 
   @media (min-width: @desktop-width) {
-    padding: 26px 25px;
+    padding: 26px 15px 26px 25px;
+    margin-left: 0;
+
     line-height: 20px;
   }
 }
@@ -133,15 +182,14 @@
 .agenda__marker {
   position: absolute;
 
-  top: 10px;
-  left: -11px;
+  top: 11px;
+  left: -15px;
 
   width: 2px;
-  height: calc(100% + 29px);
+  height: calc(100% + 25px);
 
   background-color: @fg-blue-light;
   border: none;
-
 
   &::before {
     content: "";
@@ -171,7 +219,7 @@
 
   @media (min-width: @tablet-width) {
     left: auto;
-    right: -25px;
+    right: -27px;
     top: 19px;
     height: calc(100% + 54px);
 
@@ -188,6 +236,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    right: 225px;
+    right: 192px;
   }
 }

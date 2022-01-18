@@ -51,7 +51,7 @@
 
 .page-footer__logo {
   text-align: center;
-  margin-bottom: 34px;
+  margin-bottom: 39px;
   color: @bg-main;
 
   &:focus {
@@ -60,8 +60,12 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-    margin-top: 12px;
+    margin-top: 10px;
     margin-left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 7px;
   }
 }
 
@@ -95,16 +99,20 @@
 
   @media (min-width: @tablet-width) {
     width: 154px;
-    margin-top: 4px;
+    margin-top: 1px;
     border-top: none;
     padding-bottom: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 4px;
   }
 }
 
 .page-footer__developer-text {
   .common-font(16px, 18px, 400);
   color: @fg-special-grey;
-  margin-top: -5px;
+  margin-top: 0;
 
   @media (min-width: @tablet-width) {
     .common-font(20px, 20px, 400);
@@ -121,5 +129,23 @@
 
   @media (min-width: @tablet-width) {
     padding-right: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 48px;
+  }
+}
+
+.page-footer--index {
+  .page-footer__logo {
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 47px;
   }
 }

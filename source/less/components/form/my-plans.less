@@ -10,13 +10,14 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 57px;
-    .ladder-down2top-tablet(76px);
-    .ladder__margin-top(@block-overlap-tablet);
+    .ladder-down2top-common(76px, @block-overlap-form-tablet);
+    .ladder__margin-top(@block-overlap-form-tablet);
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 54px;
-    .ladder-down2top-desktop(64px);
+    padding-left: 67px;
+    .ladder-down2top-desktop(66px);
     .ladder__margin-top(@block-overlap-desktop);
   }
 }
@@ -26,12 +27,11 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    padding-left: 35px;
-    padding-right: 35px;
+    width: 618px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 71px;
+    width: @desktop-form-width;
   }
 }
 
@@ -40,5 +40,9 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 7px;
   }
 }

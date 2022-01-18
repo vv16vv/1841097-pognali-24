@@ -5,12 +5,12 @@
     "change-photo change-photo"
     "tags tags"
     "transport transport";
-  grid-row-gap: 18px;
+  grid-row-gap: 16px;
   grid-column-gap: 35px;
   margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 131px 1fr 133px;
+    grid-template-columns: 94px 1fr 98px;
     grid-template-areas:
       "level transport photo"
       "change-photo change-photo change-photo"
@@ -20,7 +20,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: -259px;
+    margin-top: -258px;
     grid-template-columns: 1fr 95px 285px;
     grid-column-gap: 44px;
     grid-row-gap: 0;
@@ -32,17 +32,18 @@
 }
 
 .personal-form__level {
-  margin: 0 0 0 16px;
+  margin: -4px 0 0 16px;
   grid-area: level;
   color: @fg-blue-light;
 
   @media (min-width: @tablet-width) {
-    margin-left: 37px;
+    margin-left: -4px;
+    margin-top: -3px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 0;
-    margin-top: 42px;
+    margin-left: -4px;
+    margin-top: 31px;
     color: @fg-main;
   }
 }
@@ -58,8 +59,7 @@
     width: 94px;
     height: 94px;
     border-radius: 7px;
-    margin-right: 35px;
-    margin-left: 4px;
+    margin-left: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -67,6 +67,7 @@
     height: 190px;
     margin-left: 0;
     border-radius: 0;
+    margin-top: -4px;
   }
 }
 
@@ -100,13 +101,20 @@
     padding-top: 22px;
     padding-bottom: 20px;
     margin-bottom: 12px;
+    margin-top: 4px;
 
     letter-spacing: 0.09em;
   }
 
   @media (min-width: @desktop-width) {
     width: 190px;
-    margin-bottom: 27px;
+    margin-bottom: 23px;
+    margin-top: -4px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+
+    letter-spacing: 0;
+
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 
@@ -120,15 +128,17 @@
   grid-area: tags;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 4px;
   padding: 0;
 
   .chooser-form-group__title {
     @media (min-width: @tablet-width) {
-      left: 287px;
+      left: 262px;
     }
 
     @media (min-width: @desktop-width) {
-      left: 30px;
+      left: 21px;
+      bottom: -14px;
     }
   }
 
@@ -140,7 +150,8 @@
 .personal-form__textarea {
   box-sizing: border-box;
   width: 100%;
-  padding: 18px 25px 27px 25px;
+  padding: 17px 22px 19px 22px;
+  letter-spacing: -0.14em;
   border: none;
   resize: none;
 
@@ -159,13 +170,18 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding: 33px 38px 8px;
+
     .common-font(20px, 22px, 400);
-    padding: 36px 40px;
+    letter-spacing: -0.15em;
   }
 
   @media (min-width: @desktop-width) {
-    .common-font(20px, 20px, 400);
+    padding-top: 37px;
+    padding-bottom: 12px;
     margin-right: 56px;
+
+    .common-font(20px, 20px, 400);
   }
 }
 
@@ -173,7 +189,8 @@
   grid-area: transport;
   margin-left: 0;
   margin-right: 0;
-  padding-top: 20px;
+  padding-top: 4px;
+  padding-bottom: 15px;
 
   .chooser-form-group__title {
     @media (min-width: @tablet-width) {
@@ -181,7 +198,24 @@
     }
 
     @media (min-width: @desktop-width) {
-      left: 145px;
+      margin-bottom: -1px;
+
+      left: 115px;
+      bottom: -11px;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+    padding-bottom: 0;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 3px;
+    margin-left: 41px;
+    margin-bottom: 3px;
+    padding-top: 22px;
+    padding-left: 18px;
   }
 }
