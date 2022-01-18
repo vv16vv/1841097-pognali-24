@@ -209,4 +209,10 @@ window.onload = () => {
   const mapPicture = document.getElementsByClassName("address__map--no-js")[0]
   mapPicture?.classList?.remove("address__map--no-js")
   mapPicture?.classList?.add("hidden")
+
+  const routeStep = document.getElementsByClassName("steps__item--route")[0]
+  routeStep?.classList?.add("hidden")
+
+  const entertainmentStep = document.getElementsByClassName("steps__item--entertainment")[0]
+  entertainmentStep?.classList?.add("hidden")
 }
