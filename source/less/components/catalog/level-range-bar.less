@@ -38,13 +38,16 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  //box-sizing: border-box;
-  border-radius: 50%;
-  background-color: @fg-blue-light;
-  border: 1px solid @fg-blue-light;
-  top: -4px;
   padding: 0;
+
+  top: -4px;
+
+  border-radius: 50%;
+  border: 1px solid @fg-blue-light;
+  background-color: @fg-blue-light;
+
   .transition(transform);
+  cursor: col-resize;
 
   &--min {
     left: 0;

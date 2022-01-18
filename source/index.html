@@ -926,7 +926,8 @@
             <span>это быстро и бесплатно! <br></span>
             <span>Уже зарегистрированы? Тогда</span>
             <span>скорее
-              <a class="contacts__authorize button" href="#">
+              <!--suppress HtmlUnknownTarget -->
+              <a class="contacts__authorize button" href="authorize.html">
                 авторизуйтесь.
               </a></span>
           </p>
@@ -1000,14 +1001,14 @@
             <span class="address__part">ул. Большая</span>
             <span class="address__part">Конюшенная, 19/8</span>
           </p>
-          <button
+          <a
             class="address__button button button--form-rectangle button--with-icon button--route"
-            type="button">
+            href="https://www.google.ru/maps/@59.9569007,30.3333151,14.33z?hl=ru">
             <span class="button__text">Проложить маршрут</span>
             <svg class="button__icon-right" width="14" height="16">
               <use href="img/sprites/icons.svg#arrow-forward"/>
             </svg>
-          </button>
+          </a>
         </div>
       </div>
       <iframe
@@ -1113,7 +1114,8 @@
       </li>
     </ul>
     <a
-      class="page-footer__developer-button button">
+      class="page-footer__developer-button button"
+      href="https://htmlacademy.ru/intensive/adaptive">
       <span class="page-footer__developer-text">Разработано</span>
       <img
         class="developer-logo__image"
