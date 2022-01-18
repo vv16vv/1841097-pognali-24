@@ -52,8 +52,22 @@
     @media (min-width: @desktop-width) {
       background-color: @fg-main;
       color: @bg-secondary;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-top: 19px;
+      padding-bottom: 16px;
+
+      .page-header__form-wrapper {
+        min-height: 0;
+      }
+
+      .page-header__form-wrapper--light {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .page-header__form-wrapper--light .page-header__contact-buttons {
+        position: relative;
+        top: -1px;
+      }
 
       & + main {
         margin-top: @header-height-desktop;
