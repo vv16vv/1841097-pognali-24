@@ -149,6 +149,33 @@ function toggleCountryChooser(id) {
   popup.classList.toggle("hidden")
 }
 
+const switchToStep = (stepFrom, stepTo) => {
+  const item = "steps__item"
+
+  const from = document.getElementsByClassName(`${item}--${stepFrom}`)[0]
+  from.classList.toggle("hidden")
+
+  const to = document.getElementsByClassName(`${item}--${stepTo}`)[0]
+  to.classList.toggle("hidden")
+
+  const markersItem = "new-plan-markers__item"
+  const markersItemCurrent = "new-plan-markers__item--current"
+
+  const fromMarker = document.getElementsByClassName(`${markersItem}--${stepFrom}`)[0]
+  fromMarker.classList.toggle(markersItemCurrent)
+
+  const toMarker = document.getElementsByClassName(`${markersItem}--${stepTo}`)[0]
+  toMarker.classList.toggle(markersItemCurrent)
+
+  const markersList = document.getElementsByClassName("new-plan__markers")[0]
+  if(stepFrom === "dates") {
+    markersList.classList.remove(`new-plan__markers--dates`)
+  }
+  if(stepTo === "dates") {
+    markersList.classList.add(`new-plan__markers--dates`)
+  }
+}
+
 const onScroll = () => {
   const mediaTablet = window.matchMedia(`(min-width : ${tabletWidth}px)`)
   const mediaDesktop = window.matchMedia(`(min-width : ${desktopWidth}px)`)
