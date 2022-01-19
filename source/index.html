@@ -336,7 +336,7 @@
       </div>
     </div>
   </section>
-  <section class="destination">
+  <section class="destination" Б>
     <div class="destination__back">
       <div class="wrapper destination__wrapper">
         <header class="destination__header">
@@ -875,10 +875,10 @@
             <p class="services-card__price">59 руб./мес</p>
           </li>
         </ol>
-        <button
-          class="services__show-rates button button--rates"
-          type="button"
-          onclick="toggleHidden('business-rates')">
+        <a
+          class="services__show-rates button button--with-icon"
+          href="business-rates.html"
+          onclick="toggleHidden(event, 'business-rates')">
           <span class="services__show-rates-image-wrapper">
             <svg
               class="services__show-rates-image"
@@ -888,7 +888,7 @@
             </svg>
           </span>
           <span>Показать тарифы для бизнеса</span>
-        </button>
+        </a>
       </div>
     </div>
     <div class="business-rates modal hidden">
@@ -919,7 +919,7 @@
         <button
           class="business-rates__close business-rates__close-button button"
           type="button"
-          onclick="toggleHidden('business-rates')">
+          onclick="toggleHidden(event, 'business-rates')">
           Закрыть окно
         </button>
       </div>

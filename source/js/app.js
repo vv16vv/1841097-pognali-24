@@ -1,4 +1,6 @@
-function toggleHidden(className, parent = document) {
+function toggleHidden(event, className, parent = document) {
+  event.preventDefault()
+
   const menu = parent
     .getElementsByClassName(className)[0]
   menu.classList.toggle("hidden")
@@ -168,10 +170,10 @@ const switchToStep = (stepFrom, stepTo) => {
   toMarker.classList.toggle(markersItemCurrent)
 
   const markersList = document.getElementsByClassName("new-plan__markers")[0]
-  if(stepFrom === "dates") {
+  if (stepFrom === "dates") {
     markersList.classList.remove(`new-plan__markers--dates`)
   }
-  if(stepTo === "dates") {
+  if (stepTo === "dates") {
     markersList.classList.add(`new-plan__markers--dates`)
   }
 }
