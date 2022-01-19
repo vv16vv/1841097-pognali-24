@@ -199,6 +199,12 @@ const onScroll = () => {
 window.onscroll = () => onScroll()
 
 window.onload = () => {
+  const pageHeaderWrapper = document.getElementsByClassName("page-header__form-wrapper--nojs")[0]
+  pageHeaderWrapper?.classList?.remove("page-header__form-wrapper--nojs")
+
+  const pageHeaderLogo = document.getElementsByClassName("page-header__logo--nojs")[0]
+  pageHeaderLogo?.classList?.remove("page-header__logo--nojs")
+
   const menuContentPopup = document.getElementsByClassName("menu-content-popup")[0]
   menuContentPopup?.classList?.remove("menu-content-popup--nojs")
   menuContentPopup?.classList?.add("hidden")
