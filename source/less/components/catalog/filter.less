@@ -157,16 +157,6 @@
     border-radius: 4px;
   }
 
-  &--dot {
-    @media (max-width: @tablet-width - 1) {
-      .visually-hide();
-    }
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     width: 185px;
     gap: 24px;
@@ -235,6 +225,16 @@
     @media (min-width: @desktop-width) {
       display: none;
     }
+  }
+}
+
+.filter__button-dot {
+  @media (max-width: @tablet-width - 1) {
+    .visually-hide();
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
