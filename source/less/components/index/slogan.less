@@ -1,14 +1,24 @@
 .slogan {
+  display: flex;
+  flex-direction: column;
+
   box-sizing: border-box;
   padding-top: 21px;
+  min-height: 404px;
+
   z-index: 2;
 
   @media (min-width: @tablet-width) {
     padding-top: 70px;
+
+    min-height: 364px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 105px;
+
+    min-height: 0;
+
     grid-row: 1;
     grid-column: 1;
   }
@@ -32,20 +42,6 @@
     margin-top: 0;
     margin-bottom: 101px;
     padding-left: 67px;
-  }
-}
-
-.slogan__wrapper {
-  display: flex;
-  min-height: 404px;
-  flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    min-height: 364px;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-height: 0;
   }
 }
 
