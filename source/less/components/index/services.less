@@ -1,21 +1,27 @@
 .services {
+  background-color: @bg-secondary;
+}
+
+.services__back {
   background-color: @bg-light;
   color: @fg-special-grey;
 
-  .ladder-top2down-mobile(53px);
+  padding-top: 53px;
   padding-bottom: 37px;
+  .ladder__bottom(@block-overlap-mobile);
 
   position: relative;
-  z-index: @z-index-services;
 
   @media (min-width: @tablet-width) {
-    .ladder-top2down-tablet(74px);
+    padding-top: 74px;
     padding-bottom: 62px;
+    .ladder__bottom(@block-overlap-tablet);
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-top2down-desktop(107px);
+    padding-top: 107px;
     padding-bottom: 163px;
+    .ladder__bottom(@block-overlap-desktop);
   }
 }
 

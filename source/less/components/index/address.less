@@ -2,20 +2,23 @@
   background-color: @basic-yellow;
   color: @fg-blue-light;
 
-  .ladder-top2down-mobile(32px);
+  padding-top: 32px;
   padding-bottom: 35px;
+  .ladder__bottom(@block-overlap-mobile);
 
   position: relative;
   z-index: @z-index-address;
 
   @media (min-width: @tablet-width) {
-    .ladder-top2down-tablet(49px);
+    padding-top: 49px;
     padding-bottom: 84px;
+    .ladder__bottom(@block-overlap-tablet);
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-top2down-desktop(56px);
+    padding-top: 56px;
     padding-bottom: 57px;
+    .ladder__bottom(@block-overlap-desktop);
   }
 }
 

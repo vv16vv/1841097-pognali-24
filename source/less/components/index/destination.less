@@ -1,14 +1,19 @@
 .destination {
-  .ladder-top2down-mobile(71px);
+  background-color: @bg-secondary;
+}
+
+.destination__back {
+  padding-top: 71px;
   padding-bottom: 33px;
+  .ladder__bottom(@block-overlap-mobile);
 
   background-color: @bg-lighter;
 
   position: relative;
-  z-index: @z-index-destinations;
 
   @media (min-width: @tablet-width) {
-    .ladder-top2down-tablet(73px);
+    padding-top: 73px;
+    .ladder__bottom(@block-overlap-tablet);
     background-repeat: no-repeat;
     background-position: calc(50% + 200px) 139px, calc(50% - 273px) 466px;
     background-image: url("../../../img/backgrounds/dst-flags-tablet.png"),
@@ -23,7 +28,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-top2down-desktop(161px);
+    padding-top: 161px;
+    .ladder__bottom(@block-overlap-desktop);
     padding-bottom: 149px;
     background-position: calc(50% + 516px) 142px, calc(50% - 591px) 144px;
   }

@@ -1,4 +1,8 @@
 .traveller {
+  background-color: @bg-light;
+}
+
+.traveller__back {
   background-color: @bg-secondary;
   color: @fg-main;
 
@@ -19,16 +23,16 @@
       url("../../../img/backgrounds/traveller-smolov-mobile@2x.png");
   }
 
-
-  .ladder-top2down-mobile(68px);
+  padding-top: 68px;
   padding-bottom: 31px;
+  .ladder__bottom(@block-overlap-mobile);
 
   position: relative;
-  z-index: @z-index-travelers;
 
   @media (min-width: @tablet-width) {
-    .ladder-top2down-tablet(141px);
+    padding-top: 141px;
     padding-bottom: 87px;
+    .ladder__bottom(@block-overlap-tablet);
 
     background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
       url("../../../img/backgrounds/traveller-rogovaya-tablet.png"),
@@ -48,8 +52,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-top2down-desktop(130px);
+    padding-top: 130px;
     padding-bottom: 134px;
+    .ladder__bottom(@block-overlap-desktop);
     background-position: calc(50% - 554px) 124px,
       calc(50% - 388px) 440px,
       calc(50% - 102px) 188px;
