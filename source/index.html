@@ -86,7 +86,7 @@
       <button
         class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--open button"
         type="button"
-        onclick="toggleMenu(true)">
+        onclick="toggleMenu(event, true)">
         <svg width="25" height="11">
           <use href="img/sprites/icons.svg#menu-burger"/>
         </svg>
@@ -95,7 +95,7 @@
       <button
         class="page-header__menu-button page-header__menu-button--dark page-header__menu-button--close button hidden"
         type="button"
-        onclick="toggleMenu(false)">
+        onclick="toggleMenu(event, false)">
         <svg width="18" height="19">
           <use href="img/sprites/icons.svg#menu-close"/>
         </svg>

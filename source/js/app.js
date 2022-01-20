@@ -6,10 +6,10 @@ function toggleHidden(event, className, parent = document) {
   menu.classList.toggle("hidden")
 }
 
-function toggleMenu(show) {
-  toggleHidden("menu-content-popup")
-  toggleHidden("page-header__menu-button--open")
-  toggleHidden("page-header__menu-button--close")
+function toggleMenu(event, show) {
+  toggleHidden(event,"menu-content-popup")
+  toggleHidden(event,"page-header__menu-button--open")
+  toggleHidden(event, "page-header__menu-button--close")
 
   const lightSuffix = "--light"
   const darkSuffix = "--dark"
