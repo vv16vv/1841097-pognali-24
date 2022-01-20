@@ -30,11 +30,12 @@
 </head>
 <body class="page__body">
 <header class="page-header page-header--catalog">
-  <div class="page-header__form-wrapper page-header__form-wrapper--inner page-header__form-wrapper--dark">
+  <div
+    class="page-header__form-wrapper page-header__form-wrapper--inner page-header__form-wrapper--dark page-header__form-wrapper--nojs">
     <div class="wrapper page-header__wrapper">
       <div class="page-header__title-bar">
         <a
-          class="page-header__logo page-header__logo--dark button"
+          class="page-header__logo page-header__logo--dark page-header__logo--nojs button"
           href="index.html">
           <svg
             class="logo logo--mobile"
@@ -292,7 +293,7 @@
           class="filter__button-name filter__button-name--hide filter__button-name--state-in-popup">
           Свернуть
         </span>
-        <span class="filter__button--dot">.</span>
+        <span class="filter__button-dot">.</span>
         <svg class="filter__expand" width="17" height="3">
           <use href="img/sprites/icons.svg#filter-expand"/>
         </svg>
@@ -1391,7 +1392,7 @@
           <div
             class="chooser-form-group__list chooser-form-group__list--transport chooser-form-group__list-hidden">
             <ul class="transport transport--checkbox">
-              <li class="chooser-form-transport__item transport-control transport transport--checkbox">
+              <li class="transport-control transport transport--checkbox">
                 <div class="tooltip" data-tooltip="Авиаперелёт">
                   <label class="transport__item transport__item--checkbox">
                     <input
@@ -1411,7 +1412,7 @@
                 </div>
               </li>
               <li
-                class="chooser-form-transport__item transport-control transport transport--checkbox">
+                class="transport-control transport transport--checkbox">
                 <div class="tooltip" data-tooltip="Автотранспорт">
                   <label class="transport__item transport__item--checkbox">
                     <input
@@ -1430,7 +1431,7 @@
                   </label>
                 </div>
               </li>
-              <li class="chooser-form-transport__item transport-control transport">
+              <li class="transport-control transport">
                 <div class="tooltip" data-tooltip="Велосипед">
                   <label class="transport__item transport__item--checkbox">
                     <input
@@ -1448,7 +1449,7 @@
                   </label>
                 </div>
               </li>
-              <li class="chooser-form-transport__item transport-control transport">
+              <li class="transport-control transport">
                 <div class="tooltip" data-tooltip="Пешком">
                   <label class="transport__item transport__item--checkbox">
                     <input
@@ -1561,7 +1562,7 @@
           </svg>
         </h3>
         <a
-          class="traveller-details-card__image-wrapper button"
+          class="traveller-details-card__image-wrapper button button--form-round"
           href="/people/firsova.html">
           <picture>
             <source
@@ -1587,7 +1588,7 @@
               srcset="img/people/firsova-catalog-tablet.png 1x, img/people/firsova-catalog-tablet@2x.png 2x"
             >
             <img
-              class="traveller-details-card__image button--form-round"
+              class="traveller-details-card__image"
               src="img/people/firsova-catalog-mobile.png"
               srcset="img/people/firsova-catalog-mobile@2x.png 2x"
               width="70"
@@ -1760,13 +1761,13 @@
           </p>
           <p class="traveller-details-card__level">
             <svg
-              class="traveller-details-card__level--mobile"
+              class="traveller-details-card__level-image traveller-details-card__level-image--mobile"
               width="45"
               height="45">
               <use href="img/sprites/icons.svg#firsova-rating-mobile"/>
             </svg>
             <svg
-              class="traveller-details-card__level--tablet"
+              class="traveller-details-card__level-image traveller-details-card__level-image--tablet"
               width="64"
               height="64">
               <use href="img/sprites/icons.svg#firsova-rating-tablet"/>
@@ -1797,7 +1798,7 @@
           </svg>
         </h3>
         <a
-          class="traveller-details-card__image-wrapper button"
+          class="traveller-details-card__image-wrapper button button--form-round"
           href="/people/demin.html">
           <picture>
             <source
@@ -1823,7 +1824,7 @@
               srcset="img/people/demin-catalog-tablet.png 1x, img/people/demin-catalog-tablet@2x.png 2x"
             >
             <img
-              class="traveller-details-card__image button--form-round"
+              class="traveller-details-card__image"
               src="img/people/demin-catalog-mobile.png"
               srcset="img/people/demin-catalog-mobile@2x.png 2x"
               width="70"
@@ -1967,13 +1968,13 @@
           </p>
           <p class="traveller-details-card__level">
             <svg
-              class="traveller-details-card__level--mobile"
+              class="traveller-details-card__level-image traveller-details-card__level-image--mobile"
               width="45"
               height="45">
               <use href="img/sprites/icons.svg#demin-rating-mobile"/>
             </svg>
             <svg
-              class="traveller-details-card__level--tablet"
+              class="traveller-details-card__level-image traveller-details-card__level-image--tablet"
               width="64"
               height="64">
               <use href="img/sprites/icons.svg#demin-rating-tablet"/>
@@ -2004,7 +2005,7 @@
           </svg>
         </h3>
         <a
-          class="traveller-details-card__image-wrapper button"
+          class="traveller-details-card__image-wrapper button button--form-round"
           href="/people/smolov.html">
           <picture>
             <source
@@ -2030,7 +2031,7 @@
               srcset="img/people/smolov-catalog-tablet.png 1x, img/people/smolov-catalog-tablet@2x.png 2x"
             >
             <img
-              class="traveller-details-card__image button--form-round"
+              class="traveller-details-card__image"
               src="img/people/smolov-catalog-mobile.png"
               srcset="img/people/smolov-catalog-mobile@2x.png 2x"
               width="70"
@@ -2199,13 +2200,13 @@
           </p>
           <p class="traveller-details-card__level">
             <svg
-              class="traveller-details-card__level--mobile"
+              class="traveller-details-card__level-image traveller-details-card__level-image--mobile"
               width="45"
               height="45">
               <use href="img/sprites/icons.svg#smolov-rating-mobile"/>
             </svg>
             <svg
-              class="traveller-details-card__level--tablet"
+              class="traveller-details-card__level-image traveller-details-card__level-image--tablet"
               width="64"
               height="64">
               <use href="img/sprites/icons.svg#smolov-rating-tablet"/>
@@ -2236,7 +2237,7 @@
           </svg>
         </h3>
         <a
-          class="traveller-details-card__image-wrapper button"
+          class="traveller-details-card__image-wrapper button button--form-round"
           href="/people/rogovaya.html">
           <picture>
             <source
@@ -2262,7 +2263,7 @@
               srcset="img/people/rogovaya-catalog-tablet.png 1x, img/people/rogovaya-catalog-tablet@2x.png 2x"
             >
             <img
-              class="traveller-details-card__image button--form-round"
+              class="traveller-details-card__image"
               src="img/people/rogovaya-catalog-mobile.png"
               srcset="img/people/rogovaya-catalog-mobile@2x.png 2x"
               width="70"
@@ -2406,13 +2407,13 @@
           </p>
           <p class="traveller-details-card__level">
             <svg
-              class="traveller-details-card__level--mobile"
+              class="traveller-details-card__level-image traveller-details-card__level-image--mobile"
               width="45"
               height="45">
               <use href="img/sprites/icons.svg#rogovaya-rating-mobile"/>
             </svg>
             <svg
-              class="traveller-details-card__level--tablet"
+              class="traveller-details-card__level-image traveller-details-card__level-image--tablet"
               width="64"
               height="64">
               <use href="img/sprites/icons.svg#rogovaya-rating-tablet"/>
@@ -2427,7 +2428,8 @@
       </li>
     </ul>
     <div class="traveller-details__pagination wrapper">
-      <a class="traveller-details__show-more button button--with-icon" href="#">
+      <a class="traveller-details__show-more button button--with-icon"
+        href="catalog.html?all=true">
         <svg
           class="traveller-details__show-more-image"
           width="18"
@@ -2439,22 +2441,22 @@
       <div class="traveller-details__buttons pagination">
         <a
           class="pagination__button button pagination__button--number pagination__button--current"
-          href="#">
+          href="catalog.html?page=1">
           <span class="pagination__button-content">1</span>
         </a>
         <a
           class="pagination__button button pagination__button--number"
-          href="#">
+          href="catalog.html?page=2">
           <span class="pagination__button-content">2</span>
         </a>
         <a
           class="pagination__button button pagination__button--number"
-          href="#">
+          href="catalog.html?page=3">
           <span class="pagination__button-content">3</span>
         </a>
         <a
           class="pagination__button button pagination__button--number"
-          href="#">
+          href="catalog.html?page=4">
           <span class="pagination__button-content">4</span>
         </a>
         <a
@@ -2470,7 +2472,7 @@
         </a>
         <a
           class="pagination__button button pagination__button--forward"
-          href="#">
+          href="catalog.html?page=2">
           <svg
             class="pagination__button-content pagination__button-content--forward"
             width="13"
@@ -2485,7 +2487,7 @@
 </main>
 <footer class="page-footer">
   <div class="wrapper page-footer__wrapper">
-    <a class="page-footer__logo logo button" href="#">
+    <a class="page-footer__logo logo button" href="index.html">
       <svg
         class="logo logo--mobile"
         width="96"
@@ -2543,11 +2545,11 @@
       </li>
     </ul>
     <a
-      class="page-footer__developer-button button"
+      class="page-footer__developer-button developer button"
       href="https://htmlacademy.ru/intensive/adaptive">
-      <span class="page-footer__developer-text">Разработано</span>
+      <span class="developer__text">Разработано</span>
       <img
-        class="developer-logo__image"
+        class="developer__logo"
         src="img/htmlacademy-big.svg"
         width="27"
         height="34"

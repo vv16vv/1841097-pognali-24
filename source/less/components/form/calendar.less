@@ -44,14 +44,12 @@
 }
 
 .calendar__day {
-  text-align: center;
-  padding: 7px 7px 5px 8px;
   box-sizing: border-box;
+
+  padding: 7px 7px 5px 8px;
+
   border-bottom: 1px solid @fg-calendar-border;
   border-right: 1px solid @fg-calendar-border;
-
-  .common-font(14px, 18px, 400);
-  color: @fg-special-grey;
 
   &:nth-child(7n+1) {
     border-left: 1px solid @fg-calendar-border;
@@ -61,128 +59,14 @@
     border-left: none;
   }
 
-  &--name,
-  &--weekend {
-    border-right: none;
-  }
-
-  &--weekend {
-    color: @calendar-weekend;
-  }
-
-  &--long {
-    display: none;
-
-    @media (min-width: @tablet-width) {
-      display: inline;
-    }
-  }
-
-  &--past {
-    opacity: 0.3;
-  }
-
-  &--new-month {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: inline;
-    }
-  }
-
-  &--trip-mark {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: block;
-      margin: 6px 0 0;
-      padding: 0;
-    }
-  }
-
-  &--trip {
-    background-color: @fg-blue-light;
-    color: @fg-main;
-    font-weight: 500;
-  }
-
-  &--today,
-  &:hover {
-    outline: 2px solid @calendar-weekend;
-    outline-offset: -2px;
-  }
-
-  &--future {
-    font-weight: 500;
-    background-color: @bg-lighter;
-  }
-
   @media (min-width: @tablet-width) {
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 14px;
-
-    .common-font(18px, 18px, 400);
-
-    &--name,
-    &--weekend {
-      padding-top: 9px;
-      padding-bottom: 9px;
-    }
-
-    &--trip {
-      margin-top: -2px;
-      margin-left: -2px;
-      padding-left: 9px;
-    }
-
-    &--future {
-      padding-bottom: 24px;
-      padding-left: 9px;
-    }
-
-    &--trip,
-    &--future {
-      .common-font(20px, 20px, 500);
-    }
-
-    &--today,
-    &:focus {
-      outline-width: 4px;
-      outline-offset: -4px;
-    }
   }
 
   @media (min-width: @desktop-width) {
-    text-align: left;
     padding: 15px 15px 14px;
-    min-height: 72px;
-    box-sizing: border-box;
-
-    &--name,
-    &--weekend {
-      padding: 18px 16px 19px;
-      min-height: auto;
-    }
-
-    &--trip {
-      margin-top: -11px;
-      margin-left: 0;
-    }
-
-    &--future {
-      margin-top: -7px;
-      margin-left: 0;
-    }
-
-    &--trip,
-    &--future {
-      .common-font(18px, 18px, 400);
-    }
-
-    &--today,
-    &:focus {
-      outline-offset: -2px;
-    }
+    min-height: 70px;
   }
 }

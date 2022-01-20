@@ -1,50 +1,61 @@
 .about {
-  background-color: @bg-main;
-  color: @fg-main;
+  background-color: @bg-lighter;
+}
+
+.about__back {
   padding-top: 33px;
   padding-bottom: 82px;
 
   .ladder__bottom(@block-overlap-mobile);
 
-  background-image: url("../../../img/backgrounds/about-mobile.png");
-  background-size: 292px auto;
-  background-position: calc(50% + 4px) 0;
-  background-repeat: no-repeat;
+  color: @fg-main;
+  background-color: @bg-secondary;
+  background-image: url("../../../img/backgrounds/about-mobile.png"),
+    url("../../../img/backgrounds/about-rectangle-mobile.svg");
+  background-size: 292px auto, 113px 132px;
+  background-position: calc(50% + 4px) 0, calc(50% - 110px) -11px;
+  background-repeat: no-repeat, no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../../img/backgrounds/about-mobile@2x.png");
+    background-image: url("../../../img/backgrounds/about-mobile@2x.png"),
+      url("../../../img/backgrounds/about-rectangle-mobile.svg");
   }
 
-  z-index: @z-index-about;
   position: relative;
 
   @media (min-width: @tablet-width) {
-    .ladder__bottom(@block-overlap-tablet);
     padding-top: 41px;
     padding-bottom: 89px;
 
-    background-repeat: no-repeat;
-    background-position: calc(50% + 189px) 49px;
-    background-image: url("../../../img/backgrounds/about-tablet.png");
-    background-size: 376px 548px;
+    .ladder__bottom(@block-overlap-tablet);
+
+    background-color: @bg-dark;
+    background-position: calc(50% + 189px) 49px, calc(50% - 1px) 0;
+    background-image: url("../../../img/backgrounds/about-tablet.png"),
+      url("../../../img/backgrounds/about-rectangle-tablet.svg");
+    background-size: 376px 548px, 688px 212px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../../img/backgrounds/about-tablet@2x.png");
+      background-image: url("../../../img/backgrounds/about-tablet@2x.png"),
+        url("../../../img/backgrounds/about-rectangle-tablet.svg");
     }
   }
 
   @media (min-width: @desktop-width) {
-    .ladder__bottom(@block-overlap-desktop);
     padding-top: 42px;
     padding-bottom: 163px;
 
-    background-repeat: no-repeat;
-    background-position: calc(50% + 342px) 0;
-    background-image: url("../../../img/backgrounds/about-desktop.png");
-    background-size: 630px 659px;
+    .ladder__bottom(@block-overlap-desktop);
+
+    background-color: @bg-secondary;
+    background-position: calc(50% + 345px) 0, calc(50% - 552px) -20px;
+    background-image: url("../../../img/backgrounds/about-desktop.png"),
+      url("../../../img/backgrounds/about-rectangle-desktop.svg");
+    background-size: 630px 659px, 212px 212px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../../img/backgrounds/about-desktop@2x.png");
+      background-image: url("../../../img/backgrounds/about-desktop@2x.png"),
+        url("../../../img/backgrounds/about-rectangle-desktop.svg");
     }
   }
 }

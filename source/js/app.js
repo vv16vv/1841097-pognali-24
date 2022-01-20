@@ -1,4 +1,6 @@
-function toggleHidden(className, parent = document) {
+function toggleHidden(event, className, parent = document) {
+  event.preventDefault()
+
   const menu = parent
     .getElementsByClassName(className)[0]
   menu.classList.toggle("hidden")
@@ -168,10 +170,10 @@ const switchToStep = (stepFrom, stepTo) => {
   toMarker.classList.toggle(markersItemCurrent)
 
   const markersList = document.getElementsByClassName("new-plan__markers")[0]
-  if(stepFrom === "dates") {
+  if (stepFrom === "dates") {
     markersList.classList.remove(`new-plan__markers--dates`)
   }
-  if(stepTo === "dates") {
+  if (stepTo === "dates") {
     markersList.classList.add(`new-plan__markers--dates`)
   }
 }
@@ -199,6 +201,12 @@ const onScroll = () => {
 window.onscroll = () => onScroll()
 
 window.onload = () => {
+  const pageHeaderWrapper = document.getElementsByClassName("page-header__form-wrapper--nojs")[0]
+  pageHeaderWrapper?.classList?.remove("page-header__form-wrapper--nojs")
+
+  const pageHeaderLogo = document.getElementsByClassName("page-header__logo--nojs")[0]
+  pageHeaderLogo?.classList?.remove("page-header__logo--nojs")
+
   const menuContentPopup = document.getElementsByClassName("menu-content-popup")[0]
   menuContentPopup?.classList?.remove("menu-content-popup--nojs")
   menuContentPopup?.classList?.add("hidden")

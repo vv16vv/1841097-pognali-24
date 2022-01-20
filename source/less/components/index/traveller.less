@@ -1,14 +1,24 @@
 .traveller {
-  background-color: @bg-secondary;
-  color: @fg-main;
+  background-color: @bg-light;
+}
 
+.traveller__back {
+  padding-top: 68px;
+  padding-bottom: 31px;
+
+  .ladder__bottom(@block-overlap-mobile);
+
+  position: relative;
+
+  color: @fg-main;
+  background-color: @bg-secondary;
   background-repeat: no-repeat;
   background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
     url("../../../img/backgrounds/traveller-rogovaya-mobile.png"),
     url("../../../img/backgrounds/traveller-smolov-mobile.png");
-  background-position: calc(50% - 115px) 64px,
-    calc(50% - 131px) 337px,
-    calc(50% + 62px) 65px;
+  background-position: calc(50% - 115px) 36px,
+    calc(50% - 131px) 308px,
+    calc(50% + 62px) 35px;
   background-size: 132px 132px,
     64px 71px,
     143px 143px;
@@ -19,23 +29,18 @@
       url("../../../img/backgrounds/traveller-smolov-mobile@2x.png");
   }
 
-
-  .ladder-top2down-mobile(68px);
-  padding-bottom: 31px;
-
-  position: relative;
-  z-index: @z-index-travelers;
-
   @media (min-width: @tablet-width) {
-    .ladder-top2down-tablet(141px);
+    padding-top: 141px;
     padding-bottom: 87px;
+
+    .ladder__bottom(@block-overlap-tablet);
 
     background-image: url("../../../img/backgrounds/traveller-rectangle.svg"),
       url("../../../img/backgrounds/traveller-rogovaya-tablet.png"),
       url("../../../img/backgrounds/traveller-smolov-tablet.png");
-    background-position: calc(50% - 238px) 130px,
-      calc(50% + 167px) 140px,
-      calc(50% - 272px) 486px;
+    background-position: calc(50% - 238px) 70px,
+      calc(50% + 167px) 79px,
+      calc(50% - 272px) 425px;
     background-size: 212px 212px,
       285px 285px,
       143px 143px;
@@ -48,11 +53,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    .ladder-top2down-desktop(130px);
+    padding-top: 130px;
     padding-bottom: 134px;
-    background-position: calc(50% - 554px) 124px,
-      calc(50% - 388px) 440px,
-      calc(50% - 102px) 188px;
+
+    .ladder__bottom(@block-overlap-desktop);
+
+    background-position: calc(50% - 554px) 70px,
+      calc(50% - 388px) 387px,
+      calc(50% - 102px) 134px;
   }
 }
 

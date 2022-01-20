@@ -1,10 +1,25 @@
 .promo {
-  padding-top: 29px;
+  padding-top: 0;
+  padding-bottom: 39px;
+
   grid-row: 2;
   grid-column: 1 / -1;
 
+  background: linear-gradient(to bottom, @bg-main 81px, @bg-secondary 81px);
+
   @media (min-width: @tablet-width) {
     padding-top: 0;
+    padding-bottom: 96px;
+    margin-top: -140px;
+
+    background: linear-gradient(to bottom, transparent 140px, @bg-dark 140px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -231px;
+    padding-bottom: 121px;
+
+    background: transparent none;
   }
 }
 
