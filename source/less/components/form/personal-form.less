@@ -117,10 +117,12 @@
 
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+  }
+}
 
-    &--desktop {
-      display: none;
-    }
+.personal-form__button-desktop {
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
