@@ -275,12 +275,14 @@
 }
 
 .letter__countries-list--form.countries-list {
-  left: 350px;
-  top: 0;
-  height: 330px;
+  @media (min-width: @tablet-width) {
+    left: 350px;
+    top: 0;
+    height: 330px;
 
-  .countries-list__item + .countries-list__item {
-    margin-top: 0;
+    .countries-list__item + .countries-list__item {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
