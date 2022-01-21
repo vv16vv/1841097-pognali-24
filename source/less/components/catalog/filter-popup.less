@@ -1,21 +1,27 @@
 .filter-popup {
-  background-color: @bg-grey;
   width: 100%;
-  z-index: @z-index-popup;
-
-  .ladder__bottom(20px);
   padding-top: 28px;
   padding-bottom: 28px;
 
+  background-color: @bg-grey;
+
+  .ladder__bottom(20px);
+
+  z-index: @z-index-popup;
+
   @media (min-width: @tablet-width) {
-    .ladder__bottom(@block-overlap-tablet);
     padding-top: 44px;
+    padding-bottom: 80px;
+
+    .ladder__bottom(@block-overlap-tablet);
   }
 
   @media (min-width: @desktop-width) {
     background-color: @bg-lighter;
-    .ladder__bottom(@block-overlap-desktop);
+
     padding-top: 58px;
+
+    .ladder__bottom(@block-overlap-desktop);
   }
 }
 
