@@ -125,6 +125,10 @@ export const build = gulp.series(
   buildServer
 )
 
-export default gulp.series(
+export const devStart = gulp.series(
   devMinimizeStyles, devServer, watcher
+)
+
+export default gulp.series (
+  build, buildServer
 );

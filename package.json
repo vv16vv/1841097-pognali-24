@@ -29,6 +29,7 @@
     "test": "npm run editorconfig && npm run stylelint",
     "convertPNG2WEBP": "gulp convertToWebP",
     "createSVGSprite": "gulp convertSVGsToSprite",
+    "devStart": "gulp devStart",
     "build": "gulp build",
     "start": "gulp"
   },
