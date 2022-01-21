@@ -6,10 +6,10 @@ function toggleHidden(event, className, parent = document) {
   menu.classList.toggle("hidden")
 }
 
-function toggleMenu(show) {
-  toggleHidden("menu-content-popup")
-  toggleHidden("page-header__menu-button--open")
-  toggleHidden("page-header__menu-button--close")
+function toggleMenu(event, show) {
+  toggleHidden(event,"menu-content-popup")
+  toggleHidden(event,"page-header__menu-button--open")
+  toggleHidden(event, "page-header__menu-button--close")
 
   const lightSuffix = "--light"
   const darkSuffix = "--dark"
@@ -17,7 +17,7 @@ function toggleMenu(show) {
     toggleHeader(darkSuffix, lightSuffix)
   } else {
     const isNotSticky = document
-      .getElementsByClassName(`page-header--sticky`)
+      .getElementsByClassName("page-header--sticky")
       .length === 0;
     if (isNotSticky) {
       toggleHeader(lightSuffix, darkSuffix)
@@ -36,14 +36,14 @@ function toggleFilter() {
   button.classList.toggle(`${buttonClassName}--state-open`)
   button.classList.toggle(`${buttonClassName}--state-close`)
 
-  const spanClassName = `filter__button-name`
+  const spanClassName = "filter__button-name"
   const spans = button.getElementsByClassName(spanClassName)
   for (let i = 0; i < spans.length; i++) {
     spans[i].classList.toggle(`${spanClassName}--state-in-flow`)
     spans[i].classList.toggle(`${spanClassName}--state-in-popup`)
   }
 
-  const popupClassName = `filter__popup`
+  const popupClassName = "filter__popup"
   const popup = filter.getElementsByClassName(popupClassName)[0]
   popup.classList.toggle(`${popupClassName}--state-in-flow`)
   popup.classList.toggle(`${popupClassName}--state-in-popup`)
@@ -171,10 +171,10 @@ const switchToStep = (stepFrom, stepTo) => {
 
   const markersList = document.getElementsByClassName("new-plan__markers")[0]
   if (stepFrom === "dates") {
-    markersList.classList.remove(`new-plan__markers--dates`)
+    markersList.classList.remove("new-plan__markers--dates")
   }
   if (stepTo === "dates") {
-    markersList.classList.add(`new-plan__markers--dates`)
+    markersList.classList.add("new-plan__markers--dates")
   }
 }
 

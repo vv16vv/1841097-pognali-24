@@ -79,8 +79,8 @@ const processPath = (filePath) => () => gulp.src(`${SOURCE}/${filePath}`)
       .pipe(gulp.dest(`${BUILD}/${(path.dirname(filePath))}`))
 
 const minimizeSVGs = gulp.parallel(
-  processPath(`img/icons/*.svg`),
-  processPath(`img/htmlacademy-big.svg`),
+  processPath("img/icons/*.svg"),
+  processPath("img/htmlacademy-big.svg"),
 )
 
 const copySVGSprites = () => {
@@ -125,6 +125,10 @@ export const build = gulp.series(
   buildServer
 )
 
-export default gulp.series(
+export const devStart = gulp.series(
   devMinimizeStyles, devServer, watcher
+)
+
+export default gulp.series (
+  build, buildServer
 );

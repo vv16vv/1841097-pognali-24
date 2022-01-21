@@ -42,7 +42,7 @@
     }
 
     .letter__name-radio:checked ~ .letter__countries-list {
-      display: block;
+      display: flex;
     }
   }
 
@@ -246,46 +246,28 @@
 
 .letter__countries-list {
   position: absolute;
-  top: 235px;
+
+  padding-left: 18px;
+  margin-bottom: 0;
+
   left: 0;
-  height: fit-content;
-  width: 220px;
-  margin-bottom: 28px;
+  top: 225px;
+
+  height: 285px;
+  width: 200px;
+
+  overflow-y: auto;
 
   @media (min-width: @tablet-width) {
     top: 0;
-    left: 400px;
+    left: 350px;
+
+    height: 330px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 526px;
-  }
-}
-
-.letter__countries-list.countries-list {
-  padding-left: 18px;
-  top: 225px;
-  height: 285px;
-  overflow-y: auto;
-  width: 200px;
-
-  .countries-list__item + .countries-list__item {
-    margin-top: 4px;
-  }
-}
-
-.letter__countries-list--form.countries-list {
-  left: 350px;
-  top: 0;
-  height: 330px;
-
-  .countries-list__item + .countries-list__item {
-    margin-top: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 470px;
     top: -2px;
+    left: 470px;
 
     width: 207px;
     height: 395px;

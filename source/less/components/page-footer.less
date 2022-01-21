@@ -1,25 +1,40 @@
 .page-footer {
+  background-color: @bg-grey-extra-darker;
+
+  &--catalog {
+    background-color: @bg-lighter;
+  }
+
+  &--index {
+    .ladder__margin-top(@block-overlap-mobile);
+
+    background-color: transparent;
+
+    position: relative;
+    z-index: @z-index-footer;
+
+    @media (min-width: @tablet-width) {
+      .ladder__margin-top(@block-overlap-tablet);
+    }
+
+    @media (min-width: @desktop-width) {
+      .ladder__margin-top(@block-overlap-desktop);
+    }
+  }
+}
+
+.page-footer__back {
   background-color: @fg-main;
   color: @fg-special-grey;
 
   padding-top: 37px;
   padding-bottom: 5px;
-
-  .ladder__margin-top(@block-overlap-mobile);
-  margin-top: -134px;
+  margin-top: 0;
 
   border-top-left-radius: @block-overlap-mobile;
   border-top-right-radius: @block-overlap-mobile;
 
-  position: relative;
-  z-index: @z-index-footer;
-
-  &--page-destination {
-    z-index: @z-index-form-footer;
-  }
-
   @media (min-width: @tablet-width) {
-    .ladder__margin-top(@block-overlap-tablet);
     padding-top: 46px;
     padding-bottom: 0;
 
@@ -28,7 +43,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    .ladder__margin-top(143px);
     padding-top: 47px;
     padding-bottom: 5px;
 
@@ -56,6 +70,12 @@
 
   &:focus {
     outline-color: @bg-main;
+  }
+
+  &--index {
+    @media (max-width: @tablet-width - 1) {
+      margin-bottom: 41px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -91,19 +111,5 @@
 
   @media (min-width: @desktop-width) {
     padding-right: 48px;
-  }
-}
-
-.page-footer--index {
-  .page-footer__logo {
-    margin-bottom: 41px;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding-top: 49px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 47px;
   }
 }
