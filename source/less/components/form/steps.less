@@ -154,15 +154,6 @@
   outline-color: transparent;
   .transition(opacity, outline-color, background-color;);
 
-  .button__icon-right,
-  .button__icon-left {
-    display: none;
-
-    @media (min-width: @tablet-width) {
-      display: block;
-    }
-  }
-
   &:hover {
     background-color: @special-yellow-dark;
   }
@@ -227,5 +218,13 @@
       width: 228px;
       margin-right: -31px;
     }
+  }
+}
+
+.steps__button-image {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }
