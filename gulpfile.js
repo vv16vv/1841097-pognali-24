@@ -82,6 +82,7 @@ const minimizeSVGs = gulp.parallel(
   processPath("img/backgrounds/*.svg"),
   processPath("img/icons/*.svg"),
   processPath("img/htmlacademy-big.svg"),
+  processPath("favicon.svg"),
 )
 
 const copySVGSprites = () => {
