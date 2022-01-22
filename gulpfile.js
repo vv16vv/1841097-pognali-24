@@ -121,8 +121,7 @@ export const build = gulp.series(
   optimizePNGs,
   convertToWebP, copyWebP,
   minimizeSVGs, copySVGSprites,
-  copyFonts,
-  buildServer
+  copyFonts
 )
 
 export const devStart = gulp.series(
