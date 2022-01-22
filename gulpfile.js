@@ -79,6 +79,7 @@ const processPath = (filePath) => () => gulp.src(`${SOURCE}/${filePath}`)
       .pipe(gulp.dest(`${BUILD}/${(path.dirname(filePath))}`))
 
 const minimizeSVGs = gulp.parallel(
+  processPath("img/backgrounds/*.svg"),
   processPath("img/icons/*.svg"),
   processPath("img/htmlacademy-big.svg"),
 )
